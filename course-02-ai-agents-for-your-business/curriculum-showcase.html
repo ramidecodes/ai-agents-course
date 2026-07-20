@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Agents for Your Business — Curriculum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a2433;
+      --ink-soft: #4d5b6b;
+      --ink-faint: #7a8796;
+      --accent: #3d4f6f;
+      --accent-soft: #51658a;
+      --rule: rgba(26, 36, 51, 0.11);
+      --rule-strong: rgba(26, 36, 51, 0.18);
+      --wash-top: #e6ebf2;
+      --wash-mid: #f2f3f5;
+      --wash-bottom: #e8e4dc;
+      --surface: rgba(255, 255, 255, 0.42);
+      --focus: #3d4f6f;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --max: 42rem;
+      --wide: 52rem;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Figtree", sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      background:
+        radial-gradient(ellipse 90% 55% at 12% -10%, rgba(61, 79, 111, 0.1), transparent 55%),
+        radial-gradient(ellipse 70% 45% at 95% 8%, rgba(90, 100, 112, 0.07), transparent 50%),
+        linear-gradient(165deg, var(--wash-top) 0%, var(--wash-mid) 42%, var(--wash-bottom) 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      color: var(--accent-soft);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(100% - 2.5rem, var(--wide));
+      margin-inline: auto;
+    }
+
+    .wrap-narrow {
+      width: min(100% - 2.5rem, var(--max));
+      margin-inline: auto;
+    }
+
+    /* —— Hero —— */
+    .hero {
+      min-height: min(100vh, 52rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 4.5rem 0 5.5rem;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset-inline: 0;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rule-strong), transparent);
+    }
+
+    .hero-kicker {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 1.75rem;
+    }
+
+    .hero h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-size: clamp(2.5rem, 6.5vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin: 0 0 1.25rem;
+      max-width: 16ch;
+    }
+
+    .hero-sub {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.3vw, 1.5rem);
+      line-height: 1.35;
+      color: var(--ink-soft);
+      margin: 0 0 2rem;
+      max-width: 32ch;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.75rem;
+      font-size: 0.9375rem;
+      color: var(--ink-faint);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-meta li {
+      position: relative;
+    }
+
+    .hero-meta li + li::before {
+      content: "";
+      position: absolute;
+      left: -0.95rem;
+      top: 0.55em;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--ink-faint);
+      opacity: 0.7;
+    }
+
+    .scroll-cue {
+      margin-top: 3.5rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--ink-faint);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.25s var(--ease);
+    }
+
+    .scroll-cue:hover {
+      color: var(--ink);
+    }
+
+    .scroll-cue span {
+      display: inline-block;
+      transition: transform 0.35s var(--ease);
+    }
+
+    .scroll-cue:hover span {
+      transform: translateY(3px);
+    }
+
+    /* —— Sections —— */
+    section {
+      padding: 4.5rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 1rem;
+    }
+
+    h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 1.25rem;
+    }
+
+    .lede {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1.125rem;
+      max-width: 40rem;
+    }
+
+    .lede + .lede {
+      margin-top: 1rem;
+    }
+
+    .outcomes {
+      margin: 2rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .outcomes li {
+      padding-left: 1.15rem;
+      position: relative;
+      color: var(--ink-soft);
+      max-width: 38rem;
+    }
+
+    .outcomes li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 0.45rem;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .audience-note {
+      margin: 2.25rem 0 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.975rem;
+      color: var(--ink-faint);
+      max-width: 36rem;
+    }
+
+    /* —— Curriculum —— */
+    .curriculum-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.25rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .curriculum-head .lede {
+      margin-top: 0.35rem;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .toolbar button {
+      appearance: none;
+      border: 1px solid var(--rule-strong);
+      background: var(--surface);
+      color: var(--ink-soft);
+      font-family: inherit;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.55rem 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+    }
+
+    .toolbar button:hover {
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--ink);
+      border-color: rgba(26, 36, 51, 0.28);
+    }
+
+    .modules {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .module {
+      border-top: 1px solid var(--rule);
+    }
+
+    .module:last-child {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .module-heading {
+      margin: 0;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    .module-toggle {
+      width: 100%;
+      appearance: none;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      padding: 1.35rem 0;
+      cursor: pointer;
+      font-family: inherit;
+      color: inherit;
+      display: grid;
+      grid-template-columns: 2.5rem minmax(0, 1fr) 1.25rem;
+      gap: 0.35rem 1rem;
+      align-items: start;
+      transition: background 0.25s var(--ease);
+    }
+
+    .module-toggle:hover .module-title {
+      color: var(--accent);
+    }
+
+    .module-num {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: var(--ink-faint);
+      font-variant-numeric: tabular-nums;
+      padding-top: 0.15rem;
+    }
+
+    .module-copy {
+      min-width: 0;
+      display: block;
+    }
+
+    .module-title {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      display: block;
+      transition: color 0.25s var(--ease);
+    }
+
+    .module-meta {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--ink-faint);
+    }
+
+    .module-chevron {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-top: 0.35rem;
+      color: var(--ink-faint);
+      transition: transform 0.4s var(--ease), color 0.25s var(--ease);
+    }
+
+    .module[open] .module-chevron {
+      transform: rotate(180deg);
+      color: var(--accent);
+    }
+
+    .module[open] .module-title {
+      color: var(--accent);
+    }
+
+    .module-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.45s var(--ease);
+    }
+
+    .module[open] .module-panel {
+      grid-template-rows: 1fr;
+    }
+
+    .module-panel-inner {
+      overflow: hidden;
+    }
+
+    .module-body {
+      padding: 0 0 1.75rem;
+      padding-left: calc(2.5rem + 1rem);
+    }
+
+    @media (max-width: 560px) {
+      .module-toggle {
+        grid-template-columns: 2rem minmax(0, 1fr) 1.1rem;
+        gap: 0.25rem 0.75rem;
+      }
+
+      .module-body {
+        padding-left: 0;
+      }
+    }
+
+    .module-desc {
+      margin: 0 0 1.35rem;
+      color: var(--ink-soft);
+      max-width: 38rem;
+      font-size: 1rem;
+    }
+
+    .lessons {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .lesson {
+      padding: 0.95rem 0;
+      border-top: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 2.25rem 1fr;
+      gap: 0.35rem 0.85rem;
+      transition: background 0.25s var(--ease), padding-left 0.25s var(--ease);
+      border-radius: 2px;
+    }
+
+    .lesson:hover {
+      background: rgba(255, 255, 255, 0.35);
+      padding-left: 0.4rem;
+    }
+
+    .lesson-num {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--ink-faint);
+      font-variant-numeric: tabular-nums;
+      padding-top: 0.2rem;
+    }
+
+    .lesson-title {
+      font-weight: 600;
+      font-size: 1.02rem;
+      margin: 0 0 0.2rem;
+      line-height: 1.35;
+    }
+
+    .lesson-desc {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      max-width: 36rem;
+    }
+
+    /* —— Closing —— */
+    .closing {
+      padding-bottom: 5rem;
+    }
+
+    .closing p {
+      margin: 0;
+      color: var(--ink-soft);
+      max-width: 34rem;
+    }
+
+    .closing p + p {
+      margin-top: 0.85rem;
+    }
+
+    footer {
+      padding: 1.75rem 0 2.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8125rem;
+      color: var(--ink-faint);
+    }
+
+    /* —— Reveal motion —— */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .hero .reveal {
+      opacity: 1;
+      transform: none;
+      animation: heroIn 0.9s var(--ease) both;
+    }
+
+    .hero .reveal:nth-child(1) { animation-delay: 0.05s; }
+    .hero .reveal:nth-child(2) { animation-delay: 0.18s; }
+    .hero .reveal:nth-child(3) { animation-delay: 0.3s; }
+    .hero .reveal:nth-child(4) { animation-delay: 0.42s; }
+    .hero .reveal:nth-child(5) { animation-delay: 0.55s; }
+
+    @keyframes heroIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal,
+      .hero .reveal {
+        opacity: 1;
+        transform: none;
+        animation: none;
+        transition: none;
+      }
+      .module-panel,
+      .module-chevron,
+      .lesson {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="hero-kicker reveal">Course 02</p>
+      <h1 class="reveal">AI Agents for Your Business</h1>
+      <p class="hero-sub reveal">Build a persistent AI workspace for strategy, brand, content, and execution</p>
+      <ul class="hero-meta reveal" aria-label="Course overview">
+        <li>90 minutes</li>
+        <li>6 modules · 12 lessons</li>
+        <li>Beginner to intermediate</li>
+      </ul>
+      <a class="scroll-cue reveal" href="#about">Continue <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" aria-labelledby="about-heading">
+      <div class="wrap-narrow reveal">
+        <p class="section-label">About the course</p>
+        <h2 id="about-heading">From isolated conversations to a durable workspace</h2>
+        <p class="lede">
+          Learners turn scattered business knowledge and isolated AI conversations into a persistent, practical workspace. They create an inspectable memory system, organize approved business context, add reusable skills, and run recurring workflows for strategy, brand, content, and execution.
+        </p>
+        <p class="lede">
+          Builds on <strong>AI Agents Fundamentals</strong>. Theory is paired with guided setup—for entrepreneurs, creators, coaches, consultants, and small teams who remain responsible for strategic choices, facts, permissions, and consequential actions.
+        </p>
+      </div>
+    </section>
+
+    <section id="outcomes" aria-labelledby="outcomes-heading">
+      <div class="wrap-narrow reveal">
+        <p class="section-label">What you’ll leave with</p>
+        <h2 id="outcomes-heading">A workspace that remembers what you approve</h2>
+        <p class="lede">
+          By the end, learners can build and maintain a persistent AI workspace that supports recurring strategy, brand, content, and execution workflows—without handing the business over to the agent.
+        </p>
+        <ol class="outcomes">
+          <li>Set up and verify a persistent AI workspace with inspectable canonical sources and a replaceable retrieval or memory layer.</li>
+          <li>Design a useful business ontology and manage the lifecycle of private, project, and shared knowledge.</li>
+          <li>Create an approved business, audience, offer, brand, and content source of truth grounded in evidence.</li>
+          <li>Build reusable skills and supervised workflows for planning, research, decisions, content, and recurring reviews.</li>
+          <li>Complete one recurring business workflow and maintain its context through capture, confirmation, retrieval, correction, and archiving.</li>
+        </ol>
+        <p class="audience-note">
+          For entrepreneurs, creators, coaches, independent professionals, and small teams who have completed AI Agents Fundamentals or have equivalent experience. Not a course on agent engineering, custom model training, or fully autonomous business operations.
+        </p>
+      </div>
+    </section>
+
+    <section id="curriculum" aria-labelledby="curriculum-heading">
+      <div class="wrap">
+        <div class="curriculum-head reveal">
+          <div>
+            <p class="section-label">Curriculum</p>
+            <h2 id="curriculum-heading">Six modules, one persistent system</h2>
+            <p class="lede">Expand a module to see its lessons. Titles and descriptions match the current draft curriculum.</p>
+          </div>
+          <div class="toolbar">
+            <button type="button" id="expand-all">Expand all</button>
+            <button type="button" id="collapse-all">Collapse all</button>
+          </div>
+        </div>
+
+        <ul class="modules" id="modules">
+          <li class="module reveal" open>
+            <h3 class="module-heading">
+              <button type="button" class="module-toggle" aria-expanded="true" id="mod-1-btn" aria-controls="mod-1-panel">
+                <span class="module-num">01</span>
+                <span class="module-copy">
+                  <span class="module-title">Build the persistent workspace</span>
+                  <span class="module-meta">2 lessons · 15 min</span>
+                </span>
+                <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 5.5 L8 10.5 L13 5.5" />
+              </svg>
+              </button>
+            </h3>
+            <div class="module-panel" id="mod-1-panel" role="region" aria-labelledby="mod-1-btn">
+              <div class="module-panel-inner">
+                <div class="module-body">
+                  <p class="module-desc">Move from an off-the-shelf assistant used for isolated tasks to a workspace that can preserve and retrieve approved context across sessions.</p>
+                  <ul class="lessons">
+                    <li class="lesson">
+                      <span class="lesson-num">1</span>
+                      <div>
+                        <p class="lesson-title">Design the workspace before choosing the memory product</p>
+                        <p class="lesson-desc">Identify the layers of a durable, replaceable agent workspace—assistant, canonical sources, retrieval, tools, skills, and approval boundaries.</p>
+                      </div>
+                    </li>
+                    <li class="lesson">
+                      <span class="lesson-num">2</span>
+                      <div>
+                        <p class="lesson-title">Set up and verify persistent context</p>
+                        <p class="lesson-desc">Install or configure the selected memory solution and prove that write, retrieve, correct, export, and delete all work.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="module reveal">
+            <h3 class="module-heading">
+              <button type="button" class="module-toggle" aria-expanded="false" id="mod-2-btn" aria-controls="mod-2-panel">
+                <span class="module-num">02</span>
+                <span class="module-copy">
+                  <span class="module-title">Design memory that remains trustworthy</span>
+                  <span class="module-meta">2 lessons · 15 min</span>
+                </span>
+                <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 5.5 L8 10.5 L13 5.5" />
+              </svg>
+              </button>
+            </h3>
+            <div class="module-panel" id="mod-2-panel" role="region" aria-labelledby="mod-2-btn">
+              <div class="module-panel-inner">
+                <div class="module-body">
+                  <p class="module-desc">Replace the idea of magical memory with an explicit information architecture and maintenance lifecycle.</p>
+                  <ul class="lessons">
+                    <li class="lesson">
+                      <span class="lesson-num">3</span>
+                      <div>
+                        <p class="lesson-title">Instructions, context, knowledge, history, retrieval, and memory</p>
+                        <p class="lesson-desc">Decide where each kind of information belongs and how it reaches the model.</p>
+                      </div>
+                    </li>
+                    <li class="lesson">
+                      <span class="lesson-num">4</span>
+                      <div>
+                        <p class="lesson-title">Build the ontology and memory lifecycle</p>
+                        <p class="lesson-desc">Define the smallest useful business ontology and govern how knowledge is confirmed, corrected, superseded, and archived.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="module reveal">
+            <h3 class="module-heading">
+              <button type="button" class="module-toggle" aria-expanded="false" id="mod-3-btn" aria-controls="mod-3-panel">
+                <span class="module-num">03</span>
+                <span class="module-copy">
+                  <span class="module-title">Give the agent your business context</span>
+                  <span class="module-meta">2 lessons · 15 min</span>
+                </span>
+                <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 5.5 L8 10.5 L13 5.5" />
+              </svg>
+              </button>
+            </h3>
+            <div class="module-panel" id="mod-3-panel" role="region" aria-labelledby="mod-3-btn">
+              <div class="module-panel-inner">
+                <div class="module-body">
+                  <p class="module-desc">Turn scattered business material into a compact, approved source of truth.</p>
+                  <ul class="lessons">
+                    <li class="lesson">
+                      <span class="lesson-num">5</span>
+                      <div>
+                        <p class="lesson-title">Capture the business operating context</p>
+                        <p class="lesson-desc">Create a concise view of the business, goals, constraints, projects, decisions, and evidence—leaving unknowns unresolved.</p>
+                      </div>
+                    </li>
+                    <li class="lesson">
+                      <span class="lesson-num">6</span>
+                      <div>
+                        <p class="lesson-title">Define audience, offer, positioning, and brand</p>
+                        <p class="lesson-desc">Build an AI-ready brand foundation grounded in approved sources and audience evidence.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="module reveal">
+            <h3 class="module-heading">
+              <button type="button" class="module-toggle" aria-expanded="false" id="mod-4-btn" aria-controls="mod-4-panel">
+                <span class="module-num">04</span>
+                <span class="module-copy">
+                  <span class="module-title">Build the brand and content system</span>
+                  <span class="module-meta">2 lessons · 15 min</span>
+                </span>
+                <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 5.5 L8 10.5 L13 5.5" />
+              </svg>
+              </button>
+            </h3>
+            <div class="module-panel" id="mod-4-panel" role="region" aria-labelledby="mod-4-btn">
+              <div class="module-panel-inner">
+                <div class="module-body">
+                  <p class="module-desc">Translate approved business context into repeatable editorial decisions and production methods.</p>
+                  <ul class="lessons">
+                    <li class="lesson">
+                      <span class="lesson-num">7</span>
+                      <div>
+                        <p class="lesson-title">Define voice, content pillars, channels, and formats</p>
+                        <p class="lesson-desc">Make a small set of editorial choices that connect audience needs to business goals.</p>
+                      </div>
+                    </li>
+                    <li class="lesson">
+                      <span class="lesson-num">8</span>
+                      <div>
+                        <p class="lesson-title">Create the supervised content-production system</p>
+                        <p class="lesson-desc">Build reusable methods for research, ideation, briefing, drafting, editing, repurposing, and review—with human approval before publication.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="module reveal">
+            <h3 class="module-heading">
+              <button type="button" class="module-toggle" aria-expanded="false" id="mod-5-btn" aria-controls="mod-5-panel">
+                <span class="module-num">05</span>
+                <span class="module-copy">
+                  <span class="module-title">Create skills for recurring business work</span>
+                  <span class="module-meta">2 lessons · 15 min</span>
+                </span>
+                <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 5.5 L8 10.5 L13 5.5" />
+              </svg>
+              </button>
+            </h3>
+            <div class="module-panel" id="mod-5-panel" role="region" aria-labelledby="mod-5-btn">
+              <div class="module-panel-inner">
+                <div class="module-body">
+                  <p class="module-desc">Turn successful methods into portable playbooks that can work with different assistants and tools.</p>
+                  <ul class="lessons">
+                    <li class="lesson">
+                      <span class="lesson-num">9</span>
+                      <div>
+                        <p class="lesson-title">Build reusable skills and connect capabilities</p>
+                        <p class="lesson-desc">Create a skill that clearly separates method, context, tools, permissions, and approval.</p>
+                      </div>
+                    </li>
+                    <li class="lesson">
+                      <span class="lesson-num">10</span>
+                      <div>
+                        <p class="lesson-title">Design entrepreneur workflows and coaching routines</p>
+                        <p class="lesson-desc">Choose recurring work that benefits from persistent context without handing over business accountability.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="module reveal">
+            <h3 class="module-heading">
+              <button type="button" class="module-toggle" aria-expanded="false" id="mod-6-btn" aria-controls="mod-6-panel">
+                <span class="module-num">06</span>
+                <span class="module-copy">
+                  <span class="module-title">Run, review, and maintain the system</span>
+                  <span class="module-meta">2 lessons · 15 min</span>
+                </span>
+                <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 5.5 L8 10.5 L13 5.5" />
+              </svg>
+              </button>
+            </h3>
+            <div class="module-panel" id="mod-6-panel" role="region" aria-labelledby="mod-6-btn">
+              <div class="module-panel-inner">
+                <div class="module-body">
+                  <p class="module-desc">Complete one recurring business loop and establish the habits that keep its context useful over time.</p>
+                  <ul class="lessons">
+                    <li class="lesson">
+                      <span class="lesson-num">11</span>
+                      <div>
+                        <p class="lesson-title">Capstone: run one recurring business workflow</p>
+                        <p class="lesson-desc">Execute an end-to-end workflow using approved persistent context, a reusable skill, and explicit review points.</p>
+                      </div>
+                    </li>
+                    <li class="lesson">
+                      <span class="lesson-num">12</span>
+                      <div>
+                        <p class="lesson-title">Maintain, share, and improve the workspace</p>
+                        <p class="lesson-desc">Create a sustainable review routine for accuracy, privacy, access, and workflow quality.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="next-heading">
+      <div class="wrap-narrow reveal">
+        <p class="section-label">Scope</p>
+        <h2 id="next-heading">Controlled persistence, human ownership</h2>
+        <p>
+          The goal is not an AI system that remembers everything or runs the business unattended. It is a controlled workspace that retrieves the right context, preserves confirmed knowledge, supports useful work, and remains understandable to its owner.
+        </p>
+        <p>
+          Keep business truth inspectable, memory curated, skills testable, and consequential decisions human-owned.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      AI Agents for Your Business · Self-paced video course · Curriculum draft v0.2
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const modules = Array.from(document.querySelectorAll(".module"));
+
+      const timers = new WeakMap();
+
+      function setOpen(module, open) {
+        const btn = module.querySelector(".module-toggle");
+        const panel = module.querySelector(".module-panel");
+        const prev = timers.get(module);
+        if (prev) window.clearTimeout(prev);
+
+        btn.setAttribute("aria-expanded", String(open));
+
+        if (open) {
+          panel.removeAttribute("hidden");
+          // Force reflow so the grid-row expand animates
+          void panel.offsetHeight;
+          module.setAttribute("open", "");
+        } else {
+          module.removeAttribute("open");
+          const t = window.setTimeout(() => {
+            if (!module.hasAttribute("open")) {
+              panel.setAttribute("hidden", "");
+            }
+          }, 450);
+          timers.set(module, t);
+        }
+      }
+
+      modules.forEach((module) => {
+        const btn = module.querySelector(".module-toggle");
+        const initiallyOpen = module.hasAttribute("open");
+        if (!initiallyOpen) {
+          module.querySelector(".module-panel").setAttribute("hidden", "");
+        }
+        btn.setAttribute("aria-expanded", String(initiallyOpen));
+
+        btn.addEventListener("click", () => {
+          const willOpen = !module.hasAttribute("open");
+          setOpen(module, willOpen);
+        });
+      });
+
+      document.getElementById("expand-all").addEventListener("click", () => {
+        modules.forEach((m) => setOpen(m, true));
+      });
+
+      document.getElementById("collapse-all").addEventListener("click", () => {
+        modules.forEach((m) => setOpen(m, false));
+      });
+
+      // Scroll reveal
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reduceMotion) {
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+      );
+
+      document.querySelectorAll("main .reveal").forEach((el) => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>

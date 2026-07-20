@@ -2,13 +2,13 @@
 course_id: ai-agents-fundamentals
 document_type: production-guide
 status: production-draft
-source_curriculum: ai-agents-fundamentals-curriculum.md
+source_curriculum: curriculum-showcase.html
 last_updated: "2026-07-20"
 ---
 
 # AI Agents Fundamentals — Course Guide
 
-This is the internal design and production reference for **AI Agents Fundamentals**. It defines why the course exists, how it should be taught, and how the curriculum should be evaluated and maintained. It is not intended to be read aloud or converted directly into slides; the companion `ai-agents-fundamentals-curriculum.md` is the source for recording and slide production.
+This is the internal design and production reference for **AI Agents Fundamentals**. It defines why the course exists, how it should be taught, and how the curriculum should be evaluated and maintained. It is not intended to be read aloud or converted directly into slides; the companion [`curriculum-showcase.html`](./curriculum-showcase.html) is the canonical curriculum for recording and slide production.
 
 ## Course context
 
@@ -33,7 +33,7 @@ By the end, learners should be able to:
 3. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
 4. Complete a low-risk supervised workflow with appropriate permissions and human approval points.
 
-Lesson objectives in `ai-agents-fundamentals-curriculum.md` break these outcomes into smaller, observable skills.
+Lesson objectives in `curriculum-showcase.html` break these outcomes into smaller, observable skills.
 
 ## Instructional design approach
 
