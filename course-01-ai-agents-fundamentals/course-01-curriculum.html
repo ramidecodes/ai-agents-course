@@ -748,7 +748,7 @@
       padding: 0 0 1.1rem;
     }
 
-    /* —— Draft slides —— */
+    /* —— Slides (draft) —— */
     .slides {
       display: grid;
       gap: 0.75rem;
@@ -764,11 +764,23 @@
     .slide-card {
       background: var(--surface-solid);
       border: 1px solid var(--rule);
-      padding: 0.9rem 1rem 1rem;
-      min-height: 7.5rem;
+      padding: 0.95rem 1.05rem 1.05rem;
+      min-height: 8rem;
       display: flex;
       flex-direction: column;
       gap: 0.45rem;
+      box-shadow: 0 1px 0 rgba(26, 36, 51, 0.04);
+    }
+
+    .slide-card--visual {
+      border-color: rgba(31, 90, 86, 0.28);
+      background: linear-gradient(165deg, rgba(31, 90, 86, 0.06), var(--surface-solid) 55%);
+    }
+
+    @media (min-width: 560px) {
+      .slide-card--visual {
+        grid-column: 1 / -1;
+      }
     }
 
     .slide-label {
@@ -779,13 +791,17 @@
       color: var(--ink-faint);
     }
 
+    .slide-card--visual .slide-label {
+      color: var(--accent);
+    }
+
     .slide-title {
       font-family: "Fraunces", Georgia, serif;
       font-weight: 600;
-      font-size: 0.98rem;
+      font-size: 1.05rem;
       line-height: 1.25;
       margin: 0;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
     }
 
     .slide-body {
@@ -793,14 +809,48 @@
       padding: 0;
       list-style: none;
       display: grid;
-      gap: 0.25rem;
+      gap: 0.3rem;
       flex: 1;
     }
 
     .slide-body li {
       font-size: 0.8125rem;
       color: var(--ink-soft);
-      line-height: 1.4;
+      line-height: 1.45;
+      padding-left: 0.85rem;
+      position: relative;
+    }
+
+    .slide-body li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--ink-faint);
+      opacity: 0.7;
+    }
+
+    .slide-instructor-note {
+      margin: 0.85rem 0 0;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.8125rem;
+      line-height: 1.45;
+      color: var(--ink-soft);
+      border-left: 2px solid var(--rule-strong);
+      max-width: 40rem;
+    }
+
+    .slide-instructor-label {
+      display: inline-block;
+      margin-right: 0.35rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
     }
 
     /* —— Glossary —— */
@@ -981,7 +1031,7 @@
       <h1 class="reveal">AI Agents Fundamentals</h1>
       <p class="hero-sub reveal">Set up an AI assistant, assign real work, and supervise the result</p>
       <ul class="hero-meta reveal" aria-label="Course overview">
-        <li>52 minutes</li>
+        <li>53 minutes</li>
         <li>6 modules · 12 lessons</li>
         <li>Beginner · no technical background required</li>
       </ul>
@@ -995,7 +1045,7 @@
         <p class="section-label">Course promise</p>
         <h2 id="about-heading">A practical working model—not another product tour</h2>
         <p class="lede">
-          In 52 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They set up an off-the-shelf assistant on macOS, learn a reliable method for assigning work, and complete one small supervised workflow.
+          In about 53 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They set up an off-the-shelf assistant on macOS, learn a reliable method for assigning work, and complete one small supervised workflow.
         </p>
         <p class="lede">
           A concise, non-technical introduction for entrepreneurs and business users who have tried chat-based AI but still lack a dependable way to use it for real work. By the end: one AI assistant, one ordinary project folder, one repeatable way to delegate, one set of safety rules, and one completed supervised workflow.
@@ -1011,8 +1061,8 @@
           <div>
             <p class="col-label">Before</p>
             <ul class="plain-list">
-              <li>Treats every AI product as if it were “the model.”</li>
-              <li>Uses chat as disconnected questions.</li>
+              <li>Treats every AI product as if it were “the model,” ignoring the harness/app around it.</li>
+              <li>Uses chat as disconnected questions, without seeing the tool/context loop.</li>
               <li>Assumes the assistant remembers everything permanently.</li>
               <li>Judges answers by polish or confidence, not evidence.</li>
               <li>Unsure what an agent may read, change, or publish.</li>
@@ -1021,7 +1071,7 @@
           <div>
             <p class="col-label">After</p>
             <ul class="plain-list">
-              <li>Separates model, product, assistant, and agent.</li>
+              <li>Separates model, product/harness, assistant, and agent.</li>
               <li>Chooses chat, skill, workflow, automation, or agent appropriately.</li>
               <li>Gives clear assignments with sources, constraints, and success criteria.</li>
               <li>Defines approval points before consequential actions.</li>
@@ -1037,7 +1087,7 @@
         <p class="section-label">Learning outcomes</p>
         <h2 id="outcomes-heading">Four capabilities that define completion</h2>
         <ol class="outcomes">
-          <li>Explain the practical differences among a model, AI application, assistant, workflow, automation, and agent.</li>
+          <li>Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent—and how a modern chat turn actually runs.</li>
           <li>Set up an off-the-shelf AI assistant on macOS and give it focused task context using ordinary files.</li>
           <li>Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.</li>
           <li>Complete a low-risk supervised workflow with appropriate permissions and human approval points.</li>
@@ -1074,8 +1124,8 @@
               <td>2</td>
               <td><span class="mod-title">How AI systems actually work</span></td>
               <td class="hide-sm">2</td>
-              <td>10 min</td>
-              <td class="hide-sm"><span class="mod-out">Model–assistant–agent explanation and autonomy choice</span></td>
+              <td>11 min</td>
+              <td class="hide-sm"><span class="mod-out">Model vs harness, chat loop, and autonomy choice</span></td>
             </tr>
             <tr>
               <td>3</td>
@@ -1125,7 +1175,7 @@
           <div>
             <p class="section-label">Detailed curriculum</p>
             <h2 id="curriculum-heading">Instructor guide by module and lesson</h2>
-            <p class="lede">Expand a module for lesson objectives, talking points, draft slides, and glossary. This page is the canonical curriculum for teaching and slide planning.</p>
+            <p class="lede">Expand a module for lesson objectives, talking points, collapsible <strong>Slides (draft)</strong>, and a trimmed glossary. This page is the canonical curriculum for teaching and slide planning.</p>
           </div>
           <div class="toolbar">
             <button type="button" id="expand-all">Expand all</button>
@@ -1187,42 +1237,43 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Course journey</h5>
                                   <ul class="slide-body">
-                                    <li>Understand → set up → assign → supervise → review</li>
-                                    <li>Cue: one sentence for the completed loop</li>
+                                    <li>Brief → draft → review → revise → approve</li>
+                                    <li>You will complete this loop once by the end</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">You remain the accountable owner</h5>
+                                  <h5 class="slide-title">You remain accountable</h5>
                                   <ul class="slide-body">
-                                    <li>Assistant collaborates; you brief and approve</li>
-                                    <li>Cue: “polished ≠ ready”</li>
+                                    <li>The assistant collaborates; you brief and approve</li>
+                                    <li>Polish ≠ ready to use</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Safe starting zone</h5>
+                                  <h5 class="slide-title">Safe practice task</h5>
                                   <ul class="slide-body">
                                     <li>Low consequence · reversible · non-sensitive</li>
-                                    <li>Two good examples / two inappropriate ones</li>
+                                    <li>One task for the whole course</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Write your practice task</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>“By the end, I want the assistant to help me ___.”</li>
-                                    <li>Keep this task for the whole course</li>
+                                    <li>Visual: horizontal loop—brief, draft, review, revise, approve—with a human owning the approval gate</li>
+                                    <li>No product UI chrome; keep it abstract</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Show the practice-task worksheet (~30s). Fill one live example (e.g. three article angles from a public brief); reject a confidential alternative.</p>
                             </div>
                           </details>
                           <details>
@@ -1231,11 +1282,7 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>AI assistant</dt>
-                                  <dd>The working experience of a model plus instructions, context, product features, and available capabilities—briefed and supervised by you.</dd>
-                                </div>
-                                <div>
-                                  <dt>Practice task</dt>
-                                  <dd>One small, non-sensitive piece of real work used throughout the course so concepts stay tied to a single outcome.</dd>
+                                  <dd>The working experience of a model plus a product/harness, instructions, context, and available capabilities—briefed and supervised by you.</dd>
                                 </div>
                                 <div>
                                   <dt>Supervised workflow</dt>
@@ -1283,61 +1330,43 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Three-part beginner setup</h5>
+                                  <h5 class="slide-title">Minimum beginner stack</h5>
                                   <ul class="slide-body">
-                                    <li>Assistant · practice folder · starter brief</li>
-                                    <li>Cue: provider-neutral; one primary UI on camera</li>
+                                    <li>One assistant · one practice folder · one starter brief</li>
+                                    <li>Postpone optional tools and memory products</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">What can it access now?</h5>
+                                  <h5 class="slide-title">Access ≠ authority</h5>
                                   <ul class="slide-body">
+                                    <li>File access is not permission to change or publish</li>
                                     <li>Show current workspace boundaries</li>
-                                    <li>Access ≠ authority to change or publish</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Six-step acceptance test</h5>
+                                  <h5 class="slide-title">Acceptance test</h5>
                                   <ul class="slide-body">
                                     <li>Open → attach → summarize → draft → inspect → remove</li>
                                     <li>No business secrets in the test</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Source vs. generated draft</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>Never overwrite the source in a beginner test</li>
-                                    <li>Fallback: ordinary attachment if folders unavailable</li>
+                                    <li>Visual: three boxes (assistant / folder / brief) inside a dotted practice-folder boundary</li>
+                                    <li>Optional: six-step checklist beside the diagram</li>
                                   </ul>
                                 </article>
                               </div>
-                            </div>
-                          </details>
-                          <details>
-                            <summary>Glossary</summary>
-                            <div class="details-body">
-                              <dl class="glossary">
-                                <div>
-                                  <dt>Workspace / project</dt>
-                                  <dd>A dedicated place in the assistant product for course or task context, kept separate from general chat.</dd>
-                                </div>
-                                <div>
-                                  <dt>Starter brief</dt>
-                                  <dd>A harmless practice file used to verify that the assistant can read task context without sharing sensitive material.</dd>
-                                </div>
-                                <div>
-                                  <dt>Acceptance test</dt>
-                                  <dd>A short, reversible check that the setup works: read a file, produce a disposable draft, inspect it, then clean up.</dd>
-                                </div>
-                              </dl>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Run the harmless acceptance test once in the primary product UI. Narrate what you refuse to share.</p>
                             </div>
                           </details>
                         </div>
@@ -1358,7 +1387,7 @@
                 <span class="module-num">02</span>
                 <span class="module-copy">
                   <span class="module-title">How AI systems actually work</span>
-                  <span class="module-meta">2 lessons · 10 min</span>
+                  <span class="module-meta">2 lessons · 11 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -1366,78 +1395,85 @@
             <div class="module-panel" id="mod-2-panel" role="region" aria-labelledby="mod-2-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Replace vague or anthropomorphic ideas with a practical model that remains useful as products change.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> Distinguish the underlying model from the product around it, and choose an appropriate autonomy level.</p>
+                  <p class="module-desc">Replace vague or anthropomorphic ideas with a practical model that remains useful as products change—especially the difference between the model and the app/harness around it.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> Distinguish the model from the product/harness, explain one chat turn (including tools), and choose an appropriate autonomy level.</p>
                   <ul class="lessons">
 
                     <li class="lesson">
                       <span class="lesson-num">3</span>
                       <div>
-                        <p class="lesson-title">Model, application, and assistant</p>
-                        <p class="lesson-desc">Explain why a model, an AI product, and an assistant are related but not interchangeable.</p>
+                        <p class="lesson-title">Model, harness (app), and assistant</p>
+                        <p class="lesson-desc">Explain why a model, the product/harness around it, and the assistant experience are related but not interchangeable—and how one modern chat turn actually runs.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 4 min</li>
-                          <li><strong>Output</strong> One-sentence explanation of the distinction</li>
+                          <li><strong>Runtime</strong> 5 min</li>
+                          <li><strong>Output</strong> One-sentence model vs harness distinction, plus a sketched chat turn</li>
                         </ul>
+                        <p class="lesson-why">The most common misconception is that “the AI” is just the model. In practice, the product (the harness) decides what the model sees, which tools run, and what reaches you.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>A model is the reasoning and generation engine—not the complete user experience.</li>
-                            <li>The application adds interface, account, files, search, history, integrations, permissions, and product behavior.</li>
-                            <li>An assistant is the working experience when model + instructions + context + capabilities combine.</li>
-                            <li>Similar models can behave differently across products; one product may offer several models with different tradeoffs.</li>
+                            <li>A model is the reasoning and generation engine—it predicts text (and sometimes other modalities). It does not open files, click buttons, or enforce permissions by itself.</li>
+                            <li>The application—also called the harness or runtime—is ordinary software around the model: UI, accounts, context assembly, tool execution, history, integrations, and permissions.</li>
+                            <li>An assistant is the working experience when model + harness + instructions + context + capabilities combine.</li>
+                            <li>How a chat turn works now: you send a message → the harness assembles context (system/product rules, history, files, tool schemas) → the model replies with text and/or tool requests → the harness runs allowed tools and feeds results back → the model may continue → you see a response (and often a trail of steps).</li>
+                            <li>Same model, different harness → different behavior. Switching “apps” changes more than the model name.</li>
                             <li>“Multimodal” means more than one form of information—not that every product supports every modality everywhere.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
                               <li>“ChatGPT” or “Claude” is simply one model.</li>
-                              <li>A newer model automatically has more of the learner’s data.</li>
+                              <li>The model itself executes tools, searches the web, or edits files.</li>
+                              <li>A newer model automatically has more of the learner’s data or better permissions.</li>
                               <li>Model intelligence and product permissions are the same capability.</li>
                               <li>A conversational tone means the system understands or cares like a person.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">Evaluate the complete system, not only the model name.</p>
+                          <p class="rule-close">Judge the model plus its harness—not the model name alone.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Three nested layers</h5>
+                                  <h5 class="slide-title">Model vs harness</h5>
                                   <ul class="slide-body">
-                                    <li>Model → application → assistant experience</li>
-                                    <li>Analogy: brain inside a workplace</li>
+                                    <li>Model = reasoning engine (predicts text / modalities)</li>
+                                    <li>Harness/app = software that runs the loop, tools, and permissions</li>
+                                    <li>Assistant = the combined working experience</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Capability comparison</h5>
+                                  <h5 class="slide-title">One chat turn</h5>
                                   <ul class="slide-body">
-                                    <li>Model capability vs. product capability vs. granted access</li>
-                                    <li>Example: summarizing vs. searching vs. saving</li>
+                                    <li>You → harness assembles context → model</li>
+                                    <li>Model may request tools → harness executes (if allowed) → results return</li>
+                                    <li>Then a reply you can see (often with a step trail)</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Changing the model ≠ changing the app</h5>
+                                  <h5 class="slide-title">Same model, different app</h5>
                                   <ul class="slide-body">
-                                    <li>Speed, cost, reasoning, modality tradeoffs</li>
-                                    <li>Same model, different product behavior</li>
+                                    <li>Files, search, memory, and permissions differ by product</li>
+                                    <li>Capability ≠ granted access</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Retrieval check</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>“When I switch AI apps, what else changes besides the model?”</li>
+                                    <li>Visual: sequence diagram of one chat turn (message → context → model → optional tool → reply)</li>
+                                    <li>Secondary: nested layers Model ⊂ Harness ⊂ Assistant</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Send one message that triggers a visible tool (search or file read). Point to the step trail—model requested; product ran it.</p>
                             </div>
                           </details>
                           <details>
@@ -1449,12 +1485,16 @@
                                   <dd>The reasoning and generation engine that analyzes and produces text (and sometimes other modalities)—not the full product experience.</dd>
                                 </div>
                                 <div>
-                                  <dt>AI application / product</dt>
-                                  <dd>The workplace around the model: interface, accounts, files, search, history, integrations, and permissions.</dd>
+                                  <dt>Harness / AI application</dt>
+                                  <dd>The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as “app,” “runtime,” or “scaffold.”</dd>
                                 </div>
                                 <div>
                                   <dt>Assistant</dt>
-                                  <dd>The working experience created when a model is combined with instructions, context, product features, and available capabilities.</dd>
+                                  <dd>The working experience created when a model is combined with a harness, instructions, context, and available capabilities.</dd>
+                                </div>
+                                <div>
+                                  <dt>Tool call</dt>
+                                  <dd>A structured request from the model to use a capability; the harness runs it (if allowed) and returns the result.</dd>
                                 </div>
                                 <div>
                                   <dt>Multimodal</dt>
@@ -1464,7 +1504,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: An assistant can answer a request. An agent goes further by pursuing a goal across steps—but that is a spectrum, not magic.</p>
+                        <p class="transition-note">Transition: One chat turn can already use tools. An agent extends that loop across more steps toward a goal—but autonomy is a spectrum, not magic.</p>
                       </div>
                     </li>
 
@@ -1484,7 +1524,7 @@
                             <li>A single response is not automatically a workflow or an agent.</li>
                             <li>A workflow is a sequence of steps—human, software, or AI.</li>
                             <li>An automation follows a predefined trigger and path when steps and exceptions are well understood.</li>
-                            <li>An agent receives a goal, adapts some steps, uses tools, observes results, and continues within boundaries.</li>
+                            <li>An agent receives a goal, adapts some steps, uses tools (via the harness), observes results, and continues within boundaries—the same loop as a chat turn, repeated.</li>
                             <li>“Agentic” is a degree. More autonomy increases the need for trustworthy inputs, permissions, monitoring, and recovery.</li>
                             <li>Autonomy ladder: Suggest → Draft → Prepare → Act with approval → Act independently (course zone: levels 2–4).</li>
                           </ul>
@@ -1502,7 +1542,7 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
@@ -1510,41 +1550,35 @@
                                   <h5 class="slide-title">Four patterns</h5>
                                   <ul class="slide-body">
                                     <li>One-off answer · workflow · automation · agent</li>
-                                    <li>Cue: pick the simplest that still saves time</li>
+                                    <li>Pick the simplest that still saves time</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Agent loop</h5>
+                                  <h5 class="slide-title">What an agent does</h5>
                                   <ul class="slide-body">
-                                    <li>Understand goal → plan → use tools → observe → adjust → stop or ask</li>
+                                    <li>Goal + tools via harness + observe + continue within bounds</li>
+                                    <li>Same loop as a chat turn, repeated</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
                                   <h5 class="slide-title">Autonomy ladder</h5>
                                   <ul class="slide-body">
-                                    <li>Suggest · Draft · Prepare · Act with approval · Independent</li>
-                                    <li>Highlight course zone: Draft–Act with approval</li>
+                                    <li>Suggest → Draft → Prepare → Act with approval → Independent</li>
+                                    <li>Course zone: Draft through Act with approval</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Content example</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>Preparing a newsletter: appropriate</li>
-                                    <li>Publishing without review: usually not for beginners</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 5</span>
-                                  <h5 class="slide-title">Choose your level</h5>
-                                  <ul class="slide-body">
-                                    <li>Lowest autonomy that still saves meaningful time</li>
-                                    <li>Apply to the learner’s practice task</li>
+                                    <li>Visual: four-column pattern comparison, then an autonomy ladder with the course zone highlighted</li>
+                                    <li>Keep icons minimal</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Classify the learner’s practice task on the autonomy ladder; stop short of “publish without review.”</p>
                             </div>
                           </details>
                           <details>
@@ -1552,16 +1586,12 @@
                             <div class="details-body">
                               <dl class="glossary">
                                 <div>
-                                  <dt>Workflow</dt>
-                                  <dd>A sequence of steps toward a result, whether a human, software, or AI performs them.</dd>
-                                </div>
-                                <div>
                                   <dt>Automation</dt>
-                                  <dd>A predefined trigger and path that runs when the steps and exceptions are already well understood.</dd>
+                                  <dd>A predefined trigger and path that runs when the steps and exceptions are already well understood—usually limited judgment.</dd>
                                 </div>
                                 <div>
                                   <dt>Agent</dt>
-                                  <dd>A system that pursues a goal across multiple steps—planning or adapting, using tools, observing results, and continuing within boundaries.</dd>
+                                  <dd>A system that pursues a goal across multiple steps—planning or adapting, using tools via a harness, observing results, and continuing within boundaries.</dd>
                                 </div>
                                 <div>
                                   <dt>Agentic</dt>
@@ -1619,7 +1649,7 @@
                           <ul class="talking-points">
                             <li>A prompt is the immediate input; an assignment can include goal, sources, constraints, format, process, and success criteria.</li>
                             <li>Instructions stack: product rules, org/course rules, project rules, reusable skills, and the current request.</li>
-                            <li>The model only uses what the application includes in the current model call.</li>
+                            <li>The model only uses what the harness includes in the current model call—it cannot “see” your whole disk or every past chat by itself.</li>
                             <li>A context window is finite working space; a large window is not perfect memory or perfect attention.</li>
                             <li>Relevance, authority, structure, and clarity beat filling the window.</li>
                             <li>Context checklist: outcome, audience, sources, constraints, example, deliverable, quality standard, what to ask rather than assume.</li>
@@ -1639,49 +1669,43 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Context workbench</h5>
+                                  <h5 class="slide-title">Context window</h5>
                                   <ul class="slide-body">
-                                    <li>Instructions, messages, files, tool results compete for space</li>
-                                    <li>Cue: add pieces to a small on-screen workbench</li>
+                                    <li>Finite workbench—not perfect memory</li>
+                                    <li>Instructions, messages, files, and tool results compete for space</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Instruction hierarchy</h5>
+                                  <h5 class="slide-title">Harness chooses the call</h5>
                                   <ul class="slide-body">
-                                    <li>Product → course/org → project → skill → request</li>
+                                    <li>The model only sees what the harness includes this turn</li>
+                                    <li>It cannot see your whole disk or every past chat by itself</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">More vs. more relevant</h5>
+                                  <h5 class="slide-title">Smallest complete set</h5>
                                   <ul class="slide-body">
-                                    <li>Dump of 40 files vs. structured brief with sources</li>
-                                    <li>Authority and clarity beat volume</li>
+                                    <li>Relevance and authority beat volume</li>
+                                    <li>Dump of 40 files vs a structured brief with sources</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Eight-item context checklist</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>Outcome · audience · sources · constraints</li>
-                                    <li>Example · deliverable · quality · ask-don’t-assume</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 5</span>
-                                  <h5 class="slide-title">Build yours</h5>
-                                  <ul class="slide-body">
-                                    <li>Apply the checklist to the practice task</li>
-                                    <li>Smallest complete authoritative set</li>
+                                    <li>Visual: limited tray/workbench filling with instructions, messages, files, tool results</li>
+                                    <li>Show crowding when “more” is added indiscriminately</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Contrast a messy multi-file dump with a short structured brief; briefly compare answer quality.</p>
                             </div>
                           </details>
                           <details>
@@ -1690,23 +1714,19 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Prompt</dt>
-                                  <dd>The immediate input you send; a full assignment is often broader than one sentence.</dd>
-                                </div>
-                                <div>
-                                  <dt>Instructions</dt>
-                                  <dd>Rules for how the assistant should behave or approach work—often layered from product to project to request.</dd>
-                                </div>
-                                <div>
-                                  <dt>Context</dt>
-                                  <dd>The information actually available to the assistant for the current task (the temporary workbench).</dd>
+                                  <dd>The immediate input you send in a turn; a full assignment is often broader than one sentence.</dd>
                                 </div>
                                 <div>
                                   <dt>Token</dt>
-                                  <dd>A processing unit the model uses; not a measure of importance or truth.</dd>
+                                  <dd>A small processing unit the model uses for text (and related encodings); not always a whole word, and not a measure of truth.</dd>
                                 </div>
                                 <div>
                                   <dt>Context window</dt>
                                   <dd>Finite working space for instructions, messages, retrieved notes, tool results, and sources in one model call.</dd>
+                                </div>
+                                <div>
+                                  <dt>Context</dt>
+                                  <dd>The information the harness actually includes for the current model call (the temporary workbench).</dd>
                                 </div>
                               </dl>
                             </div>
@@ -1749,7 +1769,7 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
@@ -1762,29 +1782,29 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Available now vs. may persist</h5>
+                                  <h5 class="slide-title">Visible ≠ active</h5>
                                   <ul class="slide-body">
-                                    <li>Fresh conversation may lack yesterday’s context</li>
-                                    <li>Visible ≠ reliable active context</li>
+                                    <li>Chat history may not all be used every turn</li>
+                                    <li>A fresh session may lack yesterday’s context</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Classify examples</h5>
+                                  <h5 class="slide-title">Preserve on purpose</h5>
                                   <ul class="slide-body">
-                                    <li>Current task · standing instruction · approved source · prior brainstorm</li>
-                                    <li>Ask: available later?</li>
+                                    <li>If it matters later, store it deliberately</li>
+                                    <li>Course 2 deepens persistent memory and RAG</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Handoff to Course 2</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>Persistent memory, RAG, embeddings—named, not taught</li>
-                                    <li>Close: know where it lives</li>
+                                    <li>Visual: four labeled buckets with arrows showing what may or may not carry into a fresh session</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Open a fresh chat/project and show what is missing from yesterday without re-attaching sources.</p>
                             </div>
                           </details>
                           <details>
@@ -1793,19 +1813,15 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Chat history</dt>
-                                  <dd>A visible record of prior messages; visibility does not guarantee that every message is used in every response.</dd>
-                                </div>
-                                <div>
-                                  <dt>Source knowledge</dt>
-                                  <dd>Material deliberately supplied or selected for the task (briefs, notes, examples).</dd>
+                                  <dd>A visible record of prior messages; visibility does not guarantee that every message is included in every model call.</dd>
                                 </div>
                                 <div>
                                   <dt>Memory</dt>
-                                  <dd>Information a product preserves or retrieves for later use; behavior depends on product and settings.</dd>
+                                  <dd>A product mechanism for preserving selected information and retrieving it later; behavior depends on product and settings.</dd>
                                 </div>
                                 <div>
-                                  <dt>RAG (named only)</dt>
-                                  <dd>Retrieval-augmented generation—pulling relevant notes into context; taught in Course 2, not configured here.</dd>
+                                  <dt>RAG</dt>
+                                  <dd>Retrieval-augmented generation—pulling relevant source material into context before generation; named here, configured in Course 2.</dd>
                                 </div>
                               </dl>
                             </div>
@@ -1853,7 +1869,7 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Tools do—search, read, write, send, update, or otherwise act.</li>
+                            <li>Tools do—search, read, write, send, update, or otherwise act. The model requests a tool; the harness executes it (if permitted) and returns the result.</li>
                             <li>Skills guide—reusable instructions, procedures, examples, standards, and decision rules.</li>
                             <li>Connectors link the assistant to an external source or service; APIs define how systems exchange requests; MCP standardizes discovery and use for compatible clients.</li>
                             <li>A skill without a tool cannot perform the external action; a tool without a skill may be used inconsistently.</li>
@@ -1874,42 +1890,43 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Tools do · Skills guide · Connections link</h5>
+                                  <h5 class="slide-title">Tools · skills · connections</h5>
                                   <ul class="slide-body">
-                                    <li>Three-part visual</li>
-                                    <li>Then add connectors, APIs, MCP as vocabulary</li>
+                                    <li>Tools do · Skills guide · Connections link</li>
+                                    <li>A skill without a tool cannot perform the external action</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Content example</h5>
+                                  <h5 class="slide-title">Who runs the tool?</h5>
                                   <ul class="slide-body">
-                                    <li>Voice skill · file tool · research tool · publishing tool</li>
-                                    <li>Publishing not required for a drafting course</li>
+                                    <li>Model requests a tool call</li>
+                                    <li>Harness executes it if allowed and returns the result</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Capability map</h5>
+                                  <h5 class="slide-title">Connected ≠ correct</h5>
                                   <ul class="slide-body">
-                                    <li>Columns: step · information · skill · tool · approval</li>
-                                    <li>Fill for the practice workflow</li>
+                                    <li>Connected ≠ selected ≠ correct</li>
+                                    <li>Grant the minimum capability per workflow step</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Connected ≠ selected ≠ correct</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>Installation does not guarantee use or quality</li>
-                                    <li>Minimum capability per step</li>
+                                    <li>Visual: three-part strip (Tools / Skills / Connections)</li>
+                                    <li>Tiny inset of request → execute → result from Lesson 3</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Build a one-row capability map for the practice workflow (step, info, skill, tool, approval).</p>
                             </div>
                           </details>
                           <details>
@@ -1918,15 +1935,11 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Tool</dt>
-                                  <dd>An executable capability: search, read, calculate, write, send, update, or another action.</dd>
+                                  <dd>An executable capability (search, read, write, send, update). The model requests it; the harness runs it if allowed.</dd>
                                 </div>
                                 <div>
                                   <dt>Skill</dt>
-                                  <dd>Reusable guidance—procedures, examples, standards, and decision rules—for a type of work.</dd>
-                                </div>
-                                <div>
-                                  <dt>Connector</dt>
-                                  <dd>A link between the assistant and an external source or service.</dd>
+                                  <dd>Reusable guidance—procedures, examples, standards, and decision rules—for a type of work (not the same as a tool).</dd>
                                 </div>
                                 <div>
                                   <dt>API</dt>
@@ -1935,10 +1948,6 @@
                                 <div>
                                   <dt>MCP</dt>
                                   <dd>Model Context Protocol—a common pattern for compatible AI clients to discover and use resources, prompts, and tools.</dd>
-                                </div>
-                                <div>
-                                  <dt>Capability map</dt>
-                                  <dd>A table of workflow steps with the information, skill, tool, and approval each step needs.</dd>
                                 </div>
                               </dl>
                             </div>
@@ -1982,7 +1991,7 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
@@ -1995,39 +2004,36 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Instructions vs. enforcement</h5>
+                                  <h5 class="slide-title">Guide vs enforce</h5>
                                   <ul class="slide-body">
-                                    <li>“Please don’t publish” vs. no publishing permission</li>
-                                    <li>Prefer reversible: draft before send</li>
+                                    <li>Instructions guide; permissions enforce</li>
+                                    <li>“Please don’t publish” ≠ no publishing permission</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Prompt injection (calm example)</h5>
+                                  <h5 class="slide-title">Stop and ask</h5>
                                   <ul class="slide-body">
-                                    <li>External content is data, not authority over your goal</li>
-                                    <li>Don’t dramatize; do make the habit stick</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Write your stop-and-ask rule</h5>
-                                  <ul class="slide-body">
-                                    <li>“Stop and ask me before ___.”</li>
+                                    <li>Write: “Stop and ask me before ___.”</li>
                                     <li>Legal · financial · reputational · privacy · irreversible</li>
                                   </ul>
                                 </article>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
+                                  <ul class="slide-body">
+                                    <li>Visual: permission ladder with a lock on the publish rung</li>
+                                    <li>Callout: prompt injection—external content is data, not authority</li>
+                                  </ul>
+                                </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Draft the learner’s stop-and-ask sentence live; reject a “trust the model” alternative.</p>
                             </div>
                           </details>
                           <details>
                             <summary>Glossary</summary>
                             <div class="details-body">
                               <dl class="glossary">
-                                <div>
-                                  <dt>Least privilege</dt>
-                                  <dd>Granting only the access needed for the current workflow—nothing extra “just in case.”</dd>
-                                </div>
                                 <div>
                                   <dt>Sandbox</dt>
                                   <dd>An environment that limits where actions can have effect; it does not guarantee correct or harmless outputs.</dd>
@@ -2037,8 +2043,8 @@
                                   <dd>Untrusted content (pages, documents, emails, tool results) that tries to redirect the agent away from your goal.</dd>
                                 </div>
                                 <div>
-                                  <dt>Stop-and-ask rule</dt>
-                                  <dd>A written checkpoint: the agent must pause and get human approval before a named consequential action.</dd>
+                                  <dt>Least privilege</dt>
+                                  <dd>Granting only the access needed for the current workflow—nothing extra “just in case.”</dd>
                                 </div>
                               </dl>
                             </div>
@@ -2107,7 +2113,7 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
@@ -2115,12 +2121,12 @@
                                   <h5 class="slide-title">CLEAR at a glance</h5>
                                   <ul class="slide-body">
                                     <li>Clarify · Load · Explain · Ask · Review</li>
-                                    <li>Thinking checklist, not a magic template</li>
+                                    <li>A thinking checklist—not a magic template</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Before: vague request</h5>
+                                  <h5 class="slide-title">Before: vague</h5>
                                   <ul class="slide-body">
                                     <li>“Help with my content.”</li>
                                     <li>Hard to execute; harder to evaluate</li>
@@ -2128,29 +2134,22 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">After: CLEAR assignment</h5>
+                                  <h5 class="slide-title">After: CLEAR</h5>
                                   <ul class="slide-body">
-                                    <li>Walk each letter with the worked article-angles example</li>
-                                    <li>Hard constraints vs. preferences</li>
+                                    <li>Outcome, sources, standards, deliverable, and review are visible</li>
+                                    <li>Hard constraints vs preferences</li>
                                   </ul>
                                 </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Ask before assuming</h5>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
                                   <ul class="slide-body">
-                                    <li>List missing facts that would change the result</li>
-                                    <li>Optional: short plan before a costly action</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 5</span>
-                                  <h5 class="slide-title">Your CLEAR worksheet</h5>
-                                  <ul class="slide-body">
-                                    <li>Complete for the practice task</li>
-                                    <li>Plan → execute → review loop</li>
+                                    <li>Visual: CLEAR as five letters with one short phrase under each</li>
+                                    <li>Side-by-side vague request vs CLEAR assignment</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Transform “help with my content” into a CLEAR assignment on a worksheet; leave one gap and ask the assistant to surface it.</p>
                             </div>
                           </details>
                           <details>
@@ -2160,14 +2159,6 @@
                                 <div>
                                   <dt>CLEAR method</dt>
                                   <dd>Clarify outcome, Load context, Explain standards, Ask for a deliverable, Review and refine—a checklist for executable, reviewable assignments.</dd>
-                                </div>
-                                <div>
-                                  <dt>Hard constraint</dt>
-                                  <dd>A requirement that must be true, avoided, or preserved—distinct from a preference.</dd>
-                                </div>
-                                <div>
-                                  <dt>Deliverable</dt>
-                                  <dd>The exact artifact the assistant should return, including format and what counts as finished.</dd>
                                 </div>
                               </dl>
                             </div>
@@ -2210,61 +2201,46 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Messy folder → source pack</h5>
+                                  <h5 class="slide-title">Source pack</h5>
                                   <ul class="slide-body">
-                                    <li>Ambiguous files vs. small labeled set</li>
-                                    <li>Name the source of truth</li>
+                                    <li>Name the source of truth explicitly</li>
+                                    <li>Small labeled set beats a messy folder</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Source labels</h5>
+                                  <h5 class="slide-title">Authority labels</h5>
                                   <ul class="slide-body">
                                     <li>Approved · reference · draft · outdated · archive</li>
+                                    <li>Useful evidence ≠ permission to change the goal</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Instruction vs. evidence</h5>
-                                  <ul class="slide-body">
-                                    <li>Useful page ≠ authority to change the goal</li>
-                                    <li>Example + what to imitate</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Conflict-handling rule</h5>
+                                  <h5 class="slide-title">Conflicts</h5>
                                   <ul class="slide-body">
                                     <li>If facts are missing or sources conflict, stop and ask</li>
+                                    <li>Say what to imitate in examples</li>
+                                  </ul>
+                                </article>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
+                                  <ul class="slide-body">
+                                    <li>Visual: messy folder vs small labeled source pack</li>
+                                    <li>Arrow from “approved” into the CLEAR Load step</li>
                                   </ul>
                                 </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Label 3–4 practice files live; include one outdated file and show the conflict-handling instruction.</p>
                             </div>
                           </details>
-                          <details>
-                            <summary>Glossary</summary>
-                            <div class="details-body">
-                              <dl class="glossary">
-                                <div>
-                                  <dt>Source pack</dt>
-                                  <dd>A small set of deliberately chosen files or notes provided for a task, with clear labels.</dd>
-                                </div>
-                                <div>
-                                  <dt>Source of truth</dt>
-                                  <dd>The explicitly named authoritative material the assistant should treat as decisive for the task.</dd>
-                                </div>
-                                <div>
-                                  <dt>Authority label</dt>
-                                  <dd>A tag such as approved, reference-only, draft, outdated, or archived that tells the assistant how to treat a file.</dd>
-                                </div>
-                              </dl>
-                            </div>
-                          </details>
+                          
                         </div>
                         <p class="transition-note">Transition: A well-briefed agent can still be wrong. Verification and correction belong in the workflow.</p>
                       </div>
@@ -2304,7 +2280,7 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
@@ -2317,50 +2293,33 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Unhelpful vs. diagnostic</h5>
+                                  <h5 class="slide-title">Diagnostic feedback</h5>
                                   <ul class="slide-body">
-                                    <li>“This is bad. Try again.”</li>
                                     <li>Issue → evidence → standard → correction → verify</li>
+                                    <li>Not: “This is bad. Try again.”</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Worked correction</h5>
+                                  <h5 class="slide-title">Task fix vs system fix</h5>
                                   <ul class="slide-body">
-                                    <li>Weekly vs. monthly reporting claim example</li>
-                                    <li>Scan for other unsupported service details</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Task fix vs. system fix</h5>
-                                  <ul class="slide-body">
-                                    <li>One-off correction vs. durable instruction/skill/source</li>
+                                    <li>One-off correction vs durable instruction/skill/source</li>
                                     <li>Test after you change the system</li>
                                   </ul>
                                 </article>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
+                                  <ul class="slide-body">
+                                    <li>Visual: two speech bubbles—unhelpful vs diagnostic five-step feedback</li>
+                                    <li>Small fork: task fix vs system fix</li>
+                                  </ul>
+                                </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Revise one factual error with diagnostic feedback; optionally save one reusable quality check outside chat.</p>
                             </div>
                           </details>
-                          <details>
-                            <summary>Glossary</summary>
-                            <div class="details-body">
-                              <dl class="glossary">
-                                <div>
-                                  <dt>Diagnostic feedback</dt>
-                                  <dd>Feedback that names the issue, shows evidence, restates the standard, requests a specific correction, and verifies the fix.</dd>
-                                </div>
-                                <div>
-                                  <dt>Verification</dt>
-                                  <dd>Checking claims or requirements against an authoritative source or explicit standard—not asking the model if it feels sure.</dd>
-                                </div>
-                                <div>
-                                  <dt>Reusable quality check</dt>
-                                  <dd>A lightweight checklist or rule you keep for recurring work after a correction proves durable.</dd>
-                                </div>
-                              </dl>
-                            </div>
-                          </details>
+                          
                         </div>
                         <p class="transition-note">Transition: You have assignment, labeled sources, and a way to verify. Next—put them together in one short supervised workflow.</p>
                       </div>
@@ -2423,15 +2382,15 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Draft slides</summary>
+                            <summary>Slides (draft)</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Ten-step supervised workflow</h5>
+                                  <h5 class="slide-title">Run the full loop</h5>
                                   <ul class="slide-body">
-                                    <li>From open task through approve/reject</li>
-                                    <li>Keep the artifact small</li>
+                                    <li>Keep the artifact small so every step is visible</li>
+                                    <li>From CLEAR assignment through verification and approval</li>
                                   </ul>
                                 </article>
                                 <article class="slide-card">
@@ -2444,21 +2403,22 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Demo artifact</h5>
+                                  <h5 class="slide-title">Value of the loop</h5>
                                   <ul class="slide-body">
-                                    <li>Three article angles from a one-page brief</li>
-                                    <li>Review support; revise one angle</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Close and handoff</h5>
-                                  <ul class="slide-body">
-                                    <li>Controlled loop &gt; first answer</li>
+                                    <li>Controlled loop &gt; first draft</li>
                                     <li>Next: AI Agents for Your Business</li>
                                   </ul>
                                 </article>
+                                <article class="slide-card slide-card--visual">
+                                  <span class="slide-label">Visual</span>
+                                  <h5 class="slide-title">Anchoring visual</h5>
+                                  <ul class="slide-body">
+                                    <li>Visual: end-to-end supervised loop reusing Lesson 1 stages</li>
+                                    <li>Human gates called out; tiny handoff card to Course 2</li>
+                                  </ul>
+                                </article>
                               </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Execute the mini workflow (e.g. three article angles) start to finish; find one unsupported claim and revise it.</p>
                             </div>
                           </details>
                           <details>
@@ -2468,10 +2428,6 @@
                                 <div>
                                   <dt>Supervised loop</dt>
                                   <dd>The full cycle from brief and CLEAR assignment through generation, verification, revision, and human approval.</dd>
-                                </div>
-                                <div>
-                                  <dt>Reviewed artifact</dt>
-                                  <dd>A small deliverable that has been checked against the brief and a quality standard, then accepted or rejected by the learner.</dd>
                                 </div>
                               </dl>
                             </div>
@@ -2500,7 +2456,7 @@
         </p>
         <p>A learner has completed successfully when they can, without copying a full instructor prompt:</p>
         <ul>
-          <li>Explain the model–assistant–agent distinction</li>
+          <li>Explain the model–harness/app–assistant–agent distinction and the chat/tool loop</li>
           <li>Explain why context, chat history, and persistent memory are not interchangeable</li>
           <li>Give a complete CLEAR assignment</li>
           <li>Identify required tools, permissions, and at least one approval point</li>
@@ -2512,7 +2468,7 @@
 
   <footer>
     <div class="wrap">
-      AI Agents Fundamentals · Self-paced video course · Canonical curriculum v1.0 · Last updated 2026-07-20
+      AI Agents Fundamentals · Self-paced video course · Canonical curriculum v1.1 · Last updated 2026-07-20
     </div>
   </footer>
 

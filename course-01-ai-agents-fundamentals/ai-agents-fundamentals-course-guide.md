@@ -2,13 +2,13 @@
 course_id: ai-agents-fundamentals
 document_type: production-guide
 status: production-draft
-source_curriculum: curriculum-showcase.html
+source_curriculum: course-01-curriculum.html
 last_updated: "2026-07-20"
 ---
 
 # AI Agents Fundamentals — Course Guide
 
-This is the internal design and production reference for **AI Agents Fundamentals**. It defines why the course exists, how it should be taught, and how the curriculum should be evaluated and maintained. It is not intended to be read aloud or converted directly into slides; the companion [`curriculum-showcase.html`](./curriculum-showcase.html) is the canonical curriculum for recording and slide production.
+This is the internal design and production reference for **AI Agents Fundamentals**. It defines why the course exists, how it should be taught, and how the curriculum should be evaluated and maintained. It is not intended to be read aloud or converted directly into slides; the companion [`course-01-curriculum.html`](./course-01-curriculum.html) is the canonical curriculum for recording and slide production. Use each lesson’s collapsible **Slides (draft)** section as the source for slide generation (title + bullets, text visual brief, screen-share note).
 
 ## Course context
 
@@ -28,12 +28,12 @@ This is the foundation course. It teaches a provider-neutral mental model, an of
 
 By the end, learners should be able to:
 
-1. Explain the practical differences among a model, AI application, assistant, workflow, automation, and agent.
+1. Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent—and how a modern chat turn actually runs.
 2. Set up an off-the-shelf AI assistant on macOS and give it focused task context using ordinary files.
 3. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
 4. Complete a low-risk supervised workflow with appropriate permissions and human approval points.
 
-Lesson objectives in `curriculum-showcase.html` break these outcomes into smaller, observable skills.
+Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills.
 
 ## Instructional design approach
 
@@ -80,8 +80,8 @@ Use this analogy throughout the course:
 
 | Element      | Plain-language analogy              | What it contributes                                                                 |
 | ------------ | ----------------------------------- | ----------------------------------------------------------------------------------- |
-| Model        | Brain or reasoning engine           | Generates, analyzes, predicts, and transforms information.                          |
-| Application  | Workplace around the brain          | Adds an interface, files, search, permissions, history, and product behavior.       |
+| Model        | Brain or reasoning engine           | Generates, analyzes, predicts, and transforms information. It does not execute tools by itself. |
+| Harness / app| Workplace and hands around the brain| Assembles context, runs the chat/tool loop, executes tools, and enforces permissions. |
 | Instructions | Job description and operating rules | Defines role, priorities, process, constraints, and standards.                      |
 | Context      | Current workbench                   | Holds the information available for this task or conversation.                      |
 | Memory       | Notebook or knowledge system        | Preserves selected information for later use.                                       |
@@ -99,13 +99,16 @@ The anatomy of a useful agent is therefore:
 
 Use terms consistently across videos, worksheets, and slides.
 
+**Glossary scope in the curriculum HTML:** per-lesson glossaries list only technical or AI/agent-specific terms (for example harness, token, context window, MCP). Everyday words used in teaching (practice task, deliverable, source pack) stay in the lesson body but are not glossary entries.
+
 | Term              | Course definition                                                                                                           |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | AI model          | The underlying system that processes input and generates output.                                                            |
 | LLM               | A language-focused model trained to work with text and related representations.                                             |
 | Multimodal model  | A model that can work with more than one type of input or output, such as text, images, audio, or video.                    |
-| AI application    | The product interface and services built around one or more models.                                                         |
-| Assistant         | An AI application configured to help a person through conversation and available capabilities.                              |
+| Harness / AI application | The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as “app,” “runtime,” or “scaffold.” |
+| Assistant         | The working experience when a model is combined with a harness, instructions, context, and available capabilities.           |
+| Tool call         | A structured request from the model to use a capability; the harness runs it (if allowed) and returns the result.            |
 | Workflow          | A defined sequence of steps used to produce an outcome.                                                                     |
 | Automation        | A workflow triggered and executed according to predefined rules, usually with limited judgment.                             |
 | Agent             | A goal-directed system that can choose and perform multiple steps, often using tools, within defined boundaries.            |
@@ -141,7 +144,7 @@ Use low-friction checks throughout the course. They should not add significant v
 | Point           | Check                                                  | Evidence of learning                                                     |
 | --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
 | After Lesson 2  | Open the assistant and use one selected project file.  | The learner’s environment works.                                         |
-| After Lesson 3  | Explain model versus assistant in one sentence.        | The foundational distinction is understood.                              |
+| After Lesson 3  | Explain model versus harness/app in one sentence, and sketch one chat turn. | The foundational distinction and chat/tool loop are understood. |
 | After Lesson 4  | Select an autonomy level and justify it.               | The learner can match autonomy to risk.                                  |
 | After Lesson 6  | Classify five information examples.                    | Context, instructions, knowledge, memory, and archive are distinguished. |
 | After Lesson 8  | Write one stop-and-ask rule.                           | Permissions and human checkpoints are explicit.                          |
@@ -223,7 +226,7 @@ Prepare these assets before recording:
 
 # Guidance for the slide-generation agent
 
-This section describes how a later agent should translate this document into lesson slides.
+This section describes how a later agent should translate the curriculum into lesson slides. Prefer the **Slides (draft)** block in each lesson of `course-01-curriculum.html` (concrete draft cards with titles and bullets; visual as text brief only—no image assets; screen-share as an instructor note) over regenerating structure from this guide alone.
 
 ## Slide principles
 
@@ -296,7 +299,8 @@ For every slide deck, retain:
 
 Use this list to ensure the course corrects the misunderstandings most likely to cause poor results or unsafe behavior.
 
-- The model and the AI product are the same thing.
+- The model and the AI product (harness) are the same thing.
+- The model itself executes tools, searches the web, or edits files.
 - A bigger or newer model remembers more about the user personally.
 - Chat history is reliable long-term memory.
 - A large context window produces perfect recall.
@@ -336,7 +340,7 @@ Pilot the course with a small group from the intended audience before final reco
 ## Pilot evidence
 
 - Can learners choose a safe, appropriately narrow practice task without help?
-- Can they explain the model–application–assistant distinction in their own words?
+- Can they explain the model–harness/app–assistant distinction and sketch one chat/tool turn in their own words?
 - Can they complete the setup acceptance test on a clean account?
 - Can they produce a usable CLEAR assignment without copying the instructor example?
 - Can they identify a meaningful approval point and verify a claim against a source?
@@ -356,7 +360,7 @@ Pilot the course with a small group from the intended audience before final reco
 
 | Course outcome | Primary lessons | Demonstrated by |
 | -------------- | --------------- | --------------- |
-| Explain models, applications, assistants, workflows, automations, and agents | 3–4 | One-sentence explanation and autonomy choice |
+| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 3–4 | One-sentence model vs harness explanation, sketched chat turn, and autonomy choice |
 | Set up an assistant and provide focused context with ordinary files | 2, 5–6 | Setup test, starter brief, and context checklist |
 | Give, review, verify, and improve a well-sourced assignment | 7, 9–11 | Capability map, CLEAR worksheet, source pack, and diagnostic revision |
 | Complete a low-risk workflow with appropriate approval points | 4, 8, 12 | Autonomy choice, stop-and-ask rule, and reviewed capstone artifact |
