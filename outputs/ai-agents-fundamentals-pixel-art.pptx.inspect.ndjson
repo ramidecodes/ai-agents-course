@@ -1,0 +1,702 @@
+{"kind":"deck","id":"pr/nq6krs","name":"Deck"}
+{"kind":"layout","layoutId":"9e5d3199-0f70-4b35-9ead-2d021fa11cac","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"e8844d6c-897a-4999-bf22-b222a1dcd933","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/qky7fz","slide":1,"title":"PRACTICAL COURSE · SUPERVISED WORK","textShapes":5}
+{"kind":"shape","id":"sh/u58ridor","slide":1,"name":"cover-accent","bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/hszad8n2","slide":1,"name":"cover-kicker","text":"PRACTICAL COURSE · SUPERVISED WORK","textPreview":"PRACTICAL COURSE · SUPERVISED WORK","textChars":34,"textLines":1,"bbox":[76,86,620,28]}
+{"kind":"textbox","id":"sh/grq9k36x","slide":1,"name":"cover-title","text":"AI Agents\nFundamentals","textPreview":"AI Agents | Fundamentals","textChars":22,"textLines":2,"bbox":[76,164,720,190]}
+{"kind":"textbox","id":"sh/72xs7y50","slide":1,"name":"cover-subtitle","text":"A practical working model for assigning, supervising and reviewing AI-assisted work.","textPreview":"A practical working model for assigning, supervising and reviewing AI-assisted work.","textChars":84,"textLines":1,"bbox":[80,392,590,105]}
+{"kind":"shape","id":"sh/61oretof","slide":1,"name":"cover-rule","bbox":[80,558,1120,2]}
+{"kind":"textbox","id":"sh/t4za98n6","slide":1,"name":"cover-meta","text":"46 illustrated concepts · beginner-friendly · tool-agnostic","textPreview":"46 illustrated concepts · beginner-friendly · tool-agnostic","textChars":59,"textLines":1,"bbox":[80,584,720,28]}
+{"kind":"textbox","id":"sh/s369g36l","slide":1,"name":"cover-mark","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1080,584,120,38]}
+{"kind":"notes","id":"nt/qky7fz","slide":1,"text":""}
+{"kind":"slide","id":"sl/f9rthq","slide":2,"title":"ORIENTATION & SETUP","textShapes":7}
+{"kind":"shape","id":"sh/yd0z25sv","slide":2,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/l0rydkrm","slide":2,"name":"section","text":"ORIENTATION & SETUP","textPreview":"ORIENTATION & SETUP","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/kfih4fq1","slide":2,"name":"page","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/bapg7a94","slide":2,"name":"title","text":"Course journey","textPreview":"Course journey","textChars":14,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/a9gfy5sz","slide":2,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/cbyh0vap","slide":2,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/v6tgju9o","slide":2,"name":"bullet-0","text":"Brief → draft → review → revise → approve","textPreview":"Brief → draft → review → revise → approve","textChars":41,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/u5kzap83","slide":2,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/s7mtsz2d","slide":2,"name":"bullet-1","text":"You will complete this supervised loop once by the end.","textPreview":"You will complete this supervised loop once by the end.","textChars":55,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/t8val4jy","slide":2,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/6l4rq9k7","slide":2,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/76dsju1s","slide":2,"name":"term","text":"Supervised workflow — AI-assisted steps with human boundaries and approval.","textPreview":"Supervised workflow — AI-assisted steps with human boundaries and approval.","textChars":75,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/07et0ju1","slide":2,"name":"","alt":"Course journey","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/f9rthq","slide":2,"text":""}
+{"kind":"slide","id":"sl/f6dan8","slide":3,"title":"ORIENTATION & SETUP","textShapes":7}
+{"kind":"shape","id":"sh/dgna5ob6","slide":3,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/qtcra9sv","slide":3,"name":"section","text":"ORIENTATION & SETUP","textPreview":"ORIENTATION & SETUP","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/ruls3etg","slide":3,"name":"page","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/0jetg3ax","slide":3,"name":"title","text":"You remain accountable","textPreview":"You remain accountable","textChars":22,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/1kna98bi","slide":3,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/zi5s7ytc","slide":3,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/onetk3at","slide":3,"name":"bullet-0","text":"The assistant collaborates; you brief and approve.","textPreview":"The assistant collaborates; you brief and approve.","textChars":50,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/9o7ad8be","slide":3,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/lw7idw76","slide":3,"name":"bullet-1","text":"Polish is not the same as ready to use.","textPreview":"Polish is not the same as ready to use.","textChars":39,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/0vy14rql","slide":3,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/zu50bmp0","slide":3,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/ytwj2h8f","slide":3,"name":"term","text":"AI assistant — Model, harness, instructions and context, supervised by you.","textPreview":"AI assistant — Model, harness, instructions and context, supervised by you.","textChars":75,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/vqdwrahk","slide":3,"name":"","alt":"You remain accountable","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/f6dan8","slide":3,"text":""}
+{"kind":"slide","id":"sl/00xxkb","slide":4,"title":"ORIENTATION & SETUP","textShapes":7}
+{"kind":"shape","id":"sh/lsn2tgvi","slide":4,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/ypwjy1w7","slide":4,"name":"section","text":"ORIENTATION & SETUP","textPreview":"ORIENTATION & SETUP","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/zq5kr6xs","slide":4,"name":"page","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/cne1wbe1","slide":4,"name":"title","text":"Choose a safe practice task","textPreview":"Choose a safe practice task","textChars":27,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/donipwfm","slide":4,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/b250n6xg","slide":4,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/ozu1sre5","slide":4,"name":"bullet-0","text":"Low consequence · reversible · non-sensitive","textPreview":"Low consequence · reversible · non-sensitive","textChars":44,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/p03ilwfq","slide":4,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/187m5476","slide":4,"name":"bullet-1","text":"Use one small task throughout the course.","textPreview":"Use one small task throughout the course.","textChars":41,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/07ylcz6l","slide":4,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/f6p43up0","slide":4,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/elg3apof","slide":4,"name":"term","text":"Practice boundary — What you may share and where work may have effect.","textPreview":"Practice boundary — What you may share and where work may have effect.","textChars":70,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/vqxsnq1c","slide":4,"name":"","alt":"Choose a safe practice task","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/00xxkb","slide":4,"text":""}
+{"kind":"slide","id":"sl/a1azww","slide":5,"title":"ORIENTATION & SETUP","textShapes":7}
+{"kind":"shape","id":"sh/jel4vq58","slide":5,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/kzul4vmt","slide":5,"name":"section","text":"ORIENTATION & SETUP","textPreview":"ORIENTATION & SETUP","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/503mx0ne","slide":5,"name":"page","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/a9s3yl4r","slide":5,"name":"title","text":"Start with the minimum stack","textPreview":"Start with the minimum stack","textChars":28,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/val4rq5c","slide":5,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/xc3mt0ni","slide":5,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/u5wnap4b","slide":5,"name":"bullet-0","text":"One assistant · one practice folder · one starter brief","textPreview":"One assistant · one practice folder · one starter brief","textChars":55,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/f6543ulg","slide":5,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/bmh0v2tw","slide":5,"name":"bullet-1","text":"Optional tools can wait until the basics work.","textPreview":"Optional tools can wait until the basics work.","textChars":46,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/al8z2xsb","slide":5,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/xozixcbm","slide":5,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/cnqh47ah","slide":5,"name":"term","text":"Practice folder — A dedicated workspace for course files and drafts.","textPreview":"Practice folder — A dedicated workspace for course files and drafts.","textChars":68,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/x03qlgva","slide":5,"name":"","alt":"Start with the minimum stack","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/a1azww","slide":5,"text":""}
+{"kind":"slide","id":"sl/smoejg","slide":6,"title":"ORIENTATION & SETUP","textShapes":7}
+{"kind":"shape","id":"sh/7upgryhs","slide":6,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/8vyhk3id","slide":6,"name":"section","text":"ORIENTATION & SETUP","textPreview":"ORIENTATION & SETUP","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/tw7it8zi","slide":6,"name":"page","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/uxgzmd03","slide":6,"name":"title","text":"Access is not authority","textPreview":"Access is not authority","textChars":23,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/vyp0vyho","slide":6,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/h0rix8zu","slide":6,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/a1wza90z","slide":6,"name":"bullet-0","text":"File access does not grant permission to change or publish.","textPreview":"File access does not grant permission to change or publish.","textChars":59,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/b25gjehk","slide":6,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/by14729c","slide":6,"name":"bullet-1","text":"Make the workspace boundary visible before you begin.","textPreview":"Make the workspace boundary visible before you begin.","textChars":53,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/qds3yx8r","slide":6,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/d0jm9cr2","slide":6,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/czal07qx","slide":6,"name":"term","text":"File access — Ability to see files is not authority to change them.","textPreview":"File access — Ability to see files is not authority to change them.","textChars":67,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/1wnuh4nu","slide":6,"name":"","alt":"Access is not authority","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/smoejg","slide":6,"text":""}
+{"kind":"slide","id":"sl/edidlz","slide":7,"title":"ORIENTATION & SETUP","textShapes":7}
+{"kind":"shape","id":"sh/0vqp8ja9","slide":7,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/zuh8ze9o","slide":7,"name":"section","text":"ORIENTATION & SETUP","textPreview":"ORIENTATION & SETUP","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/et876ts3","slide":7,"name":"page","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/90jq58rq","slide":7,"name":"title","text":"Prove the setup with a harmless test","textPreview":"Prove the setup with a harmless test","textChars":36,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/ozqpc3a5","slide":7,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/mx87atsz","slide":7,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/p4fqt4bm","slide":7,"name":"bullet-0","text":"Open → attach → summarize → draft → inspect → remove","textPreview":"Open → attach → summarize → draft → inspect → remove","textChars":52,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/436p0za1","slide":7,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/ehkjapk7","slide":7,"name":"bullet-1","text":"Use no business secrets in the test.","textPreview":"Use no business secrets in the test.","textChars":36,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/fit03uls","slide":7,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/gj21cz2d","slide":7,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/1kbi54jy","slide":7,"name":"term","text":"Acceptance test — A harmless check before consequential work.","textPreview":"Acceptance test — A harmless check before consequential work.","textChars":61,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/e9gn61or","slide":7,"name":"","alt":"Prove the setup with a harmless test","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/edidlz","slide":7,"text":""}
+{"kind":"slide","id":"sl/wrp7j0","slide":8,"title":"HOW AI SYSTEMS WORK","textShapes":7}
+{"kind":"shape","id":"sh/8fq9of25","slide":8,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/nehsval0","slide":8,"name":"section","text":"HOW AI SYSTEMS WORK","textPreview":"HOW AI SYSTEMS WORK","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/md8rm5kf","slide":8,"name":"page","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/lczat03u","slide":8,"name":"title","text":"The model is only one layer","textPreview":"The model is only one layer","textChars":27,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/0b69kv29","slide":8,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/y9orilk3","slide":8,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/d8fapg3i","slide":8,"name":"bullet-0","text":"Model = reasoning and generation engine","textPreview":"Model = reasoning and generation engine","textChars":39,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/c769gv2x","slide":8,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/mp8r6hgz","slide":8,"name":"bullet-1","text":"Harness = context, tools and permissions · Assistant = combined experience","textPreview":"Harness = context, tools and permissions · Assistant = combined experience","textChars":74,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/7qhszmhk","slide":8,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/8ba98ry5","slide":8,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/9cja1wfq","slide":8,"name":"term","text":"Harness — The software around a model that runs the working loop.","textPreview":"Harness — The software around a model that runs the working loop.","textChars":65,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/2xozu1cf","slide":8,"name":"","alt":"The model is only one layer","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/wrp7j0","slide":8,"text":""}
+{"kind":"slide","id":"sl/1emfry","slide":9,"title":"HOW AI SYSTEMS WORK","textShapes":7}
+{"kind":"shape","id":"sh/md0f6d83","slide":9,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/9gryhsru","slide":9,"name":"section","text":"HOW AI SYSTEMS WORK","textPreview":"HOW AI SYSTEMS WORK","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/8fix8nq9","slide":9,"name":"page","text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/v29gj290","slide":9,"name":"title","text":"One chat turn is an execution loop","textPreview":"One chat turn is an execution loop","textChars":34,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/a10fax8f","slide":9,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/w3ixcnql","slide":9,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/j6tgn29w","slide":9,"name":"bullet-0","text":"The harness assembles context, then calls the model.","textPreview":"The harness assembles context, then calls the model.","textChars":52,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/i5kzex8b","slide":9,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/cbup43md","slide":9,"name":"bullet-1","text":"If a tool is requested and allowed, the harness runs it and returns the result.","textPreview":"If a tool is requested and allowed, the harness runs it and returns the result.","textChars":79,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/dc36d83y","slide":9,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/q9c72d47","slide":9,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/ralobyls","slide":9,"name":"term","text":"Tool call — The model requests; the harness executes if allowed.","textPreview":"Tool call — The model requests; the harness executes if allowed.","textChars":64,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/0fexgbqt","slide":9,"name":"","alt":"One chat turn is an execution loop","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/1emfry","slide":9,"text":""}
+{"kind":"slide","id":"sl/eoq61k","slide":10,"title":"HOW AI SYSTEMS WORK","textShapes":7}
+{"kind":"shape","id":"sh/jqxkr2dw","slide":10,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/kb61k7uh","slide":10,"name":"section","text":"HOW AI SYSTEMS WORK","textPreview":"HOW AI SYSTEMS WORK","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/5cf2tcv2","slide":10,"name":"page","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/al4jexcf","slide":10,"name":"title","text":"The same model can behave differently","textPreview":"The same model can behave differently","textChars":37,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/vmxkn2d0","slide":10,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/xof2psv6","slide":10,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/uh83qhcj","slide":10,"name":"bullet-0","text":"Files, search, memory and permissions vary by product.","textPreview":"Files, search, memory and permissions vary by product.","textChars":54,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/fihkzmd4","slide":10,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/za1kb61g","slide":10,"name":"bullet-1","text":"Capability is not the same as granted access.","textPreview":"Capability is not the same as granted access.","textChars":45,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/y9s321kv","slide":10,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/lc32dgj6","slide":10,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/0bul4b2l","slide":10,"name":"term","text":"Multimodal — More than one information form, when the product exposes it.","textPreview":"Multimodal — More than one information form, when the product exposes it.","textChars":73,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/lgzqpoby","slide":10,"name":"","alt":"The same model can behave differently","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/eoq61k","slide":10,"text":""}
+{"kind":"slide","id":"sl/i60m1f","slide":11,"title":"HOW AI SYSTEMS WORK","textShapes":7}
+{"kind":"shape","id":"sh/bud4nelk","slide":11,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/cvm5gjm5","slide":11,"name":"section","text":"HOW AI SYSTEMS WORK","textPreview":"HOW AI SYSTEMS WORK","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/dwvmp43q","slide":11,"name":"page","text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/yxoni94b","slide":11,"name":"title","text":"Use the simplest pattern that fits","textPreview":"Use the simplest pattern that fits","textChars":34,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/zyx4relw","slide":11,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/l0fmto32","slide":11,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/m1onmt47","slide":11,"name":"bullet-0","text":"One-off response · workflow · automation · agent","textPreview":"One-off response · workflow · automation · agent","textChars":48,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/72x4vyls","slide":11,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/r2pojytw","slide":11,"name":"bullet-1","text":"More autonomy is useful only when the task needs it.","textPreview":"More autonomy is useful only when the task needs it.","textChars":52,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/q1g7atcr","slide":11,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/d4r6l8b2","slide":11,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/s3ipc3uh","slide":11,"name":"term","text":"Automation — A predefined trigger and path for well-understood steps.","textPreview":"Automation — A predefined trigger and path for well-understood steps.","textChars":69,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/lsz2t8fy","slide":11,"name":"","alt":"Use the simplest pattern that fits","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/i60m1f","slide":11,"text":""}
+{"kind":"slide","id":"sl/1y0a2g","slide":12,"title":"HOW AI SYSTEMS WORK","textShapes":7}
+{"kind":"shape","id":"sh/o7u10fmp","slide":12,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/36l0ra54","slide":12,"name":"section","text":"HOW AI SYSTEMS WORK","textPreview":"HOW AI SYSTEMS WORK","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/25sjy54j","slide":12,"name":"page","text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/14jipkny","slide":12,"name":"title","text":"An agent repeats the loop","textPreview":"An agent repeats the loop","textChars":25,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/g3a1wfmd","slide":12,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/ehsju54n","slide":12,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/tgjil0n2","slide":12,"name":"bullet-0","text":"Goal → tool use → observe → continue","textPreview":"Goal → tool use → observe → continue","textChars":36,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/sfa1svmh","slide":12,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/658nytob","slide":12,"name":"bullet-1","text":"The harness and its boundaries remain in control.","textPreview":"The harness and its boundaries remain in control.","textChars":49,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/r61o7epw","slide":12,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/sra50j6h","slide":12,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/tsj69o72","slide":12,"name":"term","text":"Agent — Pursues a goal across steps using tools through a harness.","textPreview":"Agent — Pursues a goal across steps using tools through a harness.","textChars":66,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/il4vqd4f","slide":12,"name":"","alt":"An agent repeats the loop","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/1y0a2g","slide":12,"text":""}
+{"kind":"slide","id":"sl/2pu6g7","slide":13,"title":"HOW AI SYSTEMS WORK","textShapes":7}
+{"kind":"shape","id":"sh/jm1kz6lk","slide":13,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/knal8bm5","slide":13,"name":"section","text":"HOW AI SYSTEMS WORK","textPreview":"HOW AI SYSTEMS WORK","textChars":19,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/loj21g3a","slide":13,"name":"page","text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/6ps3a14v","slide":13,"name":"title","text":"Stay in the supervised autonomy zone","textPreview":"Stay in the supervised autonomy zone","textChars":36,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/7a1k36lg","slide":13,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/tc325g3m","slide":13,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/2tojyh4r","slide":13,"name":"bullet-0","text":"Suggest → Draft → Prepare → Act with approval → Independent","textPreview":"Suggest → Draft → Prepare → Act with approval → Independent","textChars":59,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/nehkrmlc","slide":13,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/v294jqp0","slide":13,"name":"bullet-1","text":"This course focuses on Draft through Act with approval.","textPreview":"This course focuses on Draft through Act with approval.","textChars":55,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/a103ql8f","slide":13,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/x4bml076","slide":13,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/w325svql","slide":13,"name":"term","text":"Autonomy ladder — A practical spectrum of delegated action.","textPreview":"Autonomy ladder — A practical spectrum of delegated action.","textChars":59,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/1g3qdwv2","slide":13,"name":"","alt":"Stay in the supervised autonomy zone","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/2pu6g7","slide":13,"text":""}
+{"kind":"slide","id":"sl/zw3ig3","slide":14,"title":"CONTEXT, MEMORY & RETRIEVAL","textShapes":7}
+{"kind":"shape","id":"sh/horipsfy","slide":14,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/ulgzudw7","slide":14,"name":"section","text":"CONTEXT, MEMORY & RETRIEVAL","textPreview":"CONTEXT, MEMORY & RETRIEVAL","textChars":27,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/fmp0nixs","slide":14,"name":"page","text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/4ri107e9","slide":14,"name":"title","text":"Context is a finite workbench","textPreview":"Context is a finite workbench","textChars":29,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/psritsvu","slide":14,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/3q90r2xo","slide":14,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/kvyho3e5","slide":14,"name":"bullet-0","text":"Instructions, messages, files and tool results compete for space.","textPreview":"Instructions, messages, files and tool results compete for space.","textChars":65,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/5w7ih8fq","slide":14,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/dgvm98nm","slide":14,"name":"bullet-1","text":"More material can make the answer worse, not better.","textPreview":"More material can make the answer worse, not better.","textChars":52,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/cfmlg3m1","slide":14,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/bet47y5w","slide":14,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/qdk3ed4b","slide":14,"name":"term","text":"Context window — The finite working space for one model call.","textPreview":"Context window — The finite working space for one model call.","textChars":61,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/36xs7apg","slide":14,"name":"","alt":"Context is a finite workbench","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/zw3ig3","slide":14,"text":""}
+{"kind":"slide","id":"sl/tqbsn3","slide":15,"title":"CONTEXT, MEMORY & RETRIEVAL","textShapes":7}
+{"kind":"shape","id":"sh/vetw3mh4","slide":15,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/wf2xc7ip","slide":15,"name":"section","text":"CONTEXT, MEMORY & RETRIEVAL","textPreview":"CONTEXT, MEMORY & RETRIEVAL","textChars":27,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/hgbe5cza","slide":15,"name":"page","text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/ihkfeh0v","slide":15,"name":"title","text":"The harness chooses what enters the call","textPreview":"The harness chooses what enters the call","textChars":40,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/jidw7mhg","slide":15,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/5kve9wzm","slide":15,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/yl0v2x0r","slide":15,"name":"bullet-0","text":"The model sees only what the harness includes this turn.","textPreview":"The model sees only what the harness includes this turn.","textChars":56,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/zm9wv2hc","slide":15,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/nqdonqlk","slide":15,"name":"bullet-1","text":"It cannot inspect your disk or every old chat by itself.","textPreview":"It cannot inspect your disk or every old chat by itself.","textChars":56,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/mp47e5kz","slide":15,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/9svqp0jq","slide":15,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/ormpgv25","slide":15,"name":"term","text":"Prompt — Immediate input for this turn; the assignment is broader.","textPreview":"Prompt — Immediate input for this turn; the assignment is broader.","textChars":66,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/50v6lsvi","slide":15,"name":"","alt":"The harness chooses what enters the call","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/tqbsn3","slide":15,"text":""}
+{"kind":"slide","id":"sl/l6z5ai","slide":16,"title":"CONTEXT, MEMORY & RETRIEVAL","textShapes":7}
+{"kind":"shape","id":"sh/p8v6h4j2","slide":16,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/254n6p0r","slide":16,"name":"section","text":"CONTEXT, MEMORY & RETRIEVAL","textPreview":"CONTEXT, MEMORY & RETRIEVAL","textChars":27,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/n6dofu1w","slide":16,"name":"page","text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/cb65cjit","slide":16,"name":"title","text":"Send the smallest complete set","textPreview":"Send the smallest complete set","textChars":30,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/xcf6l4je","slide":16,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/badoje18","slide":16,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/kf6pgjip","slide":16,"name":"bullet-0","text":"Relevance and authority beat volume.","textPreview":"Relevance and authority beat volume.","textChars":36,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/l0f6poja","slide":16,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/5cj2tgvi","slide":16,"name":"bullet-1","text":"A structured brief with named sources outperforms a file dump.","textPreview":"A structured brief with named sources outperforms a file dump.","textChars":62,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/4bq1kbex","slide":16,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/jahkr6dc","slide":16,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/i98ji1w7","slide":16,"name":"term","text":"Authority — Prefer relevant, authoritative sources over volume.","textPreview":"Authority — Prefer relevant, authoritative sources over volume.","textChars":63,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/r2tgnydk","slide":16,"name":"","alt":"Send the smallest complete set","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/l6z5ai","slide":16,"text":""}
+{"kind":"slide","id":"sl/lrnyyi","slide":17,"title":"CONTEXT, MEMORY & RETRIEVAL","textShapes":7}
+{"kind":"shape","id":"sh/x4z2pwf2","slide":17,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/a18je1wr","slide":17,"name":"section","text":"CONTEXT, MEMORY & RETRIEVAL","textPreview":"CONTEXT, MEMORY & RETRIEVAL","textChars":27,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/b2hkn6xw","slide":17,"name":"page","text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/ozq1crel","slide":17,"name":"title","text":"Do not confuse four information buckets","textPreview":"Do not confuse four information buckets","textChars":39,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/p0zilwf6","slide":17,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/nyh0jmx0","slide":17,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/0v6187e9","slide":17,"name":"bullet-0","text":"Context · chat history · source knowledge · memory","textPreview":"Context · chat history · source knowledge · memory","textChars":50,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/1wfihcfu","slide":17,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/d4rep87m","slide":17,"name":"bullet-1","text":"Each has a different role and lifetime.","textPreview":"Each has a different role and lifetime.","textChars":39,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/c3yxwn61","slide":17,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/r2pwnipg","slide":17,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/q1gfudov","slide":17,"name":"term","text":"Memory — A product mechanism that preserves or retrieves information later.","textPreview":"Memory — A product mechanism that preserves or retrieves information later.","textChars":75,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/v69oj6d8","slide":17,"name":"","alt":"Do not confuse four information buckets","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/lrnyyi","slide":17,"text":""}
+{"kind":"slide","id":"sl/rtccpj","slide":18,"title":"CONTEXT, MEMORY & RETRIEVAL","textShapes":7}
+{"kind":"shape","id":"sh/0b6xs7it","slide":18,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/zaxwz2ho","slide":18,"name":"section","text":"CONTEXT, MEMORY & RETRIEVAL","textPreview":"CONTEXT, MEMORY & RETRIEVAL","textChars":27,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/y94fqx03","slide":18,"name":"page","text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/d8vexszi","slide":18,"name":"title","text":"Fresh sessions start without memory","textPreview":"Fresh sessions start without memory","textChars":35,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/c7mxonix","slide":18,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/ql4vmd0r","slide":18,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/x4zy9czm","slide":18,"name":"bullet-0","text":"Continuity is a product feature, not a model trait.","textPreview":"Continuity is a product feature, not a model trait.","textChars":51,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/w3qx0ry1","slide":18,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/atg76xcf","slide":18,"name":"bullet-1","text":"If continuity matters, build or connect a deliberate bridge.","textPreview":"If continuity matters, build or connect a deliberate bridge.","textChars":60,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/vupoz2d0","slide":18,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/wvyp87ul","slide":18,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/xwr61sv6","slide":18,"name":"term","text":"Stateless — Each model call begins without built-in memory of past calls.","textPreview":"Stateless — Each model call begins without built-in memory of past calls.","textChars":73,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/25on6x0b","slide":18,"name":"","alt":"Fresh sessions start without memory","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/rtccpj","slide":18,"text":""}
+{"kind":"slide","id":"sl/opctq4","slide":19,"title":"CONTEXT, MEMORY & RETRIEVAL","textShapes":7}
+{"kind":"shape","id":"sh/xcr6tcjm","slide":19,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/a9gnyx0b","slide":19,"name":"section","text":"CONTEXT, MEMORY & RETRIEVAL","textPreview":"CONTEXT, MEMORY & RETRIEVAL","textChars":27,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/va9or21w","slide":19,"name":"page","text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/kfi547id","slide":19,"name":"title","text":"RAG retrieves before generating","textPreview":"RAG retrieves before generating","textChars":31,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/5gr6xcjy","slide":19,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/je9ov21s","slide":19,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/s32p8ri9","slide":19,"name":"bullet-0","text":"Search notes → select pieces → add to context → generate","textPreview":"Search notes → select pieces → add to context → generate","textChars":56,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/t4b61wju","slide":19,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/d0bidoza","slide":19,"name":"bullet-1","text":"Retrieval grounds an answer; it does not verify the answer.","textPreview":"Retrieval grounds an answer; it does not verify the answer.","textChars":59,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/cz2h4jip","slide":19,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/bet0byh4","slide":19,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/qdkz2t0j","slide":19,"name":"term","text":"RAG — Fetching relevant source material into context before generation.","textPreview":"RAG — Fetching relevant source material into context before generation.","textChars":71,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/zilcja58","slide":19,"name":"","alt":"RAG retrieves before generating","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/opctq4","slide":19,"text":""}
+{"kind":"slide","id":"sl/c2ae01","slide":20,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/ytcrahc3","slide":20,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/lwnalwve","slide":20,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/kve9crut","slide":20,"name":"page","text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/b6l8f2dc","slide":20,"name":"title","text":"Know where the model runs","textPreview":"Know where the model runs","textChars":25,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/a5cr6hcr","slide":20,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/w7u987ux","slide":20,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/n218b2dg","slide":20,"name":"bullet-0","text":"A local model can stay on your machine.","textPreview":"A local model can stay on your machine.","textChars":39,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/m1sr2xcv","slide":20,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/ofad87yx","slide":20,"name":"bullet-1","text":"A cloud model requires your context to travel to a provider.","textPreview":"A cloud model requires your context to travel to a provider.","textChars":60,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/pgju1czi","slide":20,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/2dsv6xgr","slide":20,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/ne1cz2hc","slide":20,"name":"term","text":"Cloud API — A model running on a provider’s remote servers.","textPreview":"Cloud API — A model running on a provider’s remote servers.","textChars":59,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/sf2pkjax","slide":20,"name":"","alt":"Know where the model runs","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/c2ae01","slide":20,"text":""}
+{"kind":"slide","id":"sl/kynpjx","slide":21,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/6hsvytkb","slide":21,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/dkje9832","slide":21,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/sjad032h","slide":21,"name":"page","text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/jehw3el0","slide":21,"name":"title","text":"Trust the policy, not the logo","textPreview":"Trust the policy, not the logo","textChars":30,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/id8vu9kf","slide":21,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/4fqdwj25","slide":21,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/vahwzelo","slide":21,"name":"bullet-0","text":"Read the data-use terms for the exact plan you use.","textPreview":"Read the data-use terms for the exact plan you use.","textChars":51,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/upovq9k3","slide":21,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/0zulwjq5","slide":21,"name":"bullet-1","text":"A familiar brand does not answer a privacy question.","textPreview":"A familiar brand does not answer a privacy question.","textChars":52,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/10325o7q","slide":21,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/excju98z","slide":21,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/zylk3e9k","slide":21,"name":"term","text":"Provider trust — What a specific plan and policy actually permit.","textPreview":"Provider trust — What a specific plan and policy actually permit.","textChars":65,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/cj65w7mh","slide":21,"name":"","alt":"Trust the policy, not the logo","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/kynpjx","slide":21,"text":""}
+{"kind":"slide","id":"sl/u37crs","slide":22,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/5gfe1cvq","slide":22,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/idofqxcf","slide":22,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/jexwz2d0","slide":22,"name":"page","text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/sjqxwruh","slide":22,"name":"title","text":"Hold sensitive material back by default","textPreview":"Hold sensitive material back by default","textChars":39,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/tkze5cv2","slide":22,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/7ihw3mdw","slide":22,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/g7qx0rud","slide":22,"name":"bullet-0","text":"Customer data · financials · credentials · health · NDA material","textPreview":"Customer data · financials · credentials · health · NDA material","textChars":64,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/h8zy9wby","slide":22,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/9oraxkf6","slide":22,"name":"bullet-1","text":"When unsure, do not attach it.","textPreview":"When unsure, do not attach it.","textChars":30,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/8nit4fyl","slide":22,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/nm9svax0","slide":22,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/ml0b25gv","slide":22,"name":"term","text":"Sensitive information — Categories to withhold from practice by default.","textPreview":"Sensitive information — Categories to withhold from practice by default.","textChars":72,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/judsvut8","slide":22,"name":"","alt":"Hold sensitive material back by default","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/u37crs","slide":22,"text":""}
+{"kind":"slide","id":"sl/0jtnfo","slide":23,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/vedcr6hs","slide":23,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/wfmdkbid","slide":23,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/hgvutwzy","slide":23,"name":"page","text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/ih4vm10j","slide":23,"name":"title","text":"Tools do; skills guide; connections link","textPreview":"Tools do; skills guide; connections link","textChars":40,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/jidcv6h4","slide":23,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/5kfuhgzu","slide":23,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/yl0bah0f","slide":23,"name":"bullet-0","text":"A tool performs an action. A skill supplies reusable guidance.","textPreview":"A tool performs an action. A skill supplies reusable guidance.","textChars":62,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/zmtcjmhk","slide":23,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/zqpwjyhk","slide":23,"name":"bullet-1","text":"A connection links systems; it does not guarantee a correct choice.","textPreview":"A connection links systems; it does not guarantee a correct choice.","textChars":67,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/ypgvat0z","slide":23,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/lsrelozq","slide":23,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/0rydc3i5","slide":23,"name":"term","text":"API — An interface for systems to exchange requests and results.","textPreview":"API — An interface for systems to exchange requests and results.","textChars":64,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/x4vy5gfe","slide":23,"name":"","alt":"Tools do; skills guide; connections link","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/0jtnfo","slide":23,"text":""}
+{"kind":"slide","id":"sl/350axw","slide":24,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/03ydo7qd","slide":24,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/f2pwf2ps","slide":24,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/e1gvmx8n","slide":24,"name":"page","text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/psrelc7a","slide":24,"name":"title","text":"The harness runs the tool","textPreview":"The harness runs the tool","textChars":25,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/orixs7qp","slide":24,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/25gvqx8j","slide":24,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/xwrepw76","slide":24,"name":"bullet-0","text":"The model requests a capability.","textPreview":"The model requests a capability.","textChars":32,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/cvixwrql","slide":24,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/e9svmhs7","slide":24,"name":"bullet-1","text":"The harness executes it if allowed, then returns the result.","textPreview":"The harness executes it if allowed, then returns the result.","textChars":60,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/za1cfm9s","slide":24,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/0budorax","slide":24,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/1c3ehwri","slide":24,"name":"term","text":"Tool call — Request → allowed execution → returned result.","textPreview":"Tool call — Request → allowed execution → returned result.","textChars":58,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/2hgn2hor","slide":24,"name":"","alt":"The harness runs the tool","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/350axw","slide":24,"text":""}
+{"kind":"slide","id":"sl/cyhtwc","slide":25,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/sri5wnqt","slide":25,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/rq9onipo","slide":25,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/qp0nud83","slide":25,"name":"page","text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/1wb6ts7q","slide":25,"name":"title","text":"Connected does not mean correct","textPreview":"Connected does not mean correct","textChars":31,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/0v250nq5","slide":25,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/et0nyx8z","slide":25,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/pkb6xc7m","slide":25,"name":"bullet-0","text":"Connected ≠ selected ≠ correct","textPreview":"Connected ≠ selected ≠ correct","textChars":30,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/oj2547q1","slide":25,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/ehkfexcf","slide":25,"name":"bullet-1","text":"Grant the minimum capability needed for each workflow step.","textPreview":"Grant the minimum capability needed for each workflow step.","textChars":59,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/fitgn2t0","slide":25,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/gjmxg7ul","slide":25,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/1kvypcb6","slide":25,"name":"term","text":"Least privilege — Grant only the capability needed for the step.","textPreview":"Least privilege — Grant only the capability needed for the step.","textChars":64,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/itobmlsb","slide":25,"name":"","alt":"Connected does not mean correct","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/cyhtwc","slide":25,"text":""}
+{"kind":"slide","id":"sl/n116fd","slide":26,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/2pwzehgv","slide":26,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/pc7i9wfm","slide":26,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/obe1gry1","slide":26,"name":"page","text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/bep0b6xs","slide":26,"name":"title","text":"Browse, install, then try one skill","textPreview":"Browse, install, then try one skill","textChars":35,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/qdgji1g7","slide":26,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/cfy1kbyx","slide":26,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/zip0f6xo","slide":26,"name":"bullet-0","text":"Treat a skill like an app: inspect it before adding it.","textPreview":"Treat a skill like an app: inspect it before adding it.","textChars":55,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/yhgjm1g3","slide":26,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/g3id03qh","slide":26,"name":"bullet-1","text":"Keep it only if it improves a real task.","textPreview":"Keep it only if it improves a real task.","textChars":40,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/h4ru9872","slide":26,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/u1gvyt8b","slide":26,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/v29c7ypw","slide":26,"name":"term","text":"Skill package — Reusable instructions for a type of work.","textPreview":"Skill package — Reusable instructions for a type of work.","textChars":57,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/cjedkvyp","slide":26,"name":"","alt":"Browse, install, then try one skill","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/n116fd","slide":26,"text":""}
+{"kind":"slide","id":"sl/7r1n6q","slide":27,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/7q1kfito","slide":27,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/8ru1o3a9","slide":27,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/ts32h8bu","slide":27,"name":"page","text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/y1sjitc7","slide":27,"name":"title","text":"Keep the showcase placeholder honest","textPreview":"Keep the showcase placeholder honest","textChars":36,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/j21kbyts","slide":27,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/l4j2d8bi","slide":27,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/ixc3uxsb","slide":27,"name":"bullet-0","text":"The final skill and name will be supplied later.","textPreview":"The final skill and name will be supplied later.","textChars":48,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/3ylkn2tw","slide":27,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/vulc3e5o","slide":27,"name":"bullet-1","text":"The workflow matters now; do not invent branding.","textPreview":"The workflow matters now; do not invent branding.","textChars":49,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/utcva9oj","slide":27,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/hwnu5onu","slide":27,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/wvedcj69","slide":27,"name":"term","text":"Placeholder — An explicit stand-in, not a fictional product.","textPreview":"Placeholder — An explicit stand-in, not a fictional product.","textChars":60,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/x8nel0zm","slide":27,"name":"","alt":"Keep the showcase placeholder honest","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/7r1n6q","slide":27,"text":""}
+{"kind":"slide","id":"sl/amjxms","slide":28,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/adob25o3","slide":28,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/x0zud0ne","slide":28,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/wzqt4v6t","slide":28,"name":"page","text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/naxc7q5c","slide":28,"name":"title","text":"Review before installing","textPreview":"Review before installing","textChars":24,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/m9obylor","slide":28,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/ob6t0v6x","slide":28,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/761cju5g","slide":28,"name":"bullet-0","text":"Read what the skill claims to do and touch.","textPreview":"Read what the skill claims to do and touch.","textChars":43,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/658bap4v","slide":28,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/wbuxs36p","slide":28,"name":"bullet-1","text":"Try it once; remove it if it does not earn its place.","textPreview":"Try it once; remove it if it does not earn its place.","textChars":53,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/xc3yl87a","slide":28,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/a9cfqtoj","slide":28,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/valgjyp4","slide":28,"name":"term","text":"Least privilege applies to installed skills as well as tools.","textPreview":"Least privilege applies to installed skills as well as tools.","textChars":61,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/072d8ny9","slide":28,"name":"","alt":"Review before installing","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/amjxms","slide":28,"text":""}
+{"kind":"slide","id":"sl/0o63dv","slide":29,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/ihcf2xg3","slide":29,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/5knyxcze","slide":29,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/4jex47y9","slide":29,"name":"page","text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/rm5gzmhk","slide":29,"name":"title","text":"Risk rises with the permission level","textPreview":"Risk rises with the permission level","textChars":36,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/6lwf6hgz","slide":29,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/snex8ry5","slide":29,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/7q1wnihg","slide":29,"name":"bullet-0","text":"Read → create or edit → send or publish → irreversible","textPreview":"Read → create or edit → send or publish → irreversible","textChars":54,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/mpsfudgv","slide":29,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/ojipsfu9","slide":29,"name":"bullet-1","text":"Higher-risk actions need tighter controls.","textPreview":"Higher-risk actions need tighter controls.","textChars":42,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/pkr61kvu","slide":29,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/2hg7q5cj","slide":29,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/3ipozad4","slide":29,"name":"term","text":"Permission ladder — A practical order from observation to consequence.","textPreview":"Permission ladder — A practical order from observation to consequence.","textChars":70,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/wri58vy1","slide":29,"name":"","alt":"Risk rises with the permission level","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/0o63dv","slide":29,"text":""}
+{"kind":"slide","id":"sl/8rzaij","slide":30,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/ixoz21cz","slide":30,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/50fidgbq","slide":30,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/4z6h4bu5","slide":30,"name":"page","text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/r2x0fqtw","slide":30,"name":"title","text":"Instructions guide; permissions enforce","textPreview":"Instructions guide; permissions enforce","textChars":39,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/61oz6lcb","slide":30,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/s3qh8vu1","slide":30,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/76dg3mtc","slide":30,"name":"bullet-0","text":"“Please don’t publish” is not a security boundary.","textPreview":"“Please don’t publish” is not a security boundary.","textChars":50,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/m54zuhcr","slide":30,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/sjyl4fml","slide":30,"name":"bullet-1","text":"Real controls make disallowed actions impossible.","textPreview":"Real controls make disallowed actions impossible.","textChars":49,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/tkrmxk36","slide":30,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/6hg3254f","slide":30,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/ripkval0","slide":30,"name":"term","text":"Sandbox — Limits where actions take effect; it does not ensure correctness.","textPreview":"Sandbox — Limits where actions take effect; it does not ensure correctness.","textChars":75,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/gfuxo7e9","slide":30,"name":"","alt":"Instructions guide; permissions enforce","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/8rzaij","slide":30,"text":""}
+{"kind":"slide","id":"sl/j79cqv","slide":31,"title":"DATA, TOOLS, SKILLS & SAFETY","textShapes":7}
+{"kind":"shape","id":"sh/adoruhcf","slide":31,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/xgzq5wb6","slide":31,"name":"section","text":"DATA, TOOLS, SKILLS & SAFETY","textPreview":"DATA, TOOLS, SKILLS & SAFETY","textChars":28,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/wfq9wrul","slide":31,"name":"page","text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/nqx8zmt4","slide":31,"name":"title","text":"Stop before consequential actions","textPreview":"Stop before consequential actions","textChars":33,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/mporqhcj","slide":31,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/8b69sru9","slide":31,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/7m1sv6t8","slide":31,"name":"bullet-0","text":"Require approval before publish, pay, share or delete.","textPreview":"Require approval before publish, pay, share or delete.","textChars":54,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/6l8r2lcn","slide":31,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/4r6t4bit","slide":31,"name":"bullet-1","text":"Pause for legal, financial, reputational, privacy or irreversible risk.","textPreview":"Pause for legal, financial, reputational, privacy or irreversible risk.","textChars":71,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/5sfadgze","slide":31,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/ip4b210n","slide":31,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/jqdsb6h8","slide":31,"name":"term","text":"Approval — A human gate for consequential or irreversible actions.","textPreview":"Approval — A human gate for consequential or irreversible actions.","textChars":66,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/gbydovup","slide":31,"name":"","alt":"Stop before consequential actions","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/j79cqv","slide":31,"text":""}
+{"kind":"slide","id":"sl/iq7xzp","slide":32,"title":"ASSIGN, BRIEF & REVIEW","textShapes":7}
+{"kind":"shape","id":"sh/v6hc3idg","slide":32,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/wrqdwnu1","slide":32,"name":"section","text":"ASSIGN, BRIEF & REVIEW","textPreview":"ASSIGN, BRIEF & REVIEW","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/xszu58vm","slide":32,"name":"page","text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/m1ovqtcz","slide":32,"name":"title","text":"CLEAR makes work reviewable","textPreview":"CLEAR makes work reviewable","textChars":27,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/n2xczydk","slide":32,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/94zu18vq","slide":32,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/yxovmtw3","slide":32,"name":"bullet-0","text":"Clarify outcome · Load context · Explain standards","textPreview":"Clarify outcome · Load context · Explain standards","textChars":50,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/zyxcvyd8","slide":32,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/b2tsn2hw","slide":32,"name":"bullet-1","text":"Ask for a deliverable · Review against the standard.","textPreview":"Ask for a deliverable · Review against the standard.","textChars":52,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/a1kbexgb","slide":32,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/x4bapcz2","slide":32,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/c32tg7yh","slide":32,"name":"term","text":"CLEAR — A thinking checklist, not a magic prompt template.","textPreview":"CLEAR — A thinking checklist, not a magic prompt template.","textChars":58,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/t8bel0z2","slide":32,"name":"","alt":"CLEAR makes work reviewable","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/iq7xzp","slide":32,"text":""}
+{"kind":"slide","id":"sl/cy0v8u","slide":33,"title":"ASSIGN, BRIEF & REVIEW","textShapes":7}
+{"kind":"shape","id":"sh/dovmx4zu","slide":33,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/qlk329gj","slide":33,"name":"section","text":"ASSIGN, BRIEF & REVIEW","textPreview":"ASSIGN, BRIEF & REVIEW","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/rmd4vuh4","slide":33,"name":"page","text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/4j2l0zyd","slide":33,"name":"title","text":"Vague requests are hard to evaluate","textPreview":"Vague requests are hard to evaluate","textChars":35,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/5kbmt4zy","slide":33,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/3it4ruhs","slide":33,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/of65cjyh","slide":33,"name":"bullet-0","text":"“Help with my content” leaves the destination undefined.","textPreview":"“Help with my content” leaves the destination undefined.","textChars":56,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/9gfm5of2","slide":33,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/p4vq907a","slide":33,"name":"bullet-1","text":"If success is invisible, revision becomes guesswork.","textPreview":"If success is invisible, revision becomes guesswork.","textChars":52,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/o3mpgvqp","slide":33,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/n2d87qp4","slide":33,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/2147el8j","slide":33,"name":"term","text":"Prompt — Immediate input; a vague line is not an executable assignment.","textPreview":"Prompt — Immediate input; a vague line is not an executable assignment.","textChars":71,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/reh0rids","slide":33,"name":"","alt":"Vague requests are hard to evaluate","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/cy0v8u","slide":33,"text":""}
+{"kind":"slide","id":"sl/w408c8","slide":34,"title":"ASSIGN, BRIEF & REVIEW","textShapes":7}
+{"kind":"shape","id":"sh/q5sz6xcz","slide":34,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/d8jy1cvq","slide":34,"name":"section","text":"ASSIGN, BRIEF & REVIEW","textPreview":"ASSIGN, BRIEF & REVIEW","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/c7ah87u5","slide":34,"name":"page","text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/zalg3mdg","slide":34,"name":"title","text":"A CLEAR assignment exposes the contract","textPreview":"A CLEAR assignment exposes the contract","textChars":39,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/e9szahcv","slide":34,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/0buhc7u1","slide":34,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/nelg7mds","slide":34,"name":"bullet-0","text":"Make outcome, sources, standards, deliverable and review visible.","textPreview":"Make outcome, sources, standards, deliverable and review visible.","textChars":65,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/mdczehc7","slide":34,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/srq9sjmh","slide":34,"name":"bullet-1","text":"Separate hard constraints from preferences.","textPreview":"Separate hard constraints from preferences.","textChars":43,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/tsza1o32","slide":34,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/6p8rq94r","slide":34,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/rqhszelc","slide":34,"name":"term","text":"Assignment — Outcome + sources + standards + deliverable + review.","textPreview":"Assignment — Outcome + sources + standards + deliverable + review.","textChars":66,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/4zepwfm9","slide":34,"name":"","alt":"A CLEAR assignment exposes the contract","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/w408c8","slide":34,"text":""}
+{"kind":"slide","id":"sl/412bmf","slide":35,"title":"ASSIGN, BRIEF & REVIEW","textShapes":7}
+{"kind":"shape","id":"sh/y1g3udsj","slide":35,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/l47258ra","slide":35,"name":"section","text":"ASSIGN, BRIEF & REVIEW","textPreview":"ASSIGN, BRIEF & REVIEW","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/03ylw3ap","slide":35,"name":"page","text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/n6pk7i90","slide":35,"name":"title","text":"Curate sources and label authority","textPreview":"Curate sources and label authority","textChars":34,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/m5g3ydsv","slide":35,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/87yl0nal","slide":35,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/3a5kvy9w","slide":35,"name":"bullet-0","text":"Name the source of truth explicitly.","textPreview":"Name the source of truth explicitly.","textChars":36,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/29cjmtsb","slide":35,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/gre50ny9","slide":35,"name":"bullet-1","text":"Separate approved, reference, draft, outdated and archived material.","textPreview":"Separate approved, reference, draft, outdated and archived material.","textChars":68,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/hsnm98zu","slide":35,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/u5wnydgj","slide":35,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/fq547iho","slide":35,"name":"term","text":"Authority label — The status of a source for this task.","textPreview":"Authority label — The status of a source for this task.","textChars":55,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/8vi1sryl","slide":35,"name":"","alt":"Curate sources and label authority","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/412bmf","slide":35,"text":""}
+{"kind":"slide","id":"sl/w4owsu","slide":36,"title":"ASSIGN, BRIEF & REVIEW","textShapes":7}
+{"kind":"shape","id":"sh/ton2tkrm","slide":36,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/61cjip8v","slide":36,"name":"section","text":"ASSIGN, BRIEF & REVIEW","textPreview":"ASSIGN, BRIEF & REVIEW","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/7m5kra9g","slide":36,"name":"page","text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/kzu1gfqp","slide":36,"name":"title","text":"Conflicting sources trigger a question","textPreview":"Conflicting sources trigger a question","textChars":38,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/5032pkra","slide":36,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/jylkna94","slide":36,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/wvu1cvqt","slide":36,"name":"bullet-0","text":"Stop when facts are missing or sources disagree.","textPreview":"Stop when facts are missing or sources disagree.","textChars":48,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/xw32l0re","slide":36,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/lcjq9cz2","slide":36,"name":"bullet-1","text":"Ask the human which source or example should govern.","textPreview":"Ask the human which source or example should govern.","textChars":52,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/kba9g7yh","slide":36,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/za1872hw","slide":36,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/y9srehgr","slide":36,"name":"term","text":"Conflict rule — Stop and ask when authority is unclear.","textPreview":"Conflict rule — Stop and ask when authority is unclear.","textChars":55,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/ba10zupo","slide":36,"name":"","alt":"Conflicting sources trigger a question","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/w4owsu","slide":36,"text":""}
+{"kind":"slide","id":"sl/vyq2do","slide":37,"title":"ASSIGN, BRIEF & REVIEW","textShapes":7}
+{"kind":"shape","id":"sh/7atk36h4","slide":37,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/8bm1cbyp","slide":37,"name":"section","text":"ASSIGN, BRIEF & REVIEW","textPreview":"ASSIGN, BRIEF & REVIEW","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/9cv25gza","slide":37,"name":"page","text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/ylkj61gn","slide":37,"name":"title","text":"Useful feedback is diagnostic","textPreview":"Useful feedback is diagnostic","textChars":29,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/z6tkz6h8","slide":37,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/l8b21wzy","slide":37,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/qh0j2hgb","slide":37,"name":"bullet-0","text":"Issue → evidence → standard → correction → verify","textPreview":"Issue → evidence → standard → correction → verify","textChars":49,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/bi9kvmhw","slide":37,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/be1cvilw","slide":37,"name":"bullet-1","text":"“This is bad; try again” supplies no repair path.","textPreview":"“This is bad; try again” supplies no repair path.","textChars":49,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/qdsv2d4b","slide":37,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/dg3uxs32","slide":37,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/cfad4nmh","slide":37,"name":"term","text":"Diagnostic feedback — Evidence and a testable correction.","textPreview":"Diagnostic feedback — Evidence and a testable correction.","textChars":57,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/lwr2907m","slide":37,"name":"","alt":"Useful feedback is diagnostic","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/vyq2do","slide":37,"text":""}
+{"kind":"slide","id":"sl/hmbbio","slide":38,"title":"ASSIGN, BRIEF & REVIEW","textShapes":7}
+{"kind":"shape","id":"sh/zipwvmp8","slide":38,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/0jyd4rqt","slide":38,"name":"section","text":"ASSIGN, BRIEF & REVIEW","textPreview":"ASSIGN, BRIEF & REVIEW","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/1k7exw7e","slide":38,"name":"page","text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/mlgf6h8j","slide":38,"name":"title","text":"Decide whether to fix the task or the system","textPreview":"Decide whether to fix the task or the system","textChars":44,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/nmpwzmp4","slide":38,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/9o7e1w7a","slide":38,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/2pcvux8f","slide":38,"name":"bullet-0","text":"Correct a one-off output when the issue is local.","textPreview":"Correct a one-off output when the issue is local.","textChars":49,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/3q5wn2p0","slide":38,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/fi14z2lk","slide":38,"name":"bullet-1","text":"Save a reusable instruction or skill only when the pattern repeats—then test it.","textPreview":"Save a reusable instruction or skill only when the pattern repeats—then test it.","textChars":80,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/uhs36x4z","slide":38,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/hk3m1c3q","slide":38,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/gjul87m5","slide":38,"name":"term","text":"System fix — A reusable change that must be validated on future work.","textPreview":"System fix — A reusable change that must be validated on future work.","textChars":69,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/5o7ilkja","slide":38,"name":"","alt":"Decide whether to fix the task or the system","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/hmbbio","slide":38,"text":""}
+{"kind":"slide","id":"sl/73bi13","slide":39,"title":"FIRST SUPERVISED WORKFLOW","textShapes":7}
+{"kind":"shape","id":"sh/by5snmts","slide":39,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/cjytwrad","slide":39,"name":"section","text":"FIRST SUPERVISED WORKFLOW","textPreview":"FIRST SUPERVISED WORKFLOW","textChars":25,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/dk7upwby","slide":39,"name":"page","text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/ylgby1sj","slide":39,"name":"title","text":"Run the whole loop at visible scale","textPreview":"Run the whole loop at visible scale","textChars":35,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/zmpcr6to","slide":39,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/lo7utgbu","slide":39,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/mpgb21sf","slide":39,"name":"bullet-0","text":"CLEAR assignment → draft → review → revise → approve","textPreview":"CLEAR assignment → draft → review → revise → approve","textChars":52,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/nqpcv690","slide":39,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/7e9kr65w","slide":39,"name":"bullet-1","text":"Keep the artifact small enough to inspect every step.","textPreview":"Keep the artifact small enough to inspect every step.","textChars":53,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/md03y1ob","slide":39,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/90r2tgn2","slide":39,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/8zil0b6h","slide":39,"name":"term","text":"Supervised loop — Generate, verify, revise and approve within bounds.","textPreview":"Supervised loop — Generate, verify, revise and approve within bounds.","textChars":69,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/d4nm9obu","slide":39,"name":"","alt":"Run the whole loop at visible scale","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/73bi13","slide":39,"text":""}
+{"kind":"slide","id":"sl/qx0x96","slide":40,"title":"FIRST SUPERVISED WORKFLOW","textShapes":7}
+{"kind":"shape","id":"sh/w7qlovm5","slide":40,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/b6hkfq50","slide":40,"name":"section","text":"FIRST SUPERVISED WORKFLOW","textPreview":"FIRST SUPERVISED WORKFLOW","textChars":25,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/a5o3ml4f","slide":40,"name":"page","text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/94f2dgnu","slide":40,"name":"title","text":"Human decisions belong at named gates","textPreview":"Human decisions belong at named gates","textChars":37,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/o36lkbm9","slide":40,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/m1o3il43","slide":40,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/10f29gni","slide":40,"name":"bullet-0","text":"Confirm source authority, permissions, verification and approval.","textPreview":"Confirm source authority, permissions, verification and approval.","textChars":65,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/0z61gbmd","slide":40,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/ylsf2dwv","slide":40,"name":"bullet-1","text":"Narrate each decision instead of hiding it inside the process.","textPreview":"Narrate each decision instead of hiding it inside the process.","textChars":62,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/zm1wbixg","slide":40,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/knax4ne1","slide":40,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/lojed8f6","slide":40,"name":"term","text":"Decision marker — An explicit point where human judgment controls the path.","textPreview":"Decision marker — An explicit point where human judgment controls the path.","textChars":75,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/mxwnm9cn","slide":40,"name":"","alt":"Human decisions belong at named gates","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/qx0x96","slide":40,"text":""}
+{"kind":"slide","id":"sl/aliho7","slide":41,"title":"FIRST SUPERVISED WORKFLOW","textShapes":7}
+{"kind":"shape","id":"sh/szy1grql","slide":41,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/repknm90","slide":41,"name":"section","text":"FIRST SUPERVISED WORKFLOW","textPreview":"FIRST SUPERVISED WORKFLOW","textChars":25,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/qdgjeh8f","slide":41,"name":"page","text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/5cn2lcra","slide":41,"name":"title","text":"The controlled loop creates the value","textPreview":"The controlled loop creates the value","textChars":37,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/4be1c7qp","slide":41,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/i9wjax8j","slide":41,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/h8nihcry","slide":41,"name":"bullet-0","text":"A shiny first draft is only the beginning.","textPreview":"A shiny first draft is only the beginning.","textChars":42,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/g7e187qd","slide":41,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/61svits3","slide":41,"name":"bullet-1","text":"Reliable work comes from gates, evidence and revision.","textPreview":"Reliable work comes from gates, evidence and revision.","textChars":54,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/721cby9o","slide":41,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/s3udk3a9","slide":41,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/t43ud8ru","slide":41,"name":"term","text":"Verification — Checking an output against sources and standards.","textPreview":"Verification — Checking an output against sources and standards.","textChars":64,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/ehg3mt07","slide":41,"name":"","alt":"The controlled loop creates the value","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/aliho7","slide":41,"text":""}
+{"kind":"slide","id":"sl/wyxvop","slide":42,"title":"FIRST SUPERVISED WORKFLOW","textShapes":7}
+{"kind":"shape","id":"sh/d8rep0bm","slide":42,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/q50velcb","slide":42,"name":"section","text":"FIRST SUPERVISED WORKFLOW","textPreview":"FIRST SUPERVISED WORKFLOW","textChars":25,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/r69wnqtg","slide":42,"name":"page","text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/43ydcbu5","slide":42,"name":"title","text":"You now have a complete local workshop","textPreview":"You now have a complete local workshop","textChars":38,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/54relgvq","slide":42,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/32pwj6dk","slide":42,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/gfyd8but","slide":42,"name":"bullet-0","text":"One person · one assistant · one folder · one supervised loop","textPreview":"One person · one assistant · one folder · one supervised loop","textChars":61,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/h07uhgve","slide":42,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/lc7e1k7y","slide":42,"name":"bullet-1","text":"Complete for individual work on one machine.","textPreview":"Complete for individual work on one machine.","textChars":44,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/kbyxsf6d","slide":42,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/zapwzaps","slide":42,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/y9gfqpo7","slide":42,"name":"term","text":"Local setup — Files, context and delegation for one person.","textPreview":"Local setup — Files, context and delegation for one person.","textChars":59,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/na143adc","slide":42,"name":"","alt":"You now have a complete local workshop","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/wyxvop","slide":42,"text":""}
+{"kind":"slide","id":"sl/ix714g","slide":43,"title":"FIRST SUPERVISED WORKFLOW","textShapes":7}
+{"kind":"shape","id":"sh/e94bapob","slide":43,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/lcfa54n2","slide":43,"name":"section","text":"FIRST SUPERVISED WORKFLOW","textPreview":"FIRST SUPERVISED WORKFLOW","textChars":25,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/0bmtcz6h","slide":43,"name":"page","text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/nexs7e58","slide":43,"name":"title","text":"A second person creates a shared-context problem","textPreview":"A second person creates a shared-context problem","textChars":48,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/mdobe94n","slide":43,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/8f6tgjmt","slide":43,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/3itsva5o","slide":43,"name":"bullet-0","text":"Whose folder is current? Whose memory is right?","textPreview":"Whose folder is current? Whose memory is right?","textChars":47,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/2hkr25oj","slide":43,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/g7a9ofup","slide":43,"name":"bullet-1","text":"Copying files back and forth does not create a source of truth.","textPreview":"Copying files back and forth does not create a source of truth.","textChars":63,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/h8jah0ba","slide":43,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/u58rm5cj","slide":43,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/v61sfad4","slide":43,"name":"term","text":"Shared context — One source multiple people can use safely.","textPreview":"Shared context — One source multiple people can use safely.","textChars":59,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/k3250ni1","slide":43,"name":"","alt":"A second person creates a shared-context problem","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/ix714g","slide":43,"text":""}
+{"kind":"slide","id":"sl/5xn17u","slide":44,"title":"FIRST SUPERVISED WORKFLOW","textShapes":7}
+{"kind":"shape","id":"sh/utgni9kr","slide":44,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/hwrmtoj2","slide":44,"name":"section","text":"FIRST SUPERVISED WORKFLOW","textPreview":"FIRST SUPERVISED WORKFLOW","textChars":25,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/gvi5kj2h","slide":44,"name":"page","text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/3y9ovy18","slide":44,"name":"title","text":"Team coordination is the next course","textPreview":"Team coordination is the next course","textChars":36,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/2x0nmtkn","slide":44,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/4zi5oj2t","slide":44,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/j254ju1o","slide":44,"name":"bullet-0","text":"Shared access, conflict resolution and shared memory are different problems.","textPreview":"Shared access, conflict resolution and shared memory are different problems.","textChars":76,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/y1wnapkj","slide":44,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/gj2lonyp","slide":44,"name":"bullet-1","text":"The bridge belongs in Course 2—not as a quick add-on here.","textPreview":"The bridge belongs in Course 2—not as a quick add-on here.","textChars":58,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/1kb2h8fa","slide":44,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/ehk3mdgz","slide":44,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/fitkfixk","slide":44,"name":"term","text":"Single-user setup — Complete, but intentionally not designed for sharing.","textPreview":"Single-user setup — Complete, but intentionally not designed for sharing.","textChars":73,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/kz2lg72l","slide":44,"name":"","alt":"Team coordination is the next course","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/5xn17u","slide":44,"text":""}
+{"kind":"slide","id":"sl/yevhcb","slide":45,"title":"OPTIONAL: LOCAL MEMORY","textShapes":7}
+{"kind":"shape","id":"sh/5gfil8bu","slide":45,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/it4jqds3","slide":45,"name":"section","text":"OPTIONAL: LOCAL MEMORY","textPreview":"OPTIONAL: LOCAL MEMORY","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/jux0jyto","slide":45,"name":"page","text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/sj61wna5","slide":45,"name":"title","text":"Use a memory folder, not a black box","textPreview":"Use a memory folder, not a black box","textChars":36,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/tkfipsbq","slide":45,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/7ix0nitk","slide":45,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/gnq1knah","slide":45,"name":"bullet-0","text":"Keep stored context open, inspectable and separate from practice files.","textPreview":"Keep stored context open, inspectable and separate from practice files.","textChars":71,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/hoz2tsbm","slide":45,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/5kvq98vi","slide":45,"name":"bullet-1","text":"You should be able to read and correct every saved note.","textPreview":"You should be able to read and correct every saved note.","textChars":56,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/4j2903ux","slide":45,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/3it87ydc","slide":45,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/ihkrydcr","slide":45,"name":"term","text":"Inspectable memory — External records you can review and edit.","textPreview":"Inspectable memory — External records you can review and edit.","textChars":62,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/3qtg7qds","slide":45,"name":"","alt":"Use a memory folder, not a black box","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/yevhcb","slide":45,"text":""}
+{"kind":"slide","id":"sl/7ihuy7","slide":46,"title":"OPTIONAL: LOCAL MEMORY","textShapes":7}
+{"kind":"shape","id":"sh/ruhk3m90","slide":46,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/svqlcrql","slide":46,"name":"section","text":"OPTIONAL: LOCAL MEMORY","textPreview":"OPTIONAL: LOCAL MEMORY","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/twz25wr6","slide":46,"name":"page","text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/ip836h8j","slide":46,"name":"title","text":"Propose, confirm, then save","textPreview":"Propose, confirm, then save","textChars":27,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/jqhkz294","slide":46,"name":"image-frame","bbox":[548,196,676,386]}
+{"kind":"shape","id":"sh/5sz21cru","slide":46,"name":"bullet-dot-0","bbox":[88,236,11,11]}
+{"kind":"textbox","id":"sh/u1oj2x87","slide":46,"name":"bullet-0","text":"The assistant proposes a memory note.","textPreview":"The assistant proposes a memory note.","textChars":37,"textLines":1,"bbox":[116,226,372,86]}
+{"kind":"shape","id":"sh/v2xkv29s","slide":46,"name":"bullet-dot-1","bbox":[88,348,11,11]}
+{"kind":"textbox","id":"sh/7q98jmdc","slide":46,"name":"bullet-1","text":"A human reviews it before the note enters persistent storage.","textPreview":"A human reviews it before the note enters persistent storage.","textChars":61,"textLines":1,"bbox":[116,338,372,86]}
+{"kind":"shape","id":"sh/6p07q1wr","slide":46,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/tsrqlwv2","slide":46,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/8ripsreh","slide":46,"name":"term","text":"Memory write — A deliberate, reviewable persistence step.","textPreview":"Memory write — A deliberate, reviewable persistence step.","textChars":57,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/1krmt0ra","slide":46,"name":"","alt":"Propose, confirm, then save","bbox":[556,204,660,370]}
+{"kind":"notes","id":"nt/7ihuy7","slide":46,"text":""}
+{"kind":"slide","id":"sl/p2lfyw","slide":47,"title":"OPTIONAL: LOCAL MEMORY","textShapes":7}
+{"kind":"shape","id":"sh/ytormh8f","slide":47,"name":"top-rule","bbox":[64,52,1152,2]}
+{"kind":"textbox","id":"sh/lwfqxwrq","slide":47,"name":"section","text":"OPTIONAL: LOCAL MEMORY","textPreview":"OPTIONAL: LOCAL MEMORY","textChars":22,"textLines":1,"bbox":[64,68,520,22]}
+{"kind":"textbox","id":"sh/kv69orq5","slide":47,"name":"page","text":"47","textPreview":"47","textChars":2,"textLines":1,"bbox":[1118,65,98,25]}
+{"kind":"textbox","id":"sh/bqd8r29o","slide":47,"name":"title","text":"Test continuity in a fresh session","textPreview":"Test continuity in a fresh session","textChars":34,"textLines":1,"bbox":[64,108,1152,68]}
+{"kind":"shape","id":"sh/ap4rix83","slide":47,"name":"image-frame","bbox":[56,196,676,386]}
+{"kind":"shape","id":"sh/wrm9k7q9","slide":47,"name":"bullet-dot-0","bbox":[764,236,11,11]}
+{"kind":"textbox","id":"sh/fmhs369s","slide":47,"name":"bullet-0","text":"Start with an empty session and ask a known question.","textPreview":"Start with an empty session and ask a known question.","textChars":53,"textLines":1,"bbox":[792,226,372,86]}
+{"kind":"shape","id":"sh/ul8ru187","slide":47,"name":"bullet-dot-1","bbox":[764,348,11,11]}
+{"kind":"textbox","id":"sh/gr61sr2d","slide":47,"name":"bullet-1","text":"Success means the external memory returns the correct context.","textPreview":"Success means the external memory returns the correct context.","textChars":62,"textLines":1,"bbox":[792,338,372,86]}
+{"kind":"shape","id":"sh/hsfi1w3y","slide":47,"name":"term-rule","bbox":[64,614,1152,1]}
+{"kind":"textbox","id":"sh/upojqhk7","slide":47,"name":"term-label","text":"WORKING DEFINITION","textPreview":"WORKING DEFINITION","textChars":18,"textLines":1,"bbox":[64,634,190,20]}
+{"kind":"textbox","id":"sh/vqx0zmls","slide":47,"name":"term","text":"Fresh-session test — Proof that continuity comes from the memory system.","textPreview":"Fresh-session test — Proof that continuity comes from the memory system.","textChars":72,"textLines":1,"bbox":[260,627,956,38]}
+{"kind":"image","id":"im/wz2hkji9","slide":47,"name":"","alt":"Test continuity in a fresh session","bbox":[64,204,660,370]}
+{"kind":"notes","id":"nt/p2lfyw","slide":47,"text":""}
