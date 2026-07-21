@@ -861,7 +861,7 @@
           bullets: [
             "6 modules · 17 lessons · about 60 minutes",
             "One loop you'll reuse: brief → draft → review → revise → approve",
-            "Same small practice task from start to finish—ALIVE and skills layer in later",
+            "Same small practice task throughout—later: a persistent memory layer so your agent remembers you, your project, and what you're working on",
           ],
           image: {
             file: "l01-course-journey.png",
@@ -869,8 +869,8 @@
           },
           sidebar: [
             {
-              term: "Practice task",
-              def: "One low-stakes example you keep through the course so every lesson connects.",
+              term: "Memory",
+              def: "A product feature that preserves selected information for later sessions—not automatic.",
             },
           ],
           notes:
@@ -896,12 +896,6 @@
             file: "l01-you-remain-accountable.png",
             desc: "16-bit pixel art: assistant sprite offers a sparkling draft scroll; human at a desk with an APPROVE stamp. Sparkles on the draft do not equal the stamp.",
           },
-          sidebar: [
-            {
-              term: "Supervised workflow",
-              def: "AI helps with steps; you set the goal and check the result.",
-            },
-          ],
           notes:
             "Outcomes preview (~20s): aspirational, not a test. Mention polish ≠ ready to use only if you need one quick misconception hook.",
           tasksLabel: "Watch for",
@@ -924,12 +918,6 @@
             file: "l01-safe-practice-task.png",
             desc: "16-bit pixel art: three open chests labeled low-stakes / reversible / non-sensitive; a locked vault marked confidential is crossed out.",
           },
-          sidebar: [
-            {
-              term: "Practice boundary",
-              def: "What you may share and where work may have effect.",
-            },
-          ],
           notes:
             "Screen-share: open the practice-task worksheet (~30s). Fill one live example; cross out a confidential alternative.",
           tasks: [
@@ -1057,8 +1045,8 @@
               def: "Software around the model: UI, context assembly, tools, and permissions.",
             },
             {
-              term: "LLM",
-              def: "Large language model—the text-prediction engine inside many AI agents and chat products.",
+              term: "Assistant",
+              def: "Model plus harness, instructions, and context—the working experience you brief and supervise.",
             },
           ],
         },
@@ -1131,6 +1119,16 @@
             file: "l04-four-patterns.png",
             desc: "16-bit pixel art: four columns—single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons.",
           },
+          sidebar: [
+            {
+              term: "Workflow",
+              def: "A defined sequence of steps used to produce an outcome.",
+            },
+            {
+              term: "Automation",
+              def: "A workflow triggered by rules—limited judgment, predefined path.",
+            },
+          ],
         },
         {
           type: "content",
@@ -1169,6 +1167,12 @@
             file: "l04-autonomy-ladder.png",
             desc: "16-bit pixel art: five-rung ladder (Suggest → Draft → Prepare → Act with approval → Independent); rungs 2–4 highlighted as the course zone; top rung dimmed.",
           },
+          sidebar: [
+            {
+              term: "Human in the loop",
+              def: "A person reviews, approves, or intervenes at defined points.",
+            },
+          ],
           notes:
             'Classify the learner\'s practice task on the autonomy ladder; stop short of "publish without review."',
           tasks: [
@@ -1543,10 +1547,10 @@
             desc: "16-bit pixel art split screen: left—a small home computer glowing with a self-contained model chip; right—a message travels down a road to a distant server tower labeled provider.",
           },
           sidebar: [
-            { term: "Local model", def: "Runs on the learner's own device." },
+            { term: "Local model", def: "Runs on your device; inference may stay local." },
             {
               term: "Cloud API",
-              def: "Runs on a provider's remote servers; context travels there.",
+              def: "Runs on a provider's remote servers—your context travels there.",
             },
           ],
         },
@@ -1630,8 +1634,8 @@
               def: "Reusable guidance—procedures, examples, and standards—not the same as a tool.",
             },
             {
-              term: "API",
-              def: "Software interface through which systems exchange requests and results.",
+              term: "Connector",
+              def: "An integration linking the assistant to another service or data source.",
             },
           ],
         },
@@ -1746,6 +1750,16 @@
             file: "l11-mcp-is-not-memory.png",
             desc: "16-bit pixel art: MCP plug icon with X over a brain/memory vault—separate concepts.",
           },
+          sidebar: [
+            {
+              term: "MCP",
+              def: "Connection standard for tools and data—not a storage system.",
+            },
+            {
+              term: "Memory",
+              def: "Information preserved across sessions—a separate product feature.",
+            },
+          ],
         },
 
         /* —— Lesson 12 —— */
@@ -1849,6 +1863,12 @@
             file: "l13-permission-ladder.png",
             desc: "16-bit pixel art: ladder rungs Read → create/edit → send/publish → irreversible; a padlock sits on the publish/irreversible rungs.",
           },
+          sidebar: [
+            {
+              term: "Guardrail",
+              def: "A technical or procedural control that limits what the assistant can do.",
+            },
+          ],
         },
         {
           type: "content",
@@ -1863,6 +1883,16 @@
             file: "l13-guide-vs-enforce.png",
             desc: '16-bit pixel art: sticky note saying "please don\'t publish" next to a publish button that still works; beside it, the same button with a real padlock that blocks the action.',
           },
+          sidebar: [
+            {
+              term: "Instructions",
+              def: "Persistent guidance that shapes behavior—not a security boundary by itself.",
+            },
+            {
+              term: "Sandbox",
+              def: "A restricted environment that limits where actions can take effect.",
+            },
+          ],
         },
         {
           type: "content",
@@ -1879,8 +1909,8 @@
           },
           sidebar: [
             {
-              term: "Prompt injection",
-              def: "Untrusted content (pages, documents, emails) trying to redirect the agent away from your goal.",
+              term: "Human in the loop",
+              def: "A person who must approve consequential or irreversible actions.",
             },
           ],
           notes:
@@ -2028,16 +2058,6 @@
             file: "l15-task-fix-vs-system-fix.png",
             desc: "16-bit pixel art: fork in the road—left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear.",
           },
-          sidebar: [
-            {
-              term: "Task fix",
-              def: "One-off correction to this draft or output.",
-            },
-            {
-              term: "System fix",
-              def: "Durable update to instructions, skills, sources, or ALIVE context so the error does not repeat.",
-            },
-          ],
         },
 
         /* —— Lesson 16 —— */
