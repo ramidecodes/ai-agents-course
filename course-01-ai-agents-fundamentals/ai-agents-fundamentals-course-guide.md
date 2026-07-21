@@ -153,7 +153,7 @@ Use low-friction checks throughout the course. They should not add significant v
 | After Lesson 8  | Complete ALIVE install (including quick Python check) and confirm a saved item returns in a fresh session. | Local memory works in practice. |
 | After Lesson 9  | State one personal rule for what not to share, and explain the local-model-vs-cloud-API distinction in one sentence. | Data-sharing awareness is practical, not just theoretical. |
 | After Lesson 11 | Explain what MCP is in one sentence. | MCP is recognized as a connection standard, not memory. |
-| After Lesson 12 | Evaluate one skill listing (real or the course showcase example) before installing it. | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
+| After Lesson 12 | Evaluate one skill listing (real or the course showcase example) before installing it—including author/source when discovered via directories like [skills.sh](https://skills.sh). | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
 | After Lesson 13 | Write one stop-and-ask rule.                           | Permissions and human checkpoints are explicit.                          |
 | After Lesson 14 | Complete a CLEAR assignment.                           | The task is executable and reviewable.                                   |
 | After Lesson 15 | Revise an output using diagnostic feedback.            | The learner can supervise quality.                                       |
@@ -250,7 +250,7 @@ Prepare these assets before recording:
 9. **Troubleshooting guide.** Account, file-access, permission, and ordinary-file fallback checks.
 10. **Capstone brief.** One-page fictional business brief with enough information for a small reviewed artifact.
 11. **Data-sharing quick-reference.** A one-page local-vs-cloud comparison plus a short list of what to withhold by default.
-12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD — branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command.
+12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD — branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command. In Lesson 12, point learners to [skills.sh](https://skills.sh) as one place to discover skills—and reinforce that installs carry risk: verify the author, prefer official skills from reputable teams, and review what a package claims to do before installing.
 13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 8.
 
 ## Reference documentation
