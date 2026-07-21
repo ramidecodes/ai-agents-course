@@ -3,13 +3,14 @@
 This repository contains the source curricula for two courses:
 
 1. **AI Agents Fundamentals**  
-   *Set up your first AI assistant and complete a practical workflow*  
-   [Course curriculum](course-01-ai-agents-fundamentals/course-01-curriculum.html) · [Course guide](course-01-ai-agents-fundamentals/ai-agents-fundamentals-course-guide.md)  
-   Canonical teaching surface: the HTML curriculum (12 lessons · ~53 min). The long-form outline below is an earlier expanded draft; sync terminology with the HTML when they differ.
+   *Set up an AI assistant, assign real work, and supervise the result—entirely on your own machine*  
+   [Course curriculum](course-01-ai-agents-fundamentals/course-01-curriculum.html) · [Course guide](course-01-ai-agents-fundamentals/ai-agents-fundamentals-course-guide.md) · [Memory alternatives](docs/local-memory-alternatives.md)  
+   Canonical teaching surface: the HTML curriculum (6 modules · 17 lessons · 61 min core). Claude Code + ALIVE for local memory. Each lesson is also scoped as a 2–5 min standalone promo clip. The course is scoped as a complete **local, single-user** setup and closes by naming that boundary explicitly. The long-form outline below is an earlier expanded draft that predates this scope and does not match the current module/lesson structure—treat the HTML as the only source of truth and disregard the outline below where it conflicts.
 
 2. **AI Agents for Your Business**  
-   *Build a persistent AI workspace for strategy, brand, content, and execution*  
-   [Course curriculum](course-02-ai-agents-for-your-business/course-02-curriculum.html)
+   *Build a persistent, shared AI workspace for strategy, brand, content, and execution*  
+   [Course curriculum](course-02-ai-agents-for-your-business/course-02-curriculum.html)  
+   Reserved for team-scale and shared/multi-user concerns (shared context, access control, persistent team memory) that Course 1 deliberately does not cover. To be redone around that boundary in a future pass.
 
 ---
 
@@ -394,7 +395,7 @@ The course must not depend on a particular paid memory product. A product such a
 **Lesson objective:** Explain why a model, the product/harness around it, and the assistant experience are related but not interchangeable—and how one modern chat turn actually runs.  
 **Learner output:** A one-sentence model vs harness distinction, plus a sketched chat turn.
 
-> Canonical detail lives in `course-01-ai-agents-fundamentals/course-01-curriculum.html` (12-lesson curriculum). Prefer that file’s Slides (draft) section when generating slides.
+> Canonical detail lives in `course-01-ai-agents-fundamentals/course-01-curriculum.html` (12-lesson curriculum). Prefer that file’s **Slides (draft)** section when generating Google Slides (per-slide visual briefs + side-panel terms; brand later).
 
 #### Teaching points
 
@@ -1251,12 +1252,13 @@ Prepare these assets before recording:
 
 # Guidance for the slide-generation agent
 
-This section describes how a later agent should translate this document into lesson slides.
+This section describes how a later agent should translate this document into lesson slides. Prefer `course-01-curriculum.html` **Slides (draft)** as the source of truth (title + bullets; one 16-bit pixel-art visual brief per content slide; optional side-panel terms; screen-share instructor-only; brand later).
 
 ## Slide principles
 
 - Preserve the lesson objective, runtime, learner output, and closing rule.
-- Use one visual model per lesson whenever a relationship or sequence benefits from it.
+- Give every content slide its own visual brief that reinforces that slide’s teaching point (16-bit pixel art).
+- When the slide introduces technical terms, include a side panel with only those terms and ultra-short definitions.
 - Avoid turning every teaching point into a bullet slide.
 - Prefer diagrams, comparisons, annotated examples, checklists, and before/after artifacts.
 - Keep terminology identical to the definitions in this document.
