@@ -733,18 +733,28 @@
         "What you'll be able to do":
           "assets/pixel-art/02-you-remain-accountable.png",
         "Safe practice task": "assets/pixel-art/03-safe-practice-task.png",
+        "What a model does": "assets/pixel-art/07-model-vs-harness.png",
+        "Model families (as of recording)":
+          "assets/pixel-art/09-same-model-different-app.png",
+        "Harness vs model": "assets/pixel-art/07-model-vs-harness.png",
+        "Model vs harness": "assets/pixel-art/07-model-vs-harness.png",
+        "One chat turn": "assets/pixel-art/08-one-chat-turn.png",
+        "Next: install the harness":
+          "assets/pixel-art/04-minimum-beginner-stack.png",
         "What you're setting up today":
           "assets/pixel-art/00-cover-hero.png",
         "Words you'll need":
           "assets/pixel-art/09-same-model-different-app.png",
         "Claude Code minimum stack":
           "assets/pixel-art/04-minimum-beginner-stack.png",
+        "Project folders or Personal OS":
+          "assets/pixel-art/44-memory-folder-not-black-box.png",
         "Access ≠ authority": "assets/pixel-art/05-access-not-authority.png",
+        "Install and open": "assets/pixel-art/00-cover-hero.png",
+        "Confirm it works": "assets/pixel-art/06-acceptance-test.png",
         "Install, then acceptance test":
           "assets/pixel-art/06-acceptance-test.png",
         "Acceptance test": "assets/pixel-art/06-acceptance-test.png",
-        "Model vs harness": "assets/pixel-art/07-model-vs-harness.png",
-        "One chat turn": "assets/pixel-art/08-one-chat-turn.png",
         "Same model, different app":
           "assets/pixel-art/09-same-model-different-app.png",
         "Four patterns": "assets/pixel-art/10-four-patterns.png",
@@ -766,6 +776,7 @@
           "assets/pixel-art/45-propose-confirm-save.png",
         "Run /alive:world":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
+        "Save and confirm it returns": "assets/pixel-art/46-fresh-session-test.png",
         "Save and return test": "assets/pixel-art/46-fresh-session-test.png",
         "What to expect": "assets/pixel-art/45-propose-confirm-save.png",
         "Local vs cloud model": "assets/pixel-art/19-local-vs-cloud-model.png",
@@ -827,14 +838,14 @@
         {
           type: "lesson",
           lesson: 1,
-          module: "Module 01 · Orientation and setup",
+          module: "Module 01 · Orientation and mental model",
           title: "Welcome — your first workflow in one hour",
           runtime: "3 min",
         },
         {
           type: "content",
           lesson: 1,
-          module: "Module 01 · Orientation and setup",
+          module: "Module 01 · Orientation and mental model",
           title: "Who this is for",
           bullets: [
             "Entrepreneurs, creators, coaches, and small teams—no coding required",
@@ -862,7 +873,7 @@
         {
           type: "content",
           lesson: 1,
-          module: "Module 01 · Orientation and setup",
+          module: "Module 01 · Orientation and mental model",
           title: "Course journey",
           bullets: [
             "6 modules · 17 lessons · about 62 minutes",
@@ -880,20 +891,20 @@
             },
           ],
           notes:
-            "Screen-share (~30s): pan the finished setup—practice folder, starter brief, labeled draft, your review step. Lesson 2: stack lingo first, then install Claude Code.",
+            "Screen-share (~30s): pan the finished setup—workspace folder, starter brief, labeled draft, your review step. Next: how models and harnesses work (Lesson 2), then install Claude Code (Lesson 3).",
           tasksLabel: "Watch for",
           tasks: [
             "The five loop stages on screen",
-            "What is demoed now vs what you learn and install next lesson",
+            "What is demoed now vs what you learn next",
           ],
         },
         {
           type: "content",
           lesson: 1,
-          module: "Module 01 · Orientation and setup",
+          module: "Module 01 · Orientation and mental model",
           title: "What you'll be able to do",
           bullets: [
-            "Set up Claude Code on your Mac and work with files in a practice folder",
+            "Set up Claude Code on your Mac and work with files in a dedicated workspace",
             "Brief your AI agent, review its draft, and ask for improvements",
             "Know what to share—and what to keep private",
             "Finish one complete supervised workflow on your own task",
@@ -913,7 +924,7 @@
         {
           type: "content",
           lesson: 1,
-          module: "Module 01 · Orientation and setup",
+          module: "Module 01 · Orientation and mental model",
           title: "Safe practice task",
           bullets: [
             "Pick one small, public example—e.g. three article angles from a public brief",
@@ -937,82 +948,168 @@
         {
           type: "lesson",
           lesson: 2,
-          module: "Module 01 · Orientation and setup",
-          title: "Set up Claude Code on your Mac",
-          runtime: "6 min",
+          module: "Module 01 · Orientation and mental model",
+          title: "How models and harnesses work",
+          runtime: "5 min",
         },
         {
           type: "content",
           lesson: 2,
-          module: "Module 01 · Orientation and setup",
-          title: "What you're setting up today",
+          module: "Module 01 · Orientation and mental model",
+          title: "What a model does",
           bullets: [
-            "A working assistant on your Mac, in one practice folder",
-            "Proof the file workflow works—before anything sensitive",
+            "Predicts next tokens / generates text—not “thinks like a person”",
+            "Does not open files or run tools by itself",
           ],
           image: {
-            file: "00-cover-hero.png",
-            desc: "16-bit pixel art: human and assistant robot at a desk with a laptop and checklist; human holds a green verified checkmark. Scroll, chip, and search icons arc overhead.",
-          },
-          sidebar: [
-            {
-              term: "Practice folder",
-              def: "Dedicated workspace for course files and drafts.",
-            },
-          ],
-          tasksLabel: "Watch for",
-          tasks: [
-            "What “done” looks like for this lesson",
-            "That verification comes before sensitive files",
-          ],
-        },
-        {
-          type: "content",
-          lesson: 2,
-          module: "Module 01 · Orientation and setup",
-          title: "Words you'll need",
-          bullets: [
-            "Model = reasoning engine · Harness = the app around it",
-            "Assistant = what you brief · Terminal · cloud API · plugins later",
-          ],
-          image: {
-            file: "09-same-model-different-app.png",
-            desc: "16-bit pixel art: identical model chip plugged into two different harness cabinets—one with search/files unlocked, one locked—showing same model, different access.",
+            file: "07-model-vs-harness.png",
+            desc: "16-bit pixel art: glowing chip labeled model emitting token tiles into a reply bubble; no hands, no folder keys on the chip.",
           },
           sidebar: [
             {
               term: "Model",
-              def: "Reasoning and generation engine.",
+              def: "Predicts and generates—not the full product.",
             },
+            {
+              term: "Token",
+              def: "Small processing unit for text—not always a whole word.",
+            },
+          ],
+          notes:
+            "Open with demystification (~30s): fluent text ≠ human thought. Keep anthropomorphism off the table early.",
+          tasksLabel: "Watch for",
+          tasks: [
+            "What the model does vs what it does not",
+            "Why a confident reply is still just generation",
+          ],
+        },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and mental model",
+          title: "Model families (as of recording)",
+          bullets: [
+            "Claude · GPT · Gemini · open-weight options",
+            "Category distinction—not a product catalog to memorize",
+          ],
+          image: {
+            file: "09-same-model-different-app.png",
+            desc: "16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small “as of recording” stamp.",
+          },
+          sidebar: [
+            {
+              term: "Open-weight",
+              def: "Model weights you can run or host yourself—still need a harness.",
+            },
+          ],
+          notes:
+            "Name families lightly and date the slide. Teaching point is category, not brand loyalty.",
+          tasksLabel: "Watch for",
+          tasks: [
+            "That these are model families, not apps",
+            "Why “as of recording” matters",
+          ],
+        },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and mental model",
+          title: "Harness vs model",
+          bullets: [
+            "Harness = the app: UI, tools, files, permissions, history",
+            "Assistant = what you brief · Claude Code = our harness",
+          ],
+          image: {
+            file: "07-model-vs-harness.png",
+            desc: "16-bit pixel art: glowing chip/brain labeled model, tightly wrapped by a machinery frame (harness) with dials for tools and permissions; outer glow labeled assistant.",
+          },
+          sidebar: [
             {
               term: "Harness",
               def: "Software around the model: UI, context, tools, permissions.",
             },
             {
               term: "Assistant",
-              def: "Model + harness + instructions + context—what you supervise.",
+              def: "Combined working experience you supervise.",
             },
             {
-              term: "Cloud API",
-              def: "Remote interface that processes your context on a provider's servers.",
+              term: "Claude Code",
+              def: "The harness this course uses.",
             },
           ],
           notes:
-            "Keep this light—name each term once. Deeper model-vs-harness anatomy is Lesson 3.",
+            "When output fails later, ask: generation problem or harness problem? Install is next lesson—not this one.",
           tasksLabel: "Watch for",
           tasks: [
             "Model vs harness in one plain sentence",
-            "Why “cloud API” matters before you attach files",
+            "Why Claude Code is a harness, not a model",
           ],
         },
         {
           type: "content",
           lesson: 2,
-          module: "Module 01 · Orientation and setup",
+          module: "Module 01 · Orientation and mental model",
+          title: "One chat turn",
+          bullets: [
+            "You → harness assembles context → model",
+            "Model may request tools → harness executes (if allowed) → results return",
+            "Then a reply you can see (often with a step trail)",
+          ],
+          image: {
+            file: "08-one-chat-turn.png",
+            desc: "16-bit pixel art sequence panels left-to-right: message → context tray → model chip → optional tool wrench (run by harness) → reply bubble with a tiny step trail.",
+          },
+          notes:
+            "Optional live demo in a prepared session: send one message that triggers a visible tool. Point to the step trail—model requested; harness ran it. Or stay on the diagram.",
+          tasks: [
+            "Sketch the chat/tool loop in one line",
+            "Confirm: the model requests; the harness runs tools",
+          ],
+          sidebar: [
+            {
+              term: "Tool call",
+              def: "Model requests a capability; harness runs it if allowed.",
+            },
+            {
+              term: "Context",
+              def: "What the harness includes for this model call.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and mental model",
+          title: "Next: install the harness",
+          bullets: [
+            "You know what the pieces are",
+            "Next lesson: set up Claude Code on your Mac",
+          ],
+          image: {
+            file: "04-minimum-beginner-stack.png",
+            desc: "16-bit pixel art: three boxes inside a dotted fence—assistant robot, folder, starter-brief scroll; arrow pointing forward to install.",
+          },
+          notes: "Bridge only—do not start install commands on this slide.",
+          tasksLabel: "Watch for",
+          tasks: ["What you’ll install next", "Why theory came first"],
+        },
+
+        /* —— Lesson 3 —— */
+        {
+          type: "lesson",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
+          title: "Set up Claude Code on your Mac",
+          runtime: "5 min",
+        },
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
           title: "Claude Code minimum stack",
           bullets: [
-            "Claude Code · one practice folder · one starter brief",
-            "Plugins (ALIVE, skills) come later · other harnesses exist—we standardize here",
+            "Claude Code · one workspace folder · one starter brief",
+            "Memory layer and skills come later—we standardize here",
           ],
           urls: [
             {
@@ -1022,23 +1119,51 @@
           ],
           image: {
             file: "04-minimum-beginner-stack.png",
-            desc: "16-bit pixel art: three boxes inside a dotted practice-folder fence—assistant robot, folder, starter-brief scroll. Fancy optional tool icons sit outside the fence, greyed out.",
+            desc: "16-bit pixel art: three boxes inside a dotted folder fence—assistant robot, folder, starter-brief scroll. Optional tool icons outside the fence, greyed out.",
           },
           sidebar: [
             {
               term: "Claude Code",
-              def: "The harness this course uses for demos and hands-on work.",
+              def: "The harness this course uses.",
             },
             {
-              term: "Plugin",
-              def: "Add-on that extends the harness (ALIVE, skills)—installed later.",
+              term: "Cloud API",
+              def: "Remote processing of context on a provider’s servers.",
             },
+          ],
+          notes:
+            "Keep the stack tiny. Mention other harnesses only if asked—standardize on Claude Code for the course path.",
+        },
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
+          title: "Project folders or Personal OS",
+          bullets: [
+            "New folder per project—or one Personal OS directory for general assistance",
+            "Keeps context tidy for a persistent local memory layer later",
+          ],
+          image: {
+            file: "44-memory-folder-not-black-box.png",
+            desc: "16-bit pixel art: two tidy folder trees—project folders vs one Personal OS home—versus a messy dump pile crossed out.",
+          },
+          sidebar: [
+            {
+              term: "Personal OS",
+              def: "One general directory for personal-assistant style work and lasting context.",
+            },
+          ],
+          notes:
+            "Practical hygiene, not compliance theater. Foreshadow ALIVE (Lesson 8) as a persistent local memory layer without teaching it now.",
+          tasks: [
+            "Choose: new project folder or one Personal OS directory",
+            "Write the folder path you will use",
           ],
         },
         {
           type: "content",
-          lesson: 2,
-          module: "Module 01 · Orientation and setup",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
           title: "Access ≠ authority",
           bullets: [
             "File access is not permission to change or publish",
@@ -1057,13 +1182,12 @@
         },
         {
           type: "content",
-          lesson: 2,
-          module: "Module 01 · Orientation and setup",
-          title: "Install, then acceptance test",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
+          title: "Install and open",
           bullets: [
-            "Install Claude Code → open Terminal in your practice folder",
-            "Open → attach → summarize → draft → inspect → remove",
-            "No business secrets in the test",
+            "Install Claude Code → open Terminal in your chosen folder",
+            "Start Claude Code there",
           ],
           urls: [
             {
@@ -1075,128 +1199,55 @@
             label: "Install (macOS)",
             lines: [
               "curl -fsSL https://claude.ai/install.sh | bash",
-              "cd your-practice-folder",
+              "cd your-workspace-folder",
               "claude",
             ],
           },
           image: {
-            file: "06-acceptance-test.png",
-            desc: "16-bit pixel art: six-step path tiles—open → attach → summarize → draft → inspect → remove—ending at a trash can; no secret icons on the path.",
+            file: "00-cover-hero.png",
+            desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
           },
           notes:
-            "After the lingo and stack slides, install or open Claude Code and run the acceptance test once. Narrate what you refuse to share.",
+            "Screen-share the install (or open if already installed). Narrate the folder choice.",
           tasks: [
-            "Install or open Claude Code in your practice folder",
-            "Run the acceptance test: open → attach → summarize → draft → inspect → remove",
+            "Install or open Claude Code in your chosen folder",
+            "Confirm the Terminal path matches your workspace",
+          ],
+        },
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
+          title: "Confirm it works",
+          bullets: [
+            "Open it · try a simple prompt · confirm a reply",
+            "Optional: summarize a harmless starter brief",
+            "No business secrets in this first check",
+          ],
+          image: {
+            file: "06-acceptance-test.png",
+            desc: "16-bit pixel art: short path tiles—open → prompt → reply checkmark; no secret icons on the path.",
+          },
+          notes:
+            "Keep verify plain: open, prompt, confirm. Narrate what you refuse to share. Soft close toward agents next, ALIVE later.",
+          tasks: [
+            "Try a simple prompt and confirm a reply",
             "Say aloud what you refuse to share in this workspace",
           ],
-          sidebar: [
-            {
-              term: "Acceptance test",
-              def: "Harmless check that setup works before consequential work.",
-            },
-          ],
-        },
-
-        /* —— Lesson 3 —— */
-        {
-          type: "lesson",
-          lesson: 3,
-          module: "Module 02 · How AI systems actually work",
-          title: "Model vs harness: what's actually doing the work",
-          runtime: "4 min",
-        },
-        {
-          type: "content",
-          lesson: 3,
-          module: "Module 02 · How AI systems actually work",
-          title: "Model vs harness",
-          bullets: [
-            "You supervise the assistant—not a naked model chip",
-            "When output fails, ask: generation problem or harness problem?",
-            "Adjust the layer that actually broke",
-          ],
-          image: {
-            file: "l03-model-vs-harness.png",
-            desc: "16-bit pixel art: glowing chip/brain labeled model, tightly wrapped by a machinery frame (harness) with dials for tools and permissions; an outer glow labeled assistant experience.",
-          },
-          sidebar: [
-            {
-              term: "Model",
-              def: "Reasoning and generation engine—not the full product experience.",
-            },
-            {
-              term: "Harness",
-              def: "Software around the model: UI, context assembly, tools, and permissions.",
-            },
-            {
-              term: "Assistant",
-              def: "Model plus harness, instructions, and context—the working experience you brief and supervise.",
-            },
-          ],
-          notes:
-            "You named model vs harness lightly in Lesson 2—go deeper here. When output fails, ask: generation problem or harness problem?",
-        },
-        {
-          type: "content",
-          lesson: 3,
-          module: "Module 02 · How AI systems actually work",
-          title: "One chat turn",
-          bullets: [
-            "You → harness assembles context → model",
-            "Model may request tools → harness executes (if allowed) → results return",
-            "Then a reply you can see (often with a step trail)",
-          ],
-          image: {
-            file: "l03-one-chat-turn.png",
-            desc: "16-bit pixel art sequence panels left-to-right: message → context tray → model chip → optional tool wrench (run by harness) → reply bubble with a tiny step trail.",
-          },
-          notes:
-            "Send one message that triggers a visible tool (search or file read). Point to the step trail—model requested; product ran it.",
-          tasks: [
-            "Send one message that triggers a visible tool (search or file read)",
-            "Find the step trail in the reply",
-            "Confirm: the model requested the tool; the product ran it",
-          ],
-          sidebar: [
-            {
-              term: "Tool call",
-              def: "Model requests a capability; harness runs it if allowed.",
-            },
-            {
-              term: "Context",
-              def: "What the harness includes for this model call.",
-            },
-          ],
-        },
-        {
-          type: "content",
-          fullCourse: false,
-          lesson: 3,
-          module: "Module 02 · How AI systems actually work",
-          title: "Same model, different app",
-          bullets: [
-            "Files, search, memory, and permissions differ by product",
-            "Capability ≠ granted access",
-          ],
-          image: {
-            file: "l03-same-model-different-app.png",
-            desc: "16-bit pixel art: identical model chip plugged into two different harness cabinets—one with search/files unlocked, one locked—showing same model, different access.",
-          },
         },
 
         /* —— Lesson 4 —— */
         {
           type: "lesson",
           lesson: 4,
-          module: "Module 02 · How AI systems actually work",
+          module: "Module 02 · Setup and autonomy",
           title: "When is something actually an agent?",
           runtime: "4 min",
         },
         {
           type: "content",
           lesson: 4,
-          module: "Module 02 · How AI systems actually work",
+          module: "Module 02 · Setup and autonomy",
           title: "Four patterns",
           bullets: [
             "One-off answer · workflow · automation · agent",
@@ -1220,7 +1271,7 @@
         {
           type: "content",
           lesson: 4,
-          module: "Module 02 · How AI systems actually work",
+          module: "Module 02 · Setup and autonomy",
           title: "What an agent does",
           bullets: [
             "Goal + tools via harness + observe + continue within bounds",
@@ -1244,7 +1295,7 @@
         {
           type: "content",
           lesson: 4,
-          module: "Module 02 · How AI systems actually work",
+          module: "Module 02 · Setup and autonomy",
           title: "Autonomy ladder",
           bullets: [
             "Suggest → Draft → Prepare → Act with approval → Independent",
@@ -1568,7 +1619,7 @@
           type: "content",
           lesson: 8,
           module: "Module 03 · Context, memory, and retrieval",
-          title: "Save and return test",
+          title: "Save and confirm it returns",
           bullets: [
             "Work → checkpoint → new session → ask",
             "Context returns = setup works",

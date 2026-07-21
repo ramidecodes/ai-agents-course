@@ -35,7 +35,7 @@ By the end, learners should be able to:
 5. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
 6. Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a local, single-user setup is a different problem from a shared team setup.
 
-Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (setup lessons may run slightly longer when vocabulary precedes install). Outcome 4's hands-on counterpart is Lesson 8 (ALIVE setup), in the ~62-minute core.
+Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 may run slightly longer for hands-on setup). Outcome 4's hands-on counterpart is Lesson 8 (ALIVE setup), in the ~62-minute core.
 
 ## Instructional design approach
 
@@ -44,7 +44,7 @@ The course uses backward design: the practical behavior expected at the end dete
 ### Design principles
 
 1. **One clear outcome per lesson.** Every lesson has a single main behavior or decision the learner should be able to perform.
-2. **Progress from mental model to action.** Learners first understand the system, then its information and capabilities, then how to work with it, and finally how to complete a workflow. Apply this inside setup lessons too: Lesson 2 teaches stack vocabulary and the minimum-stack mental model *before* install commands and the acceptance test.
+2. **Progress from mental model to action.** Learners first understand the system, then its information and capabilities, then how to work with it, and finally how to complete a workflow. Lesson 2 is theory only (what models and harnesses do); Lesson 3 is the install—so setup has meaning after the mental model.
 3. **Keep cognitive load low.** New terminology is grouped by function and anchored to one consistent analogy.
 4. **Use realistic business examples.** Abstract concepts are demonstrated through briefs, research, planning, drafting, and review.
 5. **Correct misconceptions explicitly.** Each lesson names a common false belief and replaces it with a usable rule.
@@ -145,12 +145,12 @@ Use low-friction checks throughout the course. They should not add significant v
 
 | Point           | Check                                                  | Evidence of learning                                                     |
 | --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
-| After Lesson 2  | Name model vs harness in one plain sentence, then open Claude Code and use one selected project file. | Stack vocabulary is usable and the environment works. |
-| After Lesson 3  | Explain model versus harness/app in one sentence, and sketch one chat turn. | The foundational distinction and chat/tool loop are understood. |
+| After Lesson 2  | Explain model versus harness/app in one sentence, and sketch one chat turn. | The foundational distinction and chat/tool loop are understood. |
+| After Lesson 3  | Open Claude Code in the chosen workspace and confirm a simple prompt works. | The harness is installed and usable. |
 | After Lesson 4  | Select an autonomy level and justify it.               | The learner can match autonomy to risk.                                  |
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
-| After Lesson 8  | Complete ALIVE install (including quick Python check) and pass a fresh-session retrieval test. | Local memory works in practice. |
+| After Lesson 8  | Complete ALIVE install (including quick Python check) and confirm a saved item returns in a fresh session. | Local memory works in practice. |
 | After Lesson 9  | State one personal rule for what not to share, and explain the local-model-vs-cloud-API distinction in one sentence. | Data-sharing awareness is practical, not just theoretical. |
 | After Lesson 11 | Explain what MCP is in one sentence. | MCP is recognized as a connection standard, not memory. |
 | After Lesson 12 | Evaluate one skill listing (real or the course showcase example) before installing it. | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
@@ -180,10 +180,12 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 
 - Teach concepts and architecture in provider-neutral language where possible.
 - Demonstrate **Claude Code** as the primary assistant throughout the core course.
-- **Lesson 2 sequence (required):** motivation → stack vocabulary (model, harness, assistant, Terminal, practice folder, cloud API, plugin) → minimum-stack mental model → access ≠ authority → *then* install → acceptance test. Do not open with install commands.
-- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 8).
+- **Lesson 2 sequence (required, theory only—no install):** what a model does (next-token / text generation) → named model families (concrete, dated “as of recording”) → harness / app / assistant vs model; Claude Code = the harness we’ll use → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
+- **Lesson 3 sequence (required):** minimum stack in plain language → workspace hygiene (new folder per project, or one general Personal OS directory) → access ≠ authority / cloud API caution → install + open in the practice folder → quick verify (open it, try a simple prompt, confirm it works) → close toward agents / ALIVE later. Do not open with install commands before the stack and folder guidance.
+- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 8)—a persistent local memory layer on disk. Lesson 3’s folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
+- When naming tools or brands, say what they *are* (the job they do)—harness, local files, memory layer, cloud API, assistant UI—not random name-drops.
 - Provide a separate translation sheet only where product differences would block learners on other assistants.
-- Demonstrate file-aware work using ordinary, human-readable files in a practice folder.
+- Demonstrate file-aware work using ordinary, human-readable files in a dedicated workspace.
 - Teach why persistent memory doesn't exist by default, what RAG is, and MCP at recognition level in the core course (dedicated ~3 min MCP lesson).
 - Give every learner a no-integration path for conceptual lessons so product differences do not block learning.
 
@@ -192,21 +194,18 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 | Layer | Course requirement | Acceptable implementation |
 | ----- | ------------------ | ------------------------- |
 | Assistant | Claude Code on macOS with file access | Primary demo environment; ALIVE plugin for memory |
-| Practice folder | Human-readable learner-owned files | Ordinary Finder folder with Markdown or text files |
+| Workspace | Human-readable learner-owned files | New folder per project, or one general Personal OS directory for a personal-assistant style setup |
 | Editing | Direct inspection and correction | Built-in editor or any familiar text editor |
 | Course assets | Brief, worksheet, and checklists | Downloadable Markdown or PDF files |
 
-## Setup acceptance test
+## Setup quick check
 
-The setup is ready only when the learner can:
+After Lesson 3, the learner should be able to:
 
-1. Open the assistant and identify its current project or workspace.
-2. Open the dedicated practice folder or project.
-3. Select or attach a harmless starter brief.
-4. Ask the assistant to summarize the brief and cite the supplied facts.
-5. Create a clearly labeled draft without overwriting the source.
-6. Inspect and edit the draft directly.
-7. Remove the disposable draft or revoke access if necessary.
+1. Open Claude Code in their chosen workspace (project folder or Personal OS directory).
+2. Try a simple prompt and confirm a reply comes back.
+3. Optionally: open or attach a harmless starter brief and ask for a short summary—inspect the result outside chat if they created a draft.
+4. Keep sensitive material out of this first session.
 
 ## Ordinary-file fallback
 
@@ -227,7 +226,7 @@ Prepare these assets before recording:
 2. **CLEAR assignment worksheet.** A one-page fillable assignment planner.
 3. **Context checklist.** Outcome, audience, sources, constraints, example, deliverable, standard, and questions.
 4. **Capability and permission map.** Workflow step, information, skill, tool, permission, and approval.
-5. **Practice folder.** A starter brief, source note, and safe destination for drafts.
+5. **Workspace starter.** A starter brief, source note, and safe destination for drafts—in a new project folder or a Personal OS directory.
 6. **Source-label template.** Approved, reference, draft, outdated, and archive labels.
 7. **Lightweight evaluation checklist.** Facts, instruction-following, quality, preference, risk, and approval.
 8. **Assistant translation sheet.** Equivalent setup concepts and product-specific terminology.
@@ -235,13 +234,13 @@ Prepare these assets before recording:
 10. **Capstone brief.** One-page fictional business brief with enough information for a small reviewed artifact.
 11. **Data-sharing quick-reference.** A one-page local-vs-cloud comparison plus a short list of what to withhold by default.
 12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD — branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command.
-13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and fresh-session retrieval test for Lesson 8.
+13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 8.
 
 ## Reference documentation
 
 | Document | Purpose |
 | -------- | ------- |
-| [`docs/local-memory-alternatives.md`](../docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP, Mem0, Zep, Letta, OpenMemory, Cursor rules, etc.); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 8. |
+| [`docs/local-memory-alternatives.md`](../docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP-based memory, and other persistent local or synced memory layers); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 8. |
 
 # Guidance for the slide-generation agent
 
@@ -305,7 +304,7 @@ For every slide deck, retain:
 - End every lesson with the reusable rule listed in its brief.
 - Avoid interface details that are likely to age quickly in conceptual lessons.
 - Record setup screens separately where possible so they can be replaced without re-recording the conceptual explanation.
-- For Lesson 2, record the vocabulary and mental-model segment separately from the install/acceptance-test screen-share so either can be updated without re-shooting both.
+- For Lesson 2 (theory) and Lesson 3 (install), record separately so either can be updated without re-shooting both.
 
 ## Accessibility and comprehension
 
@@ -367,7 +366,7 @@ Pilot the course with a small group from the intended audience before final reco
 
 - Can learners choose a safe, appropriately narrow practice task without help?
 - Can they explain the model–harness/app–assistant distinction and sketch one chat/tool turn in their own words?
-- Can they complete the setup acceptance test on a clean account?
+- Can they open Claude Code in their workspace and confirm a simple prompt works on a clean account?
 - Can they produce a usable CLEAR assignment without copying the instructor example?
 - Can they identify a meaningful approval point and verify a claim against a source?
 - Where do they pause, replay, abandon, or ask for help?
@@ -386,8 +385,8 @@ Pilot the course with a small group from the intended audience before final reco
 
 | Course outcome | Primary lessons | Demonstrated by |
 | -------------- | --------------- | --------------- |
-| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 introduces stack terms lightly; Lessons 3–4 deepen with one-sentence model vs harness explanation, sketched chat turn, and autonomy choice |
-| Set up an assistant, install a new skill, and provide focused context with ordinary files | 2, 5, 8–9 | Stack lingo + setup test, starter brief, context checklist, and one deliberately installed skill |
+| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 covers autonomy and agents |
+| Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9 | Lesson 3 install + quick verify, starter brief, context checklist, and one deliberately installed skill |
 | Explain data sharing (local vs. cloud) well enough to make cautious choices | 7 | One stated personal rule for what not to share |
 | Explain why memory isn't persistent by default, and what RAG does | 6 | Classification of five information examples plus a plain-language RAG explanation |
 | Give, review, verify, and improve a well-sourced assignment | 8, 11–12 | Capability map, CLEAR worksheet, source pack, and diagnostic revision |

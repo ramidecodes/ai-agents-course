@@ -1115,10 +1115,10 @@
         <p class="section-label">Course promise</p>
         <h2 id="about-heading">A practical working model—not another product tour</h2>
         <p class="lede">
-          In about 62 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They learn the stack vocabulary, set up Claude Code on macOS, add local memory with ALIVE, understand what happens to their data along the way, learn a reliable method for assigning work, extend the assistant with a new skill, and complete one small supervised workflow.
+          In about 62 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They learn how models and harnesses work, set up Claude Code on macOS, add local memory with ALIVE, understand what happens to their data along the way, learn a reliable method for assigning work, extend the assistant with a new skill, and complete one small supervised workflow.
         </p>
         <p class="lede">
-          A concise, non-technical introduction for entrepreneurs and business users who have tried chat-based AI but still lack a dependable way to use it for real work. By the end: Claude Code as a working assistant, one practice folder, ALIVE for memory across sessions, one repeatable way to delegate, one set of data-sharing and safety rules, and one completed supervised workflow—plus a clear view of exactly where a file-based, single-user setup like this one reaches its limit. Each lesson is scoped as a 2–6 minute standalone clip as well as part of the full course.
+          A concise, non-technical introduction for entrepreneurs and business users who have tried chat-based AI but still lack a dependable way to use it for real work. By the end: Claude Code as a working assistant, one workspace (project folder or Personal OS), ALIVE for memory across sessions, one repeatable way to delegate, one set of data-sharing and safety rules, and one completed supervised workflow—plus a clear view of exactly where a file-based, single-user setup like this one reaches its limit. Each lesson is scoped as a 2–6 minute standalone clip as well as part of the full course.
         </p>
       </div>
     </section>
@@ -1167,7 +1167,7 @@
           <li>Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a file-based, single-user setup is a different problem from a shared team setup.</li>
         </ol>
         <p class="audience-note">
-          For non-technical entrepreneurs, creators, coaches, independent professionals, and small-business teams. Prerequisites: a Mac, one supported AI assistant account, a practice folder, and one real but non-sensitive business task. No coding required. Not aimed at engineers building agent infrastructure—though the mental models remain useful.
+          For non-technical entrepreneurs, creators, coaches, independent professionals, and small-business teams. Prerequisites: a Mac, one supported AI assistant account, a workspace folder (project or Personal OS), and one real but non-sensitive business task. No coding required. Not aimed at engineers building agent infrastructure—though the mental models remain useful.
         </p>
       </div>
     </section>
@@ -1189,17 +1189,17 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td><span class="mod-title">Orientation and setup</span></td>
+              <td><span class="mod-title">Orientation and mental model</span></td>
               <td class="hide-sm">2</td>
-              <td>8 min</td>
-              <td class="hide-sm"><span class="mod-out">Safe practice task, stack lingo, and Claude Code verified</span></td>
+              <td>7 min</td>
+              <td class="hide-sm"><span class="mod-out">Safe practice task, and model vs harness clarity</span></td>
             </tr>
             <tr>
               <td>2</td>
-              <td><span class="mod-title">How AI systems actually work</span></td>
+              <td><span class="mod-title">Setup and autonomy</span></td>
               <td class="hide-sm">2</td>
-              <td>8 min</td>
-              <td class="hide-sm"><span class="mod-out">Model vs harness, chat loop, and autonomy choice</span></td>
+              <td>9 min</td>
+              <td class="hide-sm"><span class="mod-out">Claude Code working, and autonomy choice</span></td>
             </tr>
             <tr>
               <td>3</td>
@@ -1253,7 +1253,7 @@
             <p class="col-label">Before presenting</p>
             <ul class="plain-list">
               <li>Treat this curriculum and <code>course-01-slides.html</code> as a paired source of truth. The slide file controls audience-facing sequence, copy, visuals, links, and embedded notes; this file controls teaching intent, objectives, misconceptions, demonstrations, and transitions. Reconcile both whenever one changes.</li>
-              <li>Preflight Claude Code, Python 3.10+, ALIVE, the practice folder, links, commands, permissions, and the fresh-session test. Keep a prepared installed state or short capture available for network-dependent steps.</li>
+              <li>Preflight Claude Code, Python 3.10+, ALIVE, the workspace folder, links, commands, permissions, and the fresh-session check. Keep a prepared installed state or short capture available for network-dependent steps.</li>
               <li>Verify product commands, plan terms, and privacy settings against current official sources immediately before recording. State the date checked when showing policy or settings pages.</li>
               <li>Use one public, non-sensitive practice task throughout. Reset its files to a known baseline before each take.</li>
               <li>Do not record Lesson 12 until <strong>[Skill Name TBD]</strong> has been replaced with a real, reviewed skill and the corresponding slide copy and notes have been updated.</li>
@@ -1263,10 +1263,10 @@
             <p class="col-label">While presenting</p>
             <ul class="plain-list">
               <li>The listed runtime includes the demonstration. Pre-stage setup and show only the decision or action that teaches the lesson; do not make viewers wait through downloads, authentication, or long generation.</li>
-              <li>The default slide URL shows the 44-slide full-course cut. Add <code>?extended=1</code> for reinforcement slides, <code>?lesson-dividers=1</code> for standalone-clip title cards, or both for the complete 73-slide reference deck.</li>
+              <li>The default slide URL shows the full-course cut. Add <code>?extended=1</code> for reinforcement slides, <code>?lesson-dividers=1</code> for standalone-clip title cards, or both for the complete reference deck.</li>
               <li>Use each lesson divider to state the question or outcome. On content slides, explain the visual and add the example or caveat from this guide instead of reading the bullets aloud.</li>
               <li>Narrate the human decisions: source authority, workspace boundary, permission, verification, correction, and approval. A successful demo is evidence of a supervised step, not proof that the system is safe for unattended work.</li>
-              <li>When a live step fails, name the failure, switch to the prepared state, and continue with the acceptance test. Never imply that a skipped or simulated action succeeded live.</li>
+              <li>When a live step fails, name the failure, switch to the prepared state, and continue with a plain verify step (open it, try a simple prompt). Never imply that a skipped or simulated action succeeded live.</li>
               <li>Use “local” precisely: ALIVE’s files are local, while Claude Code model inference is cloud-based. Connected tools, sync, or telemetry can still transmit data even when a model runs locally.</li>
             </ul>
           </div>
@@ -1296,8 +1296,8 @@
               <button type="button" class="module-toggle" aria-expanded="true" id="mod-1-btn" aria-controls="mod-1-panel">
                 <span class="module-num">01</span>
                 <span class="module-copy">
-                  <span class="module-title">Orientation and setup</span>
-                  <span class="module-meta">2 lessons · 8 min</span>
+                  <span class="module-title">Orientation and mental model</span>
+                  <span class="module-meta">2 lessons · 7 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -1305,8 +1305,8 @@
             <div class="module-panel" id="mod-1-panel" role="region" aria-labelledby="mod-1-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Give learners a clear destination, a safe practice boundary, the essential stack vocabulary, and a verified environment before introducing deeper theory.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> A suitable practice task selected, stack terms understood well enough to install confidently, and confirmation that the assistant can work with the course context workspace.</p>
+                  <p class="module-desc">Give learners a clear destination, a safe practice boundary, and a usable mental model of what models and harnesses do—before any install.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> A suitable practice task selected, and a clear one-sentence distinction between the model and the harness/app—including how one chat turn runs.</p>
                   <ul class="lessons">
 
                     <li class="lesson">
@@ -1421,43 +1421,42 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: one supervised loop, one safe practice task. Next: learn the stack vocabulary, then install the assistant you'll use for the rest of the course.</p>
+                        <p class="transition-note">Takeaway: one supervised loop, one safe practice task. Next: how models and harnesses actually work—so the install in the following lesson has meaning.</p>
                       </div>
                     </li>
 
                     <li class="lesson">
                       <span class="lesson-num">2</span>
                       <div>
-                        <p class="lesson-title">Set up Claude Code on your Mac</p>
-                        <p class="lesson-desc">Learn the few terms you need, see how the pieces fit, then install Claude Code, open your practice folder, and run a harmless acceptance test—so you know file access works before you attach anything sensitive.</p>
+                        <p class="lesson-title">How models and harnesses work</p>
+                        <p class="lesson-desc">A model predicts the next tokens—it does not “think like a person.” Named families help you spot category differences; the harness is the app around the model. Here's how one chat turn actually runs—before you install anything.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 6 min</li>
-                          <li><strong>Output</strong> Working Claude Code session, practice folder, inspected disposable draft</li>
-                          <li><strong>Standalone clip</strong> Works alone—assumes only “I want a local AI assistant on my Mac,” not prior course lessons.</li>
+                          <li><strong>Runtime</strong> 5 min</li>
+                          <li><strong>Output</strong> One-sentence model vs harness distinction, plus a sketched chat turn</li>
+                          <li><strong>Standalone clip</strong> Works alone—no setup required; uses diagrams, not your install.</li>
                         </ul>
-                        <p class="lesson-why">Claude Code is the course's primary environment: terminal-based, file-aware, and extensible with plugins (skills, ALIVE). Learners install more confidently—and make safer sharing choices—when they understand the stack vocabulary and mental model <em>before</em> the install commands.</p>
+                        <p class="lesson-why">The most common misconception is that “the AI” is just the model. Install goes better—and safer—when learners already know what the model does, what the harness adds, and how a chat turn with tools actually runs. Theory first; Claude Code install is Lesson 3.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li><strong>Motivation:</strong> By the end of this lesson you'll have Claude Code open on a dedicated practice folder and proof that a harmless file workflow works—before any sensitive material enters the chat.</li>
-                            <li><strong>Words you'll need:</strong> A <em>model</em> is the reasoning engine; a <em>harness</em> (app) is the software around it—UI, file access, tools, permissions. An <em>assistant</em> is the working experience you brief and supervise. Claude Code is the harness we use in this course. You'll open it from <em>Terminal</em>. A <em>practice folder</em> is your dedicated workspace. Context you attach often travels over a <em>cloud API</em> unless you use a local model. <em>Plugins</em> (ALIVE, skills) come later—skip them for now.</li>
-                            <li><strong>How the pieces fit:</strong> Minimum stack = Claude Code + one practice folder + one starter brief. This course uses Claude Code as the demo harness—not because it is the only option. Cursor, Windsurf, OpenCode, and Codex are real alternatives with their own context and memory patterns; we standardize on Claude Code so every learner follows the same hands-on path. For portable memory options beyond this path, see <code>docs/local-memory-alternatives.md</code>.</li>
-                            <li><strong>Boundaries before install:</strong> Use a dedicated folder—do not mix course work into a general chat. File access is not permission to change or publish anything else. The learner remains responsible for what is shared; Claude Code sends context to Anthropic's cloud API unless you use a local model.</li>
-                            <li><strong>Then install:</strong> Install Claude Code from Anthropic; open it in Terminal at your practice folder.</li>
-                            <li><strong>Then verify:</strong> Run a harmless acceptance test: open folder → attach brief → summarize without new facts → labeled draft → inspect outside chat → remove draft or end session.</li>
+                            <li><strong>What a model does:</strong> A language model predicts likely next tokens and generates text (and sometimes other modalities). It does not open files, click buttons, or enforce permissions by itself—and a fluent reply is not the same as human understanding.</li>
+                            <li><strong>Named model families (as of recording):</strong> Name a few concrete families so learners can categorize, not memorize a catalog—e.g. Claude (Anthropic), GPT (OpenAI), Gemini (Google), and open-weight options you can run or host yourself. Teaching point: same category (models), different providers and tradeoffs; products change—use “as of recording.”</li>
+                            <li><strong>Harness / app / assistant vs model:</strong> The harness is ordinary software around the model: UI, context assembly, tool execution, history, and permissions. An assistant is the working experience when model + harness + instructions + context + capabilities combine. Claude Code is the harness we use in this course—not because it is the only option, but so everyone follows one hands-on path.</li>
+                            <li><strong>One chat turn:</strong> You send a message → the harness assembles context → the model replies with text and/or tool requests → the harness runs allowed tools and feeds results back → the model may continue → you see a response (often with a step trail). Same model, different harness → different behavior.</li>
+                            <li><strong>Bridge:</strong> Next lesson we install and open that harness on your Mac—so the vocabulary has somewhere to land.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
-                              <li>Installing more tools creates a better beginner setup.</li>
-                              <li>File access makes every file appropriate to share.</li>
-                              <li>The assistant automatically knows which source is authoritative.</li>
-                              <li>A successful test means the agent is safe for consequential work.</li>
-                              <li>You must master every AI term before you can install anything useful.</li>
+                              <li>“ChatGPT” or “Claude” is simply one model.</li>
+                              <li>The model itself executes tools, searches the web, or edits files.</li>
+                              <li>A conversational tone means the system understands or cares like a person.</li>
+                              <li>A newer model automatically has more of the learner’s data or better permissions.</li>
+                              <li>Model intelligence and product permissions are the same capability.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">Know the stack, then verify it: one assistant, one safe folder, one reversible test—and you're ready to work.</p>
+                          <p class="rule-close">Judge the model plus its harness—not the model name alone. Next: install the harness.</p>
                         </div>
 
                         <div class="lesson-details">
@@ -1468,101 +1467,94 @@
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">What you're setting up today</h5>
+                                  <h5 class="slide-title">What a model does</h5>
                                   <ul class="slide-body">
-                                    <li>A working assistant on your Mac, in one practice folder</li>
-                                    <li>Proof the file workflow works—before anything sensitive</li>
+                                    <li>Predicts next tokens / generates text—not “thinks like a person”</li>
+                                    <li>Does not open files or run tools by itself</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: human and assistant robot at a desk with a laptop and checklist; human holds a green verified checkmark. Scroll, chip, and search icons arc overhead. (Reuse: <code>00-cover-hero.png</code>.)</p>
+                                    <p>16-bit pixel art: glowing chip labeled model emitting token tiles into a reply bubble; no hands, no folder keys on the chip. (Reuse: <code>07-model-vs-harness.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Practice folder</strong> — Dedicated workspace for course files and drafts.</li>
+                                    <li><strong>Model</strong> — Predicts and generates; not the full product.</li>
+                                    <li><strong>Token</strong> — Small processing unit for text—not always a whole word.</li>
                                     </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Words you'll need</h5>
+                                  <h5 class="slide-title">Model families (as of recording)</h5>
                                   <ul class="slide-body">
-                                    <li>Model = reasoning engine · Harness = the app around it</li>
-                                    <li>Assistant = what you brief · Terminal · cloud API · plugins later</li>
+                                    <li>Claude · GPT · Gemini · open-weight options</li>
+                                    <li>Category distinction—not a product catalog to memorize</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: identical model chip plugged into two different harness cabinets—one with search/files unlocked, one locked—showing same model, different access. (Reuse: <code>09-same-model-different-app.png</code>.)</p>
+                                    <p>16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small “as of recording” stamp. (Reuse: <code>09-same-model-different-app.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Model</strong> — Reasoning and generation engine.</li>
-                                    <li><strong>Harness</strong> — Software around the model: UI, context, tools, permissions.</li>
-                                    <li><strong>Assistant</strong> — Model + harness + instructions + context—what you supervise.</li>
-                                    <li><strong>Cloud API</strong> — Remote interface that processes your context on a provider's servers.</li>
+                                    <li><strong>Open-weight</strong> — Model weights you can run or host yourself—still need a harness around them.</li>
                                     </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Claude Code minimum stack</h5>
+                                  <h5 class="slide-title">Harness vs model</h5>
                                   <ul class="slide-body">
-                                    <li>Claude Code · one practice folder · one starter brief</li>
-                                    <li>Plugins (ALIVE, skills) come later · other harnesses exist—we standardize here</li>
+                                    <li>Harness = the app: UI, tools, files, permissions, history</li>
+                                    <li>Assistant = what you brief · Claude Code = our harness</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: three boxes inside a dotted practice-folder fence—assistant robot, folder, starter-brief scroll. Fancy optional tool icons sit outside the fence, greyed out.</p>
+                                    <p>16-bit pixel art: glowing chip/brain labeled model, tightly wrapped by a machinery frame (harness) with dials for tools and permissions; outer glow labeled assistant. (Reuse: <code>07-model-vs-harness.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Claude Code</strong> — The harness this course uses for demos and hands-on work.</li>
-                                    <li><strong>Plugin</strong> — Add-on that extends the harness (ALIVE, skills)—installed later.</li>
+                                    <li><strong>Harness</strong> — Software around the model: UI, context, tools, permissions.</li>
+                                    <li><strong>Assistant</strong> — Combined working experience you supervise.</li>
+                                    <li><strong>Claude Code</strong> — The harness this course uses.</li>
                                     </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Access ≠ authority</h5>
+                                  <h5 class="slide-title">One chat turn</h5>
                                   <ul class="slide-body">
-                                    <li>File access is not permission to change or publish</li>
-                                    <li>You choose what enters the chat—and what stays out</li>
+                                    <li>You → harness assembles context → model</li>
+                                    <li>Model may request tools → harness executes (if allowed) → results return</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish arrows beyond the workspace boundary.</p>
+                                    <p>16-bit pixel art sequence: message → context tray → model chip → optional tool wrench (run by harness) → reply bubble. (Reuse: <code>08-one-chat-turn.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>File access</strong> — Ability to see files is not permission to change or publish.</li>
+                                    <li><strong>Tool call</strong> — Model requests a capability; harness runs it if allowed.</li>
+                                    <li><strong>Context</strong> — What the harness includes for this model call.</li>
                                     </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 5</span>
-                                  <h5 class="slide-title">Install, then acceptance test</h5>
+                                  <h5 class="slide-title">Next: install the harness</h5>
                                   <ul class="slide-body">
-                                    <li>Install Claude Code → open Terminal in your practice folder</li>
-                                    <li>Open → attach → summarize → draft → inspect → remove</li>
-                                    <li>No business secrets in the test</li>
+                                    <li>You know what the pieces are</li>
+                                    <li>Next lesson: set up Claude Code on your Mac</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: six-step path tiles—open → attach → summarize → draft → inspect → remove—ending at a trash can; no secret icons on the path. A small install scroll sits at the path entrance.</p>
-                                  </div>
-                                  <div class="slide-side-panel">
-                                    <span class="slide-meta-label">Side panel</span>
-                                    <ul>
-                                    <li><strong>Acceptance test</strong> — Harmless check that setup works before consequential work.</li>
-                                    </ul>
+                                    <p>16-bit pixel art: three boxes inside a dotted fence—assistant robot, folder, starter-brief scroll; arrow pointing forward to “install.” (Reuse: <code>04-minimum-beginner-stack.png</code>.)</p>
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> After the lingo and stack slides, install or open Claude Code and run the acceptance test once. Narrate what you refuse to share.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Optional: send one message that triggers a visible tool in a prepared session—point to the step trail (model requested; harness ran it). Or stay on the diagram if you prefer zero install in this clip.</p>
                             </div>
                           </details>
                           <details>
@@ -1571,33 +1563,29 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Model</dt>
-                                  <dd>The reasoning and generation engine—it predicts text (and sometimes other modalities). It does not open files or enforce permissions by itself.</dd>
+                                  <dd>The system that predicts next tokens and generates text (and sometimes other modalities)—not the full product experience.</dd>
                                 </div>
                                 <div>
-                                  <dt>Harness</dt>
+                                  <dt>Harness / AI application</dt>
                                   <dd>The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as “app” or “runtime.”</dd>
                                 </div>
                                 <div>
                                   <dt>Assistant</dt>
-                                  <dd>The working experience when model + harness + instructions + context + capabilities combine—what you brief and supervise.</dd>
+                                  <dd>The working experience created when a model is combined with a harness, instructions, context, and available capabilities.</dd>
                                 </div>
                                 <div>
-                                  <dt>Cloud API</dt>
-                                  <dd>A remote interface through which the harness sends context to a provider's servers for model processing.</dd>
+                                  <dt>Tool call</dt>
+                                  <dd>A structured request from the model to use a capability; the harness runs it (if allowed) and returns the result.</dd>
                                 </div>
                                 <div>
-                                  <dt>Practice folder</dt>
-                                  <dd>A dedicated workspace for course files and drafts—kept separate from general chat and sensitive material.</dd>
-                                </div>
-                                <div>
-                                  <dt>Acceptance test</dt>
-                                  <dd>A harmless check that setup works (open → attach → summarize → draft → inspect → remove) before consequential work.</dd>
+                                  <dt>Token</dt>
+                                  <dd>A small unit used by models to process text—not always a whole word.</dd>
                                 </div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: you know the stack and Claude Code works with your folder. Next: what's actually doing the thinking inside it.</p>
+                        <p class="transition-note">Takeaway: model generates; harness runs the loop. Next: set up Claude Code on your Mac.</p>
                       </div>
                     </li>
 
@@ -1613,8 +1601,8 @@
               <button type="button" class="module-toggle" aria-expanded="false" id="mod-2-btn" aria-controls="mod-2-panel">
                 <span class="module-num">02</span>
                 <span class="module-copy">
-                  <span class="module-title">How AI systems actually work</span>
-                  <span class="module-meta">2 lessons · 8 min</span>
+                  <span class="module-title">Setup and autonomy</span>
+                  <span class="module-meta">2 lessons · 9 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -1622,45 +1610,42 @@
             <div class="module-panel" id="mod-2-panel" role="region" aria-labelledby="mod-2-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Replace vague or anthropomorphic ideas with a practical model that remains useful as products change—especially the difference between the model and the app/harness around it.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> Distinguish the model from the product/harness, explain one chat turn (including tools), and choose an appropriate autonomy level.</p>
+                  <p class="module-desc">Install the harness you just learned about, confirm it works, then choose an autonomy level that matches risk—so setup and agent judgment land in the same module.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> Claude Code open in a sensible workspace, a quick confirm that it works, and an autonomy level chosen for the practice task.</p>
                   <ul class="lessons">
 
                     <li class="lesson">
                       <span class="lesson-num">3</span>
                       <div>
-                        <p class="lesson-title">Model vs harness: what's actually doing the work</p>
-                        <p class="lesson-desc">"The AI" is not one thing—the model reasons, but the harness (app) assembles context, runs tools, and enforces permissions. Here's how one chat turn actually runs.</p>
+                        <p class="lesson-title">Set up Claude Code on your Mac</p>
+                        <p class="lesson-desc">You know what a harness is—now install Claude Code, open it in a sensible workspace, and confirm a simple prompt works. Keep sensitive material out of this first session.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 4 min</li>
-                          <li><strong>Output</strong> One-sentence model vs harness distinction, plus a sketched chat turn</li>
-                          <li><strong>Standalone clip</strong> Works alone—no setup required; uses a diagram, not your specific install.</li>
+                          <li><strong>Runtime</strong> 5 min</li>
+                          <li><strong>Output</strong> Working Claude Code session in a chosen workspace</li>
+                          <li><strong>Standalone clip</strong> Partial—best after Lesson 2’s model/harness framing; install steps still work alone if you already want Claude Code on your Mac.</li>
                         </ul>
-                        <p class="lesson-why">Lesson 2 introduced model, harness, and assistant lightly so learners could install with confidence. This lesson goes deeper: the most common misconception is that “the AI” is just the model. In practice, the product (the harness) decides what the model sees, which tools run, and what reaches you.</p>
+                        <p class="lesson-why">Install has meaning after Lesson 2: learners know Claude Code is a harness wrapping a model, not “the AI” itself. Keep this lesson practical—minimum stack, folder hygiene, a light boundary note, install, and a plain verify—without QA jargon.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>You already met these words in setup—now unpack them: a model is the reasoning and generation engine—it predicts text (and sometimes other modalities). It does not open files, click buttons, or enforce permissions by itself.</li>
-                            <li>The application—also called the harness or runtime—is ordinary software around the model: UI, accounts, context assembly, tool execution, history, integrations, and permissions.</li>
-                            <li>An assistant is the working experience when model + harness + instructions + context + capabilities combine.</li>
-                            <li>How a chat turn works now: you send a message → the harness assembles context (system/product rules, history, files, tool schemas) → the model replies with text and/or tool requests → the harness runs allowed tools and feeds results back → the model may continue → you see a response (and often a trail of steps).</li>
-                            <li>Same model, different harness → different behavior. Switching “apps” changes more than the model name.</li>
-                            <li>The model is the brain; the harness is the app that runs it—connecting tools, assembling context, and enforcing permissions. Claude Code, Cursor, Windsurf, OpenCode, and Codex are harnesses, not models.</li>
-                            <li>Memory patterns differ by harness (plugins, <code>AGENTS.md</code>, MCP servers, editor rules). Course 1 pairs ALIVE with Claude Code; see <code>docs/local-memory-alternatives.md</code> for portable options.</li>
-                            <li>“Multimodal” means more than one form of information—not that every product supports every modality everywhere.</li>
+                            <li><strong>Minimum stack:</strong> Claude Code (the harness) + one workspace folder + one harmless starter brief. Add-ons for a persistent local memory layer and reusable skills come later—skip them for now. We standardize on Claude Code so every learner follows the same path.</li>
+                            <li><strong>Workspace hygiene:</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory if you want a personal-assistant style setup. That habit will go better later when you add a persistent local memory layer (ALIVE in Lesson 8)—memory and project context stay where they belong.</li>
+                            <li><strong>Access ≠ authority / cloud API:</strong> File access is not permission to change or publish anything else. You choose what enters the chat. Context you attach often travels over a cloud API (Claude Code sends context to Anthropic’s servers unless you use a local model)—so keep this first session non-sensitive.</li>
+                            <li><strong>Install + open:</strong> Install Claude Code from Anthropic; open Terminal at your chosen folder and start Claude Code there.</li>
+                            <li><strong>Quick verify:</strong> Open it, try a simple prompt, confirm a reply comes back. Optional: attach the starter brief and ask for a short summary. No business secrets in this first check.</li>
+                            <li><strong>Close:</strong> You’re set up. Next we talk about agents and how much autonomy to grant—then later, memory across sessions with ALIVE.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
-                              <li>“ChatGPT” or “Claude” is simply one model.</li>
-                              <li>The model itself executes tools, searches the web, or edits files.</li>
-                              <li>A newer model automatically has more of the learner’s data or better permissions.</li>
-                              <li>Model intelligence and product permissions are the same capability.</li>
-                              <li>A conversational tone means the system understands or cares like a person.</li>
+                              <li>Installing more tools creates a better beginner setup.</li>
+                              <li>File access makes every file appropriate to share.</li>
+                              <li>A successful first prompt means the agent is safe for consequential work.</li>
+                              <li>One giant Dump Everything folder is fine forever.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">Judge the model plus its harness—not the model name alone. That's the takeaway.</p>
+                          <p class="rule-close">One harness, one sensible folder, one quick confirm it works—and you’re ready for the rest of the course.</p>
                         </div>
 
                         <div class="lesson-details">
@@ -1671,65 +1656,86 @@
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Model vs harness</h5>
+                                  <h5 class="slide-title">Claude Code minimum stack</h5>
                                   <ul class="slide-body">
-                                    <li>Model = engine that interprets input and generates output</li>
-                                    <li>Harness/app = software that runs the loop, tools, and permissions</li>
-                                    <li>Assistant = the combined working experience</li>
+                                    <li>Claude Code · one workspace folder · one starter brief</li>
+                                    <li>Memory layer and skills come later—we standardize here</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: glowing chip/brain labeled model, tightly wrapped by a machinery frame (harness) with dials for tools and permissions; an outer glow labeled assistant experience.</p>
+                                    <p>16-bit pixel art: three boxes inside a dotted folder fence—assistant robot, folder, starter-brief scroll. Optional tool icons outside the fence, greyed out. (Reuse: <code>04-minimum-beginner-stack.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Model</strong> — Reasoning/generation engine—not the full product.</li>
-                                    <li><strong>Harness</strong> — Software around the model: UI, context, tools, permissions.</li>
-                                    <li><strong>Assistant</strong> — Combined working experience of model + harness + context.</li>
+                                    <li><strong>Claude Code</strong> — The harness this course uses.</li>
+                                    <li><strong>Cloud API</strong> — Remote processing of context on a provider’s servers.</li>
                                     </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">One chat turn</h5>
+                                  <h5 class="slide-title">Project folders or Personal OS</h5>
                                   <ul class="slide-body">
-                                    <li>You → harness assembles context → model</li>
-                                    <li>Model may request tools → harness executes (if allowed) → results return</li>
-                                    <li>Then a reply you can see (often with a step trail)</li>
+                                    <li>New folder per project—or one Personal OS directory for general assistance</li>
+                                    <li>Keeps context tidy for a persistent local memory layer later</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art sequence panels left-to-right: message → context tray → model chip → optional tool wrench (run by harness) → reply bubble with a tiny step trail.</p>
+                                    <p>16-bit pixel art: two tidy folder trees—labeled project folders vs one Personal OS home—versus a messy dump pile crossed out. (Reuse: <code>44-memory-folder-not-black-box.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Tool call</strong> — Model requests a capability; harness runs it if allowed.</li>
-                                    <li><strong>Context</strong> — What the harness includes for this model call.</li>
+                                    <li><strong>Personal OS</strong> — One general directory for personal-assistant style work and lasting context.</li>
                                     </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Extended deck · Slide 3</span>
-                                  <h5 class="slide-title">Same model, different app</h5>
+                                  <span class="slide-label">Slide 3</span>
+                                  <h5 class="slide-title">Access ≠ authority</h5>
                                   <ul class="slide-body">
-                                    <li>Files, search, memory, and permissions differ by product</li>
-                                    <li>Capability ≠ granted access</li>
+                                    <li>File access is not permission to change or publish</li>
+                                    <li>You choose what enters the chat—and what stays out</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: identical model chip plugged into two different harness cabinets—one with search/files unlocked, one locked—showing same model, different access.</p>
+                                    <p>16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish. (Reuse: <code>05-access-not-authority.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Multimodal</strong> — More than one information form—if the product exposes it.</li>
+                                    <li><strong>File access</strong> — Ability to see files is not permission to change or publish.</li>
                                     </ul>
                                   </div>
                                 </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 4</span>
+                                  <h5 class="slide-title">Install and open</h5>
+                                  <ul class="slide-body">
+                                    <li>Install Claude Code → open Terminal in your chosen folder</li>
+                                    <li>Start Claude Code there</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark. (Reuse: <code>00-cover-hero.png</code>.)</p>
+                                  </div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 5</span>
+                                  <h5 class="slide-title">Confirm it works</h5>
+                                  <ul class="slide-body">
+                                    <li>Open it · try a simple prompt · confirm a reply</li>
+                                    <li>Optional: summarize a harmless starter brief</li>
+                                    <li>No business secrets in this first check</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: short path tiles—open → prompt → reply checkmark; no secret icons. (Reuse: <code>06-acceptance-test.png</code>.)</p>
+                                  </div>
+                                </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Send one message that triggers a visible tool (search or file read). Point to the step trail—model requested; product ran it.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> After the stack and folder slides, install or open Claude Code in the chosen folder. Try a simple prompt; narrate what you refuse to share.</p>
                             </div>
                           </details>
                           <details>
@@ -1737,30 +1743,26 @@
                             <div class="details-body">
                               <dl class="glossary">
                                 <div>
-                                  <dt>Model</dt>
-                                  <dd>The reasoning and generation engine that analyzes and produces text (and sometimes other modalities)—not the full product experience.</dd>
+                                  <dt>Claude Code</dt>
+                                  <dd>The harness this course uses: terminal-based assistant with file access, tools, and permissions around a cloud model.</dd>
                                 </div>
                                 <div>
-                                  <dt>Harness / AI application</dt>
-                                  <dd>The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as “app,” “runtime,” or “scaffold.”</dd>
+                                  <dt>Cloud API</dt>
+                                  <dd>A remote interface through which the harness sends context to a provider’s servers for model processing.</dd>
                                 </div>
                                 <div>
-                                  <dt>Assistant</dt>
-                                  <dd>The working experience created when a model is combined with a harness, instructions, context, and available capabilities.</dd>
+                                  <dt>Personal OS</dt>
+                                  <dd>One general workspace directory for personal-assistant style work—an alternative to a new folder per project.</dd>
                                 </div>
                                 <div>
-                                  <dt>Tool call</dt>
-                                  <dd>A structured request from the model to use a capability; the harness runs it (if allowed) and returns the result.</dd>
-                                </div>
-                                <div>
-                                  <dt>Multimodal</dt>
-                                  <dd>Able to work with more than one form of information (for example text, images, or audio)—subject to what the product actually exposes.</dd>
+                                  <dt>Workspace</dt>
+                                  <dd>The folder Claude Code is opened in—where files and drafts for this work live.</dd>
                                 </div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: One chat turn can already use tools. An agent extends that loop across more steps toward a goal—but autonomy is a spectrum, not magic.</p>
+                        <p class="transition-note">Takeaway: Claude Code is open and working in a sensible folder. Next: when is something actually an agent—and how much autonomy is safe?</p>
                       </div>
                     </li>
 
@@ -1772,7 +1774,7 @@
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> Autonomy level selected for the practice task</li>
-                          <li><strong>Standalone clip</strong> Partial—best after model/harness, but the autonomy ladder stands alone for risk decisions.</li>
+                          <li><strong>Standalone clip</strong> Partial—best after model/harness (Lesson 2), but the autonomy ladder stands alone for risk decisions.</li>
                         </ul>
 
                         <div class="lesson-block">
@@ -2245,21 +2247,21 @@
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 6 min</li>
                           <li><strong>Output</strong> ALIVE installed, one saved context item, successful fresh-session retrieval</li>
-                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed—install → verify → save → return test.</li>
+                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed—install → save → open a fresh session and confirm it remembers.</li>
                         </ul>
-                        <p class="lesson-why">ALIVE is an open-source context manager for Claude Code: project state lives in readable markdown and JSON on disk; the plugin loads at session start and checkpoints with <code>/alive:save</code>. Skip internal architecture—teach install, save, and the return test.</p>
-                        <p class="audience-note"><strong>Instructor reference:</strong> For agent-agnostic and harness-portable memory options (plain files, MCP memory, Mem0, Cursor rules, etc.), see <code>docs/local-memory-alternatives.md</code>.</p>
+                        <p class="lesson-why">ALIVE is an open-source persistent local memory layer for Claude Code: project state lives in readable markdown and JSON on disk; the plugin loads at session start and checkpoints with <code>/alive:save</code>. Skip internal architecture—teach install, save, and a fresh-session confirm.</p>
+                        <p class="audience-note"><strong>Instructor reference:</strong> For other ways to keep lasting context (plain files, connection-layer memory tools, editor rules, and similar), see <code>docs/local-memory-alternatives.md</code>.</p>
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Prerequisites: Claude Code (Lesson 2) and Python 3.10+ on your Mac.</li>
+                            <li>Prerequisites: Claude Code (Lesson 3) and Python 3.10+ on your Mac.</li>
                             <li>Do you need to install Python? Only if it is missing. ALIVE (and Claude Code plugin/runtime pieces it relies on) needs Python to run.</li>
                             <li>Quick check: run <code>python3 --version</code> in Terminal. If you see version 3.10 or newer, continue. If not found (or lower), install Python 3 from python.org, then reopen Terminal and re-check.</li>
                             <li>Install from Terminal with <code>claude plugin install alive@alivecontext</code>. Exit and restart Claude Code, then run the guided setup.</li>
                             <li>First-time setup: run <code>/alive:world</code>—guided walkthrough creates your local context folder. No ALIVE account; data stays on your machine.</li>
                             <li>During work: context loads at session start. When done, run <code>/alive:save</code> to checkpoint.</li>
                             <li>What you get: persistent context across sessions without re-explaining your project. Files are inspectable in any text editor.</li>
-                            <li>Acceptance test: save one practice decision, end session, open new session, ask a question only answerable from what ALIVE saved.</li>
+                            <li>Confirm across sessions: save one practice decision, end session, open a new session, ask a question only answerable from what ALIVE saved.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -2295,7 +2297,7 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Save and return test</h5>
+                                  <h5 class="slide-title">Save and confirm it returns</h5>
                                   <ul class="slide-body">
                                     <li>Work → checkpoint → new session → ask</li>
                                     <li>Context returns = setup works</li>
@@ -3336,7 +3338,7 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>What you built today is real and complete for one person: Claude Code, a local practice folder, ALIVE for memory across sessions, one repeatable way to delegate and supervise, and one reviewed artifact.</li>
+                            <li>What you built today is real and complete for one person: Claude Code, a local workspace, ALIVE for memory across sessions, one repeatable way to delegate and supervise, and one reviewed artifact.</li>
                             <li>It is also inherently single-user and local: your files stay on your machine, your saved memory is yours alone, and nothing here is visible to a teammate unless you manually hand it to them.</li>
                             <li>A team needs a shared source of truth—one place everyone's assistant can read and write—so people don't quietly diverge onto different, conflicting versions of "the current brief" or "the approved brand note."</li>
                             <li>That requires solving problems this course deliberately did not touch: who can see or change what, how conflicting edits from two people are resolved, and how memory is shared without one person's private notes leaking to another.</li>
