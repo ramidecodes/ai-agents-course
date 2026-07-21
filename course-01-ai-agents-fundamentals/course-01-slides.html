@@ -1,1627 +1,2100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Agents Fundamentals — Slides</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --ink: #111111;
-      --ink-soft: #444444;
-      --ink-faint: #777777;
-      --paper: #ffffff;
-      --rule: rgba(0, 0, 0, 0.12);
-      --rule-strong: rgba(0, 0, 0, 0.22);
-      --wash: #f7f7f7;
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Agents Fundamentals — Slides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #111111;
+        --ink-soft: #444444;
+        --ink-faint: #777777;
+        --paper: #fef9ee;
+        --rule: rgba(0, 0, 0, 0.12);
+        --rule-strong: rgba(0, 0, 0, 0.22);
+        --wash: #f7f7f7;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-      overflow: hidden;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "Figtree", system-ui, sans-serif;
-      font-size: 1.0625rem;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-    }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Figtree", system-ui, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
 
-    :focus-visible {
-      outline: 2px solid var(--ink);
-      outline-offset: 3px;
-    }
+      :focus-visible {
+        outline: 2px solid var(--ink);
+        outline-offset: 3px;
+      }
 
-    .deck {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
+      .deck {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
 
-    .slide {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 6vw, 5rem);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.35s var(--ease), visibility 0.35s;
-    }
-
-    .slide.is-active {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
       .slide {
-        transition: none;
-      }
-    }
-
-    .slide-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid var(--rule);
-      min-height: 2.5rem;
-    }
-
-    .slide-kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin: 0;
-    }
-
-    .slide-module {
-      font-size: 0.8125rem;
-      color: var(--ink-soft);
-      margin: 0;
-      text-align: right;
-      max-width: 28ch;
-    }
-
-    .slide-body-wrap {
-      display: flex;
-      align-items: center;
-      min-height: 0;
-      padding: clamp(1.5rem, 4vh, 3rem) 0;
-    }
-
-    .slide-inner {
-      width: 100%;
-      max-width: 72rem;
-      margin-inline: auto;
-    }
-
-    /* —— Title slide —— */
-    .slide--title .slide-body-wrap {
-      align-items: flex-end;
-    }
-
-    .slide--title .slide-inner {
-      max-width: 52rem;
-    }
-
-    .slide--title h1 {
-      font-family: "Fraunces", Georgia, serif;
-      font-optical-sizing: auto;
-      font-weight: 600;
-      font-size: clamp(2.75rem, 7vw, 5rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin: 0 0 1.25rem;
-      max-width: 14ch;
-    }
-
-    .slide--title .subtitle {
-      font-family: "Fraunces", Georgia, serif;
-      font-weight: 500;
-      font-style: italic;
-      font-size: clamp(1.2rem, 2.4vw, 1.65rem);
-      line-height: 1.35;
-      color: var(--ink-soft);
-      margin: 0 0 2.5rem;
-      max-width: 28ch;
-    }
-
-    .slide--title .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem 1.75rem;
-      font-size: 0.9375rem;
-      color: var(--ink-faint);
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .slide--title .meta li {
-      position: relative;
-    }
-
-    .slide--title .meta li + li::before {
-      content: "";
-      position: absolute;
-      left: -0.95rem;
-      top: 0.55em;
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: var(--ink-faint);
-    }
-
-    /* —— Lesson divider —— */
-    .slide--lesson .slide-body-wrap {
-      align-items: center;
-    }
-
-    .slide--lesson .lesson-num {
-      font-family: "Fraunces", Georgia, serif;
-      font-size: clamp(4rem, 12vw, 8rem);
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: -0.04em;
-      color: var(--ink);
-      margin: 0 0 0.5rem;
-    }
-
-    .slide--lesson h2 {
-      font-family: "Fraunces", Georgia, serif;
-      font-weight: 600;
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin: 0 0 1.5rem;
-      max-width: 22ch;
-    }
-
-    .slide--lesson .lesson-runtime {
-      font-size: 0.9375rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin: 0;
-    }
-
-    /* —— Content slide —— */
-    .slide--content .content-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: clamp(1.5rem, 4vw, 3rem);
-      align-items: start;
-    }
-
-    @media (min-width: 900px) {
-      .slide--content .content-grid.has-visual {
-        grid-template-columns: 1fr minmax(14rem, 22rem);
+        position: absolute;
+        inset: 0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 6vw, 5rem);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.35s var(--ease),
+          visibility 0.35s;
       }
 
-      .slide--content .content-grid.has-sidebar {
-        grid-template-columns: 1fr minmax(12rem, 16rem);
+      .slide.is-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
       }
 
-      .slide--content .content-grid.has-visual.has-sidebar {
-        grid-template-columns: 1fr minmax(14rem, 20rem) minmax(10rem, 14rem);
+      @media (prefers-reduced-motion: reduce) {
+        .slide {
+          transition: none;
+        }
       }
-    }
 
-    .slide--content h2 {
-      font-family: "Fraunces", Georgia, serif;
-      font-weight: 600;
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-      margin: 0 0 1.25rem;
-      max-width: 20ch;
-    }
+      .slide-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--rule);
+        min-height: 2.5rem;
+      }
 
-    .slide--content ul.bullets {
-      margin: 0;
-      padding: 0 0 0 1.25rem;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      line-height: 1.5;
-      color: var(--ink-soft);
-    }
+      .slide-kicker {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 0;
+      }
 
-    .slide--content ul.bullets li {
-      margin-bottom: 0.65em;
-    }
+      .slide-module {
+        font-size: 0.8125rem;
+        color: var(--ink-soft);
+        margin: 0;
+        text-align: right;
+        max-width: 28ch;
+      }
 
-    .slide--content ul.bullets li:last-child {
-      margin-bottom: 0;
-    }
+      .slide-body-wrap {
+        display: flex;
+        align-items: center;
+        min-height: 0;
+        padding: clamp(1.5rem, 4vh, 3rem) 0;
+      }
 
-    .slide--content code {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 0.88em;
-      background: var(--wash);
-      padding: 0.1em 0.35em;
-      border: 1px solid var(--rule);
-    }
+      .slide-inner {
+        width: 100%;
+        max-width: 72rem;
+        margin-inline: auto;
+      }
 
-    /* —— Image placeholder —— */
-    .img-placeholder {
-      border: 1px solid var(--rule-strong);
-      background: var(--wash);
-      aspect-ratio: 4 / 3;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 1.25rem;
-      min-height: 10rem;
-    }
+      /* —— Title slide —— */
+      .slide--title .slide-body-wrap {
+        align-items: start;
+      }
 
-    .img-placeholder-label {
-      font-size: 0.6875rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin: 0 0 0.5rem;
-    }
+      .slide--title .slide-inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(2rem, 4vw, 3rem);
+        align-items: start;
+        text-align: left;
+      }
 
-    .img-placeholder-name {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 0.75rem;
-      color: var(--ink);
-      margin: 0 0 0.75rem;
-      word-break: break-all;
-      max-width: 100%;
-    }
+      @media (min-width: 900px) {
+        .slide--title .slide-inner {
+          grid-template-columns: minmax(0, 1.05fr) minmax(16rem, 34rem);
+          align-items: center;
+        }
+      }
 
-    .img-placeholder-desc {
-      font-size: 0.8125rem;
-      line-height: 1.45;
-      color: var(--ink-soft);
-      margin: 0;
-      max-width: 28ch;
-    }
+      .slide--title .title-copy {
+        min-width: 0;
+      }
 
-    /* —— Sidebar glossary —— */
-    .sidebar {
-      border-left: 1px solid var(--rule);
-      padding-left: 1.25rem;
-    }
+      .slide--title .title-visual {
+        min-width: 0;
+      }
 
-    @media (max-width: 899px) {
+      .slide--title .title-visual .slide-visual {
+        margin: 0;
+      }
+
+      .slide--title .title-visual .img-placeholder {
+        aspect-ratio: 1672 / 941;
+        min-height: 14rem;
+      }
+
+      .slide--title h1 {
+        font-family: "Fraunces", Georgia, serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size: clamp(2.75rem, 7vw, 5rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        margin: 0 0 1.25rem;
+        max-width: 12ch;
+      }
+
+      .slide--title .subtitle {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 500;
+        font-style: italic;
+        font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+        line-height: 1.35;
+        color: var(--ink-soft);
+        margin: 0 0 2.5rem;
+        max-width: 32ch;
+      }
+
+      .slide--title .meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.35rem 1.75rem;
+        font-size: 0.9375rem;
+        color: var(--ink-faint);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .slide--title .meta li {
+        position: relative;
+      }
+
+      .slide--title .meta li + li::before {
+        content: "";
+        position: absolute;
+        left: -0.95rem;
+        top: 0.55em;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--ink-faint);
+      }
+
+      /* —— Lesson divider —— */
+      .slide--lesson .slide-body-wrap {
+        align-items: center;
+      }
+
+      .slide--lesson .lesson-num {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: clamp(4rem, 12vw, 8rem);
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+        margin: 0 0 0.5rem;
+      }
+
+      .slide--lesson h2 {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 600;
+        font-size: clamp(1.75rem, 4vw, 2.75rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin: 0 0 1.5rem;
+        max-width: 22ch;
+      }
+
+      .slide--lesson .lesson-runtime {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 0;
+      }
+
+      /* —— Content slide —— */
+      .slide--content .content-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: start;
+      }
+
+      @media (min-width: 900px) {
+        .slide--content .content-grid.has-visual {
+          grid-template-columns: 1fr minmax(14rem, 22rem);
+        }
+
+        .slide--content .content-grid.has-sidebar {
+          grid-template-columns: 1fr minmax(12rem, 16rem);
+        }
+
+        .slide--content .content-grid.has-visual.has-sidebar {
+          grid-template-columns: 1fr minmax(14rem, 20rem) minmax(10rem, 14rem);
+        }
+      }
+
+      .slide--content h2 {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 600;
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        margin: 0 0 1.25rem;
+        max-width: 20ch;
+      }
+
+      .slide--content ul.bullets {
+        margin: 0;
+        padding: 0 0 0 1.25rem;
+        font-size: clamp(1.05rem, 2vw, 1.35rem);
+        line-height: 1.5;
+        color: var(--ink-soft);
+      }
+
+      .slide--content ul.bullets li {
+        margin-bottom: 0.65em;
+      }
+
+      .slide--content ul.bullets li:last-child {
+        margin-bottom: 0;
+      }
+
+      .slide--content code {
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 0.88em;
+        background: var(--wash);
+        padding: 0.1em 0.35em;
+        border: 1px solid var(--rule);
+      }
+
+      .terminal-block {
+        margin-top: 1.25rem;
+        border: 1px solid var(--rule-strong);
+        background: var(--wash);
+        overflow: hidden;
+      }
+
+      .terminal-block + .terminal-block {
+        margin-top: 0.5rem;
+      }
+
+      .terminal-label {
+        display: block;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        border-bottom: 1px solid var(--rule);
+        background: var(--paper);
+      }
+
+      .terminal-block pre {
+        margin: 0;
+        padding: 0.85rem 1rem;
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: clamp(0.8125rem, 1.6vw, 0.9375rem);
+        line-height: 1.55;
+        color: var(--ink);
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .terminal-block code {
+        font-family: inherit;
+        font-size: inherit;
+        background: none;
+        padding: 0;
+        border: none;
+      }
+
+      .slide-urls {
+        margin-top: 1rem;
+        padding: 0;
+        list-style: none;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: var(--ink-soft);
+      }
+
+      .slide-urls li + li {
+        margin-top: 0.35rem;
+      }
+
+      .slide-urls a {
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 0.92em;
+        color: var(--ink);
+        text-decoration: underline;
+        text-decoration-color: var(--rule-strong);
+        text-underline-offset: 0.15em;
+      }
+
+      .slide-urls a:hover {
+        text-decoration-color: var(--ink);
+      }
+
+      /* —— Slide visuals —— */
+      .slide-visual {
+        margin: 0;
+        display: block;
+        line-height: 0;
+      }
+
+      .slide-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+
+      /* —— Image placeholder (slides awaiting assets) —— */
+      .img-placeholder {
+        border: 1px solid var(--rule-strong);
+        background: var(--wash);
+        aspect-ratio: 4 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1.25rem;
+        min-height: 10rem;
+      }
+
+      .img-placeholder-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 0 0 0.5rem;
+      }
+
+      .img-placeholder-name {
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: 0.75rem;
+        color: var(--ink);
+        margin: 0 0 0.75rem;
+        word-break: break-all;
+        max-width: 100%;
+      }
+
+      .img-placeholder-desc {
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        color: var(--ink-soft);
+        margin: 0;
+        max-width: 28ch;
+      }
+
+      /* —— Sidebar glossary —— */
       .sidebar {
-        border-left: none;
+        border-left: 1px solid var(--rule);
+        padding-left: 1.25rem;
+      }
+
+      @media (max-width: 899px) {
+        .sidebar {
+          border-left: none;
+          border-top: 1px solid var(--rule);
+          padding-left: 0;
+          padding-top: 1.25rem;
+        }
+      }
+
+      .sidebar-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 0 0 0.75rem;
+      }
+
+      .sidebar ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0.875rem;
+        line-height: 1.45;
+        color: var(--ink-soft);
+      }
+
+      .sidebar li + li {
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
         border-top: 1px solid var(--rule);
-        padding-left: 0;
-        padding-top: 1.25rem;
       }
-    }
 
-    .sidebar-label {
-      font-size: 0.6875rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin: 0 0 0.75rem;
-    }
+      .sidebar strong {
+        display: block;
+        color: var(--ink);
+        font-weight: 600;
+        margin-bottom: 0.15rem;
+      }
 
-    .sidebar ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 0.875rem;
-      line-height: 1.45;
-      color: var(--ink-soft);
-    }
+      /* —— Presenter notes —— */
+      .presenter-notes {
+        position: fixed;
+        bottom: 4.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(42rem, calc(100% - 2rem));
+        max-height: 30vh;
+        overflow-y: auto;
+        background: var(--ink);
+        color: var(--paper);
+        padding: 1rem 1.25rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        border-radius: 2px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.25s var(--ease),
+          visibility 0.25s;
+        z-index: 20;
+      }
 
-    .sidebar li + li {
-      margin-top: 0.75rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--rule);
-    }
+      .presenter-notes.is-visible {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
 
-    .sidebar strong {
-      display: block;
-      color: var(--ink);
-      font-weight: 600;
-      margin-bottom: 0.15rem;
-    }
+      .presenter-notes-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.6;
+        margin: 0 0 0.5rem;
+      }
 
-    /* —— Presenter notes —— */
-    .presenter-notes {
-      position: fixed;
-      bottom: 4.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(42rem, calc(100% - 2rem));
-      max-height: 30vh;
-      overflow-y: auto;
-      background: var(--ink);
-      color: var(--paper);
-      padding: 1rem 1.25rem;
-      font-size: 0.875rem;
-      line-height: 1.5;
-      border-radius: 2px;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.25s var(--ease), visibility 0.25s;
-      z-index: 20;
-    }
+      .presenter-notes p {
+        margin: 0;
+      }
 
-    .presenter-notes.is-visible {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
+      /* —— Chrome / controls —— */
+      .chrome {
+        position: fixed;
+        inset-inline: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem clamp(1rem, 3vw, 2rem);
+        background: linear-gradient(to top, var(--paper) 60%, transparent);
+        z-index: 10;
+        pointer-events: none;
+      }
 
-    .presenter-notes-label {
-      font-size: 0.6875rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.6;
-      margin: 0 0 0.5rem;
-    }
+      .chrome > * {
+        pointer-events: auto;
+      }
 
-    .presenter-notes p {
-      margin: 0;
-    }
+      .counter {
+        font-size: 0.8125rem;
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-faint);
+        min-width: 5rem;
+      }
 
-    /* —— Chrome / controls —— */
-    .chrome {
-      position: fixed;
-      inset-inline: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem clamp(1rem, 3vw, 2rem);
-      background: linear-gradient(to top, var(--paper) 60%, transparent);
-      z-index: 10;
-      pointer-events: none;
-    }
+      .nav-controls {
+        display: flex;
+        gap: 0.5rem;
+      }
 
-    .chrome > * {
-      pointer-events: auto;
-    }
+      .nav-btn {
+        appearance: none;
+        border: 1px solid var(--rule-strong);
+        background: var(--paper);
+        color: var(--ink);
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition:
+          background 0.2s var(--ease),
+          border-color 0.2s;
+      }
 
-    .counter {
-      font-size: 0.8125rem;
-      font-variant-numeric: tabular-nums;
-      color: var(--ink-faint);
-      min-width: 5rem;
-    }
+      .nav-btn:hover:not(:disabled) {
+        background: var(--wash);
+        border-color: var(--ink);
+      }
 
-    .nav-controls {
-      display: flex;
-      gap: 0.5rem;
-    }
+      .nav-btn:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
 
-    .nav-btn {
-      appearance: none;
-      border: 1px solid var(--rule-strong);
-      background: var(--paper);
-      color: var(--ink);
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s var(--ease), border-color 0.2s;
-    }
+      .nav-btn svg {
+        width: 1rem;
+        height: 1rem;
+      }
 
-    .nav-btn:hover:not(:disabled) {
-      background: var(--wash);
-      border-color: var(--ink);
-    }
+      .hints {
+        font-size: 0.6875rem;
+        color: var(--ink-faint);
+        text-align: right;
+        min-width: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="deck" id="deck" aria-live="polite"></div>
 
-    .nav-btn:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-    }
-
-    .nav-btn svg {
-      width: 1rem;
-      height: 1rem;
-    }
-
-    .hints {
-      font-size: 0.6875rem;
-      color: var(--ink-faint);
-      text-align: right;
-      min-width: 5rem;
-    }
-
-  </style>
-</head>
-<body>
-  <div class="deck" id="deck" aria-live="polite"></div>
-
-  <div class="presenter-notes" id="notes" hidden>
-    <p class="presenter-notes-label">Presenter note</p>
-    <p id="notes-text"></p>
-  </div>
-
-  <div class="chrome">
-    <span class="counter" id="counter">1 / 69</span>
-    <div class="nav-controls">
-      <button type="button" class="nav-btn" id="prev" aria-label="Previous slide">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3 L5 8 L10 13" /></svg>
-      </button>
-      <button type="button" class="nav-btn" id="next" aria-label="Next slide">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3 L11 8 L6 13" /></svg>
-      </button>
+    <div class="presenter-notes" id="notes" hidden>
+      <p class="presenter-notes-label">Presenter note</p>
+      <p id="notes-text"></p>
     </div>
-    <span class="hints" id="hints">← → · N notes</span>
-  </div>
 
-  <script>
-    const SLIDES = [
-      {
-        type: "title",
-        kicker: "Course 01",
-        title: "AI Agents Fundamentals",
-        subtitle: "Set up an AI assistant, assign real work, and supervise the result",
-        meta: ["61 minutes", "6 modules · 17 lessons", "Claude Code + ALIVE", "Beginner"]
-      },
+    <div class="chrome">
+      <span class="counter" id="counter">1 / 69</span>
+      <div class="nav-controls">
+        <button
+          type="button"
+          class="nav-btn"
+          id="prev"
+          aria-label="Previous slide"
+        >
+          <svg
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M10 3 L5 8 L10 13" />
+          </svg>
+        </button>
+        <button type="button" class="nav-btn" id="next" aria-label="Next slide">
+          <svg
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M6 3 L11 8 L6 13" />
+          </svg>
+        </button>
+      </div>
+      <span class="hints" id="hints">← → · N notes</span>
+    </div>
 
-      /* —— Lesson 1 —— */
-      {
-        type: "lesson",
-        lesson: 1,
-        module: "Module 01 · Orientation and setup",
-        title: "Your first supervised AI workflow (in one hour)",
-        runtime: "2 min"
-      },
-      {
-        type: "content",
-        lesson: 1,
-        module: "Module 01 · Orientation and setup",
-        title: "Course journey",
-        bullets: [
-          "Brief → draft → review → revise → approve",
-          "You will complete this loop once by the end"
-        ],
-        image: {
-          file: "l01-course-journey.png",
-          desc: "16-bit pixel art: five linked stations in a horizontal loop (brief → draft → review → revise → approve); a small human sprite stands at the approve gate holding a checkmark flag."
-        },
-        sidebar: [{ term: "Supervised workflow", def: "AI-assisted steps where a human sets boundaries and approves results." }],
-        notes: "Show the practice-task worksheet (~30s). Fill one live example (e.g. three article angles from a public brief); reject a confidential alternative."
-      },
-      {
-        type: "content",
-        lesson: 1,
-        module: "Module 01 · Orientation and setup",
-        title: "You remain accountable",
-        bullets: [
-          "The assistant collaborates; you brief and approve",
-          "Polish ≠ ready to use"
-        ],
-        image: {
-          file: "l01-you-remain-accountable.png",
-          desc: "16-bit pixel art: assistant sprite offers a sparkling draft scroll; human at a desk with an APPROVE stamp. Sparkles on the draft do not equal the stamp."
-        },
-        sidebar: [{ term: "AI assistant", def: "Model + harness + instructions + context—briefed and supervised by you." }]
-      },
-      {
-        type: "content",
-        lesson: 1,
-        module: "Module 01 · Orientation and setup",
-        title: "Safe practice task",
-        bullets: [
-          "Low consequence · reversible · non-sensitive",
-          "One task for the whole course"
-        ],
-        image: {
-          file: "l01-safe-practice-task.png",
-          desc: "16-bit pixel art: three open chests labeled low-stakes / reversible / non-sensitive; a locked vault marked confidential is crossed out."
-        },
-        sidebar: [{ term: "Practice boundary", def: "What you may share and where work may have effect." }]
-      },
+    <script>
+      const PIXEL_ART_BY_TITLE = {
+        "AI Agents Fundamentals": "assets/pixel-art/00-cover-hero.png",
+        "Course journey": "assets/pixel-art/01-course-journey.png",
+        "You remain accountable":
+          "assets/pixel-art/02-you-remain-accountable.png",
+        "Safe practice task": "assets/pixel-art/03-safe-practice-task.png",
+        "Claude Code minimum stack":
+          "assets/pixel-art/04-minimum-beginner-stack.png",
+        "Access ≠ authority": "assets/pixel-art/05-access-not-authority.png",
+        "Acceptance test": "assets/pixel-art/06-acceptance-test.png",
+        "Model vs harness": "assets/pixel-art/07-model-vs-harness.png",
+        "One chat turn": "assets/pixel-art/08-one-chat-turn.png",
+        "Same model, different app":
+          "assets/pixel-art/09-same-model-different-app.png",
+        "Four patterns": "assets/pixel-art/10-four-patterns.png",
+        "What an agent does": "assets/pixel-art/11-what-an-agent-does.png",
+        "Autonomy ladder": "assets/pixel-art/12-autonomy-ladder.png",
+        "Context window": "assets/pixel-art/13-context-window.png",
+        "Harness chooses the call":
+          "assets/pixel-art/14-harness-chooses-call.png",
+        "Smallest complete set":
+          "assets/pixel-art/15-smallest-complete-set.png",
+        "Four buckets": "assets/pixel-art/16-four-buckets.png",
+        "No memory by default": "assets/pixel-art/17-no-memory-by-default.png",
+        "RAG: retrieve, then generate":
+          "assets/pixel-art/18-rag-retrieve-then-generate.png",
+        "Run /alive:world":
+          "assets/pixel-art/44-memory-folder-not-black-box.png",
+        "Save and return test": "assets/pixel-art/46-fresh-session-test.png",
+        "What to expect": "assets/pixel-art/45-propose-confirm-save.png",
+        "Local vs cloud model": "assets/pixel-art/19-local-vs-cloud-model.png",
+        "Trust the policy, not the logo":
+          "assets/pixel-art/20-trust-policy-not-logo.png",
+        "What to hold back": "assets/pixel-art/21-what-to-hold-back.png",
+        "Tools · skills · connections":
+          "assets/pixel-art/22-tools-skills-connections.png",
+        "Who runs the tool?": "assets/pixel-art/23-who-runs-tool.png",
+        "Connected ≠ correct": "assets/pixel-art/24-connected-not-correct.png",
+        "Browse, install, try": "assets/pixel-art/25-browse-install-try.png",
+        "Showcase (placeholder): [Skill Name TBD]":
+          "assets/pixel-art/26-showcase-skill-tbd.png",
+        "Review before you install":
+          "assets/pixel-art/27-review-before-installing.png",
+        "Permission ladder": "assets/pixel-art/28-permission-ladder.png",
+        "Guide vs enforce": "assets/pixel-art/29-guide-vs-enforce.png",
+        "Stop and ask": "assets/pixel-art/30-stop-and-ask.png",
+        "CLEAR at a glance": "assets/pixel-art/31-clear-at-a-glance.png",
+        "Before: vague": "assets/pixel-art/32-before-vague.png",
+        "After: CLEAR": "assets/pixel-art/33-after-clear.png",
+        "Source pack + authority labels":
+          "assets/pixel-art/34-source-pack-authority-labels.png",
+        "Conflicts: stop and ask":
+          "assets/pixel-art/35-conflicts-stop-and-ask.png",
+        "Diagnostic feedback": "assets/pixel-art/36-diagnostic-feedback.png",
+        "Task fix vs system fix":
+          "assets/pixel-art/37-task-fix-vs-system-fix.png",
+        "Run the full loop": "assets/pixel-art/38-run-the-full-loop.png",
+        "Human decision markers":
+          "assets/pixel-art/39-human-decision-markers.png",
+        "Value of the loop": "assets/pixel-art/40-value-of-loop.png",
+        "What you have now": "assets/pixel-art/41-what-you-have-now.png",
+        "Add a second person": "assets/pixel-art/42-add-second-person.png",
+        "A different problem, later":
+          "assets/pixel-art/43-different-problem-later.png",
+      };
 
-      /* —— Lesson 2 —— */
-      {
-        type: "lesson",
-        lesson: 2,
-        module: "Module 01 · Orientation and setup",
-        title: "Set up Claude Code on your Mac",
-        runtime: "5 min"
-      },
-      {
-        type: "content",
-        lesson: 2,
-        module: "Module 01 · Orientation and setup",
-        title: "Claude Code minimum stack",
-        bullets: [
-          "Claude Code · one practice folder · one starter brief",
-          "Plugins (ALIVE, skills) come later"
-        ],
-        image: {
-          file: "l02-claude-code-minimum-stack.png",
-          desc: "16-bit pixel art: three boxes inside a dotted practice-folder fence—assistant robot, folder, starter-brief scroll. Fancy optional tool icons sit outside the fence, greyed out."
+      const SLIDES = [
+        {
+          type: "title",
+          kicker: "Course 01",
+          title: "AI Agents Fundamentals",
+          subtitle:
+            "Set up an AI assistant, assign real work, and supervise the result",
+          meta: ["61 minutes", "6 modules · 17 lessons", "Beginner"],
+          image: {
+            file: "00-cover-hero.png",
+            desc: "Course hero visual — human and robot at a desk with supervised workflow icons.",
+          },
         },
-        sidebar: [{ term: "Practice folder", def: "Dedicated workspace for course files and drafts." }]
-      },
-      {
-        type: "content",
-        lesson: 2,
-        module: "Module 01 · Orientation and setup",
-        title: "Access ≠ authority",
-        bullets: [
-          "File access is not permission to change or publish",
-          "Show current workspace boundaries"
-        ],
-        image: {
-          file: "l02-access-not-authority.png",
-          desc: "16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish arrows beyond the workspace boundary."
-        },
-        sidebar: [{ term: "File access", def: "Ability to see files is not permission to change or publish." }]
-      },
-      {
-        type: "content",
-        lesson: 2,
-        module: "Module 01 · Orientation and setup",
-        title: "Acceptance test",
-        bullets: [
-          "Open → attach → summarize → draft → inspect → remove",
-          "No business secrets in the test"
-        ],
-        image: {
-          file: "l02-acceptance-test.png",
-          desc: "16-bit pixel art: six-step path tiles—open → attach → summarize → draft → inspect → remove—ending at a trash can; no secret icons on the path."
-        },
-        sidebar: [{ term: "Acceptance test", def: "Harmless check that setup works before consequential work." }],
-        notes: "Install or open Claude Code, run the acceptance test once. Narrate what you refuse to share."
-      },
 
-      /* —— Lesson 3 —— */
-      {
-        type: "lesson",
-        lesson: 3,
-        module: "Module 02 · How AI systems actually work",
-        title: "Model vs harness: what's actually doing the work",
-        runtime: "4 min"
-      },
-      {
-        type: "content",
-        lesson: 3,
-        module: "Module 02 · How AI systems actually work",
-        title: "Model vs harness",
-        bullets: [
-          "Model = reasoning engine (predicts text / modalities)",
-          "Harness/app = software that runs the loop, tools, and permissions",
-          "Assistant = the combined working experience"
-        ],
-        image: {
-          file: "l03-model-vs-harness.png",
-          desc: "16-bit pixel art: glowing chip/brain labeled model, tightly wrapped by a machinery frame (harness) with dials for tools and permissions; an outer glow labeled assistant experience."
+        /* —— Lesson 1 —— */
+        {
+          type: "lesson",
+          lesson: 1,
+          module: "Module 01 · Orientation and setup",
+          title: "Your first supervised AI workflow (in one hour)",
+          runtime: "2 min",
         },
-        sidebar: [
-          { term: "Model", def: "Reasoning/generation engine—not the full product." },
-          { term: "Harness", def: "Software around the model: UI, context, tools, permissions." },
-          { term: "Assistant", def: "Combined working experience of model + harness + context." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 3,
-        module: "Module 02 · How AI systems actually work",
-        title: "One chat turn",
-        bullets: [
-          "You → harness assembles context → model",
-          "Model may request tools → harness executes (if allowed) → results return",
-          "Then a reply you can see (often with a step trail)"
-        ],
-        image: {
-          file: "l03-one-chat-turn.png",
-          desc: "16-bit pixel art sequence panels left-to-right: message → context tray → model chip → optional tool wrench (run by harness) → reply bubble with a tiny step trail."
+        {
+          type: "content",
+          lesson: 1,
+          module: "Module 01 · Orientation and setup",
+          title: "Course journey",
+          bullets: [
+            "Brief → draft → review → revise → approve",
+            "You will complete this loop once by the end",
+          ],
+          image: {
+            file: "l01-course-journey.png",
+            desc: "16-bit pixel art: five linked stations in a horizontal loop (brief → draft → review → revise → approve); a small human sprite stands at the approve gate holding a checkmark flag.",
+          },
+          notes:
+            "Show the practice-task worksheet (~30s). Fill one live example (e.g. three article angles from a public brief); reject a confidential alternative.",
         },
-        sidebar: [
-          { term: "Tool call", def: "Model requests a capability; harness runs it if allowed." },
-          { term: "Context", def: "What the harness includes for this model call." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 3,
-        module: "Module 02 · How AI systems actually work",
-        title: "Same model, different app",
-        bullets: [
-          "Files, search, memory, and permissions differ by product",
-          "Capability ≠ granted access"
-        ],
-        image: {
-          file: "l03-same-model-different-app.png",
-          desc: "16-bit pixel art: identical model chip plugged into two different harness cabinets—one with search/files unlocked, one locked—showing same model, different access."
+        {
+          type: "content",
+          lesson: 1,
+          module: "Module 01 · Orientation and setup",
+          title: "You remain accountable",
+          bullets: [
+            "The assistant collaborates; you brief and approve",
+            "Polish ≠ ready to use",
+          ],
+          image: {
+            file: "l01-you-remain-accountable.png",
+            desc: "16-bit pixel art: assistant sprite offers a sparkling draft scroll; human at a desk with an APPROVE stamp. Sparkles on the draft do not equal the stamp.",
+          },
         },
-        sidebar: [{ term: "Multimodal", def: "More than one information form—if the product exposes it." }],
-        notes: "Send one message that triggers a visible tool (search or file read). Point to the step trail—model requested; product ran it."
-      },
+        {
+          type: "content",
+          lesson: 1,
+          module: "Module 01 · Orientation and setup",
+          title: "Safe practice task",
+          bullets: [
+            "Low consequence · reversible · non-sensitive",
+            "One task for the whole course",
+          ],
+          image: {
+            file: "l01-safe-practice-task.png",
+            desc: "16-bit pixel art: three open chests labeled low-stakes / reversible / non-sensitive; a locked vault marked confidential is crossed out.",
+          },
+        },
 
-      /* —— Lesson 4 —— */
-      {
-        type: "lesson",
-        lesson: 4,
-        module: "Module 02 · How AI systems actually work",
-        title: "When is something actually an agent?",
-        runtime: "4 min"
-      },
-      {
-        type: "content",
-        lesson: 4,
-        module: "Module 02 · How AI systems actually work",
-        title: "Four patterns",
-        bullets: [
-          "One-off answer · workflow · automation · agent",
-          "Pick the simplest that still saves time"
-        ],
-        image: {
-          file: "l04-four-patterns.png",
-          desc: "16-bit pixel art: four columns—single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons."
+        /* —— Lesson 2 —— */
+        {
+          type: "lesson",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "Set up Claude Code on your Mac",
+          runtime: "5 min",
         },
-        sidebar: [
-          { term: "Workflow", def: "A sequence of steps—human, software, or AI." },
-          { term: "Automation", def: "Predefined trigger and path when steps are well understood." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 4,
-        module: "Module 02 · How AI systems actually work",
-        title: "What an agent does",
-        bullets: [
-          "Goal + tools via harness + observe + continue within bounds",
-          "Same loop as a chat turn, repeated"
-        ],
-        image: {
-          file: "l04-what-an-agent-does.png",
-          desc: "16-bit pixel art: agent sprite looping goal flag → tool use → observe eye → continue arrow, inside a dashed boundary fence (harness/tools inside the fence)."
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "Claude Code minimum stack",
+          bullets: [
+            "Claude Code · one practice folder · one starter brief",
+            "Plugins (ALIVE, skills) come later",
+          ],
+          urls: [
+            {
+              href: "https://docs.anthropic.com/en/docs/claude-code",
+              label: "docs.anthropic.com/en/docs/claude-code",
+            },
+          ],
+          terminal: {
+            label: "Install (macOS)",
+            lines: [
+              "curl -fsSL https://claude.ai/install.sh | bash",
+              "cd your-practice-folder",
+              "claude",
+            ],
+          },
+          image: {
+            file: "l02-claude-code-minimum-stack.png",
+            desc: "16-bit pixel art: three boxes inside a dotted practice-folder fence—assistant robot, folder, starter-brief scroll. Fancy optional tool icons sit outside the fence, greyed out.",
+          },
+          sidebar: [
+            {
+              term: "Harness",
+              def: "Software around the model: UI, context, tools, permissions.",
+            },
+            {
+              term: "Plugin",
+              def: "Add-on that extends the harness (ALIVE, skills, MCP servers).",
+            },
+          ],
         },
-        sidebar: [
-          { term: "Agent", def: "Pursues a goal across steps using tools via a harness." },
-          { term: "Agentic", def: "A degree of planning, acting, and recovering—not magic." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 4,
-        module: "Module 02 · How AI systems actually work",
-        title: "Autonomy ladder",
-        bullets: [
-          "Suggest → Draft → Prepare → Act with approval → Independent",
-          "Course zone: Draft through Act with approval"
-        ],
-        image: {
-          file: "l04-autonomy-ladder.png",
-          desc: "16-bit pixel art: five-rung ladder (Suggest → Draft → Prepare → Act with approval → Independent); rungs 2–4 highlighted as the course zone; top rung dimmed."
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "Access ≠ authority",
+          bullets: [
+            "File access is not permission to change or publish",
+            "Show current workspace boundaries",
+          ],
+          image: {
+            file: "l02-access-not-authority.png",
+            desc: "16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish arrows beyond the workspace boundary.",
+          },
         },
-        sidebar: [{ term: "Autonomy ladder", def: "Five levels; this course usually stays Draft through Act with approval." }],
-        notes: "Classify the learner's practice task on the autonomy ladder; stop short of \"publish without review.\""
-      },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "Acceptance test",
+          bullets: [
+            "Open → attach → summarize → draft → inspect → remove",
+            "No business secrets in the test",
+          ],
+          terminal: {
+            label: "In Claude Code",
+            lines: ["cd your-practice-folder", "claude"],
+          },
+          image: {
+            file: "l02-acceptance-test.png",
+            desc: "16-bit pixel art: six-step path tiles—open → attach → summarize → draft → inspect → remove—ending at a trash can; no secret icons on the path.",
+          },
+          notes:
+            "Install or open Claude Code, run the acceptance test once. Narrate what you refuse to share.",
+        },
 
-      /* —— Lesson 5 —— */
-      {
-        type: "lesson",
-        lesson: 5,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "What your agent can actually see",
-        runtime: "4 min"
-      },
-      {
-        type: "content",
-        lesson: 5,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Context window",
-        bullets: [
-          "Finite workbench—not perfect memory",
-          "Instructions, messages, files, and tool results compete for space"
-        ],
-        image: {
-          file: "l05-context-window.png",
-          desc: "16-bit pixel art: limited workbench tray filling with labeled tiles (instructions, messages, files, tool results); overflow tiles falling off the edge when crowded."
+        /* —— Lesson 3 —— */
+        {
+          type: "lesson",
+          lesson: 3,
+          module: "Module 02 · How AI systems actually work",
+          title: "Model vs harness: what's actually doing the work",
+          runtime: "4 min",
         },
-        sidebar: [
-          { term: "Context window", def: "Finite working space for one model call." },
-          { term: "Token", def: "Small text processing unit—not a measure of truth." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 5,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Harness chooses the call",
-        bullets: [
-          "The model only sees what the harness includes this turn",
-          "It cannot see your whole disk or every past chat by itself"
-        ],
-        image: {
-          file: "l05-harness-chooses-the-call.png",
-          desc: "16-bit pixel art: harness machine selecting tiles into a tray that feeds the model; a full disk drive and past-chat archive sit outside, disconnected."
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · How AI systems actually work",
+          title: "Model vs harness",
+          bullets: [
+            "Model = reasoning engine (predicts text / modalities)",
+            "Harness/app = software that runs the loop, tools, and permissions",
+            "Assistant = the combined working experience",
+          ],
+          image: {
+            file: "l03-model-vs-harness.png",
+            desc: "16-bit pixel art: glowing chip/brain labeled model, tightly wrapped by a machinery frame (harness) with dials for tools and permissions; an outer glow labeled assistant experience.",
+          },
+          sidebar: [
+            {
+              term: "Model",
+              def: "Reasoning and generation engine—not the full product experience.",
+            },
+            {
+              term: "Harness",
+              def: "Software around the model: UI, context assembly, tools, and permissions.",
+            },
+            {
+              term: "LLM",
+              def: "Large language model—the text-prediction engine inside many assistants.",
+            },
+          ],
         },
-        sidebar: [
-          { term: "Context", def: "Information the harness includes for the current call." },
-          { term: "Prompt", def: "Immediate input for this turn; an assignment is often broader." },
-          { term: "Harness", def: "Chooses what enters the model call." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 5,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Smallest complete set",
-        bullets: [
-          "Relevance and authority beat volume",
-          "Dump of 40 files vs a structured brief with sources"
-        ],
-        image: {
-          file: "l05-smallest-complete-set.png",
-          desc: "16-bit pixel art split: left—messy pile of 40 files pouring into a clogged model; right—neat labeled brief package producing a clean output."
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · How AI systems actually work",
+          title: "One chat turn",
+          bullets: [
+            "You → harness assembles context → model",
+            "Model may request tools → harness executes (if allowed) → results return",
+            "Then a reply you can see (often with a step trail)",
+          ],
+          image: {
+            file: "l03-one-chat-turn.png",
+            desc: "16-bit pixel art sequence panels left-to-right: message → context tray → model chip → optional tool wrench (run by harness) → reply bubble with a tiny step trail.",
+          },
+          sidebar: [
+            {
+              term: "Tool call",
+              def: "Model requests a capability; harness runs it if allowed.",
+            },
+            {
+              term: "Context",
+              def: "What the harness includes for this model call.",
+            },
+          ],
         },
-        sidebar: [{ term: "Authority", def: "Prefer relevant, authoritative sources over volume." }],
-        notes: "Contrast a messy multi-file dump with a short structured brief; briefly compare answer quality."
-      },
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · How AI systems actually work",
+          title: "Same model, different app",
+          bullets: [
+            "Files, search, memory, and permissions differ by product",
+            "Capability ≠ granted access",
+          ],
+          image: {
+            file: "l03-same-model-different-app.png",
+            desc: "16-bit pixel art: identical model chip plugged into two different harness cabinets—one with search/files unlocked, one locked—showing same model, different access.",
+          },
+          notes:
+            "Send one message that triggers a visible tool (search or file read). Point to the step trail—model requested; product ran it.",
+        },
 
-      /* —— Lesson 6 —— */
-      {
-        type: "lesson",
-        lesson: 6,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Why your agent forgets everything",
-        runtime: "4 min"
-      },
-      {
-        type: "content",
-        lesson: 6,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Four buckets",
-        bullets: [
-          "Context · chat history · source knowledge · memory",
-          "Not interchangeable"
-        ],
-        image: {
-          file: "l06-four-buckets.png",
-          desc: "16-bit pixel art: four labeled buckets side by side—Context / Chat history / Source knowledge / Memory—with different fill patterns to show they are not the same."
+        /* —— Lesson 4 —— */
+        {
+          type: "lesson",
+          lesson: 4,
+          module: "Module 02 · How AI systems actually work",
+          title: "When is something actually an agent?",
+          runtime: "4 min",
         },
-        sidebar: [
-          { term: "Context", def: "Information available for the current task." },
-          { term: "Chat history", def: "Visible prior messages—not always all used." },
-          { term: "Memory", def: "Product mechanism to preserve or retrieve later." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 6,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "No memory by default",
-        bullets: [
-          "A fresh session starts genuinely empty",
-          "Continuity is a product feature, not a model trait"
-        ],
-        image: {
-          file: "l06-no-memory-by-default.png",
-          desc: "16-bit pixel art: model chip with a blank slate each time a new-session door opens; a separate \"continuity bridge\" gadget sits beside the door, clearly labeled as an add-on."
+        {
+          type: "content",
+          lesson: 4,
+          module: "Module 02 · How AI systems actually work",
+          title: "Four patterns",
+          bullets: [
+            "One-off answer · workflow · automation · agent",
+            "Pick the simplest that still saves time",
+          ],
+          image: {
+            file: "l04-four-patterns.png",
+            desc: "16-bit pixel art: four columns—single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons.",
+          },
         },
-        sidebar: [
-          { term: "Stateless", def: "Each model call starts with no built-in memory of past calls." },
-          { term: "Chat history", def: "Visibility does not mean every message is in the call." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 6,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "If it matters, store it",
-        bullets: [
-          "Said once in chat ≠ remembered next week",
-          "Deliberate storage is your job until you add memory tooling"
-        ],
-        image: {
-          file: "l06-if-it-matters-store-it.png",
-          desc: "16-bit pixel art: yesterday's speech bubble dissolving; same fact saved in a labeled file folder persists with a checkmark."
+        {
+          type: "content",
+          lesson: 4,
+          module: "Module 02 · How AI systems actually work",
+          title: "What an agent does",
+          bullets: [
+            "Goal + tools via harness + observe + continue within bounds",
+            "Same loop as a chat turn, repeated",
+          ],
+          image: {
+            file: "l04-what-an-agent-does.png",
+            desc: "16-bit pixel art: agent sprite looping goal flag → tool use → observe eye → continue arrow, inside a dashed boundary fence (harness/tools inside the fence).",
+          },
+          sidebar: [
+            {
+              term: "Agent",
+              def: "Pursues a goal across steps using tools via a harness.",
+            },
+            {
+              term: "Agentic",
+              def: "A degree of planning, acting, and recovering—not magic.",
+            },
+          ],
         },
-        notes: "Open a fresh Claude Code session and show what is missing from yesterday without re-attaching sources."
-      },
+        {
+          type: "content",
+          lesson: 4,
+          module: "Module 02 · How AI systems actually work",
+          title: "Autonomy ladder",
+          bullets: [
+            "Suggest → Draft → Prepare → Act with approval → Independent",
+            "Course zone: Draft through Act with approval",
+          ],
+          image: {
+            file: "l04-autonomy-ladder.png",
+            desc: "16-bit pixel art: five-rung ladder (Suggest → Draft → Prepare → Act with approval → Independent); rungs 2–4 highlighted as the course zone; top rung dimmed.",
+          },
+          notes:
+            'Classify the learner\'s practice task on the autonomy ladder; stop short of "publish without review."',
+        },
 
-      /* —— Lesson 7 —— */
-      {
-        type: "lesson",
-        lesson: 7,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "What RAG actually means",
-        runtime: "3 min"
-      },
-      {
-        type: "content",
-        lesson: 7,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "RAG: retrieve, then generate",
-        bullets: [
-          "Search notes → pull pieces → add to context → generate",
-          "Grounds the answer; does not guarantee it's correct"
-        ],
-        image: {
-          file: "l07-rag-retrieve-then-generate.png",
-          desc: "16-bit pixel art librarian fetching note cards into the model's context tray; question mark over the stack."
+        /* —— Lesson 5 —— */
+        {
+          type: "lesson",
+          lesson: 5,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "What your agent can actually see",
+          runtime: "4 min",
         },
-        sidebar: [{ term: "RAG", def: "Fetching relevant source material into context before generating." }]
-      },
-      {
-        type: "content",
-        lesson: 7,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "RAG ≠ memory",
-        bullets: [
-          "Retrieval = one turn · Memory = across sessions"
-        ],
-        image: {
-          file: "l07-rag-not-memory.png",
-          desc: "16-bit pixel art: single-turn conveyor (RAG) beside a vault labeled memory spanning multiple days."
-        }
-      },
+        {
+          type: "content",
+          lesson: 5,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Context window",
+          bullets: [
+            "Finite workbench—not perfect memory",
+            "Instructions, messages, files, and tool results compete for space",
+          ],
+          image: {
+            file: "l05-context-window.png",
+            desc: "16-bit pixel art: limited workbench tray filling with labeled tiles (instructions, messages, files, tool results); overflow tiles falling off the edge when crowded.",
+          },
+          sidebar: [
+            {
+              term: "Context window",
+              def: "Finite working space for instructions, messages, retrieved notes, and tool results in one model call.",
+            },
+            {
+              term: "Token",
+              def: "Small processing unit for text—not always a whole word, and not a measure of truth.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 5,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Harness chooses the call",
+          bullets: [
+            "The model only sees what the harness includes this turn",
+            "It cannot see your whole disk or every past chat by itself",
+          ],
+          image: {
+            file: "l05-harness-chooses-the-call.png",
+            desc: "16-bit pixel art: harness machine selecting tiles into a tray that feeds the model; a full disk drive and past-chat archive sit outside, disconnected.",
+          },
+          sidebar: [
+            {
+              term: "Context",
+              def: "Information the harness includes for the current call.",
+            },
+            {
+              term: "Prompt",
+              def: "Immediate input for this turn; an assignment is often broader.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 5,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Smallest complete set",
+          bullets: [
+            "Relevance and authority beat volume",
+            "Dump of 40 files vs a structured brief with sources",
+          ],
+          image: {
+            file: "l05-smallest-complete-set.png",
+            desc: "16-bit pixel art split: left—messy pile of 40 files pouring into a clogged model; right—neat labeled brief package producing a clean output.",
+          },
+          notes:
+            "Contrast a messy multi-file dump with a short structured brief; briefly compare answer quality.",
+        },
 
-      /* —— Lesson 8 —— */
-      {
-        type: "lesson",
-        lesson: 8,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Set up local memory with ALIVE",
-        runtime: "6 min"
-      },
-      {
-        type: "content",
-        lesson: 8,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Install ALIVE in Claude Code",
-        bullets: [
-          "Add marketplace → install plugin → restart session",
-          "Python 3.10+ only if missing: check with <code>python3 --version</code>"
-        ],
-        image: {
-          file: "l08-install-alive.png",
-          desc: "16-bit pixel art: Claude Code terminal with install commands; plugin icon snapping into place."
-        }
-      },
-      {
-        type: "content",
-        lesson: 8,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Run /alive:world",
-        bullets: [
-          "Guided setup creates your local context folder",
-          "Plain markdown + JSON—you can read every file"
-        ],
-        image: {
-          file: "l08-run-alive-world.png",
-          desc: "16-bit pixel art: new folder tree on disk; open text file with readable lines."
-        }
-      },
-      {
-        type: "content",
-        lesson: 8,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "Save and return test",
-        bullets: [
-          "Work → <code>/alive:save</code> → new session → ask",
-          "Context returns = setup works"
-        ],
-        image: {
-          file: "l08-save-and-return-test.png",
-          desc: "16-bit pixel art: session 1 saves; session 2 receives project context from folder without re-attaching files."
-        }
-      },
-      {
-        type: "content",
-        lesson: 8,
-        module: "Module 03 · Context, memory, and retrieval",
-        title: "What to expect",
-        bullets: [
-          "Background load at start; you checkpoint at end",
-          "You still review and correct saved context"
-        ],
-        image: {
-          file: "l08-what-to-expect.png",
-          desc: "16-bit pixel art: auto load at start; manual save at end; human holds edit pencil."
+        /* —— Lesson 6 —— */
+        {
+          type: "lesson",
+          lesson: 6,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Why your agent forgets everything",
+          runtime: "4 min",
         },
-        notes: "Run install, /alive:world, save one decision, fresh session retrieval test. Show underlying file in Finder."
-      },
+        {
+          type: "content",
+          lesson: 6,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Four buckets",
+          bullets: [
+            "Context · chat history · source knowledge · memory",
+            "Not interchangeable",
+          ],
+          image: {
+            file: "l06-four-buckets.png",
+            desc: "16-bit pixel art: four labeled buckets side by side—Context / Chat history / Source knowledge / Memory—with different fill patterns to show they are not the same.",
+          },
+          sidebar: [
+            {
+              term: "Context",
+              def: "Information the harness includes for the current model call.",
+            },
+            {
+              term: "Chat history",
+              def: "Visible record of prior messages—not always all used in every call.",
+            },
+            {
+              term: "Memory",
+              def: "Information preserved and retrievable across sessions—a product feature.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 6,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "No memory by default",
+          bullets: [
+            "A fresh session starts genuinely empty",
+            "Continuity is a product feature, not a model trait",
+          ],
+          image: {
+            file: "l06-no-memory-by-default.png",
+            desc: '16-bit pixel art: model chip with a blank slate each time a new-session door opens; a separate "continuity bridge" gadget sits beside the door, clearly labeled as an add-on.',
+          },
+          sidebar: [
+            {
+              term: "Stateless",
+              def: "No built-in memory of previous calls unless the harness re-supplies prior information.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 6,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "If it matters, store it",
+          bullets: [
+            "Said once in chat ≠ remembered next week",
+            "Deliberate storage is your job until you add memory tooling",
+          ],
+          image: {
+            file: "l06-if-it-matters-store-it.png",
+            desc: "16-bit pixel art: yesterday's speech bubble dissolving; same fact saved in a labeled file folder persists with a checkmark.",
+          },
+          notes:
+            "Open a fresh Claude Code session and show what is missing from yesterday without re-attaching sources.",
+        },
 
-      /* —— Lesson 9 —— */
-      {
-        type: "lesson",
-        lesson: 9,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "What gets shared when you use cloud AI",
-        runtime: "3 min"
-      },
-      {
-        type: "content",
-        lesson: 9,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Local vs cloud model",
-        bullets: [
-          "Local: runs on your machine—nothing needs to leave it",
-          "Cloud API: runs on a provider's servers—your context travels there"
-        ],
-        image: {
-          file: "l09-local-vs-cloud-model.png",
-          desc: "16-bit pixel art split screen: left—a small home computer glowing with a self-contained model chip; right—a message travels down a road to a distant server tower labeled provider."
+        /* —— Lesson 7 —— */
+        {
+          type: "lesson",
+          lesson: 7,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "What RAG actually means",
+          runtime: "3 min",
         },
-        sidebar: [
-          { term: "Local model", def: "Runs on the learner's own device." },
-          { term: "Cloud API", def: "Runs on a provider's remote servers." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 9,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Trust the policy, not the logo",
-        bullets: [
-          "Read the plan-level data-use terms",
-          "Free tiers are usually the least private option"
-        ],
-        image: {
-          file: "l09-trust-the-policy.png",
-          desc: "16-bit pixel art: a shiny logo badge next to a magnifying glass hovering over fine-print scroll labeled \"data use terms\"—the logo alone doesn't answer the question."
+        {
+          type: "content",
+          lesson: 7,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "RAG: retrieve, then generate",
+          bullets: [
+            "Search notes → pull pieces → add to context → generate",
+            "Grounds the answer; does not guarantee it's correct",
+          ],
+          image: {
+            file: "l07-rag-retrieve-then-generate.png",
+            desc: "16-bit pixel art librarian fetching note cards into the model's context tray; question mark over the stack.",
+          },
+          sidebar: [
+            {
+              term: "RAG",
+              def: "Retrieval-augmented generation—search source material and add relevant pieces to context before generating.",
+            },
+          ],
         },
-        sidebar: [{ term: "Provider trust", def: "What a specific plan and policy allow, not a general brand feeling." }]
-      },
-      {
-        type: "content",
-        lesson: 9,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "What to hold back",
-        bullets: [
-          "Customer data · financials · credentials · health data · NDA material",
-          "When unsure, don't attach it"
-        ],
-        image: {
-          file: "l09-what-to-hold-back.png",
-          desc: "16-bit pixel art: five labeled vault icons (customer data, financials, credentials, health, NDA) sealed shut on a shelf, separate from the open practice-folder icon."
+        {
+          type: "content",
+          lesson: 7,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "RAG ≠ memory",
+          bullets: ["Retrieval = one turn · Memory = across sessions"],
+          image: {
+            file: "l07-rag-not-memory.png",
+            desc: "16-bit pixel art: single-turn conveyor (RAG) beside a vault labeled memory spanning multiple days.",
+          },
+          sidebar: [
+            {
+              term: "RAG",
+              def: "Retrieve-then-answer for one turn—not perfect recall.",
+            },
+            {
+              term: "Memory",
+              def: "Information preserved and retrievable across sessions.",
+            },
+          ],
         },
-        sidebar: [{ term: "Sensitive information", def: "Categories to withhold by default from any AI product." }],
-        notes: "Open the assistant's plan/settings page and point to the actual data-use or training toggle live."
-      },
 
-      /* —— Lesson 10 —— */
-      {
-        type: "lesson",
-        lesson: 10,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Tools vs skills: what agents can actually do",
-        runtime: "3 min"
-      },
-      {
-        type: "content",
-        lesson: 10,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Tools · skills · connections",
-        bullets: [
-          "Tools do · Skills guide · Connections link",
-          "A skill without a tool cannot perform the external action"
-        ],
-        image: {
-          file: "l10-tools-skills-connections.png",
-          desc: "16-bit pixel art three-part strip: wrench labeled Tools do; guidebook labeled Skills guide; plug labeled Connections link. Skill book alone cannot swing the wrench."
+        /* —— Lesson 8 —— */
+        {
+          type: "lesson",
+          lesson: 8,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Set up local memory with ALIVE",
+          runtime: "6 min",
         },
-        sidebar: [
-          { term: "Tool", def: "Executable capability (search, read, write, send…)." },
-          { term: "Skill", def: "Reusable guidance—not the same as a tool." },
-          { term: "API", def: "Interface for systems to exchange requests and results." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 10,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Who runs the tool?",
-        bullets: [
-          "Model requests a tool call",
-          "Harness executes it if allowed and returns the result"
-        ],
-        image: {
-          file: "l10-who-runs-the-tool.png",
-          desc: "16-bit pixel art: model chip speech bubble \"request tool\" → harness robot arm executes → result package returns to the model."
+        {
+          type: "content",
+          lesson: 8,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Install ALIVE in Claude Code",
+          bullets: [
+            "Add marketplace → install plugin → restart session",
+            "Python 3.10+ only if missing—check first, install only if needed",
+          ],
+          urls: [
+            {
+              href: "https://github.com/alivecontext/alive",
+              label: "github.com/alivecontext/alive",
+            },
+            { href: "https://alivecontext.com/", label: "alivecontext.com" },
+            {
+              href: "https://www.python.org/downloads/",
+              label: "python.org/downloads (if needed)",
+            },
+          ],
+          terminals: [
+            {
+              label: "Terminal — Python check",
+              lines: ["python3 --version"],
+            },
+            {
+              label: "In Claude Code",
+              lines: [
+                "/plugin marketplace add https://github.com/alivecontext/alive.git",
+                "/plugin install alive@alivecontext",
+              ],
+            },
+          ],
+          image: {
+            file: "l08-install-alive.png",
+            desc: "16-bit pixel art: Claude Code terminal with install commands; plugin icon snapping into place.",
+          },
+          sidebar: [
+            {
+              term: "ALIVE",
+              def: "Open-source local context system for Claude Code; stores project state in plain files across sessions.",
+            },
+            {
+              term: "Plugin",
+              def: "Add-on that extends the harness (marketplace install).",
+            },
+          ],
         },
-        sidebar: [
-          { term: "Tool call", def: "Model requests; harness runs if allowed." },
-          { term: "Harness", def: "Executes tools and returns results." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 10,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Connected ≠ correct",
-        bullets: [
-          "Connected ≠ selected ≠ correct",
-          "Grant the minimum capability per workflow step"
-        ],
-        image: {
-          file: "l10-connected-not-correct.png",
-          desc: "16-bit pixel art: many plugged tools; only one selected with a green check; a capability-map strip underneath: step | info | skill | tool | approval."
+        {
+          type: "content",
+          lesson: 8,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Run /alive:world",
+          bullets: [
+            "Guided setup creates your local context folder",
+            "Plain markdown + JSON—you can read every file",
+          ],
+          terminal: {
+            label: "In Claude Code",
+            lines: ["/alive:world"],
+          },
+          image: {
+            file: "l08-run-alive-world.png",
+            desc: "16-bit pixel art: new folder tree on disk; open text file with readable lines.",
+          },
         },
-        sidebar: [
-          { term: "MCP", def: "Pattern for clients to discover and use tools/resources." },
-          { term: "Least privilege", def: "Grant the minimum capability needed per step." }
-        ],
-        notes: "Build a one-row capability map for the practice workflow (step, info, skill, tool, approval)."
-      },
+        {
+          type: "content",
+          lesson: 8,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "Save and return test",
+          bullets: [
+            "Work → checkpoint → new session → ask",
+            "Context returns = setup works",
+          ],
+          terminal: {
+            label: "In Claude Code",
+            lines: ["/alive:save"],
+          },
+          image: {
+            file: "l08-save-and-return-test.png",
+            desc: "16-bit pixel art: session 1 saves; session 2 receives project context from folder without re-attaching files.",
+          },
+          sidebar: [
+            {
+              term: "Checkpoint",
+              def: "End-of-session save (/alive:save) that routes work into local context files.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 8,
+          module: "Module 03 · Context, memory, and retrieval",
+          title: "What to expect",
+          bullets: [
+            "Background load at start; you checkpoint at end",
+            "You still review and correct saved context",
+          ],
+          image: {
+            file: "l08-what-to-expect.png",
+            desc: "16-bit pixel art: auto load at start; manual save at end; human holds edit pencil.",
+          },
+          notes:
+            "Run install, /alive:world, save one decision, fresh session retrieval test. Show underlying file in Finder.",
+        },
 
-      /* —— Lesson 11 —— */
-      {
-        type: "lesson",
-        lesson: 11,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "What is MCP?",
-        runtime: "3 min"
-      },
-      {
-        type: "content",
-        lesson: 11,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "A standard plug for tools",
-        bullets: [
-          "Before: custom integration per tool",
-          "With MCP: one protocol, many servers"
-        ],
-        image: {
-          file: "l11-standard-plug-for-tools.png",
-          desc: "16-bit pixel art: assistant with one universal socket; multiple labeled servers (files, calendar, web) plug in via the same MCP port."
-        }
-      },
-      {
-        type: "content",
-        lesson: 11,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Discover → request → harness runs",
-        bullets: [
-          "Assistant sees available MCP tools",
-          "Model requests; harness executes if allowed"
-        ],
-        image: {
-          file: "l11-discover-request-harness-runs.png",
-          desc: "16-bit pixel art: catalog shelf of MCP tools; request arrow to harness gate; result returns to model."
-        }
-      },
-      {
-        type: "content",
-        lesson: 11,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "MCP is not memory",
-        bullets: [
-          "Connection layer, not storage",
-          "Still need permissions and review"
-        ],
-        image: {
-          file: "l11-mcp-is-not-memory.png",
-          desc: "16-bit pixel art: MCP plug icon with X over a brain/memory vault—separate concepts."
-        }
-      },
+        /* —— Lesson 9 —— */
+        {
+          type: "lesson",
+          lesson: 9,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "What gets shared when you use cloud AI",
+          runtime: "3 min",
+        },
+        {
+          type: "content",
+          lesson: 9,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Local vs cloud model",
+          bullets: [
+            "Local: runs on your machine—nothing needs to leave it",
+            "Cloud API: runs on a provider's servers—your context travels there",
+          ],
+          image: {
+            file: "l09-local-vs-cloud-model.png",
+            desc: "16-bit pixel art split screen: left—a small home computer glowing with a self-contained model chip; right—a message travels down a road to a distant server tower labeled provider.",
+          },
+          sidebar: [
+            { term: "Local model", def: "Runs on the learner's own device." },
+            {
+              term: "Cloud API",
+              def: "Runs on a provider's remote servers; context travels there.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 9,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Trust the policy, not the logo",
+          bullets: [
+            "Read the plan-level data-use terms",
+            "Free tiers are usually the least private option",
+          ],
+          urls: [
+            {
+              href: "https://docs.anthropic.com/en/docs/claude-code",
+              label:
+                "docs.anthropic.com/en/docs/claude-code (settings & policy)",
+            },
+          ],
+          image: {
+            file: "l09-trust-the-policy.png",
+            desc: '16-bit pixel art: a shiny logo badge next to a magnifying glass hovering over fine-print scroll labeled "data use terms"—the logo alone doesn\'t answer the question.',
+          },
+          sidebar: [
+            {
+              term: "Data-use policy",
+              def: "Provider terms for how submitted content may be stored, reviewed, or used.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 9,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "What to hold back",
+          bullets: [
+            "Customer data · financials · credentials · health data · NDA material",
+            "When unsure, don't attach it",
+          ],
+          image: {
+            file: "l09-what-to-hold-back.png",
+            desc: "16-bit pixel art: five labeled vault icons (customer data, financials, credentials, health, NDA) sealed shut on a shelf, separate from the open practice-folder icon.",
+          },
+          notes:
+            "Open the assistant's plan/settings page and point to the actual data-use or training toggle live.",
+        },
 
-      /* —— Lesson 12 —— */
-      {
-        type: "lesson",
-        lesson: 12,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "How to install a new skill",
-        runtime: "3 min"
-      },
-      {
-        type: "content",
-        lesson: 12,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Browse, install, try",
-        bullets: [
-          "The skills command browses a library of ready-made skills",
-          "Install one the way you'd add an app"
-        ],
-        image: {
-          file: "l12-browse-install-try.png",
-          desc: "16-bit pixel art: a shelf of labeled skill-book icons; one book flies into an open backpack on the assistant sprite after an \"install\" tap."
+        /* —— Lesson 10 —— */
+        {
+          type: "lesson",
+          lesson: 10,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Tools vs skills: what agents can actually do",
+          runtime: "3 min",
         },
-        sidebar: [{ term: "Skills command", def: "Built-in way to discover, install, and remove skill packages." }]
-      },
-      {
-        type: "content",
-        lesson: 12,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Showcase (placeholder): [Skill Name TBD]",
-        bullets: [
-          "Placeholder branding/business-coach skill (keep placeholder as-is)",
-          "Final skill + name supplied later—do not invent branding; workflow shown is what matters"
-        ],
-        image: {
-          file: "l12-showcase-skill-tbd.png",
-          desc: "16-bit pixel art: a skill-book icon with a clearly stitched \"TBD\" placeholder patch on its cover, sitting on the shelf next to ordinary skill books."
+        {
+          type: "content",
+          lesson: 10,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Tools · skills · connections",
+          bullets: [
+            "Tools do · Skills guide · Connections link",
+            "A skill without a tool cannot perform the external action",
+          ],
+          image: {
+            file: "l10-tools-skills-connections.png",
+            desc: "16-bit pixel art three-part strip: wrench labeled Tools do; guidebook labeled Skills guide; plug labeled Connections link. Skill book alone cannot swing the wrench.",
+          },
+          sidebar: [
+            {
+              term: "Tool",
+              def: "Executable capability (search, read, write, send). The model requests it; the harness runs it if allowed.",
+            },
+            {
+              term: "Skill",
+              def: "Reusable guidance—procedures, examples, and standards—not the same as a tool.",
+            },
+            {
+              term: "API",
+              def: "Software interface through which systems exchange requests and results.",
+            },
+          ],
         },
-        sidebar: [{ term: "Skill package", def: "An installable bundle of reusable instructions for a type of work." }]
-      },
-      {
-        type: "content",
-        lesson: 12,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Review before you install",
-        bullets: [
-          "Read what it claims to do and touch",
-          "Try once; remove if it doesn't earn its place"
-        ],
-        image: {
-          file: "l12-review-before-install.png",
-          desc: "16-bit pixel art: a magnifying glass over a skill's description card before the install button; a trash icon beside an uninstall action."
+        {
+          type: "content",
+          lesson: 10,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Who runs the tool?",
+          bullets: [
+            "Model requests a tool call",
+            "Harness executes it if allowed and returns the result",
+          ],
+          image: {
+            file: "l10-who-runs-the-tool.png",
+            desc: '16-bit pixel art: model chip speech bubble "request tool" → harness robot arm executes → result package returns to the model.',
+          },
+          sidebar: [
+            {
+              term: "Tool call",
+              def: "Model requests; harness runs if allowed.",
+            },
+            { term: "Harness", def: "Executes tools and returns results." },
+          ],
         },
-        sidebar: [{ term: "Least privilege", def: "Applies to installed skills, not only to tools." }],
-        notes: "Run the skills command live, install the placeholder showcase skill (keep placeholder label exactly as written), then swap only after the real skill is supplied."
-      },
+        {
+          type: "content",
+          lesson: 10,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Connected ≠ correct",
+          bullets: [
+            "Connected ≠ selected ≠ correct",
+            "Grant the minimum capability per workflow step",
+          ],
+          image: {
+            file: "l10-connected-not-correct.png",
+            desc: "16-bit pixel art: many plugged tools; only one selected with a green check; a capability-map strip underneath: step | info | skill | tool | approval.",
+          },
+          notes:
+            "Build a one-row capability map for the practice workflow (step, info, skill, tool, approval).",
+        },
 
-      /* —— Lesson 13 —— */
-      {
-        type: "lesson",
-        lesson: 13,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "When to stop and ask for approval",
-        runtime: "2 min"
-      },
-      {
-        type: "content",
-        lesson: 13,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Permission ladder",
-        bullets: [
-          "Read → create/edit → send/publish → irreversible",
-          "Least privilege for this workflow"
-        ],
-        image: {
-          file: "l13-permission-ladder.png",
-          desc: "16-bit pixel art: ladder rungs Read → create/edit → send/publish → irreversible; a padlock sits on the publish/irreversible rungs."
+        /* —— Lesson 11 —— */
+        {
+          type: "lesson",
+          lesson: 11,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "What is MCP?",
+          runtime: "3 min",
         },
-        sidebar: [{ term: "Least privilege", def: "Grant only the access needed for this workflow." }]
-      },
-      {
-        type: "content",
-        lesson: 13,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Guide vs enforce",
-        bullets: [
-          "Instructions guide; permissions enforce",
-          "\"Please don't publish\" ≠ no publishing permission"
-        ],
-        image: {
-          file: "l13-guide-vs-enforce.png",
-          desc: "16-bit pixel art: sticky note saying \"please don't publish\" next to a publish button that still works; beside it, the same button with a real padlock that blocks the action."
+        {
+          type: "content",
+          lesson: 11,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "A standard plug for tools",
+          bullets: [
+            "Before: custom integration per tool",
+            "With MCP: one protocol, many servers",
+          ],
+          urls: [
+            {
+              href: "https://modelcontextprotocol.io/",
+              label: "modelcontextprotocol.io",
+            },
+          ],
+          image: {
+            file: "l11-standard-plug-for-tools.png",
+            desc: "16-bit pixel art: assistant with one universal socket; multiple labeled servers (files, calendar, web) plug in via the same MCP port.",
+          },
+          sidebar: [
+            {
+              term: "MCP",
+              def: "Model Context Protocol—open standard for AI clients to discover external tools and data.",
+            },
+            {
+              term: "MCP server",
+              def: "Service that exposes tools or resources to compatible assistants via MCP.",
+            },
+          ],
         },
-        sidebar: [
-          { term: "Sandbox", def: "Limits where actions take effect—not a correctness guarantee." },
-          { term: "Instructions", def: "Guidance only; not a security boundary by themselves." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 13,
-        module: "Module 04 · Data, tools, skills, and safety",
-        title: "Stop and ask",
-        bullets: [
-          "Write: \"Stop and ask me before ___.\"",
-          "Legal · financial · reputational · privacy · irreversible"
-        ],
-        image: {
-          file: "l13-stop-and-ask.png",
-          desc: "16-bit pixel art: stop-sign gate before publish/pay/share icons; human sprite at the gate; small labels for legal, financial, reputational, privacy."
+        {
+          type: "content",
+          lesson: 11,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Discover → request → harness runs",
+          bullets: [
+            "Assistant sees available MCP tools",
+            "Model requests; harness executes if allowed",
+          ],
+          image: {
+            file: "l11-discover-request-harness-runs.png",
+            desc: "16-bit pixel art: catalog shelf of MCP tools; request arrow to harness gate; result returns to model.",
+          },
         },
-        sidebar: [
-          { term: "Prompt injection", def: "Untrusted content trying to redirect the agent." },
-          { term: "Approval", def: "Human gate for consequential or irreversible actions." }
-        ],
-        notes: "Draft the learner's stop-and-ask sentence live; reject a \"trust the model\" alternative."
-      },
+        {
+          type: "content",
+          lesson: 11,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "MCP is not memory",
+          bullets: [
+            "Connection layer, not storage",
+            "Still need permissions and review",
+          ],
+          image: {
+            file: "l11-mcp-is-not-memory.png",
+            desc: "16-bit pixel art: MCP plug icon with X over a brain/memory vault—separate concepts.",
+          },
+        },
 
-      /* —— Lesson 14 —— */
-      {
-        type: "lesson",
-        lesson: 14,
-        module: "Module 05 · Assign, brief, and review",
-        title: "Give better assignments with CLEAR",
-        runtime: "4 min"
-      },
-      {
-        type: "content",
-        lesson: 14,
-        module: "Module 05 · Assign, brief, and review",
-        title: "CLEAR at a glance",
-        bullets: [
-          "Clarify · Load · Explain · Ask · Review",
-          "A thinking checklist—not a magic template"
-        ],
-        image: {
-          file: "l14-clear-at-a-glance.png",
-          desc: "16-bit pixel art: five letter blocks C–L–E–A–R, each with one short phrase underneath (outcome / context / standards / deliverable / review)."
+        /* —— Lesson 12 —— */
+        {
+          type: "lesson",
+          lesson: 12,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "How to install a new skill",
+          runtime: "3 min",
         },
-        sidebar: [{ term: "CLEAR method", def: "Clarify, Load, Explain, Ask, Review—a checklist for reviewable assignments." }]
-      },
-      {
-        type: "content",
-        lesson: 14,
-        module: "Module 05 · Assign, brief, and review",
-        title: "Before: vague",
-        bullets: [
-          "\"Help with my content.\"",
-          "Hard to execute; harder to evaluate"
-        ],
-        image: {
-          file: "l14-before-vague.png",
-          desc: "16-bit pixel art: foggy speech bubble reading \"help with my content\"; confused assistant shrug; no checklist visible."
+        {
+          type: "content",
+          lesson: 12,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Browse, install, try",
+          bullets: [
+            "Use the plugins command to browse marketplaces",
+            "Install one the way you'd add an app",
+          ],
+          terminal: {
+            label: "In Claude Code",
+            lines: ["/plugins"],
+          },
+          image: {
+            file: "l12-browse-install-try.png",
+            desc: '16-bit pixel art: a shelf of labeled skill-book icons; one book flies into an open backpack on the assistant sprite after an "install" tap.',
+          },
+          sidebar: [
+            {
+              term: "Skill",
+              def: "Reusable guidance—procedures, examples, standards—not the same as a tool.",
+            },
+            {
+              term: "Plugin",
+              def: "Add-on package (skills, ALIVE, MCP servers) installed via marketplace.",
+            },
+          ],
         },
-        sidebar: [{ term: "Prompt", def: "Immediate input; a vague line is not an executable assignment." }]
-      },
-      {
-        type: "content",
-        lesson: 14,
-        module: "Module 05 · Assign, brief, and review",
-        title: "After: CLEAR",
-        bullets: [
-          "Outcome, sources, standards, deliverable, and review are visible",
-          "Hard constraints vs preferences"
-        ],
-        image: {
-          file: "l14-after-clear.png",
-          desc: "16-bit pixel art: the vague bubble transforms into a labeled checklist sheet with boxes for outcome, sources, standards, deliverable, and review."
+        {
+          type: "content",
+          lesson: 12,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Showcase (placeholder): [Skill Name TBD]",
+          bullets: [
+            "Placeholder branding/business-coach skill (keep placeholder as-is)",
+            "Final skill + name supplied later—do not invent branding; workflow shown is what matters",
+          ],
+          image: {
+            file: "l12-showcase-skill-tbd.png",
+            desc: '16-bit pixel art: a skill-book icon with a clearly stitched "TBD" placeholder patch on its cover, sitting on the shelf next to ordinary skill books.',
+          },
         },
-        sidebar: [{ term: "Assignment", def: "Outcome + sources + standards + deliverable + review standard." }],
-        notes: "Transform \"help with my content\" into a CLEAR assignment on a worksheet; leave one gap and ask the assistant to surface it."
-      },
+        {
+          type: "content",
+          lesson: 12,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Review before you install",
+          bullets: [
+            "Read what it claims to do and touch",
+            "Try once; remove if it doesn't earn its place",
+          ],
+          image: {
+            file: "l12-review-before-install.png",
+            desc: "16-bit pixel art: a magnifying glass over a skill's description card before the install button; a trash icon beside an uninstall action.",
+          },
+          notes:
+            "Run the skills command live, install the placeholder showcase skill (keep placeholder label exactly as written), then swap only after the real skill is supplied.",
+        },
 
-      /* —— Lesson 15 —— */
-      {
-        type: "lesson",
-        lesson: 15,
-        module: "Module 05 · Assign, brief, and review",
-        title: "Verify outputs and fix the system",
-        runtime: "4 min"
-      },
-      {
-        type: "content",
-        lesson: 15,
-        module: "Module 05 · Assign, brief, and review",
-        title: "Source pack + authority labels",
-        bullets: [
-          "Name the source of truth explicitly",
-          "Approved · reference · draft · outdated · archive"
-        ],
-        image: {
-          file: "l15-source-pack-authority-labels.png",
-          desc: "16-bit pixel art: messy overflowing folder on the left vs a small neat pack with five clear stamps feeding into a CLEAR Load box."
+        /* —— Lesson 13 —— */
+        {
+          type: "lesson",
+          lesson: 13,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "When to stop and ask for approval",
+          runtime: "2 min",
         },
-        sidebar: [
-          { term: "Source of truth", def: "Explicitly named authoritative material for the task." },
-          { term: "Authority label", def: "Status of a source for this task." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 15,
-        module: "Module 05 · Assign, brief, and review",
-        title: "Conflicts: stop and ask",
-        bullets: [
-          "If facts are missing or sources conflict, stop and ask",
-          "Say what to imitate in examples"
-        ],
-        image: {
-          file: "l15-conflicts-stop-and-ask.png",
-          desc: "16-bit pixel art: two scrolls disagreeing; stop hand and ask-bubble to a human; an example scroll with an \"imitate this\" arrow."
+        {
+          type: "content",
+          lesson: 13,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Permission ladder",
+          bullets: [
+            "Read → create/edit → send/publish → irreversible",
+            "Least privilege for this workflow",
+          ],
+          image: {
+            file: "l13-permission-ladder.png",
+            desc: "16-bit pixel art: ladder rungs Read → create/edit → send/publish → irreversible; a padlock sits on the publish/irreversible rungs.",
+          },
         },
-        sidebar: [{ term: "Conflict rule", def: "Stop and ask when sources conflict or facts are missing." }]
-      },
-      {
-        type: "content",
-        lesson: 15,
-        module: "Module 05 · Assign, brief, and review",
-        title: "Diagnostic feedback",
-        bullets: [
-          "Issue → evidence → standard → correction → verify",
-          "Not: \"This is bad. Try again.\""
-        ],
-        image: {
-          file: "l15-diagnostic-feedback.png",
-          desc: "16-bit pixel art: left speech bubble \"This is bad. Try again.\" crossed out; right—five-step arrow chain issue → evidence → standard → correction → verify."
+        {
+          type: "content",
+          lesson: 13,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Guide vs enforce",
+          bullets: [
+            "Instructions guide; permissions enforce",
+            '"Please don\'t publish" ≠ no publishing permission',
+          ],
+          image: {
+            file: "l13-guide-vs-enforce.png",
+            desc: '16-bit pixel art: sticky note saying "please don\'t publish" next to a publish button that still works; beside it, the same button with a real padlock that blocks the action.',
+          },
         },
-        sidebar: [{ term: "Diagnostic feedback", def: "Issue, evidence, standard, correction, verification." }],
-        notes: "Label 3–4 practice files live, including one outdated file; then revise one factual error with diagnostic feedback."
-      },
+        {
+          type: "content",
+          lesson: 13,
+          module: "Module 04 · Data, tools, skills, and safety",
+          title: "Stop and ask",
+          bullets: [
+            'Write: "Stop and ask me before ___."',
+            "Legal · financial · reputational · privacy · irreversible",
+          ],
+          image: {
+            file: "l13-stop-and-ask.png",
+            desc: "16-bit pixel art: stop-sign gate before publish/pay/share icons; human sprite at the gate; small labels for legal, financial, reputational, privacy.",
+          },
+          sidebar: [
+            {
+              term: "Prompt injection",
+              def: "Untrusted content (pages, documents, emails) trying to redirect the agent away from your goal.",
+            },
+          ],
+          notes:
+            'Draft the learner\'s stop-and-ask sentence live; reject a "trust the model" alternative.',
+        },
 
-      /* —— Lesson 16 —— */
-      {
-        type: "lesson",
-        lesson: 16,
-        module: "Module 06 · Your first supervised workflow",
-        title: "Run one supervised workflow end to end",
-        runtime: "3 min"
-      },
-      {
-        type: "content",
-        lesson: 16,
-        module: "Module 06 · Your first supervised workflow",
-        title: "Run the full loop",
-        bullets: [
-          "Keep the artifact small so every step is visible",
-          "From CLEAR assignment through verification and approval"
-        ],
-        image: {
-          file: "l16-run-the-full-loop.png",
-          desc: "16-bit pixel art: compact end-to-end loop reusing Lesson 1 stages (brief → draft → review → revise → approve); CLEAR sheet at the start and a verify stamp mid-path."
+        /* —— Lesson 14 —— */
+        {
+          type: "lesson",
+          lesson: 14,
+          module: "Module 05 · Assign, brief, and review",
+          title: "Give better assignments with CLEAR",
+          runtime: "4 min",
         },
-        sidebar: [
-          { term: "Supervised loop", def: "CLEAR → generate → verify → revise → human approval." },
-          { term: "CLEAR method", def: "Assignment checklist that starts the loop." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 16,
-        module: "Module 06 · Your first supervised workflow",
-        title: "Human decision markers",
-        bullets: [
-          "Source authority · permissions · verification · approval",
-          "Narrate these live"
-        ],
-        image: {
-          file: "l16-human-decision-markers.png",
-          desc: "16-bit pixel art: four checkpoint gates with human sprites—source authority / permissions / verification / approval—along the workflow path."
+        {
+          type: "content",
+          lesson: 14,
+          module: "Module 05 · Assign, brief, and review",
+          title: "CLEAR at a glance",
+          bullets: [
+            "Clarify · Load · Explain · Ask · Review",
+            "A thinking checklist—not a magic template",
+          ],
+          image: {
+            file: "l14-clear-at-a-glance.png",
+            desc: "16-bit pixel art: five letter blocks C–L–E–A–R, each with one short phrase underneath (outcome / context / standards / deliverable / review).",
+          },
         },
-        sidebar: [
-          { term: "Approval", def: "Human gate for consequential or external actions." },
-          { term: "Least privilege", def: "Permissions stay narrow through the demo." }
-        ]
-      },
-      {
-        type: "content",
-        lesson: 16,
-        module: "Module 06 · Your first supervised workflow",
-        title: "Value of the loop",
-        bullets: [
-          "Controlled loop beats chasing a perfect first draft"
-        ],
-        image: {
-          file: "l16-value-of-the-loop.png",
-          desc: "16-bit pixel art: shiny first-draft pile smaller than a controlled loop pathway with gates; tiny handoff card labeled Course 2 at the end."
+        {
+          type: "content",
+          lesson: 14,
+          module: "Module 05 · Assign, brief, and review",
+          title: "Before: vague",
+          bullets: [
+            '"Help with my content."',
+            "Hard to execute; harder to evaluate",
+          ],
+          image: {
+            file: "l14-before-vague.png",
+            desc: '16-bit pixel art: foggy speech bubble reading "help with my content"; confused assistant shrug; no checklist visible.',
+          },
+          sidebar: [
+            {
+              term: "Prompt",
+              def: "Immediate input for this turn; a vague line is not an executable assignment.",
+            },
+          ],
         },
-        sidebar: [{ term: "Supervised workflow", def: "Value is the controlled loop, not the first answer." }],
-        notes: "Execute the mini workflow (e.g. three article angles) start to finish; find one unsupported claim and revise it."
-      },
+        {
+          type: "content",
+          lesson: 14,
+          module: "Module 05 · Assign, brief, and review",
+          title: "After: CLEAR",
+          bullets: [
+            "Outcome, sources, standards, deliverable, and review are visible",
+            "Hard constraints vs preferences",
+          ],
+          image: {
+            file: "l14-after-clear.png",
+            desc: "16-bit pixel art: the vague bubble transforms into a labeled checklist sheet with boxes for outcome, sources, standards, deliverable, and review.",
+          },
+          notes:
+            'Transform "help with my content" into a CLEAR assignment on a worksheet; leave one gap and ask the assistant to surface it.',
+        },
 
-      /* —— Lesson 17 —— */
-      {
-        type: "lesson",
-        lesson: 17,
-        module: "Module 06 · Your first supervised workflow",
-        title: "Why your local setup stops at one person",
-        runtime: "2 min"
-      },
-      {
-        type: "content",
-        lesson: 17,
-        module: "Module 06 · Your first supervised workflow",
-        title: "What you have now",
-        bullets: [
-          "One assistant, one local folder, one supervised loop",
-          "Complete—for one person"
-        ],
-        image: {
-          file: "l17-what-you-have-now.png",
-          desc: "16-bit pixel art: a single human sprite standing inside a cozy, complete workshop room—desk, folder, assistant robot—with a solid checkmark on the door."
+        /* —— Lesson 15 —— */
+        {
+          type: "lesson",
+          lesson: 15,
+          module: "Module 05 · Assign, brief, and review",
+          title: "Verify outputs and fix the system",
+          runtime: "4 min",
         },
-        sidebar: [{ term: "Local setup", def: "Files, memory, and delegation that work for one person on one machine." }]
-      },
-      {
-        type: "content",
-        lesson: 17,
-        module: "Module 06 · Your first supervised workflow",
-        title: "Add a second person",
-        bullets: [
-          "Whose folder is current? Whose memory is right?",
-          "Not solved by copying files back and forth"
-        ],
-        image: {
-          file: "l17-add-a-second-person.png",
-          desc: "16-bit pixel art: two identical workshop rooms side by side, each with its own folder and assistant; a confused double-arrow between them shows conflicting copies."
+        {
+          type: "content",
+          lesson: 15,
+          module: "Module 05 · Assign, brief, and review",
+          title: "Source pack + authority labels",
+          bullets: [
+            "Name the source of truth explicitly",
+            "Approved · reference · draft · outdated · archive",
+          ],
+          image: {
+            file: "l15-source-pack-authority-labels.png",
+            desc: "16-bit pixel art: messy overflowing folder on the left vs a small neat pack with five clear stamps feeding into a CLEAR Load box.",
+          },
         },
-        sidebar: [{ term: "Shared context", def: "One source of truth multiple people can read and write safely." }]
-      },
-      {
-        type: "content",
-        lesson: 17,
-        module: "Module 06 · Your first supervised workflow",
-        title: "A different problem, later",
-        bullets: [
-          "Access control, conflict resolution, shared memory",
-          "Next: AI Agents for Your Business"
-        ],
-        image: {
-          file: "l17-a-different-problem-later.png",
-          desc: "16-bit pixel art: the two workshop rooms connected by a bridge under construction, with a signpost reading \"Course 2\" pointing across it."
+        {
+          type: "content",
+          lesson: 15,
+          module: "Module 05 · Assign, brief, and review",
+          title: "Conflicts: stop and ask",
+          bullets: [
+            "If facts are missing or sources conflict, stop and ask",
+            "Say what to imitate in examples",
+          ],
+          image: {
+            file: "l15-conflicts-stop-and-ask.png",
+            desc: '16-bit pixel art: two scrolls disagreeing; stop hand and ask-bubble to a human; an example scroll with an "imitate this" arrow.',
+          },
         },
-        sidebar: [{ term: "Single-user setup", def: "This course's scope: complete, but not built for sharing." }],
-        notes: "None required—close on the two-room slide and state the boundary plainly, without a sales pitch for Course 2."
+        {
+          type: "content",
+          lesson: 15,
+          module: "Module 05 · Assign, brief, and review",
+          title: "Diagnostic feedback",
+          bullets: [
+            "Issue → evidence → standard → correction → verify",
+            'Not: "This is bad. Try again."',
+          ],
+          image: {
+            file: "l15-diagnostic-feedback.png",
+            desc: '16-bit pixel art: left speech bubble "This is bad. Try again." crossed out; right—five-step arrow chain issue → evidence → standard → correction → verify.',
+          },
+          notes:
+            "Label 3–4 practice files live, including one outdated file; then revise one factual error with diagnostic feedback.",
+        },
+        {
+          type: "content",
+          lesson: 15,
+          module: "Module 05 · Assign, brief, and review",
+          title: "Task fix vs system fix",
+          bullets: [
+            "Task fix: patch this output once",
+            "System fix: update the instruction, skill, or source where the error started",
+          ],
+          image: {
+            file: "l15-task-fix-vs-system-fix.png",
+            desc: "16-bit pixel art: fork in the road—left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear.",
+          },
+          sidebar: [
+            {
+              term: "Task fix",
+              def: "One-off correction to this draft or output.",
+            },
+            {
+              term: "System fix",
+              def: "Durable update to instructions, skills, sources, or ALIVE context so the error does not repeat.",
+            },
+          ],
+        },
+
+        /* —— Lesson 16 —— */
+        {
+          type: "lesson",
+          lesson: 16,
+          module: "Module 06 · Your first supervised workflow",
+          title: "Run one supervised workflow end to end",
+          runtime: "3 min",
+        },
+        {
+          type: "content",
+          lesson: 16,
+          module: "Module 06 · Your first supervised workflow",
+          title: "Run the full loop",
+          bullets: [
+            "Keep the artifact small so every step is visible",
+            "From CLEAR assignment through verification and approval",
+          ],
+          image: {
+            file: "l16-run-the-full-loop.png",
+            desc: "16-bit pixel art: compact end-to-end loop reusing Lesson 1 stages (brief → draft → review → revise → approve); CLEAR sheet at the start and a verify stamp mid-path.",
+          },
+        },
+        {
+          type: "content",
+          lesson: 16,
+          module: "Module 06 · Your first supervised workflow",
+          title: "Human decision markers",
+          bullets: [
+            "Source authority · permissions · verification · approval",
+            "Narrate these live",
+          ],
+          image: {
+            file: "l16-human-decision-markers.png",
+            desc: "16-bit pixel art: four checkpoint gates with human sprites—source authority / permissions / verification / approval—along the workflow path.",
+          },
+        },
+        {
+          type: "content",
+          lesson: 16,
+          module: "Module 06 · Your first supervised workflow",
+          title: "Value of the loop",
+          bullets: ["Controlled loop beats chasing a perfect first draft"],
+          image: {
+            file: "l16-value-of-the-loop.png",
+            desc: "16-bit pixel art: shiny first-draft pile smaller than a controlled loop pathway with gates; tiny handoff card labeled Course 2 at the end.",
+          },
+          notes:
+            "Execute the mini workflow (e.g. three article angles) start to finish; find one unsupported claim and revise it.",
+        },
+
+        /* —— Lesson 17 —— */
+        {
+          type: "lesson",
+          lesson: 17,
+          module: "Module 06 · Your first supervised workflow",
+          title: "Why your local setup stops at one person",
+          runtime: "2 min",
+        },
+        {
+          type: "content",
+          lesson: 17,
+          module: "Module 06 · Your first supervised workflow",
+          title: "What you have now",
+          bullets: [
+            "One assistant, one local folder, one supervised loop",
+            "Complete—for one person",
+          ],
+          image: {
+            file: "l17-what-you-have-now.png",
+            desc: "16-bit pixel art: a single human sprite standing inside a cozy, complete workshop room—desk, folder, assistant robot—with a solid checkmark on the door.",
+          },
+        },
+        {
+          type: "content",
+          lesson: 17,
+          module: "Module 06 · Your first supervised workflow",
+          title: "Add a second person",
+          bullets: [
+            "Whose folder is current? Whose memory is right?",
+            "Not solved by copying files back and forth",
+          ],
+          image: {
+            file: "l17-add-a-second-person.png",
+            desc: "16-bit pixel art: two identical workshop rooms side by side, each with its own folder and assistant; a confused double-arrow between them shows conflicting copies.",
+          },
+        },
+        {
+          type: "content",
+          lesson: 17,
+          module: "Module 06 · Your first supervised workflow",
+          title: "A different problem, later",
+          bullets: [
+            "Access control, conflict resolution, shared memory",
+            "Next: AI Agents for Your Business",
+          ],
+          image: {
+            file: "l17-a-different-problem-later.png",
+            desc: '16-bit pixel art: the two workshop rooms connected by a bridge under construction, with a signpost reading "Course 2" pointing across it.',
+          },
+          notes:
+            "None required—close on the two-room slide and state the boundary plainly, without a sales pitch for Course 2.",
+        },
+      ];
+
+      const deck = document.getElementById("deck");
+      const counter = document.getElementById("counter");
+      const prevBtn = document.getElementById("prev");
+      const nextBtn = document.getElementById("next");
+      const notesEl = document.getElementById("notes");
+      const notesText = document.getElementById("notes-text");
+
+      let current = 0;
+      let notesVisible = false;
+
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
       }
-    ];
 
-    const deck = document.getElementById("deck");
-    const counter = document.getElementById("counter");
-    const prevBtn = document.getElementById("prev");
-    const nextBtn = document.getElementById("next");
-    const notesEl = document.getElementById("notes");
-    const notesText = document.getElementById("notes-text");
+      function renderBullets(bullets) {
+        return `<ul class="bullets">${bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`;
+      }
 
-    let current = 0;
-    let notesVisible = false;
+      function imageAltText(img, title) {
+        if (img.desc) {
+          return img.desc.replace(/^16-bit pixel art:\s*/i, "");
+        }
+        return title;
+      }
 
-    function escapeHtml(str) {
-      return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
-    }
-
-    function renderBullets(bullets) {
-      return `<ul class="bullets">${bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`;
-    }
-
-    function renderImage(img) {
-      if (!img) return "";
-      return `
+      function renderImage(img, title) {
+        if (!img) return "";
+        const src = PIXEL_ART_BY_TITLE[title];
+        if (src) {
+          const alt = imageAltText(img, title);
+          return `
+        <figure class="slide-visual">
+          <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" width="1672" height="941" loading="lazy" decoding="async" />
+        </figure>`;
+        }
+        return `
         <div class="img-placeholder" role="img" aria-label="Image placeholder: ${escapeHtml(img.file)}">
           <p class="img-placeholder-label">Image asset</p>
           <p class="img-placeholder-name">${escapeHtml(img.file)}</p>
           <p class="img-placeholder-desc">${escapeHtml(img.desc)}</p>
         </div>`;
-    }
-
-    function renderSidebar(items) {
-      if (!items || !items.length) return "";
-      return `
-        <aside class="sidebar">
-          <p class="sidebar-label">Terms</p>
-          <ul>${items.map((i) => `<li><strong>${escapeHtml(i.term)}</strong>${escapeHtml(i.def)}</li>`).join("")}</ul>
-        </aside>`;
-    }
-
-    function renderSlide(data, index) {
-      const active = index === current ? " is-active" : "";
-      let inner = "";
-
-      if (data.type === "title") {
-        inner = `
-          <div class="slide-inner">
-            <h1>${escapeHtml(data.title)}</h1>
-            <p class="subtitle">${escapeHtml(data.subtitle)}</p>
-            <ul class="meta">${data.meta.map((m) => `<li>${escapeHtml(m)}</li>`).join("")}</ul>
-          </div>`;
-        return `<section class="slide slide--title${active}" data-index="${index}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">${escapeHtml(data.kicker)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
       }
 
-      if (data.type === "lesson") {
-        inner = `
+      function renderTerminal(terminal) {
+        if (!terminal || !terminal.lines || !terminal.lines.length) return "";
+        const label = terminal.label
+          ? `<span class="terminal-label">${escapeHtml(terminal.label)}</span>`
+          : "";
+        const body = terminal.lines.map((line) => escapeHtml(line)).join("\n");
+        return `
+        <div class="terminal-block">
+          ${label}
+          <pre><code>${body}</code></pre>
+        </div>`;
+      }
+
+      function renderTerminals(data) {
+        const blocks = [];
+        if (data.terminal) blocks.push(data.terminal);
+        if (data.terminals) blocks.push(...data.terminals);
+        return blocks.map((t) => renderTerminal(t)).join("");
+      }
+
+      function renderUrls(urls) {
+        if (!urls || !urls.length) return "";
+        return `<ul class="slide-urls">${urls.map((u) => `<li><a href="${escapeHtml(u.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(u.label || u.href)}</a></li>`).join("")}</ul>`;
+      }
+
+      function renderSidebar(items) {
+        if (!items || !items.length) return "";
+        return `
+        <aside class="sidebar">
+          <p class="sidebar-label">Glossary</p>
+          <ul>${items.map((i) => `<li><strong>${escapeHtml(i.term)}</strong>${escapeHtml(i.def)}</li>`).join("")}</ul>
+        </aside>`;
+      }
+
+      function renderSlide(data, index) {
+        const active = index === current ? " is-active" : "";
+        let inner = "";
+
+        if (data.type === "title") {
+          const visual = data.image
+            ? `<div class="title-visual">${renderImage(data.image, data.title)}</div>`
+            : "";
+          inner = `
+          <div class="slide-inner">
+            <div class="title-copy">
+              <h1>${escapeHtml(data.title)}</h1>
+              <p class="subtitle">${escapeHtml(data.subtitle)}</p>
+              <ul class="meta">${data.meta.map((m) => `<li>${escapeHtml(m)}</li>`).join("")}</ul>
+            </div>
+            ${visual}
+          </div>`;
+          return `<section class="slide slide--title${active}" data-index="${index}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">${escapeHtml(data.kicker)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
+        }
+
+        if (data.type === "lesson") {
+          inner = `
           <div class="slide-inner">
             <p class="lesson-num">${String(data.lesson).padStart(2, "0")}</p>
             <h2>${escapeHtml(data.title)}</h2>
             <p class="lesson-runtime">${escapeHtml(data.runtime)}</p>
           </div>`;
-        return `<section class="slide slide--lesson${active}" data-index="${index}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">Lesson ${data.lesson}</p><p class="slide-module">${escapeHtml(data.module)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
-      }
+          return `<section class="slide slide--lesson${active}" data-index="${index}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">Lesson ${data.lesson}</p><p class="slide-module">${escapeHtml(data.module)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
+        }
 
-      const hasVisual = Boolean(data.image);
-      const hasSidebar = Boolean(data.sidebar && data.sidebar.length);
-      const gridClass = ["content-grid", hasVisual ? "has-visual" : "", hasSidebar ? "has-sidebar" : ""].filter(Boolean).join(" ");
+        const hasVisual = Boolean(data.image);
+        const hasSidebar = Boolean(data.sidebar && data.sidebar.length);
+        const gridClass = [
+          "content-grid",
+          hasVisual ? "has-visual" : "",
+          hasSidebar ? "has-sidebar" : "",
+        ]
+          .filter(Boolean)
+          .join(" ");
 
-      inner = `
+        inner = `
         <div class="slide-inner">
           <div class="${gridClass}">
             <div class="content-main">
               <h2>${escapeHtml(data.title)}</h2>
               ${renderBullets(data.bullets)}
+              ${renderTerminals(data)}
+              ${renderUrls(data.urls)}
             </div>
-            ${hasVisual ? renderImage(data.image) : ""}
+            ${hasVisual ? renderImage(data.image, data.title) : ""}
             ${renderSidebar(data.sidebar)}
           </div>
         </div>`;
 
-      return `<section class="slide slide--content${active}" data-index="${index}" data-notes="${data.notes ? escapeHtml(data.notes) : ""}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">Lesson ${data.lesson}</p><p class="slide-module">${escapeHtml(data.module)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
-    }
+        return `<section class="slide slide--content${active}" data-index="${index}" data-notes="${data.notes ? escapeHtml(data.notes) : ""}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">Lesson ${data.lesson}</p><p class="slide-module">${escapeHtml(data.module)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
+      }
 
-    function buildDeck() {
-      deck.innerHTML = SLIDES.map((s, i) => renderSlide(s, i)).join("");
-    }
+      function buildDeck() {
+        deck.innerHTML = SLIDES.map((s, i) => renderSlide(s, i)).join("");
+      }
 
-    function updateUI() {
-      deck.querySelectorAll(".slide").forEach((el, i) => {
-        const active = i === current;
-        el.classList.toggle("is-active", active);
-        el.setAttribute("aria-hidden", String(!active));
+      function updateUI() {
+        deck.querySelectorAll(".slide").forEach((el, i) => {
+          const active = i === current;
+          el.classList.toggle("is-active", active);
+          el.setAttribute("aria-hidden", String(!active));
+        });
+
+        counter.textContent = `${current + 1} / ${SLIDES.length}`;
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === SLIDES.length - 1;
+
+        const slide = SLIDES[current];
+        const note =
+          slide.notes ||
+          (slide.type === "content"
+            ? deck.querySelector(`.slide[data-index="${current}"]`)?.dataset
+                .notes
+            : "");
+        if (note) {
+          notesText.textContent = note;
+          notesEl.hidden = false;
+        } else {
+          notesText.textContent = "";
+          notesEl.hidden = true;
+          notesVisible = false;
+          notesEl.classList.remove("is-visible");
+        }
+      }
+
+      function goTo(index) {
+        current = Math.max(0, Math.min(SLIDES.length - 1, index));
+        updateUI();
+      }
+
+      function next() {
+        goTo(current + 1);
+      }
+      function prev() {
+        goTo(current - 1);
+      }
+
+      function toggleNotes() {
+        if (!notesText.textContent) return;
+        notesVisible = !notesVisible;
+        notesEl.classList.toggle("is-visible", notesVisible);
+      }
+
+      prevBtn.addEventListener("click", prev);
+      nextBtn.addEventListener("click", next);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
+          e.preventDefault();
+          next();
+        } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+          e.preventDefault();
+          prev();
+        } else if (e.key === "n" || e.key === "N") {
+          toggleNotes();
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          goTo(0);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          goTo(SLIDES.length - 1);
+        }
       });
 
-      counter.textContent = `${current + 1} / ${SLIDES.length}`;
-      prevBtn.disabled = current === 0;
-      nextBtn.disabled = current === SLIDES.length - 1;
+      let touchStartX = 0;
+      deck.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        },
+        { passive: true },
+      );
+      deck.addEventListener(
+        "touchend",
+        (e) => {
+          const dx = e.changedTouches[0].screenX - touchStartX;
+          if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
+        },
+        { passive: true },
+      );
 
-      const slide = SLIDES[current];
-      const note = slide.notes || (slide.type === "content" ? deck.querySelector(`.slide[data-index="${current}"]`)?.dataset.notes : "");
-      if (note) {
-        notesText.textContent = note;
-        notesEl.hidden = false;
-      } else {
-        notesText.textContent = "";
-        notesEl.hidden = true;
-        notesVisible = false;
-        notesEl.classList.remove("is-visible");
-      }
-    }
-
-    function goTo(index) {
-      current = Math.max(0, Math.min(SLIDES.length - 1, index));
+      buildDeck();
       updateUI();
-    }
-
-    function next() { goTo(current + 1); }
-    function prev() { goTo(current - 1); }
-
-    function toggleNotes() {
-      if (!notesText.textContent) return;
-      notesVisible = !notesVisible;
-      notesEl.classList.toggle("is-visible", notesVisible);
-    }
-
-    prevBtn.addEventListener("click", prev);
-    nextBtn.addEventListener("click", next);
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
-        e.preventDefault();
-        next();
-      } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
-        e.preventDefault();
-        prev();
-      } else if (e.key === "n" || e.key === "N") {
-        toggleNotes();
-      } else if (e.key === "Home") {
-        e.preventDefault();
-        goTo(0);
-      } else if (e.key === "End") {
-        e.preventDefault();
-        goTo(SLIDES.length - 1);
-      }
-    });
-
-    let touchStartX = 0;
-    deck.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
-    deck.addEventListener("touchend", (e) => {
-      const dx = e.changedTouches[0].screenX - touchStartX;
-      if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
-    }, { passive: true });
-
-    buildDeck();
-    updateUI();
-  </script>
-</body>
+    </script>
+  </body>
 </html>
