@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Agents Fundamentals — Curriculum</title>
+  <title>AI Agents Fundamentals: Curriculum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9.144,500;0,9.144,600;0,9.144,700;1,9.144,500&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #1a2433;
@@ -28,8 +28,8 @@
     }
 
     *,
-    *::before,
-    *::after {
+    *:before,
+    *:after {
       box-sizing: border-box;
     }
 
@@ -87,7 +87,7 @@
       position: relative;
     }
 
-    .hero::after {
+    .hero:after {
       content: "";
       position: absolute;
       inset-inline: 0;
@@ -142,7 +142,7 @@
       position: relative;
     }
 
-    .hero-meta li + li::before {
+    .hero-meta li + li:before {
       content: "";
       position: absolute;
       left: -0.95rem;
@@ -256,7 +256,7 @@
       max-width: 28rem;
     }
 
-    .plain-list li::before {
+    .plain-list li:before {
       content: "";
       position: absolute;
       left: 0;
@@ -283,7 +283,7 @@
       counter-increment: outcome;
     }
 
-    .outcomes li::before {
+    .outcomes li:before {
       content: counter(outcome);
       position: absolute;
       left: 0;
@@ -311,8 +311,7 @@
       margin-top: 1.75rem;
     }
 
-    .glance th,
-    .glance td {
+    .glance th.glance td {
       text-align: left;
       padding: 0.7rem 0.65rem;
       border-bottom: 1px solid var(--rule);
@@ -639,7 +638,7 @@
       line-height: 1.5;
     }
 
-    .talking-points li::before {
+    .talking-points li:before {
       content: "";
       position: absolute;
       left: 0;
@@ -682,7 +681,7 @@
       line-height: 1.45;
     }
 
-    .misconceptions li::before {
+    .misconceptions li:before {
       content: "— ";
       color: var(--ink-faint);
     }
@@ -724,11 +723,11 @@
       user-select: none;
     }
 
-    .lesson-details summary::-webkit-details-marker {
+    .lesson-details summary:-webkit-details-marker {
       display: none;
     }
 
-    .lesson-details summary::after {
+    .lesson-details summary:after {
       content: "+";
       font-size: 1rem;
       font-weight: 500;
@@ -736,7 +735,7 @@
       line-height: 1;
     }
 
-    .lesson-details details[open] summary::after {
+    .lesson-details details[open] summary:after {
       content: "−";
     }
 
@@ -811,7 +810,7 @@
       position: relative;
     }
 
-    .slide-body li::before {
+    .slide-body li:before {
       content: "";
       position: absolute;
       left: 0;
@@ -844,8 +843,7 @@
       margin-bottom: 0.2rem;
     }
 
-    .slide-visual,
-    .slide-side-panel {
+    .slide-visual.slide-side-panel {
       margin: 0.1rem 0 0;
       padding-top: 0.5rem;
       border-top: 1px solid var(--rule);
@@ -854,8 +852,7 @@
       color: var(--ink-soft);
     }
 
-    .slide-visual p,
-    .slide-side-panel p {
+    .slide-visual p.slide-side-panel p {
       margin: 0;
     }
 
@@ -994,7 +991,7 @@
       position: relative;
     }
 
-    .closing li::before {
+    .closing li:before {
       content: "";
       position: absolute;
       left: 0;
@@ -1048,15 +1045,13 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .reveal,
-      .hero .reveal {
+      .reveal.hero .reveal {
         opacity: 1;
         transform: none;
         animation: none;
         transition: none;
       }
-      .module-panel,
-      .module-chevron {
+      .module-panel.module-chevron {
         transition: none;
       }
     }
@@ -1076,12 +1071,10 @@
       .module-panel-inner {
         overflow: visible;
       }
-      .module[open] .module-panel,
-      .module .module-panel {
+      .module[open] .module-panel.module .module-panel {
         grid-template-rows: 1fr;
       }
-      .toolbar,
-      .scroll-cue {
+      .toolbar.scroll-cue {
         display: none;
       }
       .lesson-details details {
@@ -1113,12 +1106,12 @@
     <section id="about" aria-labelledby="about-heading">
       <div class="wrap-narrow reveal">
         <p class="section-label">Course promise</p>
-        <h2 id="about-heading">A practical working model—not another product tour</h2>
+        <h2 id="about-heading">A practical working model, not another product tour</h2>
         <p class="lede">
-          In about 62 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They learn how models and harnesses work, set up Claude Code on macOS, understand context and memory, learn tools vs skills vs plugins, carefully install a skill, add local memory with ALIVE, understand what happens to their data, recognize MCP, learn a reliable method for assigning work, and complete one small supervised workflow.
+          In about an hour, you replace vague product folklore with a working model of assistants and agents: what the model does, what the harness adds, how context and memory work, how tools and skills differ, and how to supervise one small workflow end to end.
         </p>
         <p class="lede">
-          A concise, non-technical introduction for entrepreneurs and business users who have tried chat-based AI but still lack a dependable way to use it for real work. By the end: Claude Code as a working assistant, one workspace (project folder or Personal OS), ALIVE for memory across sessions, one repeatable way to delegate, one set of data-sharing and safety rules, and one completed supervised workflow—plus a clear view of exactly where a file-based, single-user setup like this one reaches its limit. Each lesson is scoped as a 2–6 minute standalone clip as well as part of the full course.
+          Built for entrepreneurs and business users who have tried chat AI but still lack a dependable way to use it for real work. By the end you have Claude Code running, a workspace folder, ALIVE for memory across sessions, a CLEAR way to assign work, clear data-sharing rules, and one completed supervised loop, plus an honest view of where a single-user, file-based setup stops. Lessons are short enough to watch alone (about 2–6 minutes) or in sequence.
         </p>
       </div>
     </section>
@@ -1131,7 +1124,7 @@
           <div>
             <p class="col-label">Before</p>
             <ul class="plain-list">
-              <li>Treats every AI product as if it were “the model,” ignoring the harness/app around it.</li>
+              <li>Treats every AI product as if it were "the model," ignoring the harness/app around it.</li>
               <li>Uses chat as disconnected questions, without seeing the tool/context loop.</li>
               <li>Assumes the assistant remembers everything permanently.</li>
               <li>Shares files or context with an AI product without knowing where that information actually goes.</li>
@@ -1145,7 +1138,7 @@
               <li>Separates model, product/harness, assistant, and agent.</li>
               <li>Chooses chat, skill, workflow, automation, or agent appropriately.</li>
               <li>Knows the practical difference between a local model and a cloud API, and what that means for sensitive information.</li>
-              <li>Gives clear assignments with sources, constraints, and success criteria—and installs a new skill deliberately when one is genuinely useful.</li>
+              <li>Gives clear assignments with sources, constraints, and success criteria, and installs a new skill deliberately when one is genuinely useful.</li>
               <li>Defines approval points before consequential actions.</li>
               <li>Reviews work as the accountable owner of the outcome, and knows when a file-based, single-user setup stops being enough.</li>
             </ul>
@@ -1157,17 +1150,17 @@
     <section id="outcomes" aria-labelledby="outcomes-heading">
       <div class="wrap-narrow reveal">
         <p class="section-label">Learning outcomes</p>
-        <h2 id="outcomes-heading">Six capabilities that define completion</h2>
+        <h2 id="outcomes-heading">What "done" looks like</h2>
         <ol class="outcomes">
-          <li>Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent—and how a modern chat turn actually runs.</li>
+          <li>Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent, and how a modern chat turn actually runs.</li>
           <li>Set up Claude Code on macOS with ALIVE for local memory, extend the assistant with a new skill, and give it focused task context using ordinary files.</li>
-          <li>Explain what gets shared with whom—including the practical difference between a locally-running model and a cloud API—well enough to make deliberate, cautious choices about sensitive information.</li>
+          <li>Explain what gets shared with whom, including the practical difference between a locally-running model and a cloud API, well enough to make deliberate, cautious choices about sensitive information.</li>
           <li>Explain why an assistant has no persistent memory by default, what retrieval-augmented generation (RAG) does, and set up ALIVE for basic local memory across sessions.</li>
           <li>Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.</li>
           <li>Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a file-based, single-user setup is a different problem from a shared team setup.</li>
         </ol>
         <p class="audience-note">
-          For non-technical entrepreneurs, creators, coaches, independent professionals, and small-business teams. Prerequisites: a Mac, one supported AI assistant account, a workspace folder (project or Personal OS), and one real but non-sensitive business task. No coding required. Not aimed at engineers building agent infrastructure—though the mental models remain useful.
+          For non-technical entrepreneurs, creators, coaches, independent professionals, and small-business teams. Prerequisites: a Mac, one supported AI assistant account, a workspace folder (project or Personal OS), and one real but non-sensitive business task. No coding required. Not aimed at engineers building agent infrastructure, though the mental models remain useful.
         </p>
       </div>
     </section>
@@ -1242,7 +1235,7 @@
               <td></td>
               <td>Total</td>
               <td class="hide-sm">17</td>
-              <td>61 min</td>
+              <td>62 min</td>
               <td class="hide-sm">A complete, supervised, single-user AI working loop with file-based memory</td>
             </tr>
           </tfoot>
@@ -1254,7 +1247,7 @@
     <section id="presenter" aria-labelledby="presenter-heading">
       <div class="wrap-narrow reveal">
         <p class="section-label">Presenter guidelines</p>
-        <h2 id="presenter-heading">Keep the hour coherent, current, and demonstrably supervised</h2>
+        <h2 id="presenter-heading">Keep the hour coherent, current, and supervised</h2>
         <div class="two-col">
           <div>
             <p class="col-label">Before presenting</p>
@@ -1274,7 +1267,7 @@
               <li>Use each lesson divider to state the question or outcome. On content slides, explain the visual and add the example or caveat from this guide instead of reading the bullets aloud.</li>
               <li>Narrate the human decisions: source authority, workspace boundary, permission, verification, correction, and approval. A successful demo is evidence of a supervised step, not proof that the system is safe for unattended work.</li>
               <li>When a live step fails, name the failure, switch to the prepared state, and continue with a plain verify step (open it, try a simple prompt). Never imply that a skipped or simulated action succeeded live.</li>
-              <li>Use “local” precisely: ALIVE’s files are local, while Claude Code model inference is cloud-based. Connected tools, sync, or telemetry can still transmit data even when a model runs locally.</li>
+              <li>Use "local" precisely: ALIVE's files are local, while Claude Code model inference is cloud-based. Connected tools, sync, or telemetry can still transmit data even when a model runs locally.</li>
             </ul>
           </div>
         </div>
@@ -1312,19 +1305,19 @@
             <div class="module-panel" id="mod-1-panel" role="region" aria-labelledby="mod-1-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Give learners a clear destination, a safe practice boundary, and a usable mental model of what models and harnesses do—before any install.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> A suitable practice task selected, and a clear one-sentence distinction between the model and the harness/app—including how one chat turn runs.</p>
+                  <p class="module-desc">Give learners a clear destination, a safe practice boundary, and a usable mental model of what models and harnesses do before any install.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> A suitable practice task selected, and a clear one-sentence distinction between the model and the harness/app, including how one chat turn runs.</p>
                   <ul class="lessons">
 
                     <li class="lesson">
                       <span class="lesson-num">1</span>
                       <div>
                         <p class="lesson-title">Your first supervised AI workflow (in one hour)</p>
-                        <p class="lesson-desc">If AI still feels like scattered chats, this is the loop you'll finish by the end: brief → draft → review → revise → approve—on one small, safe practice task.</p>
+                        <p class="lesson-desc">If AI still feels like scattered chats, this is the loop you'll finish by the end: brief → draft → review → revise → approve on one small, safe practice task.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 2 min</li>
                           <li><strong>Output</strong> One-sentence practice task and privacy boundary</li>
-                          <li><strong>Standalone clip</strong> Works alone—states the course promise and safe practice boundary without prior lessons.</li>
+                          <li><strong>Standalone clip</strong> Works alone: states the course promise and safe practice boundary without prior lessons.</li>
                         </ul>
                         <p class="lesson-why">Cold open: name the destination before any setup or jargon. A viewer should know why to keep watching in the first ten seconds.</p>
 
@@ -1333,7 +1326,7 @@
                           <ul class="talking-points">
                             <li>Describe the final result before explaining the technology.</li>
                             <li>Position the assistant as a collaborator that must be briefed and supervised.</li>
-                            <li>Use real enough material to be meaningful—but not confidential, regulated, or unauthorized data.</li>
+                            <li>Use real enough material to be meaningful, but not confidential, regulated, or unauthorized data.</li>
                             <li>Start with reversible, low-consequence work.</li>
                             <li>Choose one small task and keep it through the course so every concept connects to one outcome.</li>
                           </ul>
@@ -1345,14 +1338,14 @@
                               <li>An agent is accountable for the business outcome.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">Use real work, but begin with low stakes and reversible actions—and you'll have one clear workflow to show for it.</p>
+                          <p class="rule-close">Use real work, but begin with low stakes and reversible actions, and you'll have one clear workflow to show for it.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -1368,7 +1361,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Supervised workflow</strong> — AI-assisted steps where a human sets boundaries and approves results.</li>
+                                    <li><strong>Supervised workflow</strong>: AI-assisted steps where a human sets boundaries and approves results.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1386,7 +1379,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>AI assistant</strong> — Model + harness + instructions + context—briefed and supervised by you.</li>
+                                    <li><strong>AI assistant</strong>: Model + harness + instructions + context, briefed and supervised by you.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1404,7 +1397,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Practice boundary</strong> — What you may share and where work may have effect.</li>
+                                    <li><strong>Practice boundary</strong>: What you may share and where work may have effect.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1418,7 +1411,7 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>AI assistant</dt>
-                                  <dd>The working experience of a model plus a product/harness, instructions, context, and available capabilities—briefed and supervised by you.</dd>
+                                  <dd>The working experience of a model plus a product/harness, instructions, context, and available capabilities, briefed and supervised by you.</dd>
                                 </div>
                                 <div>
                                   <dt>Supervised workflow</dt>
@@ -1428,7 +1421,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: one supervised loop, one safe practice task. Next: how models and harnesses actually work—so the install in the following lesson has meaning.</p>
+                        <p class="transition-note">Takeaway: one supervised loop, one safe practice task. Next: how models and harnesses actually work, so the install in the following lesson has meaning.</p>
                       </div>
                     </li>
 
@@ -1436,47 +1429,47 @@
                       <span class="lesson-num">2</span>
                       <div>
                         <p class="lesson-title">How models and harnesses work</p>
-                        <p class="lesson-desc">A model predicts the next tokens—it does not “think like a person.” Named families help you spot category differences; the harness is the app around the model. Here's how one chat turn actually runs—before you install anything.</p>
+                        <p class="lesson-desc">A model predicts the next tokens. It does not "think like a person." Named families help you spot category differences; the harness is the app around the model. Here's how one chat turn actually runs before you install anything.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 5 min</li>
                           <li><strong>Output</strong> One-sentence model vs harness distinction, plus a sketched chat turn</li>
-                          <li><strong>Standalone clip</strong> Works alone—no setup required; uses diagrams, not your install.</li>
+                          <li><strong>Standalone clip</strong> Works alone, no setup required; uses diagrams, not your install.</li>
                         </ul>
-                        <p class="lesson-why">The most common misconception is that “the AI” is just the model. Install goes better—and safer—when learners already know what the model does, what the harness adds, and how a chat turn with tools actually runs. Theory first; Claude Code install is Lesson 3.</p>
+                        <p class="lesson-why">The most common misconception is that "the AI" is just the model. Install goes better, and safer when learners already know what the model does, what the harness adds, and how a chat turn with tools actually runs. Theory first; Claude Code install is Lesson 3.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li><strong>What a model does:</strong> A language model predicts likely next tokens and generates text (and sometimes other modalities). It does not open files, click buttons, or enforce permissions by itself—and a fluent reply is not the same as human understanding.</li>
-                            <li><strong>Named model families (as of recording):</strong> Name a few concrete families so learners can categorize, not memorize a catalog—e.g. Claude (Anthropic), GPT (OpenAI), Gemini (Google), and open-weight options you can run or host yourself. Teaching point: same category (models), different providers and tradeoffs; products change—use “as of recording.”</li>
-                            <li><strong>Harness / app / assistant vs model:</strong> The harness is ordinary software around the model: UI, context assembly, tool execution, history, and permissions. An assistant is the working experience when model + harness + instructions + context + capabilities combine. Claude Code is the harness we use in this course—not because it is the only option, but so everyone follows one hands-on path.</li>
+                            <li><strong>What a model does:</strong> A language model predicts likely next tokens and generates text (and sometimes other modalities). It does not open files, click buttons, or enforce permissions by itself, and a fluent reply is not the same as human understanding.</li>
+                            <li><strong>Named model families (as of recording):</strong> Name a few concrete families so learners can categorize, not memorize a catalog: e.g. Claude (Anthropic), GPT (OpenAI), Gemini (Google), and open-weight options you can run or host yourself. Teaching point: same category (models), different providers and tradeoffs; products change. Use "as of recording."</li>
+                            <li><strong>Harness / app / assistant vs model:</strong> The harness is ordinary software around the model: UI, context assembly, tool execution, history, and permissions. An assistant is the working experience when model + harness + instructions + context + capabilities combine. Claude Code is the harness we use in this course, not because it is the only option, but so everyone follows one hands-on path.</li>
                             <li><strong>One chat turn:</strong> You send a message → the harness assembles context → the model replies with text and/or tool requests → the harness runs allowed tools and feeds results back → the model may continue → you see a response (often with a step trail). Same model, different harness → different behavior.</li>
-                            <li><strong>Bridge:</strong> Next lesson we install and open that harness on your Mac—so the vocabulary has somewhere to land.</li>
+                            <li><strong>Bridge:</strong> Next lesson we install and open that harness on your Mac, so the vocabulary has somewhere to land.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
-                              <li>“ChatGPT” or “Claude” is simply one model.</li>
+                              <li>"ChatGPT" or "Claude" is simply one model.</li>
                               <li>The model itself executes tools, searches the web, or edits files.</li>
                               <li>A conversational tone means the system understands or cares like a person.</li>
-                              <li>A newer model automatically has more of the learner’s data or better permissions.</li>
+                              <li>A newer model automatically has more of the learner's data or better permissions.</li>
                               <li>Model intelligence and product permissions are the same capability.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">Judge the model plus its harness—not the model name alone. Next: install the harness.</p>
+                          <p class="rule-close">Judge the model plus its harness, not the model name alone. Next: install the harness.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">What a model does</h5>
                                   <ul class="slide-body">
-                                    <li>Predicts next tokens / generates text—not “thinks like a person”</li>
+                                    <li>Predicts next tokens / generates text, not "thinks like a person"</li>
                                     <li>Does not open files or run tools by itself</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -1486,8 +1479,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Model</strong> — Predicts and generates; not the full product.</li>
-                                    <li><strong>Token</strong> — Small processing unit for text—not always a whole word.</li>
+                                    <li><strong>Model</strong>: Predicts and generates; not the full product.</li>
+                                    <li><strong>Token</strong>: Small processing unit for text, not always a whole word.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1496,16 +1489,16 @@
                                   <h5 class="slide-title">Model families (as of recording)</h5>
                                   <ul class="slide-body">
                                     <li>Claude · GPT · Gemini · open-weight options</li>
-                                    <li>Category distinction—not a product catalog to memorize</li>
+                                    <li>Category distinction, not a product catalog to memorize</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small “as of recording” stamp. (Reuse: <code>09-same-model-different-app.png</code>.)</p>
+                                    <p>16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small "as of recording" stamp. (Reuse: <code>09-same-model-different-app.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Open-weight</strong> — Model weights you can run or host yourself—still need a harness around them.</li>
+                                    <li><strong>Open-weight</strong>: Model weights you can run or host yourself. Still need a harness around them.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1523,9 +1516,9 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Harness</strong> — Software around the model: UI, context, tools, permissions.</li>
-                                    <li><strong>Assistant</strong> — Combined working experience you supervise.</li>
-                                    <li><strong>Claude Code</strong> — The harness this course uses.</li>
+                                    <li><strong>Harness</strong>: Software around the model: UI, context, tools, permissions.</li>
+                                    <li><strong>Assistant</strong>: Combined working experience you supervise.</li>
+                                    <li><strong>Claude Code</strong>: The harness this course uses.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1543,8 +1536,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Tool call</strong> — Model requests a capability; harness runs it if allowed.</li>
-                                    <li><strong>Context</strong> — What the harness includes for this model call.</li>
+                                    <li><strong>Tool call</strong>: Model requests a capability; harness runs it if allowed.</li>
+                                    <li><strong>Context</strong>: What the harness includes for this model call.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1557,11 +1550,11 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: three boxes inside a dotted fence—assistant robot, folder, starter-brief scroll; arrow pointing forward to “install.” (Reuse: <code>04-minimum-beginner-stack.png</code>.)</p>
+                                    <p>16-bit pixel art: three boxes inside a dotted fence: assistant robot, folder, starter-brief scroll; arrow pointing forward to "install." (Reuse: <code>04-minimum-beginner-stack.png</code>.)</p>
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Optional: send one message that triggers a visible tool in a prepared session—point to the step trail (model requested; harness ran it). Or stay on the diagram if you prefer zero install in this clip.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Optional: send one message that triggers a visible tool in a prepared session: point to the step trail (model requested; harness ran it). Or stay on the diagram if you prefer zero install in this clip.</p>
                             </div>
                           </details>
                           <details>
@@ -1570,11 +1563,11 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Model</dt>
-                                  <dd>The system that predicts next tokens and generates text (and sometimes other modalities)—not the full product experience.</dd>
+                                  <dd>The system that predicts next tokens and generates text (and sometimes other modalities), not the full product experience.</dd>
                                 </div>
                                 <div>
                                   <dt>Harness / AI application</dt>
-                                  <dd>The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as “app” or “runtime.”</dd>
+                                  <dd>The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as "app" or "runtime."</dd>
                                 </div>
                                 <div>
                                   <dt>Assistant</dt>
@@ -1586,7 +1579,7 @@
                                 </div>
                                 <div>
                                   <dt>Token</dt>
-                                  <dd>A small unit used by models to process text—not always a whole word.</dd>
+                                  <dd>A small unit used by models to process text, not always a whole word.</dd>
                                 </div>
                               </dl>
                             </div>
@@ -1617,7 +1610,7 @@
             <div class="module-panel" id="mod-2-panel" role="region" aria-labelledby="mod-2-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Install the harness you just learned about, confirm it works, then choose an autonomy level that matches risk—so setup and agent judgment land in the same module.</p>
+                  <p class="module-desc">Install the harness you just learned about, confirm it works, then choose an autonomy level that matches risk, so setup and agent judgment land in the same module.</p>
                   <p class="module-outcome"><strong>Outcome:</strong> Claude Code open in a sensible workspace, a quick confirm that it works, and an autonomy level chosen for the practice task.</p>
                   <ul class="lessons">
 
@@ -1625,26 +1618,26 @@
                       <span class="lesson-num">3</span>
                       <div>
                         <p class="lesson-title">Set up Claude Code on your Mac</p>
-                        <p class="lesson-desc">You know what a harness is—now follow a numbered path: create a workspace, get account access, install Claude Code, open it in that folder, and confirm a simple prompt works. Keep sensitive material out of this first session.</p>
+                        <p class="lesson-desc">You know what a harness is. Now follow a numbered path: create a workspace, get account access, install Claude Code, open it in that folder, and confirm a simple prompt works. Keep sensitive material out of this first session.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 5–7 min</li>
                           <li><strong>Output</strong> Working Claude Code session in a chosen workspace</li>
-                          <li><strong>Standalone clip</strong> Partial—best after Lesson 2’s model/harness framing; install steps still work alone if you already want Claude Code on your Mac.</li>
+                          <li><strong>Standalone clip</strong> Partial (best after Lesson 2's model/harness framing); install steps still work alone if you already want Claude Code on your Mac.</li>
                         </ul>
-                        <p class="lesson-why">Install has meaning after Lesson 2: learners know Claude Code is a harness wrapping a model, not “the AI” itself. Keep this lesson a clear step-by-step path with links—minimum stack, folder choice, a light boundary caution, then install and verify—without QA jargon.</p>
+                        <p class="lesson-why">Install has meaning after Lesson 2: learners know Claude Code is a harness wrapping a model, not "the AI" itself. Keep this lesson a clear step-by-step path with links: minimum stack, folder choice, a light boundary caution, then install and verify without QA jargon.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Learner setup path (follow in order)</h4>
                           <ul class="talking-points">
-                            <li><strong>Minimum stack:</strong> Claude Code (the harness) + one workspace folder + one harmless starter brief. Memory layer and skills come later—skip them for now. We standardize on Claude Code so every learner follows the same path.</li>
-                            <li><strong>1 · Choose &amp; create your workspace.</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory for personal-assistant style work. Create it in Finder, or in Terminal: <code>mkdir ~/Personal-OS</code> (or your project path). That habit helps later when you add a persistent local memory layer (ALIVE in Lesson 11—after you know what plugins are).</li>
-                            <li><strong>Caution (not a step)—Access ≠ authority:</strong> File access is not permission to change or publish. You choose what enters the chat. Context you attach often travels over a cloud API (Claude Code sends context to Anthropic’s servers unless you use a local model)—keep this first session non-sensitive.</li>
-                            <li><strong>2 · Get Claude account access.</strong> Claude Code needs a paid Claude plan (Pro, Max, Team, or Enterprise) or a Claude Console account—not free Claude.ai chat alone. What it is: your login for the harness and cloud model. Open: <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">claude.com/pricing</a></li>
-                            <li><strong>3 · Open Terminal.</strong> Built into macOS—where you’ll run the install and start Claude Code. What it is: the app for typing commands. Open: Spotlight → “Terminal”, or <a href="https://support.apple.com/guide/terminal/welcome/mac" target="_blank" rel="noopener noreferrer">Apple Terminal User Guide</a> · New to terminals? <a href="https://code.claude.com/docs/en/terminal-guide" target="_blank" rel="noopener noreferrer">Claude terminal guide</a></li>
-                            <li><strong>4 · Install Claude Code.</strong> Official native installer (recommended). No Node.js for this path. What it is: the harness this course uses—terminal assistant with file access, tools, and permissions around a cloud model. Docs: <a href="https://code.claude.com/docs/en/install" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/install</a>. Command: <code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
+                            <li><strong>Minimum stack:</strong> Claude Code (the harness) + one workspace folder + one harmless starter brief. Memory layer and skills come later. Skip them for now. We standardize on Claude Code so every learner follows the same path.</li>
+                            <li><strong>1 · Choose &amp; create your workspace.</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory for personal-assistant style work. Create it in Finder, or in Terminal: <code>mkdir ~/Personal-OS</code> (or your project path). That habit helps later when you add a persistent local memory layer (ALIVE in Lesson 11 after you know what plugins are).</li>
+                            <li><strong>Caution (not a step), Access ≠ authority:</strong> File access is not permission to change or publish. You choose what enters the chat. Context you attach often travels over a cloud API (Claude Code sends context to Anthropic's servers unless you use a local model). Keep this first session non-sensitive.</li>
+                            <li><strong>2 · Get Claude account access.</strong> Claude Code needs a paid Claude plan (Pro, Max, Team, or Enterprise) or a Claude Console account, not free Claude.ai chat alone. What it is: your login for the harness and cloud model. Open: <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">claude.com/pricing</a></li>
+                            <li><strong>3 · Open Terminal.</strong> Built into macOS where you'll run the install and start Claude Code. What it is: the app for typing commands. Open: Spotlight → "Terminal", or <a href="https://support.apple.com/guide/terminal/welcome/mac" target="_blank" rel="noopener noreferrer">Apple Terminal User Guide</a> · New to terminals? <a href="https://code.claude.com/docs/en/terminal-guide" target="_blank" rel="noopener noreferrer">Claude terminal guide</a></li>
+                            <li><strong>4 · Install Claude Code.</strong> Official native installer (recommended). No Node.js for this path. What it is: the harness this course uses (a terminal assistant with file access, tools, and permissions around a cloud model). Docs: <a href="https://code.claude.com/docs/en/install" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/install</a>. Command: <code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
                             <li><strong>5 · Open Claude Code in your folder.</strong> In Terminal: <code>cd</code> into the workspace you created, then run <code>claude</code>. On first run, complete browser sign-in when prompted. Docs: <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/quickstart</a>. Commands: <code>cd your-workspace-folder</code> then <code>claude</code></li>
                             <li><strong>6 · Confirm it works.</strong> Try a simple prompt and confirm a reply. Optional: attach the starter brief and ask for a short summary. No business secrets in this first check. Example: <code>Reply with one sentence: setup works.</code></li>
-                            <li><strong>Close:</strong> You’re set up. Next: agents and how much autonomy to grant—then tools, skills, and plugins, including ALIVE for memory across sessions.</li>
+                            <li><strong>Close:</strong> You're set up. Next: agents and how much autonomy to grant, then tools, skills, and plugins, including ALIVE for memory across sessions.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -1655,14 +1648,14 @@
                               <li>One giant Dump Everything folder is fine forever.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">One harness, one sensible folder, one quick confirm it works—and you’re ready for the rest of the course.</p>
+                          <p class="rule-close">One harness, one sensible folder, one quick confirm it works, and you're ready for the rest of the course.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -1673,13 +1666,13 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: three boxes inside a dotted folder fence—assistant robot, folder, starter-brief scroll. Optional tool icons outside the fence, greyed out. (Reuse: <code>04-minimum-beginner-stack.png</code>.)</p>
+                                    <p>16-bit pixel art: three boxes inside a dotted folder fence: assistant robot, folder, starter-brief scroll. Optional tool icons outside the fence, greyed out. (Reuse: <code>04-minimum-beginner-stack.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Claude Code</strong> — The harness this course uses.</li>
-                                    <li><strong>Cloud API</strong> — Remote processing of context on a provider’s servers.</li>
+                                    <li><strong>Claude Code</strong>: The harness this course uses.</li>
+                                    <li><strong>Cloud API</strong>: Remote processing of context on a provider's servers.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1687,17 +1680,17 @@
                                   <span class="slide-label">Slide 2</span>
                                   <h5 class="slide-title">1 · Choose your workspace</h5>
                                   <ul class="slide-body">
-                                    <li>New folder per project—or one Personal OS directory</li>
+                                    <li>New folder per project, or one Personal OS directory</li>
                                     <li>Create it now; write down the path</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: two tidy folder trees—labeled project folders vs one Personal OS home—versus a messy dump pile crossed out. (Reuse: <code>44-memory-folder-not-black-box.png</code>.)</p>
+                                    <p>16-bit pixel art: two tidy folder trees: labeled project folders vs one Personal OS home versus a messy dump pile crossed out. (Reuse: <code>44-memory-folder-not-black-box.png</code>.)</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Personal OS</strong> — One general directory for personal-assistant style work and lasting context.</li>
+                                    <li><strong>Personal OS</strong>: One general directory for personal-assistant style work and lasting context.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1706,7 +1699,7 @@
                                   <h5 class="slide-title">Caution · Access ≠ authority</h5>
                                   <ul class="slide-body">
                                     <li>File access is not permission to change or publish</li>
-                                    <li>You choose what enters the chat—keep this session non-sensitive</li>
+                                    <li>You choose what enters the chat. Keep this session non-sensitive</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1715,7 +1708,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>File access</strong> — Ability to see files is not permission to change or publish.</li>
+                                    <li><strong>File access</strong>: Ability to see files is not permission to change or publish.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1723,7 +1716,7 @@
                                   <span class="slide-label">Slide 4</span>
                                   <h5 class="slide-title">2 · Get Claude account access</h5>
                                   <ul class="slide-body">
-                                    <li>Pro, Max, Team, Enterprise—or Claude Console</li>
+                                    <li>Pro, Max, Team, Enterprise, or Claude Console</li>
                                     <li>Free Claude.ai chat alone is not enough for Claude Code</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -1735,7 +1728,7 @@
                                   <span class="slide-label">Slide 5</span>
                                   <h5 class="slide-title">3 · Open Terminal</h5>
                                   <ul class="slide-body">
-                                    <li>Built into macOS—Spotlight → Terminal</li>
+                                    <li>Built into macOS (Spotlight → Terminal)</li>
                                     <li>This is where install and Claude Code run</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -1747,7 +1740,7 @@
                                   <span class="slide-label">Slide 6</span>
                                   <h5 class="slide-title">4 · Install Claude Code</h5>
                                   <ul class="slide-body">
-                                    <li>Native installer (recommended)—no Node.js</li>
+                                    <li>Native installer (recommended), no Node.js</li>
                                     <li><code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
                                   </ul>
                                   <div class="slide-visual">
@@ -1777,7 +1770,7 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: short path tiles—open → prompt → reply checkmark; no secret icons. (Reuse: <code>06-acceptance-test.png</code>.)</p>
+                                    <p>16-bit pixel art: short path tiles: open → prompt → reply checkmark; no secret icons. (Reuse: <code>06-acceptance-test.png</code>.)</p>
                                   </div>
                                 </article>
                               </div>
@@ -1794,11 +1787,11 @@
                                 </div>
                                 <div>
                                   <dt>Cloud API</dt>
-                                  <dd>A remote interface through which the harness sends context to a provider’s servers for model processing.</dd>
+                                  <dd>A remote interface through which the harness sends context to a provider's servers for model processing.</dd>
                                 </div>
                                 <div>
                                   <dt>Personal OS</dt>
-                                  <dd>One general workspace directory for personal-assistant style work—an alternative to a new folder per project.</dd>
+                                  <dd>One general workspace directory for personal-assistant style work: an alternative to a new folder per project.</dd>
                                 </div>
                                 <div>
                                   <dt>Terminal</dt>
@@ -1806,13 +1799,13 @@
                                 </div>
                                 <div>
                                   <dt>Workspace</dt>
-                                  <dd>The folder Claude Code is opened in—where files and drafts for this work live.</dd>
+                                  <dd>The folder Claude Code is opened in where files and drafts for this work live.</dd>
                                 </div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: Claude Code is open and working in a sensible folder. Next: when is something actually an agent—and how much autonomy is safe?</p>
+                        <p class="transition-note">Takeaway: Claude Code is open and working in a sensible folder. Next: when is something actually an agent, and how much autonomy is safe?</p>
                       </div>
                     </li>
 
@@ -1820,21 +1813,21 @@
                       <span class="lesson-num">4</span>
                       <div>
                         <p class="lesson-title">When is something actually an agent?</p>
-                        <p class="lesson-desc">Not every chatbot is an agent. Learn the simplest pattern that fits your task—and how much autonomy is safe to grant.</p>
+                        <p class="lesson-desc">Not every chatbot is an agent. Learn the simplest pattern that fits your task, and how much autonomy is safe to grant.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> Autonomy level selected for the practice task</li>
-                          <li><strong>Standalone clip</strong> Partial—best after model/harness (Lesson 2), but the autonomy ladder stands alone for risk decisions.</li>
+                          <li><strong>Standalone clip</strong> Partial (best after model/harness in Lesson 2), but the autonomy ladder stands alone for risk decisions.</li>
                         </ul>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li>A single response is not automatically a workflow or an agent.</li>
-                            <li>A workflow is a sequence of steps—human, software, or AI.</li>
+                            <li>A workflow is a sequence of steps: human, software, or AI.</li>
                             <li>An automation follows a predefined trigger and path when steps and exceptions are well understood.</li>
-                            <li>An agent receives a goal, adapts some steps, uses tools (via the harness), observes results, and continues within boundaries—the same loop as a chat turn, repeated.</li>
-                            <li>“Agentic” is a degree. More autonomy increases the need for trustworthy inputs, permissions, monitoring, and recovery.</li>
+                            <li>An agent receives a goal, adapts some steps, uses tools (via the harness), observes results, and continues within boundaries: the same loop as a chat turn, repeated.</li>
+                            <li>"Agentic" is a degree. More autonomy increases the need for trustworthy inputs, permissions, monitoring, and recovery.</li>
                             <li>Autonomy ladder: Suggest → Draft → Prepare → Act with approval → Act independently (course zone: levels 2–4).</li>
                           </ul>
                           <div class="misconceptions">
@@ -1846,14 +1839,14 @@
                               <li>Automation and agent are synonyms; the agent always knows when to stop.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">Earn autonomy through narrow scope, evidence, and successful review—not enthusiasm. Pick your level and stop there for now.</p>
+                          <p class="rule-close">Earn autonomy through narrow scope, evidence, and successful review, not enthusiasm. Pick your level and stop there for now.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -1864,13 +1857,13 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: four columns—single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons.</p>
+                                    <p>16-bit pixel art: four columns: single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Workflow</strong> — A sequence of steps—human, software, or AI.</li>
-                                    <li><strong>Automation</strong> — Predefined trigger and path when steps are well understood.</li>
+                                    <li><strong>Workflow</strong>: A sequence of steps: human, software, or AI.</li>
+                                    <li><strong>Automation</strong>: Predefined trigger and path when steps are well understood.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1888,8 +1881,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Agent</strong> — Pursues a goal across steps using tools via a harness.</li>
-                                    <li><strong>Agentic</strong> — A degree of planning, acting, and recovering—not magic.</li>
+                                    <li><strong>Agent</strong>: Pursues a goal across steps using tools via a harness.</li>
+                                    <li><strong>Agentic</strong>: A degree of planning, acting, and recovering, not magic.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1907,12 +1900,12 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Autonomy ladder</strong> — Five levels; this course usually stays Draft through Act with approval.</li>
+                                    <li><strong>Autonomy ladder</strong>: Five levels; this course usually stays Draft through Act with approval.</li>
                                     </ul>
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Classify the learner’s practice task on the autonomy ladder; stop short of “publish without review.”</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Classify the learner's practice task on the autonomy ladder; stop short of "publish without review."</p>
                             </div>
                           </details>
                           <details>
@@ -1921,15 +1914,15 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Automation</dt>
-                                  <dd>A predefined trigger and path that runs when the steps and exceptions are already well understood—usually limited judgment.</dd>
+                                  <dd>A predefined trigger and path that runs when the steps and exceptions are already well understood: usually limited judgment.</dd>
                                 </div>
                                 <div>
                                   <dt>Agent</dt>
-                                  <dd>A system that pursues a goal across multiple steps—planning or adapting, using tools via a harness, observing results, and continuing within boundaries.</dd>
+                                  <dd>A system that pursues a goal across multiple steps: planning or adapting, using tools via a harness, observing results, and continuing within boundaries.</dd>
                                 </div>
                                 <div>
                                   <dt>Agentic</dt>
-                                  <dd>A degree of planning, choosing, acting, and recovering—not a separate category of magic.</dd>
+                                  <dd>A degree of planning, choosing, acting, and recovering, not a separate category of magic.</dd>
                                 </div>
                                 <div>
                                   <dt>Autonomy ladder</dt>
@@ -1939,7 +1932,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: Agents decide using whatever information is available now. Next—what enters that temporary workbench, and what does not.</p>
+                        <p class="transition-note">Transition: Agents decide using whatever information is available now. Next: what enters that temporary workbench, and what does not.</p>
                       </div>
                     </li>
 
@@ -1964,7 +1957,7 @@
             <div class="module-panel" id="mod-3-panel" role="region" aria-labelledby="mod-3-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Understand what the model can see this turn, why it forgets by default, and what RAG does—before adding plugins or external connections.</p>
+                  <p class="module-desc">Understand what the model can see this turn, why it forgets by default, and what RAG does before adding plugins or external connections.</p>
                   <p class="module-outcome"><strong>Outcome:</strong> A context checklist, a clear view of why memory is not automatic, and a plain-language RAG explanation.</p>
                   <ul class="lessons">
 
@@ -1972,11 +1965,11 @@
                       <span class="lesson-num">5</span>
                       <div>
                         <p class="lesson-title">What your agent can actually see</p>
-                        <p class="lesson-desc">The model only sees what the harness puts in front of it this turn—not your whole disk, not every past chat. Here's how to assemble focused context.</p>
+                        <p class="lesson-desc">The model only sees what the harness puts in front of it this turn, not your whole disk, not every past chat. Here's how to assemble focused context.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> Context checklist for the practice task</li>
-                          <li><strong>Standalone clip</strong> Partial—context window concept stands alone; checklist ties to the practice task.</li>
+                          <li><strong>Standalone clip</strong> Partial: context window concept stands alone; checklist ties to the practice task.</li>
                         </ul>
 
                         <div class="lesson-block">
@@ -1984,7 +1977,7 @@
                           <ul class="talking-points">
                             <li>A prompt is the immediate input; an assignment can include goal, sources, constraints, format, process, and success criteria.</li>
                             <li>Instructions stack: product rules, org/course rules, project rules, reusable skills, and the current request.</li>
-                            <li>The model only uses what the harness includes in the current model call—it cannot “see” your whole disk or every past chat by itself.</li>
+                            <li>The model only uses what the harness includes in the current model call: it cannot "see" your whole disk or every past chat by itself.</li>
                             <li>A context window is finite working space; a large window is not perfect memory or perfect attention.</li>
                             <li>Relevance, authority, structure, and clarity beat filling the window.</li>
                             <li>Context checklist: outcome, audience, sources, constraints, example, deliverable, quality standard, what to ask rather than assume.</li>
@@ -2006,13 +1999,13 @@
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Context window</h5>
                                   <ul class="slide-body">
-                                    <li>Finite workbench—not perfect memory</li>
+                                    <li>Finite workbench, not perfect memory</li>
                                     <li>Instructions, messages, files, and tool results compete for space</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -2022,8 +2015,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Context window</strong> — Finite working space for one model call.</li>
-                                    <li><strong>Token</strong> — Small text processing unit—not a measure of truth.</li>
+                                    <li><strong>Context window</strong>: Finite working space for one model call.</li>
+                                    <li><strong>Token</strong>: Small text processing unit, not a measure of truth.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2041,9 +2034,9 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Context</strong> — Information the harness includes for the current call.</li>
-                                    <li><strong>Prompt</strong> — Immediate input for this turn; an assignment is often broader.</li>
-                                    <li><strong>Harness</strong> — Chooses what enters the model call.</li>
+                                    <li><strong>Context</strong>: Information the harness includes for the current call.</li>
+                                    <li><strong>Prompt</strong>: Immediate input for this turn; an assignment is often broader.</li>
+                                    <li><strong>Harness</strong>: Chooses what enters the model call.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2056,12 +2049,12 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art split: left—messy pile of 40 files pouring into a clogged model; right—neat labeled brief package producing a clean output.</p>
+                                    <p>16-bit pixel art split: left: messy pile of 40 files pouring into a clogged model; right: neat labeled brief package producing a clean output.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Authority</strong> — Prefer relevant, authoritative sources over volume.</li>
+                                    <li><strong>Authority</strong>: Prefer relevant, authoritative sources over volume.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2100,11 +2093,11 @@
                       <span class="lesson-num">6</span>
                       <div>
                         <p class="lesson-title">Why your agent forgets everything</p>
-                        <p class="lesson-desc">The model has no built-in memory of the last chat; a new session only knows what the harness deliberately reloads. Here's why—and what chat history is not.</p>
+                        <p class="lesson-desc">The model has no built-in memory of the last chat; a new session only knows what the harness deliberately reloads. Here's why, and what chat history is not.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> Classification of what persists today vs what must be supplied again</li>
-                          <li><strong>Standalone clip</strong> Works alone—the most shared misconception in AI; no prior setup required.</li>
+                          <li><strong>Standalone clip</strong> Works alone: the most shared misconception in AI; no prior setup required.</li>
                         </ul>
                         <p class="lesson-why">The single most consequential misunderstanding: people assume an assistant remembers them like a colleague. By default, it does not. The next lesson covers one common workaround (RAG). Later, after tools and plugins are clear, you will install ALIVE as a practical local-memory plugin.</p>
 
@@ -2113,7 +2106,7 @@
                           <ul class="talking-points">
                             <li>Context = information available for the current task. Chat history = visible prior messages; the product may not use every message every time. Source knowledge = material deliberately supplied. Memory = information a product preserves and retrieves later.</li>
                             <li>By default, a model call is stateless: nothing about you or prior sessions is known unless the harness supplies it. A new session may still load product-managed instructions, files, history, retrieval, or memory.</li>
-                            <li>Products create continuity differently—recent history, saved preferences, retrieval layers—but none of that is the model itself remembering.</li>
+                            <li>Products create continuity differently: recent history, saved preferences, retrieval layers, but none of that is the model itself remembering.</li>
                             <li>Important business knowledge should not be assumed to persist because it was said once. If it matters later, it needs a deliberate place to live.</li>
                           </ul>
                           <div class="misconceptions">
@@ -2124,14 +2117,14 @@
                               <li>The agent permanently learns every correction made in conversation.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">No memory is the default. If information matters, know where it lives—or build a place for it.</p>
+                          <p class="rule-close">No memory is the default. If information matters, know where it lives, or build a place for it.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Extended deck · Slide 1</span>
@@ -2142,14 +2135,14 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: four labeled buckets side by side—Context / Chat history / Source knowledge / Memory—with different fill patterns to show they are not the same.</p>
+                                    <p>16-bit pixel art: four labeled buckets side by side: Context / Chat history / Source knowledge / Memory, with different fill patterns to show they are not the same.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Context</strong> — Information available for the current task.</li>
-                                    <li><strong>Chat history</strong> — Visible prior messages—not always all used.</li>
-                                    <li><strong>Memory</strong> — Product mechanism to preserve or retrieve later.</li>
+                                    <li><strong>Context</strong>: Information available for the current task.</li>
+                                    <li><strong>Chat history</strong>: Visible prior messages, not always all used.</li>
+                                    <li><strong>Memory</strong>: Product mechanism to preserve or retrieve later.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2167,8 +2160,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Stateless</strong> — Each model call starts with no built-in memory of past calls.</li>
-                                    <li><strong>Chat history</strong> — Visibility does not mean every message is in the call.</li>
+                                    <li><strong>Stateless</strong>: Each model call starts with no built-in memory of past calls.</li>
+                                    <li><strong>Chat history</strong>: Visibility does not mean every message is in the call.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2202,7 +2195,7 @@
                                 </div>
                                 <div>
                                   <dt>Memory (persistent memory)</dt>
-                                  <dd>Information deliberately preserved and made retrievable across sessions—a product or setup feature, not a default model behavior.</dd>
+                                  <dd>Information deliberately preserved and made retrievable across sessions: a product or setup feature, not a default model behavior.</dd>
                                 </div>
                               </dl>
                             </div>
@@ -2215,17 +2208,17 @@
                       <span class="lesson-num">7</span>
                       <div>
                         <p class="lesson-title">What RAG actually means</p>
-                        <p class="lesson-desc">Before the model answers, many systems search your notes and pull relevant pieces into context. That's RAG—and it helps, but doesn't guarantee truth.</p>
+                        <p class="lesson-desc">Before the model answers, many systems search your notes and pull relevant pieces into context. That's RAG, and it helps, but doesn't guarantee truth.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> One-sentence explanation of RAG and its limits</li>
-                          <li><strong>Standalone clip</strong> Works alone—defines RAG without requiring ALIVE or any specific product.</li>
+                          <li><strong>Standalone clip</strong> Works alone: defines RAG without requiring ALIVE or any specific product.</li>
                         </ul>
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li>RAG (retrieval-augmented generation): before generating, the harness searches notes or documents, pulls relevant pieces into context, then the model generates.</li>
-                            <li>The model still only sees what was retrieved that turn—it did not "remember" on its own.</li>
+                            <li>The model still only sees what was retrieved that turn: it did not "remember" on its own.</li>
                             <li>RAG improves grounding when the right material is retrieved; it does not guarantee correctness or faithful use.</li>
                             <li>RAG is not memory: retrieval is one turn's context assembly; memory preserves information across sessions.</li>
                           </ul>
@@ -2256,7 +2249,7 @@
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
-                                    <ul><li><strong>RAG</strong> — Fetching relevant source material into context before generating.</li></ul>
+                                    <ul><li><strong>RAG</strong>: Fetching relevant source material into context before generating.</li></ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
@@ -2278,12 +2271,12 @@
                             <summary>Glossary</summary>
                             <div class="details-body">
                               <dl class="glossary">
-                                <div><dt>RAG</dt><dd>Retrieval-augmented generation—searching source material and adding relevant pieces to context before generating.</dd></div>
+                                <div><dt>RAG</dt><dd>Retrieval-augmented generation: searching source material and adding relevant pieces to context before generating.</dd></div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: tools, skills, and plugins—the vocabulary you need before installing memory or connections.</p>
+                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: tools, skills, and plugins: the vocabulary you need before installing memory or connections.</p>
                       </div>
                     </li>
 
@@ -2316,20 +2309,20 @@
                       <span class="lesson-num">8</span>
                       <div>
                         <p class="lesson-title">Tools vs skills vs plugins</p>
-                        <p class="lesson-desc">Tools let the agent act; skills tell it how to act well; plugins and connections package extensions you can add. Here's the vocabulary—before you install anything.</p>
+                        <p class="lesson-desc">Tools let the agent act; skills tell it how to act well; plugins and connections package extensions you can add. Here's the vocabulary before you install anything.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> Capability map for the practice workflow</li>
-                          <li><strong>Standalone clip</strong> Partial—tools/skills distinction stands alone; map ties to the practice task.</li>
+                          <li><strong>Standalone clip</strong> Partial: tools/skills distinction stands alone; map ties to the practice task.</li>
                         </ul>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Tools do—search, read, write, send, update, or otherwise act. The model requests a tool; the harness executes it (if permitted) and returns the result.</li>
-                            <li>Skills guide—reusable instructions, procedures, examples, standards, and decision rules.</li>
-                            <li>Plugins (and similar packages) extend the harness—they may bundle skills, hooks, agents, or connection servers. ALIVE (later) is a plugin; installing a skill often goes through the same plugin/marketplace flow.</li>
-                            <li>Connectors link the assistant to an external source or service; APIs define how systems exchange requests. MCP (later) is one standard for those connections—not memory.</li>
+                            <li>Tools do: search, read, write, send, update, or otherwise act. The model requests a tool; the harness executes it (if permitted) and returns the result.</li>
+                            <li>Skills guide: reusable instructions, procedures, examples, standards, and decision rules.</li>
+                            <li>Plugins (and similar packages) extend the harness: they may bundle skills, hooks, agents, or connection servers. ALIVE (later) is a plugin; installing a skill often goes through the same plugin/marketplace flow.</li>
+                            <li>Connectors link the assistant to an external source or service; APIs define how systems exchange requests. MCP (later) is one standard for those connections, not memory.</li>
                             <li>A skill without a tool cannot perform the external action; a tool without a skill may be used inconsistently.</li>
                             <li>Connected ≠ selected ≠ correct. More tools increase action surface and risk.</li>
                             <li>Build a capability map from the workflow; grant the minimum needed per step. Next you will install one skill carefully, then try ALIVE as a first meaningful plugin.</li>
@@ -2338,7 +2331,7 @@
                             <p>Correct these</p>
                             <ul>
                               <li>A skill and a tool are the same thing.</li>
-                              <li>MCP is the agent’s memory; MCP replaces APIs entirely.</li>
+                              <li>MCP is the agent's memory; MCP replaces APIs entirely.</li>
                               <li>Once a tool is connected, the agent will choose it correctly.</li>
                               <li>More tools always create a more capable system.</li>
                             </ul>
@@ -2350,7 +2343,7 @@
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -2366,9 +2359,9 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Tool</strong> — Executable capability (search, read, write, send…).</li>
-                                    <li><strong>Skill</strong> — Reusable guidance—not the same as a tool.</li>
-                                    <li><strong>Plugin</strong> — Installable package that can add skills, hooks, or connections.</li>
+                                    <li><strong>Tool</strong>: Executable capability (search, read, write, send…).</li>
+                                    <li><strong>Skill</strong>: Reusable guidance, not the same as a tool.</li>
+                                    <li><strong>Plugin</strong>: Installable package that can add skills, hooks, or connections.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2381,13 +2374,13 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: model chip speech bubble “request tool” → harness robot arm executes → result package returns to the model. Tiny inset of request → execute → result.</p>
+                                    <p>16-bit pixel art: model chip speech bubble "request tool" → harness robot arm executes → result package returns to the model. Tiny inset of request → execute → result.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Tool call</strong> — Model requests; harness runs if allowed.</li>
-                                    <li><strong>Harness</strong> — Executes tools and returns results.</li>
+                                    <li><strong>Tool call</strong>: Model requests; harness runs if allowed.</li>
+                                    <li><strong>Harness</strong>: Executes tools and returns results.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2405,8 +2398,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Least privilege</strong> — Grant the minimum capability needed per step.</li>
-                                    <li><strong>Connection</strong> — Link to an external source or service (MCP comes later).</li>
+                                    <li><strong>Least privilege</strong>: Grant the minimum capability needed per step.</li>
+                                    <li><strong>Connection</strong>: Link to an external source or service (MCP comes later).</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2424,7 +2417,7 @@
                                 </div>
                                 <div>
                                   <dt>Skill</dt>
-                                  <dd>Reusable guidance—procedures, examples, standards, and decision rules—for a type of work (not the same as a tool).</dd>
+                                  <dd>Reusable guidance: procedures, examples, standards, and decision rules for a type of work (not the same as a tool).</dd>
                                 </div>
                                 <div>
                                   <dt>Plugin</dt>
@@ -2438,30 +2431,30 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: tools do, skills guide, plugins/connections extend. Next: install one skill carefully—review before you trust it.</p>
+                        <p class="transition-note">Takeaway: tools do, skills guide, plugins/connections extend. Next: install one skill carefully. Review before you trust it.</p>
                       </div>
                     </li>
 <li class="lesson">
                       <span class="lesson-num">9</span>
                       <div>
                         <p class="lesson-title">How to install a new skill</p>
-                        <p class="lesson-desc">In Claude Code, browse and install a reusable skill package—then try it once on your practice task instead of rewriting the same instructions every time.</p>
+                        <p class="lesson-desc">In Claude Code, browse and install a reusable skill package, then try it once on your practice task instead of rewriting the same instructions every time.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> One installed skill, tried once on the practice task</li>
-                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed—discover, review, install, try once.</li>
+                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed: discover, review, install, try once.</li>
                         </ul>
-                        <p class="lesson-why">Learners just learned what a skill is. This lesson makes it concrete: skills are not something you always author yourself—many supported assistants let you discover and install one with a short command, the same way you'd add an app.</p>
+                        <p class="lesson-why">Learners just learned what a skill is. This lesson makes it concrete: skills are not something you always author yourself. Many supported assistants let you discover and install one with a short command, the same way you'd add an app.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li>In Claude Code, use <code>/plugin</code> to browse packages from configured marketplaces, inspect the source and contents, install, and remove if unhelpful.</li>
                             <li>A plugin may bundle skills, hooks, agents, or MCP servers. Installing the package can therefore add more than guidance; review its source and requested access before installing.</li>
-                            <li>To discover skills beyond the in-product list, browse <a href="https://skills.sh" target="_blank" rel="noopener noreferrer">skills.sh</a>. Installing still carries risk—check the author, prefer official skills from reputable teams, then review what the package claims to do before you install.</li>
+                            <li>To discover skills beyond the in-product list, browse <a href="https://skills.sh" target="_blank" rel="noopener noreferrer">skills.sh</a>. Installing still carries risk. Check the author, prefer official skills from reputable teams, then review what the package claims to do before you install.</li>
                             <li>A good skill states its purpose, expected inputs, and output format; a vague or undocumented skill is harder to supervise and should be treated with more caution.</li>
-                            <li>Showcase example (placeholder only): <strong>[Skill Name TBD — branding/business-coach skill]</strong>. Keep this exact placeholder until the course creator supplies the final skill and name. Do not replace or brand it yet. The workflow shown here—search, read what it does, install, try it once, remove if unhelpful—applies regardless of which skill you pick.</li>
-                            <li>Try the installed skill once on the practice task and compare the result to an unguided request—notice what the skill added (structure, questions asked, standard followed).</li>
+                            <li>Showcase example (placeholder only): <strong>[Skill Name TBD: branding/business-coach skill]</strong>. Keep this exact placeholder until the course creator supplies the final skill and name. Do not replace or brand it yet. The workflow shown here (search, read what it does, install, try it once, remove if unhelpful) applies regardless of which skill you pick.</li>
+                            <li>Try the installed skill once on the practice task and compare the result to an unguided request. Notice what the skill added (structure, questions asked, standard followed).</li>
                             <li>Remove or disable a skill the same way you installed it if it turns out to be unhelpful or overly broad.</li>
                           </ul>
                           <div class="misconceptions">
@@ -2479,7 +2472,7 @@
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes. <strong>Note:</strong> the showcase skill name is a placeholder pending the final skill and name from the course creator—do not invent branding for it.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes. <strong>Note:</strong> the showcase skill name is a placeholder pending the final skill and name from the course creator. Do not invent branding for it.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -2495,7 +2488,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Plugin manager</strong> — Built-in way to discover, inspect, install, and remove packages.</li>
+                                    <li><strong>Plugin manager</strong>: Built-in way to discover, inspect, install, and remove packages.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2504,16 +2497,16 @@
                                   <h5 class="slide-title">Showcase (placeholder): [Skill Name TBD]</h5>
                                   <ul class="slide-body">
                                     <li>Placeholder branding/business-coach skill (keep placeholder as-is)</li>
-                                    <li>Final skill + name supplied later—do not invent branding; workflow shown is what matters</li>
+                                    <li>Final skill + name supplied later. Do not invent branding; workflow shown is what matters</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: a skill-book icon with a clearly stitched "TBD" placeholder patch on its cover, sitting on the shelf next to ordinary skill books—visually flagged as a stand-in, not a real product.</p>
+                                    <p>16-bit pixel art: a skill-book icon with a clearly stitched "TBD" placeholder patch on its cover, sitting on the shelf next to ordinary skill books. Visually flagged as a stand-in, not a real product.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Skill package</strong> — An installable bundle of reusable instructions for a type of work.</li>
+                                    <li><strong>Skill package</strong>: An installable bundle of reusable instructions for a type of work.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2521,7 +2514,7 @@
                                   <span class="slide-label">Slide 3</span>
                                   <h5 class="slide-title">Review before you install</h5>
                                   <ul class="slide-body">
-                                    <li>Discover at skills.sh—then verify the author</li>
+                                    <li>Discover at skills.sh, then verify the author</li>
                                     <li>Prefer official skills from reputable teams; read what it claims to do</li>
                                     <li>Try once; remove if it doesn't earn its place</li>
                                   </ul>
@@ -2532,7 +2525,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Least privilege</strong> — Applies to installed skills, not only to tools.</li>
+                                    <li><strong>Least privilege</strong>: Applies to installed skills, not only to tools.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2556,7 +2549,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: New capabilities—whether tools or skills—are only safe to use once boundaries are clear. Next: when to stop and ask for approval.</p>
+                        <p class="transition-note">Transition: New capabilities (tools or skills) are only safe once boundaries are clear. Next: when to stop and ask for approval.</p>
                       </div>
                     </li>
 <li class="lesson">
@@ -2567,7 +2560,7 @@
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 2 min</li>
                           <li><strong>Output</strong> One written stop-and-ask rule</li>
-                          <li><strong>Standalone clip</strong> Works alone—the permission ladder and stop-and-ask sentence need no prior lessons.</li>
+                          <li><strong>Standalone clip</strong> Works alone: the permission ladder and stop-and-ask sentence need no prior lessons.</li>
                         </ul>
 
                         <div class="lesson-block">
@@ -2576,8 +2569,8 @@
                             <li>Read, create, edit, delete, send, publish, purchase, and administer are different permission levels.</li>
                             <li>Grant only the access needed for the current workflow; prefer reversible actions.</li>
                             <li>Instructions are guidance; technical permissions, scoped credentials, sandboxes, and approval UIs enforce limits.</li>
-                            <li>A sandbox limits where actions can have effect—it does not make every output correct or harmless.</li>
-                            <li>Prompt injection: untrusted content trying to redirect the agent—treat external pages and tool results as data, not authority.</li>
+                            <li>A sandbox limits where actions can have effect. It does not make every output correct or harmless.</li>
+                            <li>Prompt injection: untrusted content trying to redirect the agent. Treat external pages and tool results as data, not authority.</li>
                             <li>Approve actions with legal, financial, reputational, privacy, or irreversible consequences.</li>
                           </ul>
                           <div class="misconceptions">
@@ -2596,7 +2589,7 @@
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -2612,7 +2605,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Least privilege</strong> — Grant only the access needed for this workflow.</li>
+                                    <li><strong>Least privilege</strong>: Grant only the access needed for this workflow.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2621,17 +2614,17 @@
                                   <h5 class="slide-title">Guide vs enforce</h5>
                                   <ul class="slide-body">
                                     <li>Instructions guide; permissions enforce</li>
-                                    <li>“Please don’t publish” ≠ no publishing permission</li>
+                                    <li>"Please don't publish" ≠ no publishing permission</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: sticky note saying “please don’t publish” next to a publish button that still works; beside it, the same button with a real padlock that blocks the action.</p>
+                                    <p>16-bit pixel art: sticky note saying "please don't publish" next to a publish button that still works; beside it, the same button with a real padlock that blocks the action.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Sandbox</strong> — Limits where actions take effect—not a correctness guarantee.</li>
-                                    <li><strong>Instructions</strong> — Guidance only; not a security boundary by themselves.</li>
+                                    <li><strong>Sandbox</strong>: Limits where actions take effect, not a correctness guarantee.</li>
+                                    <li><strong>Instructions</strong>: Guidance only; not a security boundary by themselves.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2639,7 +2632,7 @@
                                   <span class="slide-label">Slide 3</span>
                                   <h5 class="slide-title">Stop and ask</h5>
                                   <ul class="slide-body">
-                                    <li>Write: “Stop and ask me before ___.”</li>
+                                    <li>Write: "Stop and ask me before ___."</li>
                                     <li>Legal · financial · reputational · privacy · irreversible</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -2649,13 +2642,13 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Prompt injection</strong> — Untrusted content trying to redirect the agent.</li>
-                                    <li><strong>Approval</strong> — Human gate for consequential or irreversible actions.</li>
+                                    <li><strong>Prompt injection</strong>: Untrusted content trying to redirect the agent.</li>
+                                    <li><strong>Approval</strong>: Human gate for consequential or irreversible actions.</li>
                                     </ul>
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Draft the learner’s stop-and-ask sentence live; reject a “trust the model” alternative.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Draft the learner's stop-and-ask sentence live; reject a "trust the model" alternative.</p>
                             </div>
                           </details>
                           <details>
@@ -2672,13 +2665,13 @@
                                 </div>
                                 <div>
                                   <dt>Least privilege</dt>
-                                  <dd>Granting only the access needed for the current workflow—nothing extra “just in case.”</dd>
+                                  <dd>Granting only the access needed for the current workflow: nothing extra "just in case."</dd>
                                 </div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: Boundaries are clear. Next: install ALIVE—your first meaningful plugin for local memory across sessions.</p>
+                        <p class="transition-note">Transition: Boundaries are clear. Next: install ALIVE, your first meaningful plugin for local memory across sessions.</p>
                       </div>
                     </li>
 
@@ -2711,13 +2704,13 @@
                       <span class="lesson-num">11</span>
                       <div>
                         <p class="lesson-title">Set up local memory with ALIVE</p>
-                        <p class="lesson-desc">Install the ALIVE plugin for Claude Code, run the guided setup, save one decision, and prove it comes back in a fresh session—all as plain files on your machine.</p>
+                        <p class="lesson-desc">Install the ALIVE plugin for Claude Code, run the guided setup, save one decision, and prove it comes back in a fresh session, all as plain files on your machine.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 6 min</li>
                           <li><strong>Output</strong> ALIVE installed, one saved context item, successful fresh-session retrieval</li>
-                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed—install → save → open a fresh session and confirm it remembers.</li>
+                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed: install → save → open a fresh session and confirm it remembers.</li>
                         </ul>
-                        <p class="lesson-why">ALIVE is a Claude Code plugin—an open-source persistent local memory layer: project state lives in readable markdown and JSON on disk; the plugin loads at session start and checkpoints with <code>/alive:save</code>. Skip internal architecture—teach install, save, and a fresh-session confirm.</p>
+                        <p class="lesson-why">ALIVE is a Claude Code plugin, an open-source persistent local memory layer: project state lives in readable markdown and JSON on disk; the plugin loads at session start and checkpoints with <code>/alive:save</code>. Skip internal architecture. Teach install, save, and a fresh-session confirm.</p>
                         <p class="audience-note"><strong>Instructor reference:</strong> For other ways to keep lasting context (plain files, connection-layer memory tools, editor rules, and similar), see <code>docs/local-memory-alternatives.md</code>.</p>
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
@@ -2726,7 +2719,7 @@
                             <li>Do you need to install Python? Only if it is missing. ALIVE (and Claude Code plugin/runtime pieces it relies on) needs Python to run.</li>
                             <li>Quick check: run <code>python3 --version</code> in Terminal. If you see version 3.10 or newer, continue. If not found (or lower), install Python 3 from python.org, then reopen Terminal and re-check.</li>
                             <li>Install from Terminal with <code>claude plugin install alive@alivecontext</code>. Exit and restart Claude Code, then run the guided setup.</li>
-                            <li>First-time setup: run <code>/alive:world</code>—guided walkthrough creates your local context folder. No ALIVE account; data stays on your machine.</li>
+                            <li>First-time setup: run <code>/alive:world</code>. Guided walkthrough creates your local context folder. No ALIVE account; data stays on your machine.</li>
                             <li>During work: context loads at session start. When done, run <code>/alive:save</code> to checkpoint.</li>
                             <li>What you get: persistent context across sessions without re-explaining your project. Files are inspectable in any text editor.</li>
                             <li>Confirm across sessions: save one practice decision, end session, open a new session, ask a question only answerable from what ALIVE saved.</li>
@@ -2734,8 +2727,8 @@
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
-                              <li>ALIVE sends your context to a cloud memory service—core context stays local in plain files.</li>
-                              <li>You must understand ALIVE's internal vocabulary to use it—the guided setup and save command are enough to start.</li>
+                              <li>ALIVE sends your context to a cloud memory service. Core context stays local in plain files.</li>
+                              <li>You must understand ALIVE's internal vocabulary to use it: the guided setup and save command are enough to start.</li>
                             </ul>
                           </div>
                           <p class="rule-close">Install, save once, return in a fresh session. If context comes back, your memory layer works.</p>
@@ -2750,7 +2743,7 @@
                                   <h5 class="slide-title">Install ALIVE in Claude Code</h5>
                                   <ul class="slide-body">
                                     <li>Install plugin → restart Claude Code → run setup</li>
-                                    <li>Python 3.10+ only if missing—check first, install only if needed</li>
+                                    <li>Python 3.10+ only if missing. Check first, install only if needed</li>
                                   </ul>
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: Claude Code terminal with install commands; plugin icon snapping into place.</p></div>
                                 </article>
@@ -2759,7 +2752,7 @@
                                   <h5 class="slide-title">Run /alive:world</h5>
                                   <ul class="slide-body">
                                     <li>Guided setup creates your local context folder</li>
-                                    <li>Plain markdown + JSON—you can read every file</li>
+                                    <li>Plain markdown + JSON. You can read every file</li>
                                   </ul>
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: new folder tree on disk; open text file with readable lines.</p></div>
                                 </article>
@@ -2803,23 +2796,23 @@
                       <span class="lesson-num">12</span>
                       <div>
                         <p class="lesson-title">What gets shared when you use cloud AI</p>
-                        <p class="lesson-desc">Claude Code sends your context to Anthropic's servers to process it. Here's what that means—and what to withhold before you attach anything sensitive.</p>
+                        <p class="lesson-desc">Claude Code sends your context to Anthropic's servers to process it. Here's what that means, and what to withhold before you attach anything sensitive.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> A personal rule for what to share and what to withhold</li>
-                          <li><strong>Standalone clip</strong> Works alone—local vs cloud data exposure without needing the full course.</li>
+                          <li><strong>Standalone clip</strong> Works alone: local vs cloud data exposure without needing the full course.</li>
                         </ul>
-                        <p class="lesson-why">You now have local memory on disk—but Claude Code still uses a cloud API. Before connecting more external tools, get a plain-language mental model of where information actually goes.</p>
+                        <p class="lesson-why">You now have local memory on disk, but Claude Code still uses a cloud API. Before connecting more external tools, get a plain-language mental model of where information actually goes.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li>A locally-running model can perform inference on the learner's own machine, but connected tools, sync, or telemetry may still transmit data. Check the whole product path, not only the model.</li>
-                            <li>A cloud API model runs on a provider's servers; anything included in the context—files, pasted text, chat messages—travels to that provider to be processed, and may be logged, retained, or reviewed depending on the provider's policy and plan.</li>
+                            <li>A cloud API model runs on a provider's servers; anything included in the context (files, pasted text, chat messages) travels to that provider to be processed, and may be logged, retained, or reviewed depending on the provider's policy and plan.</li>
                             <li>Most everyday assistants (the ones this course uses) are cloud-based. That is not automatically unsafe, but it means the learner is trusting a specific provider's policies, not just "the AI."</li>
                             <li>Provider trust is specific: read the current terms for the provider, plan, account type, and settings. Free versus paid alone does not determine privacy.</li>
                             <li>Be cautious with: customer or client personal data, financial records, credentials and API keys, health information, anything under an NDA, and anything you are not personally authorized to share.</li>
-                            <li>Local models trade convenience and capability for that privacy—typically smaller, slower to set up, and less capable than the leading cloud models. This course does not require setting one up; the point is to recognize the trade-off exists.</li>
+                            <li>Local models trade convenience and capability for that privacy: typically smaller, slower to set up, and less capable than the leading cloud models. This course does not require setting one up; the point is to recognize the trade-off exists.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -2830,31 +2823,31 @@
                               <li>Read-only or "just summarizing" access has no data-sharing implications.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">Know whether you are talking to your own machine or someone else's server—then decide what you're willing to send. That's your rule.</p>
+                          <p class="rule-close">Know whether you are talking to your own machine or someone else's server, then decide what you're willing to send. That's your rule.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Local vs cloud model</h5>
                                   <ul class="slide-body">
                                     <li>Local inference can stay on-device; connected tools may still send data</li>
-                                    <li>Cloud API: runs on a provider's servers—your context travels there</li>
+                                    <li>Cloud API: runs on a provider's servers. Your context travels there</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art split screen: left—a small home computer glowing with a self-contained model chip, walls around it; right—a message travels down a road to a distant server tower labeled provider.</p>
+                                    <p>16-bit pixel art split screen: left: a small home computer glowing with a self-contained model chip, walls around it; right: a message travels down a road to a distant server tower labeled provider.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Local model</strong> — Runs on the learner's own device.</li>
-                                    <li><strong>Cloud API</strong> — Runs on a provider's remote servers.</li>
+                                    <li><strong>Local model</strong>: Runs on the learner's own device.</li>
+                                    <li><strong>Cloud API</strong>: Runs on a provider's remote servers.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2867,12 +2860,12 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: a shiny logo badge next to a small magnifying glass hovering over fine-print scroll labeled "data use terms"—the logo alone doesn't answer the question.</p>
+                                    <p>16-bit pixel art: a shiny logo badge next to a small magnifying glass hovering over fine-print scroll labeled "data use terms": the logo alone doesn't answer the question.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Provider trust</strong> — What a specific plan and policy allow, not a general brand feeling.</li>
+                                    <li><strong>Provider trust</strong>: What a specific plan and policy allow, not a general brand feeling.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2890,7 +2883,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Sensitive information</strong> — Categories to withhold by default from any AI product.</li>
+                                    <li><strong>Sensitive information</strong>: Categories to withhold by default from any AI product.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2918,28 +2911,28 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: With a clear data-sharing rule in place, recognize MCP—the standard way assistants connect to external tools and data.</p>
+                        <p class="transition-note">Transition: With a clear data-sharing rule in place, recognize MCP: the standard way assistants connect to external tools and data.</p>
                       </div>
                     </li>
 <li class="lesson">
                       <span class="lesson-num">13</span>
                       <div>
                         <p class="lesson-title">What is MCP?</p>
-                        <p class="lesson-desc">MCP (Model Context Protocol) is a standard way for AI assistants to discover and use external tools and data—like USB for agent connections. Here's what that means in plain language.</p>
+                        <p class="lesson-desc">MCP (Model Context Protocol) is a standard way for AI assistants to discover and use external tools and data, similar to a USB plug for agent connections. Recognition only in this course; no MCP install yet.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> One-sentence explanation of what MCP is and what it is not</li>
-                          <li><strong>Standalone clip</strong> Works alone—defines MCP without requiring Claude Code setup.</li>
+                          <li><strong>Standalone clip</strong> Works alone: defines MCP without requiring Claude Code setup.</li>
                         </ul>
-                        <p class="lesson-why">Learners will see MCP mentioned in product docs and plugin marketplaces. This lesson gives recognition-level clarity without turning into a protocol spec.</p>
+                        <p class="lesson-why">Learners will see MCP mentioned in product docs and plugin marketplaces. This lesson is recognition only: what MCP is, what it is not. You will not install an MCP server here.</p>
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li>Problem MCP solves: every tool used to need a custom integration. MCP gives compatible assistants a common way to discover what's available and call it.</li>
-                            <li>Plain analogy: MCP is like a standard plug—one assistant can connect to many MCP servers (calendar, files, databases) if both sides speak MCP.</li>
+                            <li>Plain analogy: MCP is like a standard plug. One assistant can connect to many MCP servers (calendar, files, databases) if both sides speak MCP.</li>
                             <li>What MCP provides: a catalog of tools and resources the assistant can request; the harness still runs them with your permissions.</li>
                             <li>What MCP is not: memory, a replacement for APIs, or a guarantee the right tool will be chosen.</li>
-                            <li>In Claude Code: MCP servers appear as connectable capabilities—similar in spirit to plugins, but following the open MCP standard.</li>
+                            <li>In Claude Code: MCP servers appear as connectable capabilities, similar in spirit to plugins, but following the open MCP standard.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -2949,7 +2942,7 @@
                               <li>Connecting an MCP server means the agent will always use it correctly.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">MCP standardizes connections—it does not replace judgment, permissions, or review.</p>
+                          <p class="rule-close">MCP standardizes connections. It does not replace judgment, permissions, or review.</p>
                         </div>
                         <div class="lesson-details">
                           <details>
@@ -2962,6 +2955,7 @@
                                   <ul class="slide-body">
                                     <li>Before: custom integration per tool</li>
                                     <li>With MCP: one protocol, many servers</li>
+                                    <li>This course: recognize it; no MCP install yet</li>
                                   </ul>
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: assistant with one universal socket; multiple labeled servers (files, calendar, web) plug in via the same MCP port.</p></div>
                                 </article>
@@ -2981,7 +2975,7 @@
                                     <li>Connection layer, not storage</li>
                                     <li>Still need permissions and review</li>
                                   </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: MCP plug icon with X over a brain/memory vault—separate concepts.</p></div>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: MCP plug icon with X over a brain/memory vault, separate concepts.</p></div>
                                 </article>
                               </div>
                             </div>
@@ -2990,7 +2984,7 @@
                             <summary>Glossary</summary>
                             <div class="details-body">
                               <dl class="glossary">
-                                <div><dt>MCP</dt><dd>Model Context Protocol—an open standard for AI clients to discover and use external tools and data sources.</dd></div>
+                                <div><dt>MCP</dt><dd>Model Context Protocol, an open standard for AI clients to discover and use external tools and data sources.</dd></div>
                                 <div><dt>MCP server</dt><dd>A service that exposes tools or resources to compatible assistants via MCP.</dd></div>
                               </dl>
                             </div>
@@ -3029,21 +3023,21 @@
                       <span class="lesson-num">14</span>
                       <div>
                         <p class="lesson-title">Give better assignments with CLEAR</p>
-                        <p class="lesson-desc">Turn "help with my content" into an assignment the agent can execute and you can review—outcome, sources, standards, deliverable, and how you'll verify.</p>
+                        <p class="lesson-desc">Turn "help with my content" into an assignment the agent can execute and you can review: outcome, sources, standards, deliverable, and how you'll verify.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> One complete CLEAR assignment for the practice task</li>
-                          <li><strong>Standalone clip</strong> Partial—CLEAR framework stands alone; example uses the practice task.</li>
+                          <li><strong>Standalone clip</strong> Partial: CLEAR framework stands alone; example uses the practice task.</li>
                         </ul>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li><strong>C</strong>larify the outcome—what, for whom, and why.</li>
-                            <li><strong>L</strong>oad the context—facts, sources, history, examples; label authority.</li>
-                            <li><strong>E</strong>xplain standards and constraints—hard constraints vs. preferences.</li>
-                            <li><strong>A</strong>sk for a deliverable—format, process, and stopping condition.</li>
-                            <li><strong>R</strong>eview and refine—how you will inspect, verify, correct, and approve.</li>
+                            <li><strong>C</strong>larify the outcome: what, for whom, and why.</li>
+                            <li><strong>L</strong>oad the context: facts, sources, history, examples; label authority.</li>
+                            <li><strong>E</strong>xplain standards and constraints: hard constraints vs. preferences.</li>
+                            <li><strong>A</strong>sk for a deliverable: format, process, and stopping condition.</li>
+                            <li><strong>R</strong>eview and refine: how you will inspect, verify, correct, and approve.</li>
                             <li>CLEAR is a thinking checklist, not a rigid prompt formula. Ask for missing info or a short plan before costly actions when gaps matter.</li>
                           </ul>
                           <div class="misconceptions">
@@ -3062,14 +3056,14 @@
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">CLEAR at a glance</h5>
                                   <ul class="slide-body">
                                     <li>Clarify · Load · Explain · Ask · Review</li>
-                                    <li>A thinking checklist—not a magic template</li>
+                                    <li>A thinking checklist, not a magic template</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -3078,7 +3072,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>CLEAR method</strong> — Clarify, Load, Explain, Ask, Review—a checklist for reviewable assignments.</li>
+                                    <li><strong>CLEAR method</strong>: Clarify, Load, Explain, Ask, Review, a checklist for reviewable assignments.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3086,17 +3080,17 @@
                                   <span class="slide-label">Slide 2</span>
                                   <h5 class="slide-title">Before: vague</h5>
                                   <ul class="slide-body">
-                                    <li>“Help with my content.”</li>
+                                    <li>"Help with my content."</li>
                                     <li>Hard to execute; harder to evaluate</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: foggy speech bubble reading “help with my content”; confused assistant shrug; no checklist visible.</p>
+                                    <p>16-bit pixel art: foggy speech bubble reading "help with my content"; confused assistant shrug; no checklist visible.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Prompt</strong> — Immediate input; a vague line is not an executable assignment.</li>
+                                    <li><strong>Prompt</strong>: Immediate input; a vague line is not an executable assignment.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3114,12 +3108,12 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Assignment</strong> — Outcome + sources + standards + deliverable + review standard.</li>
+                                    <li><strong>Assignment</strong>: Outcome + sources + standards + deliverable + review standard.</li>
                                     </ul>
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Transform “help with my content” into a CLEAR assignment on a worksheet; leave one gap and ask the assistant to surface it.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Transform "help with my content" into a CLEAR assignment on a worksheet; leave one gap and ask the assistant to surface it.</p>
                             </div>
                           </details>
                           <details>
@@ -3128,7 +3122,7 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>CLEAR method</dt>
-                                  <dd>Clarify outcome, Load context, Explain standards, Ask for a deliverable, Review and refine—a checklist for executable, reviewable assignments.</dd>
+                                  <dd>Clarify outcome, Load context, Explain standards, Ask for a deliverable, Review and refine, a checklist for executable, reviewable assignments.</dd>
                                 </div>
                               </dl>
                             </div>
@@ -3141,27 +3135,27 @@
                       <span class="lesson-num">15</span>
                       <div>
                         <p class="lesson-title">Verify outputs and fix the system</p>
-                        <p class="lesson-desc">Label your sources, review the draft against evidence, and turn one correction into a reusable quality check—not just another chat message.</p>
+                        <p class="lesson-desc">Label your sources, review the draft against evidence, and turn one correction into a reusable quality check, not just another chat message.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> Labeled source pack, one revised artifact, and one reusable quality check</li>
-                          <li><strong>Standalone clip</strong> Partial—diagnostic feedback pattern stands alone; demo uses practice files.</li>
+                          <li><strong>Standalone clip</strong> Partial: diagnostic feedback pattern stands alone; demo uses practice files.</li>
                         </ul>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Name the source of truth explicitly—do not make the agent guess which file is current. Label files: approved, reference-only, draft, outdated, or archived.</li>
+                            <li>Name the source of truth explicitly. Do not make the agent guess which file is current. Label files: approved, reference-only, draft, outdated, or archived.</li>
                             <li>Distinguish instructions from evidence; useful information is not automatic authority over the task. Tell the assistant how to handle conflicts, and ask it to surface missing or low-confidence information before drafting.</li>
-                            <li>Once you have a draft, separate factual correctness, instruction-following, quality, and preference—they need different feedback.</li>
+                            <li>Once you have a draft, separate factual correctness, instruction-following, quality, and preference: they need different feedback.</li>
                             <li>Diagnostic feedback formula: issue → evidence → applicable standard → requested correction → verification. Verify claims against authoritative sources when accuracy matters.</li>
-                            <li>Save durable corrections in the relevant instruction, skill, source note, or ALIVE context—not only in chat.</li>
+                            <li>Save durable corrections in the relevant instruction, skill, source note, or ALIVE context, not only in chat.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
                               <li>The newest-looking file is necessarily the approved file.</li>
-                              <li>A confident answer is a verified answer; asking “Are you sure?” is a sufficient fact check.</li>
+                              <li>A confident answer is a verified answer; asking "Are you sure?" is a sufficient fact check.</li>
                               <li>Every correction should become long-term memory.</li>
                             </ul>
                           </div>
@@ -3172,7 +3166,7 @@
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -3188,8 +3182,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Source of truth</strong> — Explicitly named authoritative material for the task.</li>
-                                    <li><strong>Authority label</strong> — Status of a source for this task.</li>
+                                    <li><strong>Source of truth</strong>: Explicitly named authoritative material for the task.</li>
+                                    <li><strong>Authority label</strong>: Status of a source for this task.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3202,12 +3196,12 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: two scrolls disagreeing; stop hand and ask-bubble to a human; an example scroll with an “imitate this” arrow.</p>
+                                    <p>16-bit pixel art: two scrolls disagreeing; stop hand and ask-bubble to a human; an example scroll with an "imitate this" arrow.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Conflict rule</strong> — Stop and ask when sources conflict or facts are missing.</li>
+                                    <li><strong>Conflict rule</strong>: Stop and ask when sources conflict or facts are missing.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3216,16 +3210,16 @@
                                   <h5 class="slide-title">Diagnostic feedback</h5>
                                   <ul class="slide-body">
                                     <li>Issue → evidence → standard → correction → verify</li>
-                                    <li>Not: “This is bad. Try again.”</li>
+                                    <li>Not: "This is bad. Try again."</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: left speech bubble “This is bad. Try again.” crossed out; right—five-step arrow chain issue → evidence → standard → correction → verify.</p>
+                                    <p>16-bit pixel art: left speech bubble "This is bad. Try again." crossed out; right: five-step arrow chain issue → evidence → standard → correction → verify.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Diagnostic feedback</strong> — Issue, evidence, standard, correction, verification.</li>
+                                    <li><strong>Diagnostic feedback</strong>: Issue, evidence, standard, correction, verification.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3238,13 +3232,13 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: fork in the road—left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear.</p>
+                                    <p>16-bit pixel art: fork in the road: left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                      <li><strong>Task fix</strong> — One-off correction to this output.</li>
-                                      <li><strong>System fix</strong> — Durable update where the error originated.</li>
+                                      <li><strong>Task fix</strong>: One-off correction to this output.</li>
+                                      <li><strong>System fix</strong>: Durable update where the error originated.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3287,11 +3281,11 @@
                       <span class="lesson-num">16</span>
                       <div>
                         <p class="lesson-title">Run one supervised workflow end to end</p>
-                        <p class="lesson-desc">Watch the full loop once—CLEAR brief, generate, verify against sources, revise, approve—on a deliberately small artifact so every step stays visible.</p>
+                        <p class="lesson-desc">Watch the full loop once: CLEAR brief, generate, verify against sources, revise, approve on a deliberately small artifact so every step stays visible.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> One reviewed artifact through the complete supervised loop</li>
-                          <li><strong>Standalone clip</strong> Partial—best as course capstone; loop concept is clear without every prior install step.</li>
+                          <li><strong>Standalone clip</strong> Partial: best as course capstone; loop concept is clear without every prior install step.</li>
                         </ul>
 
                         <div class="lesson-block">
@@ -3318,7 +3312,7 @@
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -3334,8 +3328,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Supervised loop</strong> — CLEAR → generate → verify → revise → human approval.</li>
-                                    <li><strong>CLEAR method</strong> — Assignment checklist that starts the loop.</li>
+                                    <li><strong>Supervised loop</strong>: CLEAR → generate → verify → revise → human approval.</li>
+                                    <li><strong>CLEAR method</strong>: Assignment checklist that starts the loop.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3348,13 +3342,13 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: four checkpoint gates with human sprites—source authority / permissions / verification / approval—along the workflow path.</p>
+                                    <p>16-bit pixel art: four checkpoint gates with human sprites: source authority / permissions / verification / approval: along the workflow path.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Approval</strong> — Human gate for consequential or external actions.</li>
-                                    <li><strong>Least privilege</strong> — Permissions stay narrow through the demo.</li>
+                                    <li><strong>Approval</strong>: Human gate for consequential or external actions.</li>
+                                    <li><strong>Least privilege</strong>: Permissions stay narrow through the demo.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3371,7 +3365,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Supervised workflow</strong> — Value is the controlled loop, not the first answer.</li>
+                                    <li><strong>Supervised workflow</strong>: Value is the controlled loop, not the first answer.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3398,11 +3392,11 @@
                       <span class="lesson-num">17</span>
                       <div>
                         <p class="lesson-title">Why this single-user setup stops at one person</p>
-                        <p class="lesson-desc">What you built works for one person on one machine—including ALIVE memory. Adding a teammate is a different problem, not "more of the same."</p>
+                        <p class="lesson-desc">What you built works for one person on one machine, including ALIVE memory. Adding a teammate is a different problem, not "more of the same."</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 2 min</li>
                           <li><strong>Output</strong> A one-sentence statement of what this setup covers, and what it deliberately does not</li>
-                          <li><strong>Standalone clip</strong> Works alone—local vs team boundary without requiring the full course.</li>
+                          <li><strong>Standalone clip</strong> Works alone: local vs team boundary without requiring the full course.</li>
                         </ul>
 
                         <div class="lesson-block">
@@ -3410,9 +3404,9 @@
                           <ul class="talking-points">
                             <li>What you built today is real and complete for one person: Claude Code, a local workspace, ALIVE for memory across sessions, one repeatable way to delegate and supervise, and one reviewed artifact.</li>
                             <li>It is also inherently single-user and local: your files stay on your machine, your saved memory is yours alone, and nothing here is visible to a teammate unless you manually hand it to them.</li>
-                            <li>A team needs a shared source of truth—one place everyone's assistant can read and write—so people don't quietly diverge onto different, conflicting versions of "the current brief" or "the approved brand note."</li>
+                            <li>A team needs a shared source of truth: one place everyone's assistant can read and write, so people don't quietly diverge onto different, conflicting versions of "the current brief" or "the approved brand note."</li>
                             <li>That requires solving problems this course deliberately did not touch: who can see or change what, how conflicting edits from two people are resolved, and how memory is shared without one person's private notes leaking to another.</li>
-                            <li>This is not a matter of scaling up what you did today—shared, multi-user context is a genuinely different problem, with its own tools and safeguards.</li>
+                            <li>This is not a matter of scaling up what you did today: shared, multi-user context is a genuinely different problem, with its own tools and safeguards.</li>
                             <li>That problem is the subject of the next course, <strong>AI Agents for Your Business</strong>, which will be rebuilt around this exact boundary.</li>
                           </ul>
                           <div class="misconceptions">
@@ -3422,30 +3416,30 @@
                               <li>Sharing a folder or a chat transcript with a teammate is the same as a real shared context system.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">This course gives you a complete file-based setup for one person. Shared team context is a different problem—and that's the honest stopping point.</p>
+                          <p class="rule-close">This course gives you a complete file-based setup for one person. Shared team context is a different problem, and that's the honest stopping point.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
                             <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art; one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Extended deck · Slide 1</span>
                                   <h5 class="slide-title">What you have now</h5>
                                   <ul class="slide-body">
                                     <li>One assistant, one local folder, one supervised loop</li>
-                                    <li>Complete—for one person</li>
+                                    <li>Complete for one person</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: a single human sprite standing inside a cozy, complete workshop room—desk, folder, assistant robot—with a solid checkmark on the door.</p>
+                                    <p>16-bit pixel art: a single human sprite standing inside a cozy, complete workshop room: desk, folder, assistant robot, with a solid checkmark on the door.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Local setup</strong> — Files, memory, and delegation that work for one person on one machine.</li>
+                                    <li><strong>Local setup</strong>: Files, memory, and delegation that work for one person on one machine.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3463,7 +3457,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Shared context</strong> — One source of truth multiple people can read and write safely.</li>
+                                    <li><strong>Shared context</strong>: One source of truth multiple people can read and write safely.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3476,12 +3470,12 @@
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: the two workshop rooms from Slide 2 now connected by a bridge under construction, with a signpost reading "Course 2" pointing across it—clearly a separate, later project, not a quick add-on.</p>
+                                    <p>16-bit pixel art: the two workshop rooms from Slide 2 now connected by a bridge under construction, with a signpost reading "Course 2" pointing across it: clearly a separate, later project, not a quick add-on.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Single-user setup</strong> — This course's scope: complete, but not built for sharing.</li>
+                                    <li><strong>Single-user setup</strong>: This course's scope is complete, but not built for sharing.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -3495,17 +3489,17 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Single-user (local) setup</dt>
-                                  <dd>An assistant, files, and memory that live on and serve one person's own machine—this course's entire scope.</dd>
+                                  <dd>An assistant, files, and memory that live on and serve one person's own machine: this course's entire scope.</dd>
                                 </div>
                                 <div>
                                   <dt>Shared / team context</dt>
-                                  <dd>A common workspace multiple people's assistants can read and write, with access control and conflict handling—out of scope here, reserved for a later course.</dd>
+                                  <dd>A common workspace multiple people's assistants can read and write, with access control and conflict handling: out of scope here, reserved for a later course.</dd>
                                 </div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Closing: you have a complete single-user loop—and a clear boundary for what comes next.</p>
+                        <p class="transition-note">Closing: you have a complete single-user loop, and a clear boundary for what comes next.</p>
                       </div>
                     </li>
 
@@ -3522,7 +3516,7 @@
     <section class="closing" aria-labelledby="next-heading">
       <div class="wrap-narrow reveal">
         <p class="section-label">Scope &amp; completion</p>
-        <h2 id="next-heading">A complete single-user foundation—on purpose, not by accident</h2>
+        <h2 id="next-heading">A complete single-user foundation: on purpose, not by accident</h2>
         <p>
           This course stays deliberately local and single-user. Shared team memory, multi-user access control, business context, brand systems, content production, and entrepreneurship workflows belong in the follow-on course, <strong>AI Agents for Your Business</strong>, which will be rebuilt around that boundary.
         </p>
@@ -3549,9 +3543,9 @@
   </footer>
 
   <script>
-    (function () {
+    (function  {
       const modules = Array.from(document.querySelectorAll(".module"));
-      const timers = new WeakMap();
+      const timers = new WeakMap;
 
       function setOpen(module, open) {
         const btn = module.querySelector(".module-toggle");
@@ -3567,7 +3561,7 @@
           module.setAttribute("open", "");
         } else {
           module.removeAttribute("open");
-          const t = window.setTimeout(() => {
+          const t = window.setTimeout( => {
             if (!module.hasAttribute("open")) {
               panel.setAttribute("hidden", "");
             }
@@ -3584,16 +3578,16 @@
         }
         btn.setAttribute("aria-expanded", String(initiallyOpen));
 
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click",  => {
           setOpen(module, !module.hasAttribute("open"));
         });
       });
 
-      document.getElementById("expand-all").addEventListener("click", () => {
+      document.getElementById("expand-all").addEventListener("click",  => {
         modules.forEach((m) => setOpen(m, true));
       });
 
-      document.getElementById("collapse-all").addEventListener("click", () => {
+      document.getElementById("collapse-all").addEventListener("click",  => {
         modules.forEach((m) => setOpen(m, false));
       });
 
@@ -3617,7 +3611,7 @@
       );
 
       document.querySelectorAll("main .reveal").forEach((el) => observer.observe(el));
-    })();
+    });
   </script>
 </body>
 </html>

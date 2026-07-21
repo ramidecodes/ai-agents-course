@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Agents Fundamentals — Slides</title>
+    <title>AI Agents Fundamentals: Slides</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9.144,500;0,9.144,600;0,9.144,700;1,9.144,500&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -23,8 +23,8 @@
       }
 
       *,
-      *::before,
-      *::after {
+      *:before,
+      *:after {
         box-sizing: border-box;
       }
 
@@ -193,7 +193,7 @@
         position: relative;
       }
 
-      .slide--title .meta li + li::before {
+      .slide--title .meta li + li:before {
         content: "";
         position: absolute;
         left: -0.95rem;
@@ -397,7 +397,7 @@
         gap: 0.5rem;
       }
 
-      .slide-tasks-label::before {
+      .slide-tasks-label:before {
         content: "";
         display: inline-block;
         width: 0.55rem;
@@ -842,7 +842,7 @@
           meta: ["62 minutes", "7 modules · 17 lessons", "Beginner"],
           image: {
             file: "00-cover-hero.png",
-            desc: "Course hero visual — human and robot at a desk with supervised workflow icons.",
+            desc: "Course hero visual: human and robot at a desk with supervised workflow icons.",
           },
         },
 
@@ -851,7 +851,7 @@
           type: "lesson",
           lesson: 1,
           module: "Module 01 · Orientation and mental model",
-          title: "Welcome — your first workflow in one hour",
+          title: "Welcome: your first workflow in one hour",
           runtime: "3 min",
         },
         {
@@ -860,18 +860,18 @@
           module: "Module 01 · Orientation and mental model",
           title: "Who this is for",
           bullets: [
-            "Entrepreneurs, creators, coaches, and small teams—no coding required",
+            "Entrepreneurs, creators, coaches, and small teams (no coding required)",
             "You've tried chat AI; here we turn scattered tries into one clear workflow",
-            "Step by step—you'll review results before anything goes live",
+            "You'll review results before anything goes live",
           ],
           image: {
             file: "00-cover-hero.png",
-            desc: "16-bit pixel art: human and robot at a desk with supervised workflow icons—collaborative, welcoming setup.",
+            desc: "16-bit pixel art: human and robot at a desk with supervised workflow icons, collaborative, welcoming setup.",
           },
           sidebar: [
             {
               term: "AI agent",
-              def: "A goal-directed system that can choose and perform multiple steps—within boundaries you set.",
+              def: "A goal-directed system that can choose and perform multiple steps within boundaries you set.",
             },
           ],
           notes:
@@ -890,7 +890,7 @@
           bullets: [
             "7 modules · 17 lessons · about 62 minutes",
             "One loop you'll reuse: brief → draft → review → revise → approve",
-            "Same small practice task throughout—later: tools, skills, and plugins (including a local memory layer) so your agent can remember your project across sessions",
+            "Same small practice task throughout. Later: tools, skills, and plugins (including a local memory layer) so your agent can remember your project across sessions",
           ],
           image: {
             file: "l01-course-journey.png",
@@ -899,11 +899,11 @@
           sidebar: [
             {
               term: "Memory",
-              def: "A product feature that preserves selected information for later sessions—not automatic.",
+              def: "A product feature that preserves selected information for later sessions, not automatic.",
             },
           ],
           notes:
-            "Screen-share (~30s): pan the finished setup—workspace folder, starter brief, labeled draft, your review step. Next: how models and harnesses work (Lesson 2), then install Claude Code (Lesson 3).",
+            "Screen-share (~30s): pan the finished setup: workspace folder, starter brief, labeled draft, your review step. Next: how models and harnesses work (Lesson 2), then install Claude Code (Lesson 3).",
           tasksLabel: "Watch for",
           tasks: [
             "The five loop stages on screen",
@@ -918,7 +918,7 @@
           bullets: [
             "Set up Claude Code on your Mac and work with files in a dedicated workspace",
             "Brief your AI agent, review its draft, and ask for improvements",
-            "Know what to share—and what to keep private",
+            "Know what to share, and what to keep private",
             "Finish one complete supervised workflow on your own task",
           ],
           image: {
@@ -930,7 +930,7 @@
           tasksLabel: "Watch for",
           tasks: [
             "The four skills you'll build by the end",
-            "That reviewing the draft is part of the workflow—not extra homework",
+            "That reviewing the draft is part of the workflow, not extra homework",
           ],
         },
         {
@@ -939,9 +939,9 @@
           module: "Module 01 · Orientation and mental model",
           title: "Safe practice task",
           bullets: [
-            "Pick one small, public example—e.g. three article angles from a public brief",
+            "Pick one small, public example: e.g. three article angles from a public brief",
             "Low stakes · easy to undo · nothing confidential",
-            "Same task for all 17 lessons—every concept connects to one outcome",
+            "Same task for all 17 lessons. Every concept connects to one outcome",
           ],
           image: {
             file: "l01-safe-practice-task.png",
@@ -970,7 +970,7 @@
           module: "Module 01 · Orientation and mental model",
           title: "What a model does",
           bullets: [
-            "Predicts next tokens / generates text—not “thinks like a person”",
+            "Predicts next tokens / generates text, not "thinks like a person"",
             "Does not open files or run tools by itself",
           ],
           image: {
@@ -980,11 +980,11 @@
           sidebar: [
             {
               term: "Model",
-              def: "Predicts and generates—not the full product.",
+              def: "Predicts and generates, not the full product.",
             },
             {
               term: "Token",
-              def: "Small processing unit for text—not always a whole word.",
+              def: "Small processing unit for text, not always a whole word.",
             },
           ],
           notes:
@@ -1002,16 +1002,16 @@
           title: "Model families (as of recording)",
           bullets: [
             "Claude · GPT · Gemini · open-weight options",
-            "Category distinction—not a product catalog to memorize",
+            "Category distinction, not a product catalog to memorize",
           ],
           image: {
             file: "09-same-model-different-app.png",
-            desc: "16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small “as of recording” stamp.",
+            desc: "16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small "as of recording" stamp.",
           },
           sidebar: [
             {
               term: "Open-weight",
-              def: "Model weights you can run or host yourself—still need a harness.",
+              def: "Model weights you can run or host yourself. Still need a harness.",
             },
           ],
           notes:
@@ -1019,7 +1019,7 @@
           tasksLabel: "Watch for",
           tasks: [
             "That these are model families, not apps",
-            "Why “as of recording” matters",
+            "Why "as of recording" matters",
           ],
         },
         {
@@ -1050,7 +1050,7 @@
             },
           ],
           notes:
-            "When output fails later, ask: generation problem or harness problem? Install is next lesson—not this one.",
+            "When output fails later, ask: generation problem or harness problem? Install is next lesson, not this one.",
           tasksLabel: "Watch for",
           tasks: [
             "Model vs harness in one plain sentence",
@@ -1072,7 +1072,7 @@
             desc: "16-bit pixel art sequence panels left-to-right: message → context tray → model chip → optional tool wrench (run by harness) → reply bubble with a tiny step trail.",
           },
           notes:
-            "Optional live demo in a prepared session: send one message that triggers a visible tool. Point to the step trail—model requested; harness ran it. Or stay on the diagram.",
+            "Optional live demo in a prepared session: send one message that triggers a visible tool. Point to the step trail: model requested; harness ran it. Or stay on the diagram.",
           tasks: [
             "Sketch the chat/tool loop in one line",
             "Confirm: the model requests; the harness runs tools",
@@ -1099,11 +1099,11 @@
           ],
           image: {
             file: "04-minimum-beginner-stack.png",
-            desc: "16-bit pixel art: three boxes inside a dotted fence—assistant robot, folder, starter-brief scroll; arrow pointing forward to install.",
+            desc: "16-bit pixel art: three boxes inside a dotted fence: assistant robot, folder, starter-brief scroll; arrow pointing forward to install.",
           },
-          notes: "Bridge only—do not start install commands on this slide.",
+          notes: "Bridge only. Do not start install commands on this slide.",
           tasksLabel: "Watch for",
-          tasks: ["What you’ll install next", "Why theory came first"],
+          tasks: ["What you'll install next", "Why theory came first"],
         },
 
         /* —— Lesson 3 —— */
@@ -1131,7 +1131,7 @@
           ],
           image: {
             file: "04-minimum-beginner-stack.png",
-            desc: "16-bit pixel art: three boxes inside a dotted folder fence—assistant robot, folder, starter-brief scroll. Optional tool icons outside the fence, greyed out.",
+            desc: "16-bit pixel art: three boxes inside a dotted folder fence: assistant robot, folder, starter-brief scroll. Optional tool icons outside the fence, greyed out.",
           },
           sidebar: [
             {
@@ -1140,11 +1140,11 @@
             },
             {
               term: "Cloud API",
-              def: "Remote processing of context on a provider’s servers.",
+              def: "Remote processing of context on a provider's servers.",
             },
           ],
           notes:
-            "Show the whole path before diving in. Memory layer and skills come later—standardize on Claude Code.",
+            "Show the whole path before diving in. Memory layer and skills come later. Standardize on Claude Code.",
           tasksLabel: "Watch for",
           tasks: ["The six steps", "What stays out of the minimum stack"],
         },
@@ -1154,7 +1154,7 @@
           module: "Module 02 · Setup and autonomy",
           title: "1 · Choose your workspace",
           bullets: [
-            "New folder per project—or one Personal OS directory",
+            "New folder per project, or one Personal OS directory",
             "Create it now; write down the path",
           ],
           terminal: {
@@ -1163,7 +1163,7 @@
           },
           image: {
             file: "44-memory-folder-not-black-box.png",
-            desc: "16-bit pixel art: two tidy folder trees—project folders vs one Personal OS home—versus a messy dump pile crossed out.",
+            desc: "16-bit pixel art: two tidy folder trees: project folders vs one Personal OS home versus a messy dump pile crossed out.",
           },
           sidebar: [
             {
@@ -1172,7 +1172,7 @@
             },
           ],
           notes:
-            "Practical hygiene, not compliance theater. Foreshadow ALIVE (Lesson 11—after plugins) without teaching it now.",
+            "Practical hygiene, not compliance theater. Foreshadow ALIVE (Lesson 11 after plugins) without teaching it now.",
           tasks: [
             "Choose: new project folder or one Personal OS directory",
             "Create the folder and write the path",
@@ -1185,7 +1185,7 @@
           title: "Caution · Access ≠ authority",
           bullets: [
             "File access is not permission to change or publish",
-            "You choose what enters the chat—keep this session non-sensitive",
+            "You choose what enters the chat. Keep this session non-sensitive",
           ],
           image: {
             file: "05-access-not-authority.png",
@@ -1198,7 +1198,7 @@
             },
           ],
           notes:
-            "Caution only—not a setup step. Cloud API: context you attach often leaves your machine.",
+            "Caution only, not a setup step. Cloud API: context you attach often leaves your machine.",
         },
         {
           type: "content",
@@ -1206,7 +1206,7 @@
           module: "Module 02 · Setup and autonomy",
           title: "2 · Get Claude account access",
           bullets: [
-            "Pro, Max, Team, Enterprise—or Claude Console",
+            "Pro, Max, Team, Enterprise, or Claude Console",
             "Free Claude.ai chat alone is not enough for Claude Code",
           ],
           urls: [
@@ -1238,13 +1238,13 @@
           module: "Module 02 · Setup and autonomy",
           title: "3 · Open Terminal",
           bullets: [
-            "Built into macOS—Spotlight → Terminal",
+            "Built into macOS (Spotlight → Terminal)",
             "This is where install and Claude Code run",
           ],
           urls: [
             {
               href: "https://support.apple.com/guide/terminal/welcome/mac",
-              label: "support.apple.com — Terminal User Guide",
+              label: "support.apple.com: Terminal User Guide",
             },
             {
               href: "https://code.claude.com/docs/en/terminal-guide",
@@ -1271,7 +1271,7 @@
           module: "Module 02 · Setup and autonomy",
           title: "4 · Install Claude Code",
           bullets: [
-            "Native installer (recommended)—no Node.js",
+            "Native installer (recommended), no Node.js",
             "Paste the command, press Return, wait for it to finish",
           ],
           urls: [
@@ -1347,7 +1347,7 @@
           },
           image: {
             file: "06-acceptance-test.png",
-            desc: "16-bit pixel art: short path tiles—open → prompt → reply checkmark; no secret icons on the path.",
+            desc: "16-bit pixel art: short path tiles: open → prompt → reply checkmark; no secret icons on the path.",
           },
           notes:
             "Keep verify plain: open, prompt, confirm. Narrate what you refuse to share. Soft close toward agents next; tools/skills/plugins and ALIVE come later.",
@@ -1376,7 +1376,7 @@
           ],
           image: {
             file: "l04-four-patterns.png",
-            desc: "16-bit pixel art: four columns—single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons.",
+            desc: "16-bit pixel art: four columns: single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons.",
           },
           sidebar: [
             {
@@ -1385,7 +1385,7 @@
             },
             {
               term: "Automation",
-              def: "A workflow triggered by rules—limited judgment, predefined path.",
+              def: "A workflow triggered by rules, limited judgment, predefined path.",
             },
           ],
         },
@@ -1409,7 +1409,7 @@
             },
             {
               term: "Agentic",
-              def: "A degree of planning, acting, and recovering—not magic.",
+              def: "A degree of planning, acting, and recovering, not magic.",
             },
           ],
         },
@@ -1455,7 +1455,7 @@
           module: "Module 03 · Context, forgetting, and retrieval",
           title: "Context window",
           bullets: [
-            "Finite workbench—not perfect memory",
+            "Finite workbench, not perfect memory",
             "Instructions, messages, files, and tool results compete for space",
           ],
           image: {
@@ -1469,7 +1469,7 @@
             },
             {
               term: "Token",
-              def: "Small processing unit for text—not always a whole word, and not a measure of truth.",
+              def: "Small processing unit for text, not always a whole word, and not a measure of truth.",
             },
           ],
         },
@@ -1509,7 +1509,7 @@
           ],
           image: {
             file: "l05-smallest-complete-set.png",
-            desc: "16-bit pixel art split: left—messy pile of 40 files pouring into a clogged model; right—neat labeled brief package producing a clean output.",
+            desc: "16-bit pixel art split: left: messy pile of 40 files pouring into a clogged model; right: neat labeled brief package producing a clean output.",
           },
           notes:
             "Contrast a messy multi-file dump with a short structured brief; briefly compare answer quality.",
@@ -1540,7 +1540,7 @@
           ],
           image: {
             file: "l06-four-buckets.png",
-            desc: "16-bit pixel art: four labeled buckets side by side—Context / Chat history / Source knowledge / Memory—with different fill patterns to show they are not the same.",
+            desc: "16-bit pixel art: four labeled buckets side by side: Context / Chat history / Source knowledge / Memory, with different fill patterns to show they are not the same.",
           },
           sidebar: [
             {
@@ -1549,11 +1549,11 @@
             },
             {
               term: "Chat history",
-              def: "Visible record of prior messages—not always all used in every call.",
+              def: "Visible record of prior messages, not always all used in every call.",
             },
             {
               term: "Memory",
-              def: "Information preserved and retrievable across sessions—a product feature.",
+              def: "Information preserved and retrievable across sessions: a product feature.",
             },
           ],
         },
@@ -1623,7 +1623,7 @@
           sidebar: [
             {
               term: "RAG",
-              def: "Retrieval-augmented generation—search source material and add relevant pieces to context before generating.",
+              def: "Retrieval-augmented generation: search source material and add relevant pieces to context before generating.",
             },
           ],
         },
@@ -1644,7 +1644,7 @@
           sidebar: [
             {
               term: "RAG",
-              def: "Retrieve-then-answer for one turn—not perfect recall.",
+              def: "Retrieve-then-answer for one turn, not perfect recall.",
             },
             {
               term: "Memory",
@@ -1652,7 +1652,7 @@
             },
           ],
           notes:
-            "RAG is not memory. Next module: tools vs skills vs plugins—then a careful skill install—before ALIVE as a memory plugin.",
+            "RAG is not memory. Next module: tools vs skills vs plugins, then a careful skill install before ALIVE as a memory plugin.",
         },
 
         /* —— Lesson 8 —— */
@@ -1683,11 +1683,11 @@
             },
             {
               term: "Skill",
-              def: "Reusable guidance—procedures, examples, and standards—not the same as a tool.",
+              def: "Reusable guidance: procedures, examples, and standards, not the same as a tool.",
             },
             {
               term: "Plugin",
-              def: "Installable package that can add skills, hooks, or connections (ALIVE is a plugin—later).",
+              def: "Installable package that can add skills, hooks, or connections. ALIVE is a plugin (later).",
             },
           ],
           notes:
@@ -1765,7 +1765,7 @@
           sidebar: [
             {
               term: "Skill",
-              def: "Reusable guidance—procedures, examples, standards—not the same as a tool.",
+              def: "Reusable guidance: procedures, examples, standards, not the same as a tool.",
             },
             {
               term: "Plugin",
@@ -1787,7 +1787,7 @@
           title: "Showcase (placeholder): [Skill Name TBD]",
           bullets: [
             "Placeholder branding/business-coach skill (keep placeholder as-is)",
-            "Final skill + name supplied later—do not invent branding; workflow shown is what matters",
+            "Final skill + name supplied later. Do not invent branding; workflow shown is what matters",
           ],
           image: {
             file: "l12-showcase-skill-tbd.png",
@@ -1800,7 +1800,7 @@
           module: "Module 04 · Tools, skills, and approvals",
           title: "Review before you install",
           bullets: [
-            "Discover at skills.sh—then verify the author",
+            "Discover at skills.sh, then verify the author",
             "Prefer official skills from reputable teams; read what it claims to do",
             "Try once; remove if it doesn't earn its place",
           ],
@@ -1815,7 +1815,7 @@
             desc: "16-bit pixel art: a magnifying glass over a skill's description card before the install button; a trash icon beside an uninstall action.",
           },
           notes:
-            "Point to skills.sh as one discovery directory—not an auto-trust list. Installing carries risk: verify the author, prefer official skills from reputable teams, then inspect before install. Production blocker: do not record this lesson with the placeholder. Once the real skill is supplied, use /plugin, inspect the package contents and source, install it, then try it once on the practice task.",
+            "Point to skills.sh as one discovery directory, not an auto-trust list. Installing carries risk: verify the author, prefer official skills from reputable teams, then inspect before install. Production blocker: do not record this lesson with the placeholder. Once the real skill is supplied, use /plugin, inspect the package contents and source, install it, then try it once on the practice task.",
           tasks: [
             "Optionally browse skills.sh, then verify the author",
             "Inspect the package contents and source before install",
@@ -1869,7 +1869,7 @@
           sidebar: [
             {
               term: "Instructions",
-              def: "Persistent guidance that shapes behavior—not a security boundary by itself.",
+              def: "Persistent guidance that shapes behavior, not a security boundary by itself.",
             },
             {
               term: "Sandbox",
@@ -1920,7 +1920,7 @@
           title: "Install ALIVE in Claude Code",
           bullets: [
             "Install plugin → restart Claude Code → run setup",
-            "Python 3.10+ only if missing—check first, install only if needed",
+            "Python 3.10+ only if missing. Check first, install only if needed",
           ],
           urls: [
             {
@@ -1935,7 +1935,7 @@
           ],
           terminals: [
             {
-              label: "Terminal — Python check",
+              label: "Terminal: Python check",
               lines: ["python3 --version"],
             },
             {
@@ -1971,7 +1971,7 @@
           title: "Run /alive:world",
           bullets: [
             "Guided setup creates your local context folder",
-            "Plain markdown + JSON—you can read every file",
+            "Plain markdown + JSON. You can read every file",
           ],
           terminal: {
             label: "In Claude Code",
@@ -2051,17 +2051,17 @@
           title: "Local vs cloud model",
           bullets: [
             "Local inference can stay on-device; connected tools may still send data",
-            "Cloud API: runs on a provider's servers—your context travels there",
+            "Cloud API: runs on a provider's servers. Your context travels there",
           ],
           image: {
             file: "l09-local-vs-cloud-model.png",
-            desc: "16-bit pixel art split screen: left—a small home computer glowing with a self-contained model chip; right—a message travels down a road to a distant server tower labeled provider.",
+            desc: "16-bit pixel art split screen: left: a small home computer glowing with a self-contained model chip; right: a message travels down a road to a distant server tower labeled provider.",
           },
           sidebar: [
             { term: "Local model", def: "Runs on your device; inference may stay local." },
             {
               term: "Cloud API",
-              def: "Runs on a provider's remote servers—your context travels there.",
+              def: "Runs on a provider's remote servers. Your context travels there.",
             },
           ],
         },
@@ -2083,7 +2083,7 @@
           ],
           image: {
             file: "l09-trust-the-policy.png",
-            desc: '16-bit pixel art: a shiny logo badge next to a magnifying glass hovering over fine-print scroll labeled "data use terms"—the logo alone doesn\'t answer the question.',
+            desc: '16-bit pixel art: a shiny logo badge next to a magnifying glass hovering over fine-print scroll labeled "data use terms": the logo alone doesn\'t answer the question.',
           },
           sidebar: [
             {
@@ -2130,6 +2130,7 @@
           bullets: [
             "Before: custom integration per tool",
             "With MCP: one protocol, many servers",
+            "This course: recognize the idea; you do not install an MCP server here",
           ],
           urls: [
             {
@@ -2144,7 +2145,7 @@
           sidebar: [
             {
               term: "MCP",
-              def: "Model Context Protocol—open standard for AI clients to discover external tools and data.",
+              def: "Model Context Protocol: open standard for AI clients to discover external tools and data.",
             },
             {
               term: "MCP server",
@@ -2179,18 +2180,20 @@
           ],
           image: {
             file: "l11-mcp-is-not-memory.png",
-            desc: "16-bit pixel art: MCP plug icon with X over a brain/memory vault—separate concepts.",
+            desc: "16-bit pixel art: MCP plug icon with X over a brain/memory vault, separate concepts.",
           },
           sidebar: [
             {
               term: "MCP",
-              def: "Connection standard for tools and data—not a storage system.",
+              def: "Connection standard for tools and data, not a storage system.",
             },
             {
               term: "Memory",
-              def: "Information preserved across sessions—a separate product feature.",
+              def: "Information preserved across sessions: a separate product feature.",
             },
           ],
+          notes:
+            "Recognition only: what MCP is and is not. Do not install an MCP server in this lesson. Next: CLEAR assignments.",
         },
 
         /* —— Lesson 14 —— */
@@ -2208,7 +2211,7 @@
           title: "CLEAR at a glance",
           bullets: [
             "Clarify · Load · Explain · Ask · Review",
-            "A thinking checklist—not a magic template",
+            "A thinking checklist, not a magic template",
           ],
           image: {
             file: "l14-clear-at-a-glance.png",
@@ -2305,7 +2308,7 @@
           ],
           image: {
             file: "l15-diagnostic-feedback.png",
-            desc: '16-bit pixel art: left speech bubble "This is bad. Try again." crossed out; right—five-step arrow chain issue → evidence → standard → correction → verify.',
+            desc: '16-bit pixel art: left speech bubble "This is bad. Try again." crossed out; right: five-step arrow chain issue → evidence → standard → correction → verify.',
           },
           notes:
             "Label 3–4 practice files live, including one outdated file; revise one factual error with diagnostic feedback, then make one durable system fix where the error began.",
@@ -2327,7 +2330,7 @@
           ],
           image: {
             file: "l15-task-fix-vs-system-fix.png",
-            desc: "16-bit pixel art: fork in the road—left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear.",
+            desc: "16-bit pixel art: fork in the road: left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear.",
           },
         },
 
@@ -2364,7 +2367,7 @@
           ],
           image: {
             file: "l16-human-decision-markers.png",
-            desc: "16-bit pixel art: four checkpoint gates with human sprites—source authority / permissions / verification / approval—along the workflow path.",
+            desc: "16-bit pixel art: four checkpoint gates with human sprites: source authority / permissions / verification / approval: along the workflow path.",
           },
           notes:
             "Pre-stage the brief and source pack. Execute the mini workflow (e.g. three article angles) start to finish, narrating the four human decision markers; find one unsupported claim and revise it. Do not wait through setup or unrelated generation in this three-minute segment.",
@@ -2404,11 +2407,11 @@
           title: "What you have now",
           bullets: [
             "One agent, one local folder, one supervised loop",
-            "Complete—for one person",
+            "Complete for one person",
           ],
           image: {
             file: "l17-what-you-have-now.png",
-            desc: "16-bit pixel art: a single human sprite standing inside a cozy, complete workshop room—desk, folder, assistant robot—with a solid checkmark on the door.",
+            desc: "16-bit pixel art: a single human sprite standing inside a cozy, complete workshop room: desk, folder, assistant robot, with a solid checkmark on the door.",
           },
         },
         {
@@ -2515,7 +2518,7 @@
       function renderTerminals(data) {
         const blocks = [];
         if (data.terminal) blocks.push(data.terminal);
-        if (data.terminals) blocks.push(...data.terminals);
+        if (data.terminals) blocks.push(..data.terminals);
         return blocks.map((t) => renderTerminal(t)).join("");
       }
 
@@ -2614,13 +2617,13 @@
         return `<section class="slide slide--content${active}" data-index="${index}" data-notes="${data.notes ? escapeHtml(data.notes) : ""}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">Lesson ${data.lesson}</p><p class="slide-module">${escapeHtml(data.module)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
       }
 
-      function buildDeck() {
+      function buildDeck {
         deck.innerHTML = ACTIVE_SLIDES.map((s, i) => renderSlide(s, i)).join(
           "",
         );
       }
 
-      function updateUI() {
+      function updateUI {
         deck.querySelectorAll(".slide").forEach((el, i) => {
           const active = i === current;
           el.classList.toggle("is-active", active);
@@ -2651,17 +2654,17 @@
 
       function goTo(index) {
         current = Math.max(0, Math.min(ACTIVE_SLIDES.length - 1, index));
-        updateUI();
+        updateUI;
       }
 
-      function next() {
+      function next {
         goTo(current + 1);
       }
-      function prev() {
+      function prev {
         goTo(current - 1);
       }
 
-      function toggleNotes() {
+      function toggleNotes {
         if (!notesText.textContent) return;
         notesVisible = !notesVisible;
         notesEl.classList.toggle("is-visible", notesVisible);
@@ -2672,18 +2675,18 @@
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
-          e.preventDefault();
-          next();
+          e.preventDefault;
+          next;
         } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
-          e.preventDefault();
-          prev();
+          e.preventDefault;
+          prev;
         } else if (e.key === "n" || e.key === "N") {
-          toggleNotes();
+          toggleNotes;
         } else if (e.key === "Home") {
-          e.preventDefault();
+          e.preventDefault;
           goTo(0);
         } else if (e.key === "End") {
-          e.preventDefault();
+          e.preventDefault;
           goTo(ACTIVE_SLIDES.length - 1);
         }
       });
@@ -2700,13 +2703,13 @@
         "touchend",
         (e) => {
           const dx = e.changedTouches[0].screenX - touchStartX;
-          if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
+          if (Math.abs(dx) > 50) dx < 0 ? next : prev;
         },
         { passive: true },
       );
 
-      buildDeck();
-      updateUI();
+      buildDeck;
+      updateUI;
     </script>
   </body>
 </html>

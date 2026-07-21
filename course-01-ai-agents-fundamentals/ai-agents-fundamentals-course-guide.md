@@ -6,9 +6,9 @@ source_curriculum: course-01-curriculum.html
 last_updated: "2026-07-21"
 ---
 
-# AI Agents Fundamentals — Course Guide
+# AI Agents Fundamentals: Course Guide
 
-This is the internal design and production reference for **AI Agents Fundamentals**. It defines why the course exists, how it should be taught, and how the curriculum should be evaluated and maintained. It is not intended to be read aloud or converted directly into slides; the companion [`course-01-curriculum.html`](./course-01-curriculum.html) is the canonical curriculum for recording and slide production—and the **source of truth** for Google Slides generation. Use each lesson’s collapsible **Slides (draft)** section (title + bullets, per-slide 16-bit pixel-art visual brief, optional side-panel terms, instructor screen-share note). Brand is applied later outside this HTML.
+This is the internal design and production reference for **AI Agents Fundamentals**. It defines why the course exists, how it should be taught, and how the curriculum should be evaluated and maintained. It is not intended to be read aloud or converted directly into slides; the companion [`course-01-curriculum.html`](./course-01-curriculum.html) is the canonical curriculum for recording and slide production, and the **source of truth** for Google Slides generation. Use each lesson's collapsible **Slides (draft)** section (title + bullets, per-slide 16-bit pixel-art visual brief, optional side-panel terms, instructor screen-share note). Brand is applied later outside this HTML.
 
 ## Course context
 
@@ -22,15 +22,15 @@ This is the internal design and production reference for **AI Agents Fundamental
 
 ### Place in the course sequence
 
-This is the foundation course, and it is now scoped deliberately around a **complete local, single-user setup**: Claude Code as the primary assistant, conceptual grounding in context/memory/RAG, tools vs skills vs plugins vocabulary, a careful new-skill install, ALIVE for local memory, data-sharing awareness, MCP at recognition level, and one complete supervised working loop. The course closes by naming its own boundary explicitly: everything here works for one person on one machine. Shared/team context, multi-user access control, business context, brand and content systems, and coaching routines belong in **AI Agents for Your Business**, which will be rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
+This is the foundation course, scoped around a **complete local, single-user setup**: Claude Code as the primary assistant, grounding in context/memory/RAG, tools vs skills vs plugins, a careful skill install, ALIVE for local memory, data-sharing awareness, MCP at recognition level, and one supervised working loop. The course closes by naming its own boundary: everything here works for one person on one machine. Shared team context, multi-user access control, business context, brand systems, and coaching routines belong in **AI Agents for Your Business**, rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
 
 ### Observable course outcomes
 
 By the end, learners should be able to:
 
-1. Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent—and how a modern chat turn actually runs.
+1. Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent, and how a modern chat turn actually runs.
 2. Set up Claude Code on macOS with ALIVE for local memory, extend the assistant with a new skill, and give it focused task context using ordinary files.
-3. Explain what gets shared with whom—including the practical difference between a locally-running model and a cloud API—well enough to make deliberate, cautious choices about sensitive information.
+3. Explain what gets shared with whom, including the practical difference between a locally-running model and a cloud API, well enough to make deliberate, cautious choices about sensitive information.
 4. Explain why an assistant has no persistent memory by default, what retrieval-augmented generation (RAG) does, and complete a basic ALIVE local memory setup.
 5. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
 6. Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a local, single-user setup is a different problem from a shared team setup.
@@ -44,14 +44,14 @@ The course uses backward design: the practical behavior expected at the end dete
 ### Design principles
 
 1. **One clear outcome per lesson.** Every lesson has a single main behavior or decision the learner should be able to perform.
-2. **Progress from mental model to action.** Learners first understand the system, then its information, then its capabilities (tools/skills/plugins), then how to extend and supervise it, and finally how to complete a workflow. Lesson 2 is theory only (what models and harnesses do); Lesson 3 is the install—so setup has meaning after the mental model. ALIVE and MCP come only after plugin vocabulary is clear.
+2. **Progress from mental model to action.** Learners first understand the system, then its information, then its capabilities (tools/skills/plugins), then how to extend and supervise it, and finally how to complete a workflow. Lesson 2 is theory only (what models and harnesses do); Lesson 3 is the install, so setup has meaning after the mental model. ALIVE and MCP come only after plugin vocabulary is clear.
 3. **Keep cognitive load low.** New terminology is grouped by function and anchored to one consistent analogy.
 4. **Use realistic business examples.** Abstract concepts are demonstrated through briefs, research, planning, drafting, and review.
 5. **Correct misconceptions explicitly.** Each lesson names a common false belief and replaces it with a usable rule.
 6. **Require a small learner output.** Every module ends with a decision, artifact, or check that contributes to the final workflow.
 7. **Teach supervision, not blind trust.** The learner remains accountable for scope, permissions, evidence, and final approval.
 8. **Prefer familiar foundations.** Use ordinary files and off-the-shelf product features before introducing integrations or memory infrastructure.
-9. **Use retrieval practice.** Short “Can you explain or decide this?” checks help learners recall ideas instead of only recognizing them.
+9. **Use retrieval practice.** Short "Can you explain or decide this?" checks help learners recall ideas instead of only recognizing them.
 10. **Align the final assessment with the promise.** The capstone requires setup, delegation, tool awareness, review, and revision.
 
 ### Standard lesson pattern
@@ -74,7 +74,7 @@ Every module should include three forms of learner effort:
 2. **Practice:** Ask the learner to produce a small artifact, classification, or decision.
 3. **Reflection and retrieval:** Ask the learner to explain a distinction, justify a choice, or retrieve prior knowledge without simply rereading it.
 
-Distribute checks throughout the course rather than relying on a single final quiz. Give immediate, specific feedback through worked answers, comparison criteria, or a short rubric. Revisit the core loop—context → assignment → action → review—several times so recall is spaced and cumulative.
+Distribute checks throughout the course rather than relying on a single final quiz. Give immediate, specific feedback through worked answers, comparison criteria, or a short rubric. Revisit the core loop (context → assignment → action → review) several times so recall is spaced and cumulative.
 
 ## Consistent course mental model
 
@@ -108,7 +108,7 @@ Use terms consistently across videos, worksheets, and slides.
 | AI model          | The underlying system that processes input and generates output.                                                            |
 | LLM               | A language-focused model trained to work with text and related representations.                                             |
 | Multimodal model  | A model that can work with more than one type of input or output, such as text, images, audio, or video.                    |
-| Harness / AI application | The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as “app,” “runtime,” or “scaffold.” |
+| Harness / AI application | The software around the model: UI, context assembly, tool execution, history, integrations, and permissions. Same idea as "app," "runtime," or "scaffold." |
 | Assistant         | The working experience when a model is combined with a harness, instructions, context, and available capabilities.           |
 | Tool call         | A structured request from the model to use a capability; the harness runs it (if allowed) and returns the result.            |
 | Workflow          | A defined sequence of steps used to produce an outcome.                                                                     |
@@ -123,7 +123,7 @@ Use terms consistently across videos, worksheets, and slides.
 | Memory            | A mechanism for preserving selected information and making it available later.                                              |
 | Knowledge source  | A document, database, page, or other source the system can consult.                                                         |
 | Retrieval         | The process of finding relevant information for the current task.                                                           |
-| RAG               | Retrieval-augmented generation: retrieving relevant source material and adding it to the model’s context before generation. |
+| RAG               | Retrieval-augmented generation: retrieving relevant source material and adding it to the model's context before generation. |
 | Embedding         | A numeric representation used to compare meaning or similarity.                                                             |
 | Vector search     | A way of finding semantically similar material using embeddings.                                                            |
 | Knowledge graph   | Structured entities and relationships that make connections explicit.                                                       |
@@ -151,7 +151,7 @@ Use low-friction checks throughout the course. They should not add significant v
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
 | After Lesson 8  | Explain tools vs skills vs plugins/connections in one sentence each. | Capability vocabulary is clear before installs. |
-| After Lesson 9  | Evaluate one skill listing (real or the course showcase example) before installing it—including author/source when discovered via directories like [skills.sh](https://skills.sh). | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
+| After Lesson 9  | Evaluate one skill listing (real or the course showcase example) before installing it, including author/source when discovered via directories like [skills.sh](https://skills.sh). | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
 | After Lesson 10 | Write one stop-and-ask rule.                           | Permissions and human checkpoints are explicit.                          |
 | After Lesson 11 | Complete ALIVE install (including quick Python check) and confirm a saved item returns in a fresh session. | Local memory plugin works in practice. |
 | After Lesson 12 | State one personal rule for what not to share, and explain the local-model-vs-cloud-API distinction in one sentence. | Data-sharing awareness is practical, not just theoretical. |
@@ -181,11 +181,11 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 
 - Teach concepts and architecture in provider-neutral language where possible.
 - Demonstrate **Claude Code** as the primary assistant throughout the core course.
-- **Lesson 2 sequence (required, theory only—no install):** what a model does (next-token / text generation) → named model families (concrete, dated “as of recording”) → harness / app / assistant vs model; Claude Code = the harness we’ll use → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
-- **Lesson 3 sequence (required)—numbered learner path:** (0) minimum stack in plain language (Claude Code + one workspace folder + one harmless starter brief) → (1) choose & create workspace (new folder per project, or one Personal OS directory) → **caution (not a step):** access ≠ authority / cloud API → (2) Claude account access if needed → (3) open Terminal → (4) install Claude Code → (5) open Claude Code in that folder (sign in when prompted) → (6) confirm it works with a simple prompt → close toward agents; tools/skills/plugins and ALIVE come later. Do not open with install commands before the stack and folder guidance. Official links: [claude.com/pricing](https://claude.com/pricing) · [Terminal (macOS)](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) · [Install Claude Code](https://code.claude.com/docs/en/install) · [Quickstart](https://code.claude.com/docs/en/quickstart).
+- **Lesson 2 sequence (required, theory only, no install):** what a model does (next-token / text generation) → named model families (concrete, dated "as of recording") → harness / app / assistant vs model; Claude Code = the harness we'll use → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
+- **Lesson 3 sequence (required), numbered learner path:** (0) minimum stack in plain language (Claude Code + one workspace folder + one harmless starter brief) → (1) choose & create workspace (new folder per project, or one Personal OS directory) → **caution (not a step):** access ≠ authority / cloud API → (2) Claude account access if needed → (3) open Terminal → (4) install Claude Code → (5) open Claude Code in that folder (sign in when prompted) → (6) confirm it works with a simple prompt → close toward agents; tools/skills/plugins and ALIVE come later. Do not open with install commands before the stack and folder guidance. Official links: [claude.com/pricing](https://claude.com/pricing) · [Terminal (macOS)](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) · [Install Claude Code](https://code.claude.com/docs/en/install) · [Quickstart](https://code.claude.com/docs/en/quickstart).
 - **Capability ladder (required order):** tools vs skills vs plugins/connections (Lesson 8) → carefully install/review a skill with [skills.sh](https://skills.sh) author checks (Lesson 9) → approvals / least privilege (Lesson 10) → **ALIVE** as first meaningful plugin for local memory (Lesson 11) → data-sharing judgment (Lesson 12) → MCP at recognition level (Lesson 13). Do not teach ALIVE or MCP before the vocabulary lesson.
-- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 11)—a Claude Code plugin that stores persistent local memory on disk. Lesson 3’s folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
-- When naming tools or brands, say what they *are* (the job they do)—harness, local files, memory layer, cloud API, assistant UI—not random name-drops.
+- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 11): a Claude Code plugin that stores persistent local memory on disk. Lesson 3's folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
+- When naming tools or brands, say what they *are* (the job they do): harness, local files, memory layer, cloud API, assistant UI, not random name-drops.
 - Provide a separate translation sheet only where product differences would block learners on other assistants.
 - Demonstrate file-aware work using ordinary, human-readable files in a dedicated workspace.
 - Teach why persistent memory doesn't exist by default and what RAG is before extensions; teach MCP at recognition level only after skills/plugins are clear (dedicated ~3 min MCP lesson).
@@ -206,10 +206,10 @@ Teach and demo in this order. Every installable/openable tool gets a one-line ro
 
 | Step | What to do | What this is | Link / command |
 | ---- | ---------- | ------------ | -------------- |
-| — | Know the minimum stack | Claude Code (harness) + one workspace folder + one harmless starter brief. Skip memory layer and skills for now. | [Claude Code docs](https://code.claude.com/docs/en/quickstart) |
+| · | Know the minimum stack | Claude Code (harness) + one workspace folder + one harmless starter brief. Skip memory layer and skills for now. | [Claude Code docs](https://code.claude.com/docs/en/quickstart) |
 | 1 | Choose & create your workspace | A new folder per project, **or** one general Personal OS directory for personal-assistant style work. | Create in Finder or: `mkdir ~/Personal-OS` (or your project path) |
 | ⚠ | Access ≠ authority (caution) | File access is not permission to change or publish. Context you attach often travels over a cloud API. | Keep this first session non-sensitive |
-| 2 | Get Claude account access | Paid Claude plan (Pro, Max, Team, or Enterprise) or Claude Console—required to sign in to Claude Code. Free Claude.ai chat alone is not enough. | [claude.com/pricing](https://claude.com/pricing) |
+| 2 | Get Claude account access | Paid Claude plan (Pro, Max, Team, or Enterprise) or Claude Console, required to sign in to Claude Code. Free Claude.ai chat alone is not enough. | [claude.com/pricing](https://claude.com/pricing) |
 | 3 | Open Terminal | macOS app where you type commands; Claude Code runs here. | [Apple Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) |
 | 4 | Install Claude Code | Native installer (recommended). No Node.js required for this path. | [Install docs](https://code.claude.com/docs/en/install) · `curl -fsSL https://claude.ai/install.sh \| bash` |
 | 5 | Open Claude Code in your folder | Start the harness in the workspace you chose; complete browser sign-in on first run. | [Quickstart](https://code.claude.com/docs/en/quickstart) · `cd your-workspace-folder` then `claude` |
@@ -223,7 +223,7 @@ After Lesson 3, the learner should be able to:
 
 1. Open Claude Code in their chosen workspace (project folder or Personal OS directory).
 2. Try a simple prompt and confirm a reply comes back.
-3. Optionally: open or attach a harmless starter brief and ask for a short summary—inspect the result outside chat if they created a draft.
+3. Optionally: open or attach a harmless starter brief and ask for a short summary. Inspect the result outside chat if they created a draft.
 4. Keep sensitive material out of this first session.
 
 ## Ordinary-file fallback
@@ -235,7 +235,7 @@ If project or workspace features are unavailable, the learner should still be ab
 3. Giving a CLEAR assignment in an ordinary conversation.
 4. Saving the reviewed output as a separate file.
 
-The fallback reinforces the foundation: useful work depends on clear context, a defined assignment, and human review—not on a particular product feature.
+The fallback reinforces the foundation: useful work depends on clear context, a defined assignment, and human review, not on a particular product feature.
 
 # Required course assets
 
@@ -245,30 +245,30 @@ Prepare these assets before recording:
 2. **CLEAR assignment worksheet.** A one-page fillable assignment planner.
 3. **Context checklist.** Outcome, audience, sources, constraints, example, deliverable, standard, and questions.
 4. **Capability and permission map.** Workflow step, information, skill, tool, permission, and approval.
-5. **Workspace starter.** A starter brief, source note, and safe destination for drafts—in a new project folder or a Personal OS directory.
+5. **Workspace starter.** A starter brief, source note, and safe destination for drafts in a new project folder or a Personal OS directory.
 6. **Source-label template.** Approved, reference, draft, outdated, and archive labels.
 7. **Lightweight evaluation checklist.** Facts, instruction-following, quality, preference, risk, and approval.
 8. **Assistant translation sheet.** Equivalent setup concepts and product-specific terminology.
 9. **Troubleshooting guide.** Account, file-access, permission, and ordinary-file fallback checks.
 10. **Capstone brief.** One-page fictional business brief with enough information for a small reviewed artifact.
 11. **Data-sharing quick-reference.** A one-page local-vs-cloud comparison plus a short list of what to withhold by default.
-12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD — branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command. In Lesson 9, point learners to [skills.sh](https://skills.sh) as one place to discover skills—and reinforce that installs carry risk: verify the author, prefer official skills from reputable teams, and review what a package claims to do before installing.
+12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD: branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command. In Lesson 9, point learners to [skills.sh](https://skills.sh) as one place to discover skills, and reinforce that installs carry risk: verify the author, prefer official skills from reputable teams, and review what a package claims to do before installing.
 13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 11.
 
 ## Reference documentation
 
 | Document | Purpose |
 | -------- | ------- |
-| [`docs/local-memory-alternatives.md`](../docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP-based memory, and other persistent local or synced memory layers); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 11. |
+| [`docs/local-memory-alternatives.md`](./docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP-based memory, and other persistent local or synced memory layers); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 11. |
 
 # Guidance for the slide-generation agent
 
-This section describes how a later agent should translate the curriculum into lesson slides. Prefer the **Slides (draft)** block in each lesson of `course-01-curriculum.html` (concrete draft cards with titles and bullets; **one 16-bit pixel-art visual brief per content slide**; optional side panel of technical terms + ultra-short defs; screen-share as an instructor note only) over regenerating structure from this guide alone. Do not invent a brand system in the slides—brand is applied later.
+This section describes how a later agent should translate the curriculum into lesson slides. Prefer the **Slides (draft)** block in each lesson of `course-01-curriculum.html` (concrete draft cards with titles and bullets; **one 16-bit pixel-art visual brief per content slide**; optional side panel of technical terms + ultra-short defs; screen-share as an instructor note only) over regenerating structure from this guide alone. Do not invent a brand system in the slides. Brand is applied later.
 
 ## Slide principles
 
 - Preserve the lesson objective, runtime, learner output, and closing rule.
-- Give every content slide its own visual brief that reinforces that slide’s teaching point (16-bit pixel art; diagram-like and concrete).
+- Give every content slide its own visual brief that reinforces that slide's teaching point (16-bit pixel art; diagram-like and concrete).
 - When the slide introduces technical terms, include a side panel with only those terms and ultra-short definitions (prefer lesson glossary wording).
 - Avoid turning every teaching point into a bullet slide.
 - Prefer diagrams, comparisons, annotated examples, checklists, and before/after artifacts.
@@ -278,7 +278,7 @@ This section describes how a later agent should translate the curriculum into le
 - Do not imply that memory, RAG, MCP, embeddings, or knowledge graphs guarantee correctness.
 - Keep branding and content examples deliberately shallow; they are bridges to the next course.
 - Make human approval visually explicit wherever an external or consequential action appears.
-- Preserve placeholders exactly as written in the curriculum HTML (skill name) until the production team supplies a final name—do not invent a name to fill a slide.
+- Preserve placeholders exactly as written in the curriculum HTML (skill name) until the production team supplies a final name. Do not invent a name to fill a slide.
 
 ## Suggested slide count
 
@@ -309,10 +309,10 @@ For every slide deck, retain:
 ## Tone
 
 - Calm, practical, and non-alarmist.
-- Respect the learner’s business judgment.
+- Respect the learner's business judgment.
 - Avoid anthropomorphic claims and exaggerated promises.
 - Define jargon immediately, then return to plain language.
-- Use “the assistant may” or “the product can” instead of implying universal behavior.
+- Use "the assistant may" or "the product can" instead of implying universal behavior.
 
 ## Recording discipline
 
@@ -359,10 +359,10 @@ Use this list to ensure the course corrects the misunderstandings most likely to
 - More autonomy is always more useful.
 - Prompting is mainly clever wording.
 - A confident or well-written answer is a verified answer.
-- The agent’s summary is an objective record of what happened.
+- The agent's summary is an objective record of what happened.
 - A locally-running model and a cloud API call carry the same data-exposure risk.
 - Anything shared with an AI product stays only inside that one conversation.
-- Installing a skill is the same as installing harmless documentation—it deserves no more scrutiny than reading a paragraph.
+- Installing a skill is the same as installing harmless documentation. It deserves no more scrutiny than reading a paragraph.
 - A local, single-user memory or delegation setup will keep working unchanged once a second person needs it too.
 
 # Pre-production decisions
@@ -413,4 +413,4 @@ Pilot the course with a small group from the intended audience before final reco
 
 # Design source
 
-This guide incorporates the course creator’s Notion page, [How to design a course](https://app.notion.com/p/ecovirtual/How-to-design-a-course-25ab9164a01f8087a473e53dc68de3a6), reviewed on 2026-07-20. Its key requirements are reflected here: validate the need and desired performance change, define a small set of course outcomes plus lesson-level objectives, progress from simple to complex, manage cognitive load, activate prior knowledge, combine examples with practice and reflection, use frequent retrieval and timely feedback, support accessibility and inclusion, pilot with a small group, measure the outcomes, and iterate regularly.
+This guide incorporates the course creator's Notion page, [How to design a course](https://app.notion.com/p/ecovirtual/How-to-design-a-course-25ab9164a01f8087a473e53dc68de3a6), reviewed on 2026-07-20. Its key requirements are reflected here: validate the need and desired performance change, define a small set of course outcomes plus lesson-level objectives, progress from simple to complex, manage cognitive load, activate prior knowledge, combine examples with practice and reflection, use frequent retrieval and timely feedback, support accessibility and inclusion, pilot with a small group, measure the outcomes, and iterate regularly.
