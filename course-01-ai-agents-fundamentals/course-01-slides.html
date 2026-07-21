@@ -729,7 +729,8 @@
       const PIXEL_ART_BY_TITLE = {
         "AI Agents Fundamentals": "assets/pixel-art/00-cover-hero.png",
         "Course journey": "assets/pixel-art/01-course-journey.png",
-        "You remain accountable":
+        "Who this is for": "assets/pixel-art/00-cover-hero.png",
+        "What you'll be able to do":
           "assets/pixel-art/02-you-remain-accountable.png",
         "Safe practice task": "assets/pixel-art/03-safe-practice-task.png",
         "Claude Code minimum stack":
@@ -808,7 +809,7 @@
           kicker: "Course 01",
           title: "AI Agents Fundamentals",
           subtitle:
-            "Set up an AI assistant, assign real work, and supervise the result",
+            "Set up an AI agent, assign real work, and supervise the result",
           meta: ["60 minutes", "6 modules · 17 lessons", "Beginner"],
           image: {
             file: "00-cover-hero.png",
@@ -821,8 +822,36 @@
           type: "lesson",
           lesson: 1,
           module: "Module 01 · Orientation and setup",
-          title: "Your first supervised AI workflow (in one hour)",
-          runtime: "2 min",
+          title: "Welcome — your first workflow in one hour",
+          runtime: "3 min",
+        },
+        {
+          type: "content",
+          lesson: 1,
+          module: "Module 01 · Orientation and setup",
+          title: "Who this is for",
+          bullets: [
+            "Entrepreneurs, creators, coaches, and small teams—no coding required",
+            "You've tried chat AI; here we turn scattered tries into one clear workflow",
+            "Step by step—you'll review results before anything goes live",
+          ],
+          image: {
+            file: "00-cover-hero.png",
+            desc: "16-bit pixel art: human and robot at a desk with supervised workflow icons—collaborative, welcoming setup.",
+          },
+          sidebar: [
+            {
+              term: "AI agent",
+              def: "A goal-directed system that can choose and perform multiple steps—within boundaries you set.",
+            },
+          ],
+          notes:
+            "Warm open (~20s): name the audience and the one-hour promise. No setup or jargon yet.",
+          tasksLabel: "Watch for",
+          tasks: [
+            "Whether this sounds like your situation",
+            "The friendly, step-by-step pace",
+          ],
         },
         {
           type: "content",
@@ -830,8 +859,9 @@
           module: "Module 01 · Orientation and setup",
           title: "Course journey",
           bullets: [
-            "Claude Code + practice folder → brief → draft → review → approve",
-            "Same loop on one task through Lesson 16; ALIVE and skills layer in later",
+            "6 modules · 17 lessons · about 60 minutes",
+            "One loop you'll reuse: brief → draft → review → revise → approve",
+            "Same small practice task from start to finish—ALIVE and skills layer in later",
           ],
           image: {
             file: "l01-course-journey.png",
@@ -839,12 +869,12 @@
           },
           sidebar: [
             {
-              term: "Supervised workflow",
-              def: "AI-assisted steps where a human sets boundaries and approves results.",
+              term: "Practice task",
+              def: "One low-stakes example you keep through the course so every lesson connects.",
             },
           ],
           notes:
-            "Screen-share (~30s): pan the finished setup—practice folder, starter brief, labeled draft, your approve step. Learners install Claude Code in Lesson 2.",
+            "Screen-share (~30s): pan the finished setup—practice folder, starter brief, labeled draft, your review step. You install Claude Code in Lesson 2.",
           tasksLabel: "Watch for",
           tasks: [
             "The five loop stages on screen",
@@ -855,10 +885,12 @@
           type: "content",
           lesson: 1,
           module: "Module 01 · Orientation and setup",
-          title: "You remain accountable",
+          title: "What you'll be able to do",
           bullets: [
-            "You attach the brief in Claude Code; the assistant drafts",
-            "You inspect the output and stamp approve—polish ≠ ready to use",
+            "Set up Claude Code on your Mac and work with files in a practice folder",
+            "Brief your AI agent, review its draft, and ask for improvements",
+            "Know what to share—and what to keep private",
+            "Finish one complete supervised workflow on your own task",
           ],
           image: {
             file: "l01-you-remain-accountable.png",
@@ -866,15 +898,16 @@
           },
           sidebar: [
             {
-              term: "AI assistant",
-              def: "Model + harness + instructions + context—briefed and supervised by you.",
+              term: "Supervised workflow",
+              def: "AI helps with steps; you set the goal and check the result.",
             },
           ],
           notes:
-            "Screen-share: narrate who briefs vs who approves; point at the APPROVE stamp on the visual.",
+            "Outcomes preview (~20s): aspirational, not a test. Mention polish ≠ ready to use only if you need one quick misconception hook.",
           tasksLabel: "Watch for",
           tasks: [
-            "Who writes the brief vs who holds the approve stamp",
+            "The four skills you'll build by the end",
+            "That reviewing the draft is part of the workflow—not extra homework",
           ],
         },
         {
@@ -883,8 +916,9 @@
           module: "Module 01 · Orientation and setup",
           title: "Safe practice task",
           bullets: [
-            "One public example—e.g. three article angles from a public brief",
-            "Low consequence · reversible · non-sensitive · same task all 17 lessons",
+            "Pick one small, public example—e.g. three article angles from a public brief",
+            "Low stakes · easy to undo · nothing confidential",
+            "Same task for all 17 lessons—every concept connects to one outcome",
           ],
           image: {
             file: "l01-safe-practice-task.png",
@@ -900,7 +934,7 @@
             "Screen-share: open the practice-task worksheet (~30s). Fill one live example; cross out a confidential alternative.",
           tasks: [
             "Pick your one-sentence practice task for the whole course",
-            "Confirm: low consequence, reversible, non-sensitive",
+            "Confirm: low stakes, easy to undo, nothing confidential",
             "Write what you will NOT share (privacy boundary)",
           ],
         },
@@ -1024,7 +1058,7 @@
             },
             {
               term: "LLM",
-              def: "Large language model—the text-prediction engine inside many assistants.",
+              def: "Large language model—the text-prediction engine inside many AI agents and chat products.",
             },
           ],
         },
@@ -1679,7 +1713,7 @@
             },
             {
               term: "MCP server",
-              def: "Service that exposes tools or resources to compatible assistants via MCP.",
+              def: "Service that exposes tools or resources to compatible agents via MCP.",
             },
           ],
         },
@@ -1690,7 +1724,7 @@
           module: "Module 04 · Data, tools, skills, and safety",
           title: "Discover → request → harness runs",
           bullets: [
-            "Assistant sees available MCP tools",
+            "Agent sees available MCP tools",
             "Model requests; harness executes if allowed",
           ],
           image: {
@@ -1914,11 +1948,11 @@
             desc: "16-bit pixel art: the vague bubble transforms into a labeled checklist sheet with boxes for outcome, sources, standards, deliverable, and review.",
           },
           notes:
-            'Transform "help with my content" into a CLEAR assignment on a worksheet; leave one gap and ask the assistant to surface it.',
+            'Transform "help with my content" into a CLEAR assignment on a worksheet; leave one gap and ask the agent to surface it.',
           tasks: [
             'Transform "help with my content" into a CLEAR assignment',
             "Include outcome, sources, standards, deliverable, and review",
-            "Leave one intentional gap and ask the assistant to surface it",
+            "Leave one intentional gap and ask the agent to surface it",
           ],
         },
 
@@ -2078,7 +2112,7 @@
           module: "Module 06 · Your first supervised workflow",
           title: "What you have now",
           bullets: [
-            "One assistant, one local folder, one supervised loop",
+            "One agent, one local folder, one supervised loop",
             "Complete—for one person",
           ],
           image: {
