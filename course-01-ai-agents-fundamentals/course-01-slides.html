@@ -747,11 +747,23 @@
           "assets/pixel-art/09-same-model-different-app.png",
         "Claude Code minimum stack":
           "assets/pixel-art/04-minimum-beginner-stack.png",
+        "Your setup path":
+          "assets/pixel-art/04-minimum-beginner-stack.png",
         "Project folders or Personal OS":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
+        "1 · Choose your workspace":
+          "assets/pixel-art/44-memory-folder-not-black-box.png",
         "Access ≠ authority": "assets/pixel-art/05-access-not-authority.png",
+        "Caution · Access ≠ authority":
+          "assets/pixel-art/05-access-not-authority.png",
+        "2 · Get Claude account access":
+          "assets/pixel-art/00-cover-hero.png",
+        "3 · Open Terminal": "assets/pixel-art/00-cover-hero.png",
+        "4 · Install Claude Code": "assets/pixel-art/00-cover-hero.png",
         "Install and open": "assets/pixel-art/00-cover-hero.png",
+        "5 · Open in your folder": "assets/pixel-art/00-cover-hero.png",
         "Confirm it works": "assets/pixel-art/06-acceptance-test.png",
+        "6 · Confirm it works": "assets/pixel-art/06-acceptance-test.png",
         "Install, then acceptance test":
           "assets/pixel-art/06-acceptance-test.png",
         "Acceptance test": "assets/pixel-art/06-acceptance-test.png",
@@ -1100,21 +1112,21 @@
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
           title: "Set up Claude Code on your Mac",
-          runtime: "5 min",
+          runtime: "5–7 min",
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "Claude Code minimum stack",
+          title: "Your setup path",
           bullets: [
-            "Claude Code · one workspace folder · one starter brief",
-            "Memory layer and skills come later—we standardize here",
+            "Minimum: Claude Code · one folder · one starter brief",
+            "1 Workspace → 2 Account → 3 Terminal → 4 Install → 5 Open → 6 Confirm",
           ],
           urls: [
             {
-              href: "https://docs.anthropic.com/en/docs/claude-code",
-              label: "docs.anthropic.com/en/docs/claude-code",
+              href: "https://code.claude.com/docs/en/quickstart",
+              label: "code.claude.com/docs/en/quickstart",
             },
           ],
           image: {
@@ -1132,17 +1144,23 @@
             },
           ],
           notes:
-            "Keep the stack tiny. Mention other harnesses only if asked—standardize on Claude Code for the course path.",
+            "Show the whole path before diving in. Memory layer and skills come later—standardize on Claude Code.",
+          tasksLabel: "Watch for",
+          tasks: ["The six steps", "What stays out of the minimum stack"],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "Project folders or Personal OS",
+          title: "1 · Choose your workspace",
           bullets: [
-            "New folder per project—or one Personal OS directory for general assistance",
-            "Keeps context tidy for a persistent local memory layer later",
+            "New folder per project—or one Personal OS directory",
+            "Create it now; write down the path",
           ],
+          terminal: {
+            label: "Optional (Terminal)",
+            lines: ["mkdir ~/Personal-OS"],
+          },
           image: {
             file: "44-memory-folder-not-black-box.png",
             desc: "16-bit pixel art: two tidy folder trees—project folders vs one Personal OS home—versus a messy dump pile crossed out.",
@@ -1154,20 +1172,20 @@
             },
           ],
           notes:
-            "Practical hygiene, not compliance theater. Foreshadow ALIVE (Lesson 8) as a persistent local memory layer without teaching it now.",
+            "Practical hygiene, not compliance theater. Foreshadow ALIVE (Lesson 8) without teaching it now.",
           tasks: [
             "Choose: new project folder or one Personal OS directory",
-            "Write the folder path you will use",
+            "Create the folder and write the path",
           ],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "Access ≠ authority",
+          title: "Caution · Access ≠ authority",
           bullets: [
             "File access is not permission to change or publish",
-            "You choose what enters the chat—and what stays out",
+            "You choose what enters the chat—keep this session non-sensitive",
           ],
           image: {
             file: "05-access-not-authority.png",
@@ -1179,51 +1197,154 @@
               def: "Ability to see files is not permission to change or publish.",
             },
           ],
+          notes:
+            "Caution only—not a setup step. Cloud API: context you attach often leaves your machine.",
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "Install and open",
+          title: "2 · Get Claude account access",
           bullets: [
-            "Install Claude Code → open Terminal in your chosen folder",
-            "Start Claude Code there",
+            "Pro, Max, Team, Enterprise—or Claude Console",
+            "Free Claude.ai chat alone is not enough for Claude Code",
           ],
           urls: [
             {
-              href: "https://docs.anthropic.com/en/docs/claude-code",
-              label: "docs.anthropic.com/en/docs/claude-code",
+              href: "https://claude.com/pricing",
+              label: "claude.com/pricing",
+            },
+          ],
+          image: {
+            file: "00-cover-hero.png",
+            desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
+          },
+          sidebar: [
+            {
+              term: "Claude account",
+              def: "Paid plan or Console login required to use Claude Code.",
+            },
+          ],
+          notes:
+            "Screen-share pricing only if learners need signup. Skip if already subscribed.",
+          tasks: [
+            "Confirm you have Pro/Max/Team/Enterprise or Console access",
+            "Open claude.com/pricing if you still need an account",
+          ],
+        },
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
+          title: "3 · Open Terminal",
+          bullets: [
+            "Built into macOS—Spotlight → Terminal",
+            "This is where install and Claude Code run",
+          ],
+          urls: [
+            {
+              href: "https://support.apple.com/guide/terminal/welcome/mac",
+              label: "support.apple.com — Terminal User Guide",
+            },
+            {
+              href: "https://code.claude.com/docs/en/terminal-guide",
+              label: "code.claude.com/docs/en/terminal-guide",
+            },
+          ],
+          image: {
+            file: "00-cover-hero.png",
+            desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist.",
+          },
+          sidebar: [
+            {
+              term: "Terminal",
+              def: "macOS app where you type commands.",
+            },
+          ],
+          notes:
+            "Open Terminal live. Point beginners to the Claude terminal guide if needed.",
+          tasks: ["Open Terminal via Spotlight"],
+        },
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
+          title: "4 · Install Claude Code",
+          bullets: [
+            "Native installer (recommended)—no Node.js",
+            "Paste the command, press Return, wait for it to finish",
+          ],
+          urls: [
+            {
+              href: "https://code.claude.com/docs/en/install",
+              label: "code.claude.com/docs/en/install",
             },
           ],
           terminal: {
             label: "Install (macOS)",
-            lines: [
-              "curl -fsSL https://claude.ai/install.sh | bash",
-              "cd your-workspace-folder",
-              "claude",
-            ],
+            lines: ["curl -fsSL https://claude.ai/install.sh | bash"],
+          },
+          image: {
+            file: "00-cover-hero.png",
+            desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
+          },
+          sidebar: [
+            {
+              term: "Native installer",
+              def: "Official install path; auto-updates in the background.",
+            },
+          ],
+          notes:
+            "Screen-share the install (or skip if already installed). Restart Terminal if `claude` is not found.",
+          tasks: [
+            "Run the install command",
+            "Optional check: claude --version",
+          ],
+        },
+        {
+          type: "content",
+          lesson: 3,
+          module: "Module 02 · Setup and autonomy",
+          title: "5 · Open in your folder",
+          bullets: [
+            "cd into your workspace, then start Claude Code",
+            "Complete browser sign-in on first run",
+          ],
+          urls: [
+            {
+              href: "https://code.claude.com/docs/en/quickstart",
+              label: "code.claude.com/docs/en/quickstart",
+            },
+          ],
+          terminal: {
+            label: "Open in your workspace",
+            lines: ["cd your-workspace-folder", "claude"],
           },
           image: {
             file: "00-cover-hero.png",
             desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
           },
           notes:
-            "Screen-share the install (or open if already installed). Narrate the folder choice.",
+            "Narrate the folder path. Walk through browser login once.",
           tasks: [
-            "Install or open Claude Code in your chosen folder",
-            "Confirm the Terminal path matches your workspace",
+            "cd to the folder from step 1",
+            "Run claude and finish sign-in if prompted",
           ],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "Confirm it works",
+          title: "6 · Confirm it works",
           bullets: [
             "Open it · try a simple prompt · confirm a reply",
             "Optional: summarize a harmless starter brief",
             "No business secrets in this first check",
           ],
+          terminal: {
+            label: "Example prompt",
+            lines: ["Reply with one sentence: setup works."],
+          },
           image: {
             file: "06-acceptance-test.png",
             desc: "16-bit pixel art: short path tiles—open → prompt → reply checkmark; no secret icons on the path.",

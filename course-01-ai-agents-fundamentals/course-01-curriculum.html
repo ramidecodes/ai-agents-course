@@ -1198,7 +1198,7 @@
               <td>2</td>
               <td><span class="mod-title">Setup and autonomy</span></td>
               <td class="hide-sm">2</td>
-              <td>9 min</td>
+              <td>10 min</td>
               <td class="hide-sm"><span class="mod-out">Claude Code working, and autonomy choice</span></td>
             </tr>
             <tr>
@@ -1602,7 +1602,7 @@
                 <span class="module-num">02</span>
                 <span class="module-copy">
                   <span class="module-title">Setup and autonomy</span>
-                  <span class="module-meta">2 lessons · 9 min</span>
+                  <span class="module-meta">2 lessons · 10 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -1618,23 +1618,26 @@
                       <span class="lesson-num">3</span>
                       <div>
                         <p class="lesson-title">Set up Claude Code on your Mac</p>
-                        <p class="lesson-desc">You know what a harness is—now install Claude Code, open it in a sensible workspace, and confirm a simple prompt works. Keep sensitive material out of this first session.</p>
+                        <p class="lesson-desc">You know what a harness is—now follow a numbered path: create a workspace, get account access, install Claude Code, open it in that folder, and confirm a simple prompt works. Keep sensitive material out of this first session.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 5 min</li>
+                          <li><strong>Runtime</strong> 5–7 min</li>
                           <li><strong>Output</strong> Working Claude Code session in a chosen workspace</li>
                           <li><strong>Standalone clip</strong> Partial—best after Lesson 2’s model/harness framing; install steps still work alone if you already want Claude Code on your Mac.</li>
                         </ul>
-                        <p class="lesson-why">Install has meaning after Lesson 2: learners know Claude Code is a harness wrapping a model, not “the AI” itself. Keep this lesson practical—minimum stack, folder hygiene, a light boundary note, install, and a plain verify—without QA jargon.</p>
+                        <p class="lesson-why">Install has meaning after Lesson 2: learners know Claude Code is a harness wrapping a model, not “the AI” itself. Keep this lesson a clear step-by-step path with links—minimum stack, folder choice, a light boundary caution, then install and verify—without QA jargon.</p>
 
                         <div class="lesson-block">
-                          <h4 class="lesson-subhead">Key talking points</h4>
+                          <h4 class="lesson-subhead">Learner setup path (follow in order)</h4>
                           <ul class="talking-points">
-                            <li><strong>Minimum stack:</strong> Claude Code (the harness) + one workspace folder + one harmless starter brief. Add-ons for a persistent local memory layer and reusable skills come later—skip them for now. We standardize on Claude Code so every learner follows the same path.</li>
-                            <li><strong>Workspace hygiene:</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory if you want a personal-assistant style setup. That habit will go better later when you add a persistent local memory layer (ALIVE in Lesson 8)—memory and project context stay where they belong.</li>
-                            <li><strong>Access ≠ authority / cloud API:</strong> File access is not permission to change or publish anything else. You choose what enters the chat. Context you attach often travels over a cloud API (Claude Code sends context to Anthropic’s servers unless you use a local model)—so keep this first session non-sensitive.</li>
-                            <li><strong>Install + open:</strong> Install Claude Code from Anthropic; open Terminal at your chosen folder and start Claude Code there.</li>
-                            <li><strong>Quick verify:</strong> Open it, try a simple prompt, confirm a reply comes back. Optional: attach the starter brief and ask for a short summary. No business secrets in this first check.</li>
-                            <li><strong>Close:</strong> You’re set up. Next we talk about agents and how much autonomy to grant—then later, memory across sessions with ALIVE.</li>
+                            <li><strong>Minimum stack:</strong> Claude Code (the harness) + one workspace folder + one harmless starter brief. Memory layer and skills come later—skip them for now. We standardize on Claude Code so every learner follows the same path.</li>
+                            <li><strong>1 · Choose &amp; create your workspace.</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory for personal-assistant style work. Create it in Finder, or in Terminal: <code>mkdir ~/Personal-OS</code> (or your project path). That habit helps later when you add a persistent local memory layer (ALIVE in Lesson 8).</li>
+                            <li><strong>Caution (not a step)—Access ≠ authority:</strong> File access is not permission to change or publish. You choose what enters the chat. Context you attach often travels over a cloud API (Claude Code sends context to Anthropic’s servers unless you use a local model)—keep this first session non-sensitive.</li>
+                            <li><strong>2 · Get Claude account access.</strong> Claude Code needs a paid Claude plan (Pro, Max, Team, or Enterprise) or a Claude Console account—not free Claude.ai chat alone. What it is: your login for the harness and cloud model. Open: <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">claude.com/pricing</a></li>
+                            <li><strong>3 · Open Terminal.</strong> Built into macOS—where you’ll run the install and start Claude Code. What it is: the app for typing commands. Open: Spotlight → “Terminal”, or <a href="https://support.apple.com/guide/terminal/welcome/mac" target="_blank" rel="noopener noreferrer">Apple Terminal User Guide</a> · New to terminals? <a href="https://code.claude.com/docs/en/terminal-guide" target="_blank" rel="noopener noreferrer">Claude terminal guide</a></li>
+                            <li><strong>4 · Install Claude Code.</strong> Official native installer (recommended). No Node.js for this path. What it is: the harness this course uses—terminal assistant with file access, tools, and permissions around a cloud model. Docs: <a href="https://code.claude.com/docs/en/install" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/install</a>. Command: <code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
+                            <li><strong>5 · Open Claude Code in your folder.</strong> In Terminal: <code>cd</code> into the workspace you created, then run <code>claude</code>. On first run, complete browser sign-in when prompted. Docs: <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/quickstart</a>. Commands: <code>cd your-workspace-folder</code> then <code>claude</code></li>
+                            <li><strong>6 · Confirm it works.</strong> Try a simple prompt and confirm a reply. Optional: attach the starter brief and ask for a short summary. No business secrets in this first check. Example: <code>Reply with one sentence: setup works.</code></li>
+                            <li><strong>Close:</strong> You’re set up. Next: agents and how much autonomy to grant—then later, memory across sessions with ALIVE.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -1656,10 +1659,10 @@
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Claude Code minimum stack</h5>
+                                  <h5 class="slide-title">Your setup path</h5>
                                   <ul class="slide-body">
-                                    <li>Claude Code · one workspace folder · one starter brief</li>
-                                    <li>Memory layer and skills come later—we standardize here</li>
+                                    <li>Minimum: Claude Code · one folder · one starter brief</li>
+                                    <li>1 Workspace → 2 Account → 3 Terminal → 4 Install → 5 Open → 6 Confirm</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1675,10 +1678,10 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Project folders or Personal OS</h5>
+                                  <h5 class="slide-title">1 · Choose your workspace</h5>
                                   <ul class="slide-body">
-                                    <li>New folder per project—or one Personal OS directory for general assistance</li>
-                                    <li>Keeps context tidy for a persistent local memory layer later</li>
+                                    <li>New folder per project—or one Personal OS directory</li>
+                                    <li>Create it now; write down the path</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1693,10 +1696,10 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Access ≠ authority</h5>
+                                  <h5 class="slide-title">Caution · Access ≠ authority</h5>
                                   <ul class="slide-body">
                                     <li>File access is not permission to change or publish</li>
-                                    <li>You choose what enters the chat—and what stays out</li>
+                                    <li>You choose what enters the chat—keep this session non-sensitive</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1711,10 +1714,10 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Install and open</h5>
+                                  <h5 class="slide-title">2 · Get Claude account access</h5>
                                   <ul class="slide-body">
-                                    <li>Install Claude Code → open Terminal in your chosen folder</li>
-                                    <li>Start Claude Code there</li>
+                                    <li>Pro, Max, Team, Enterprise—or Claude Console</li>
+                                    <li>Free Claude.ai chat alone is not enough for Claude Code</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1723,7 +1726,43 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 5</span>
-                                  <h5 class="slide-title">Confirm it works</h5>
+                                  <h5 class="slide-title">3 · Open Terminal</h5>
+                                  <ul class="slide-body">
+                                    <li>Built into macOS—Spotlight → Terminal</li>
+                                    <li>This is where install and Claude Code run</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist. (Reuse: <code>00-cover-hero.png</code>.)</p>
+                                  </div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 6</span>
+                                  <h5 class="slide-title">4 · Install Claude Code</h5>
+                                  <ul class="slide-body">
+                                    <li>Native installer (recommended)—no Node.js</li>
+                                    <li><code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark. (Reuse: <code>00-cover-hero.png</code>.)</p>
+                                  </div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 7</span>
+                                  <h5 class="slide-title">5 · Open in your folder</h5>
+                                  <ul class="slide-body">
+                                    <li><code>cd your-workspace-folder</code> then <code>claude</code></li>
+                                    <li>Complete browser sign-in on first run</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark. (Reuse: <code>00-cover-hero.png</code>.)</p>
+                                  </div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 8</span>
+                                  <h5 class="slide-title">6 · Confirm it works</h5>
                                   <ul class="slide-body">
                                     <li>Open it · try a simple prompt · confirm a reply</li>
                                     <li>Optional: summarize a harmless starter brief</li>
@@ -1735,7 +1774,7 @@
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> After the stack and folder slides, install or open Claude Code in the chosen folder. Try a simple prompt; narrate what you refuse to share.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Walk steps 1→6 in order. After the caution slide, open pricing if needed, then Terminal → install → <code>cd</code> + <code>claude</code> → simple prompt. Narrate what you refuse to share.</p>
                             </div>
                           </details>
                           <details>
@@ -1753,6 +1792,10 @@
                                 <div>
                                   <dt>Personal OS</dt>
                                   <dd>One general workspace directory for personal-assistant style work—an alternative to a new folder per project.</dd>
+                                </div>
+                                <div>
+                                  <dt>Terminal</dt>
+                                  <dd>The macOS app where you type commands to install and run Claude Code.</dd>
                                 </div>
                                 <div>
                                   <dt>Workspace</dt>

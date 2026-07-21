@@ -181,7 +181,7 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 - Teach concepts and architecture in provider-neutral language where possible.
 - Demonstrate **Claude Code** as the primary assistant throughout the core course.
 - **Lesson 2 sequence (required, theory only—no install):** what a model does (next-token / text generation) → named model families (concrete, dated “as of recording”) → harness / app / assistant vs model; Claude Code = the harness we’ll use → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
-- **Lesson 3 sequence (required):** minimum stack in plain language → workspace hygiene (new folder per project, or one general Personal OS directory) → access ≠ authority / cloud API caution → install + open in the practice folder → quick verify (open it, try a simple prompt, confirm it works) → close toward agents / ALIVE later. Do not open with install commands before the stack and folder guidance.
+- **Lesson 3 sequence (required)—numbered learner path:** (0) minimum stack in plain language (Claude Code + one workspace folder + one harmless starter brief) → (1) choose & create workspace (new folder per project, or one Personal OS directory) → **caution (not a step):** access ≠ authority / cloud API → (2) Claude account access if needed → (3) open Terminal → (4) install Claude Code → (5) open Claude Code in that folder (sign in when prompted) → (6) confirm it works with a simple prompt → close toward agents / ALIVE later. Do not open with install commands before the stack and folder guidance. Official links: [claude.com/pricing](https://claude.com/pricing) · [Terminal (macOS)](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) · [Install Claude Code](https://code.claude.com/docs/en/install) · [Quickstart](https://code.claude.com/docs/en/quickstart).
 - Use **ALIVE** by name for the hands-on local memory lesson (Lesson 8)—a persistent local memory layer on disk. Lesson 3’s folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
 - When naming tools or brands, say what they *are* (the job they do)—harness, local files, memory layer, cloud API, assistant UI—not random name-drops.
 - Provide a separate translation sheet only where product differences would block learners on other assistants.
@@ -197,6 +197,23 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 | Workspace | Human-readable learner-owned files | New folder per project, or one general Personal OS directory for a personal-assistant style setup |
 | Editing | Direct inspection and correction | Built-in editor or any familiar text editor |
 | Course assets | Brief, worksheet, and checklists | Downloadable Markdown or PDF files |
+
+## Lesson 3 setup path (step-by-step)
+
+Teach and demo in this order. Every installable/openable tool gets a one-line role, an official URL, and the exact action already used in the slides.
+
+| Step | What to do | What this is | Link / command |
+| ---- | ---------- | ------------ | -------------- |
+| — | Know the minimum stack | Claude Code (harness) + one workspace folder + one harmless starter brief. Skip memory layer and skills for now. | [Claude Code docs](https://code.claude.com/docs/en/quickstart) |
+| 1 | Choose & create your workspace | A new folder per project, **or** one general Personal OS directory for personal-assistant style work. | Create in Finder or: `mkdir ~/Personal-OS` (or your project path) |
+| ⚠ | Access ≠ authority (caution) | File access is not permission to change or publish. Context you attach often travels over a cloud API. | Keep this first session non-sensitive |
+| 2 | Get Claude account access | Paid Claude plan (Pro, Max, Team, or Enterprise) or Claude Console—required to sign in to Claude Code. Free Claude.ai chat alone is not enough. | [claude.com/pricing](https://claude.com/pricing) |
+| 3 | Open Terminal | macOS app where you type commands; Claude Code runs here. | [Apple Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) |
+| 4 | Install Claude Code | Native installer (recommended). No Node.js required for this path. | [Install docs](https://code.claude.com/docs/en/install) · `curl -fsSL https://claude.ai/install.sh \| bash` |
+| 5 | Open Claude Code in your folder | Start the harness in the workspace you chose; complete browser sign-in on first run. | [Quickstart](https://code.claude.com/docs/en/quickstart) · `cd your-workspace-folder` then `claude` |
+| 6 | Confirm it works | Open it, try a simple prompt, confirm a reply. Optional: summarize a harmless starter brief. | Example prompt: `Reply with one sentence: setup works.` |
+
+**Intentionally not in Lesson 3:** Node.js/npm (native installer supersedes that path); Homebrew (optional alternative only); Python / ALIVE / skills (Lesson 8+); Desktop app (course path is Terminal CLI).
 
 ## Setup quick check
 

@@ -1,7 +1,7 @@
 # Local and portable memory alternatives
 
 **Audience:** Course instructors and curious learners  
-**Course 1 default:** [ALIVE](https://alivecontext.com/) + [Claude Code](https://docs.anthropic.com/en/docs/claude-code)  
+**Course 1 default:** [ALIVE](https://alivecontext.com/) + [Claude Code](https://code.claude.com/docs/en/quickstart)  
 **Last reviewed:** July 2026
 
 This document compares ways to give an AI assistant **persistent context across sessions**—without treating any single product as the only answer. Course 1 teaches ALIVE inside Claude Code because that stack is local, inspectable, and matches the hands-on path. Everything below is optional reading if you use a different harness or want a more portable pattern.
@@ -139,7 +139,7 @@ Varies by filename: `AGENTS.md` is intentionally cross-tool; `CLAUDE.md` is Clau
 
 **Add ALIVE (or structured logs)** when you need session-to-session project state, decisions, and bundles—not just static rules.
 
-**Official links:** [agents.md](https://agents.md/) · [OpenAI Codex — AGENTS.md](https://developers.openai.com/codex/guides/agents-md) · [Claude Code memory docs](https://docs.anthropic.com/en/docs/claude-code/memory)
+**Official links:** [agents.md](https://agents.md/) · [OpenAI Codex — AGENTS.md](https://developers.openai.com/codex/guides/agents-md) · [Claude Code memory docs](https://code.claude.com/docs/en/memory)
 
 ---
 
@@ -343,7 +343,7 @@ Course 1 demonstrates **Claude Code**, but the **model vs harness** lesson appli
 
 | Harness | Notes |
 | ------- | ----- |
-| **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** | Course 1 default; ALIVE plugin; `CLAUDE.md` |
+| **[Claude Code](https://code.claude.com/docs/en/quickstart)** | Course 1 default; ALIVE plugin; `CLAUDE.md` |
 | **[Cursor](https://cursor.com/)** | IDE-integrated; rules and skills; MCP |
 | **[Windsurf](https://windsurf.com/)** | IDE agent; Cascade flows; MCP |
 | **[OpenCode](https://opencode.ai/)** | Open-source, model-agnostic terminal/IDE harness; `AGENTS.md`, MCP |
