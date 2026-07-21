@@ -1101,7 +1101,7 @@
       <p class="hero-sub reveal">Set up an AI assistant, assign real work, and supervise the result</p>
       <ul class="hero-meta reveal" aria-label="Course overview">
         <li>62 minutes</li>
-        <li>6 modules · 17 lessons</li>
+        <li>7 modules · 17 lessons</li>
         <li>Claude Code + ALIVE</li>
         <li>Beginner · no technical background required</li>
       </ul>
@@ -1115,7 +1115,7 @@
         <p class="section-label">Course promise</p>
         <h2 id="about-heading">A practical working model—not another product tour</h2>
         <p class="lede">
-          In about 62 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They learn how models and harnesses work, set up Claude Code on macOS, add local memory with ALIVE, understand what happens to their data along the way, learn a reliable method for assigning work, extend the assistant with a new skill, and complete one small supervised workflow.
+          In about 62 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They learn how models and harnesses work, set up Claude Code on macOS, understand context and memory, learn tools vs skills vs plugins, carefully install a skill, add local memory with ALIVE, understand what happens to their data, recognize MCP, learn a reliable method for assigning work, and complete one small supervised workflow.
         </p>
         <p class="lede">
           A concise, non-technical introduction for entrepreneurs and business users who have tried chat-based AI but still lack a dependable way to use it for real work. By the end: Claude Code as a working assistant, one workspace (project folder or Personal OS), ALIVE for memory across sessions, one repeatable way to delegate, one set of data-sharing and safety rules, and one completed supervised workflow—plus a clear view of exactly where a file-based, single-user setup like this one reaches its limit. Each lesson is scoped as a 2–6 minute standalone clip as well as part of the full course.
@@ -1175,7 +1175,7 @@
     <section id="glance" aria-labelledby="glance-heading">
       <div class="wrap reveal">
         <p class="section-label">At a glance</p>
-        <h2 id="glance-heading">Six modules, one complete single-user working loop</h2>
+        <h2 id="glance-heading">Seven modules, one complete single-user working loop</h2>
         <table class="glance">
           <thead>
             <tr>
@@ -1203,27 +1203,34 @@
             </tr>
             <tr>
               <td>3</td>
-              <td><span class="mod-title">Context, memory, and retrieval</span></td>
-              <td class="hide-sm">4</td>
-              <td>17 min</td>
-              <td class="hide-sm"><span class="mod-out">Context checklist, memory/RAG clarity, and ALIVE setup</span></td>
+              <td><span class="mod-title">Context, forgetting, and retrieval</span></td>
+              <td class="hide-sm">3</td>
+              <td>11 min</td>
+              <td class="hide-sm"><span class="mod-out">Context checklist, memory/RAG clarity</span></td>
             </tr>
             <tr>
               <td>4</td>
-              <td><span class="mod-title">Data, tools, skills, and safety</span></td>
-              <td class="hide-sm">5</td>
-              <td>14 min</td>
-              <td class="hide-sm"><span class="mod-out">Data-sharing judgment, tools/MCP/skills map, one installed skill, approval rule</span></td>
+              <td><span class="mod-title">Tools, skills, and approvals</span></td>
+              <td class="hide-sm">3</td>
+              <td>8 min</td>
+              <td class="hide-sm"><span class="mod-out">Tools/skills/plugins map, one installed skill, approval rule</span></td>
             </tr>
             <tr>
               <td>5</td>
+              <td><span class="mod-title">Local memory, data judgment, and MCP</span></td>
+              <td class="hide-sm">3</td>
+              <td>12 min</td>
+              <td class="hide-sm"><span class="mod-out">ALIVE setup, data-sharing judgment, MCP recognition</span></td>
+            </tr>
+            <tr>
+              <td>6</td>
               <td><span class="mod-title">Assign, brief, and review</span></td>
               <td class="hide-sm">2</td>
               <td>8 min</td>
               <td class="hide-sm"><span class="mod-out">Complete assignment, source pack, and reviewed output</span></td>
             </tr>
             <tr>
-              <td>6</td>
+              <td>7</td>
               <td><span class="mod-title">Your first supervised workflow</span></td>
               <td class="hide-sm">2</td>
               <td>5 min</td>
@@ -1256,7 +1263,7 @@
               <li>Preflight Claude Code, Python 3.10+, ALIVE, the workspace folder, links, commands, permissions, and the fresh-session check. Keep a prepared installed state or short capture available for network-dependent steps.</li>
               <li>Verify product commands, plan terms, and privacy settings against current official sources immediately before recording. State the date checked when showing policy or settings pages.</li>
               <li>Use one public, non-sensitive practice task throughout. Reset its files to a known baseline before each take.</li>
-              <li>Do not record Lesson 12 until <strong>[Skill Name TBD]</strong> has been replaced with a real, reviewed skill and the corresponding slide copy and notes have been updated.</li>
+              <li>Do not record Lesson 9 until <strong>[Skill Name TBD]</strong> has been replaced with a real, reviewed skill and the corresponding slide copy and notes have been updated.</li>
             </ul>
           </div>
           <div>
@@ -1630,14 +1637,14 @@
                           <h4 class="lesson-subhead">Learner setup path (follow in order)</h4>
                           <ul class="talking-points">
                             <li><strong>Minimum stack:</strong> Claude Code (the harness) + one workspace folder + one harmless starter brief. Memory layer and skills come later—skip them for now. We standardize on Claude Code so every learner follows the same path.</li>
-                            <li><strong>1 · Choose &amp; create your workspace.</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory for personal-assistant style work. Create it in Finder, or in Terminal: <code>mkdir ~/Personal-OS</code> (or your project path). That habit helps later when you add a persistent local memory layer (ALIVE in Lesson 8).</li>
+                            <li><strong>1 · Choose &amp; create your workspace.</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory for personal-assistant style work. Create it in Finder, or in Terminal: <code>mkdir ~/Personal-OS</code> (or your project path). That habit helps later when you add a persistent local memory layer (ALIVE in Lesson 11—after you know what plugins are).</li>
                             <li><strong>Caution (not a step)—Access ≠ authority:</strong> File access is not permission to change or publish. You choose what enters the chat. Context you attach often travels over a cloud API (Claude Code sends context to Anthropic’s servers unless you use a local model)—keep this first session non-sensitive.</li>
                             <li><strong>2 · Get Claude account access.</strong> Claude Code needs a paid Claude plan (Pro, Max, Team, or Enterprise) or a Claude Console account—not free Claude.ai chat alone. What it is: your login for the harness and cloud model. Open: <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">claude.com/pricing</a></li>
                             <li><strong>3 · Open Terminal.</strong> Built into macOS—where you’ll run the install and start Claude Code. What it is: the app for typing commands. Open: Spotlight → “Terminal”, or <a href="https://support.apple.com/guide/terminal/welcome/mac" target="_blank" rel="noopener noreferrer">Apple Terminal User Guide</a> · New to terminals? <a href="https://code.claude.com/docs/en/terminal-guide" target="_blank" rel="noopener noreferrer">Claude terminal guide</a></li>
                             <li><strong>4 · Install Claude Code.</strong> Official native installer (recommended). No Node.js for this path. What it is: the harness this course uses—terminal assistant with file access, tools, and permissions around a cloud model. Docs: <a href="https://code.claude.com/docs/en/install" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/install</a>. Command: <code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
                             <li><strong>5 · Open Claude Code in your folder.</strong> In Terminal: <code>cd</code> into the workspace you created, then run <code>claude</code>. On first run, complete browser sign-in when prompted. Docs: <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/quickstart</a>. Commands: <code>cd your-workspace-folder</code> then <code>claude</code></li>
                             <li><strong>6 · Confirm it works.</strong> Try a simple prompt and confirm a reply. Optional: attach the starter brief and ask for a short summary. No business secrets in this first check. Example: <code>Reply with one sentence: setup works.</code></li>
-                            <li><strong>Close:</strong> You’re set up. Next: agents and how much autonomy to grant—then later, memory across sessions with ALIVE.</li>
+                            <li><strong>Close:</strong> You’re set up. Next: agents and how much autonomy to grant—then tools, skills, and plugins, including ALIVE for memory across sessions.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -1948,8 +1955,8 @@
               <button type="button" class="module-toggle" aria-expanded="false" id="mod-3-btn" aria-controls="mod-3-panel">
                 <span class="module-num">03</span>
                 <span class="module-copy">
-                  <span class="module-title">Context, memory, and retrieval</span>
-                  <span class="module-meta">4 lessons · 17 min</span>
+                  <span class="module-title">Context, forgetting, and retrieval</span>
+                  <span class="module-meta">3 lessons · 11 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -1957,11 +1964,11 @@
             <div class="module-panel" id="mod-3-panel" role="region" aria-labelledby="mod-3-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Give learners the vocabulary and judgment needed to provide, retrieve, and preserve information reliably.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> Assemble useful task context, explain why memory isn't automatic, understand RAG, and set up ALIVE for local memory across sessions.</p>
+                  <p class="module-desc">Understand what the model can see this turn, why it forgets by default, and what RAG does—before adding plugins or external connections.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> A context checklist, a clear view of why memory is not automatic, and a plain-language RAG explanation.</p>
                   <ul class="lessons">
 
-                    <li class="lesson">
+<li class="lesson">
                       <span class="lesson-num">5</span>
                       <div>
                         <p class="lesson-title">What your agent can actually see</p>
@@ -2089,8 +2096,7 @@
                         <p class="transition-note">Takeaway: context is a finite workbench. Next: why sessions start empty.</p>
                       </div>
                     </li>
-
-                    <li class="lesson">
+<li class="lesson">
                       <span class="lesson-num">6</span>
                       <div>
                         <p class="lesson-title">Why your agent forgets everything</p>
@@ -2100,7 +2106,7 @@
                           <li><strong>Output</strong> Classification of what persists today vs what must be supplied again</li>
                           <li><strong>Standalone clip</strong> Works alone—the most shared misconception in AI; no prior setup required.</li>
                         </ul>
-                        <p class="lesson-why">The single most consequential misunderstanding: people assume an assistant remembers them like a colleague. By default, it does not. The next two lessons show one common workaround (RAG) and one practical fix (ALIVE).</p>
+                        <p class="lesson-why">The single most consequential misunderstanding: people assume an assistant remembers them like a colleague. By default, it does not. The next lesson covers one common workaround (RAG). Later, after tools and plugins are clear, you will install ALIVE as a practical local-memory plugin.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
@@ -2205,8 +2211,7 @@
                         <p class="transition-note">Takeaway: sessions start empty. Next: how products fake memory with retrieval (RAG).</p>
                       </div>
                     </li>
-
-                    <li class="lesson">
+<li class="lesson">
                       <span class="lesson-num">7</span>
                       <div>
                         <p class="lesson-title">What RAG actually means</p>
@@ -2278,100 +2283,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: install ALIVE so context survives the next session.</p>
-                      </div>
-                    </li>
-
-                    <li class="lesson">
-                      <span class="lesson-num">8</span>
-                      <div>
-                        <p class="lesson-title">Set up local memory with ALIVE</p>
-                        <p class="lesson-desc">Install the ALIVE plugin for Claude Code, run the guided setup, save one decision, and prove it comes back in a fresh session—all as plain files on your machine.</p>
-                        <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 6 min</li>
-                          <li><strong>Output</strong> ALIVE installed, one saved context item, successful fresh-session retrieval</li>
-                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed—install → save → open a fresh session and confirm it remembers.</li>
-                        </ul>
-                        <p class="lesson-why">ALIVE is an open-source persistent local memory layer for Claude Code: project state lives in readable markdown and JSON on disk; the plugin loads at session start and checkpoints with <code>/alive:save</code>. Skip internal architecture—teach install, save, and a fresh-session confirm.</p>
-                        <p class="audience-note"><strong>Instructor reference:</strong> For other ways to keep lasting context (plain files, connection-layer memory tools, editor rules, and similar), see <code>docs/local-memory-alternatives.md</code>.</p>
-                        <div class="lesson-block">
-                          <h4 class="lesson-subhead">Key talking points</h4>
-                          <ul class="talking-points">
-                            <li>Prerequisites: Claude Code (Lesson 3) and Python 3.10+ on your Mac.</li>
-                            <li>Do you need to install Python? Only if it is missing. ALIVE (and Claude Code plugin/runtime pieces it relies on) needs Python to run.</li>
-                            <li>Quick check: run <code>python3 --version</code> in Terminal. If you see version 3.10 or newer, continue. If not found (or lower), install Python 3 from python.org, then reopen Terminal and re-check.</li>
-                            <li>Install from Terminal with <code>claude plugin install alive@alivecontext</code>. Exit and restart Claude Code, then run the guided setup.</li>
-                            <li>First-time setup: run <code>/alive:world</code>—guided walkthrough creates your local context folder. No ALIVE account; data stays on your machine.</li>
-                            <li>During work: context loads at session start. When done, run <code>/alive:save</code> to checkpoint.</li>
-                            <li>What you get: persistent context across sessions without re-explaining your project. Files are inspectable in any text editor.</li>
-                            <li>Confirm across sessions: save one practice decision, end session, open a new session, ask a question only answerable from what ALIVE saved.</li>
-                          </ul>
-                          <div class="misconceptions">
-                            <p>Correct these</p>
-                            <ul>
-                              <li>ALIVE sends your context to a cloud memory service—core context stays local in plain files.</li>
-                              <li>You must understand ALIVE's internal vocabulary to use it—the guided setup and save command are enough to start.</li>
-                            </ul>
-                          </div>
-                          <p class="rule-close">Install, save once, return in a fresh session. If context comes back, your memory layer works.</p>
-                        </div>
-                        <div class="lesson-details">
-                          <details>
-                            <summary>Slides</summary>
-                            <div class="details-body">
-                              <div class="slides">
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Install ALIVE in Claude Code</h5>
-                                  <ul class="slide-body">
-                                    <li>Install plugin → restart Claude Code → run setup</li>
-                                    <li>Python 3.10+ only if missing—check first, install only if needed</li>
-                                  </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: Claude Code terminal with install commands; plugin icon snapping into place.</p></div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Run /alive:world</h5>
-                                  <ul class="slide-body">
-                                    <li>Guided setup creates your local context folder</li>
-                                    <li>Plain markdown + JSON—you can read every file</li>
-                                  </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: new folder tree on disk; open text file with readable lines.</p></div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Save and confirm it returns</h5>
-                                  <ul class="slide-body">
-                                    <li>Work → checkpoint → new session → ask</li>
-                                    <li>Context returns = setup works</li>
-                                  </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: session 1 saves; session 2 receives project context from folder without re-attaching files.</p></div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Extended deck · Slide 4</span>
-                                  <h5 class="slide-title">What to expect</h5>
-                                  <ul class="slide-body">
-                                    <li>Background load at start; you checkpoint at end</li>
-                                    <li>You still review and correct saved context</li>
-                                  </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: auto load at start; manual save at end; human holds edit pencil.</p></div>
-                                </article>
-                              </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Preflight Python and the plugin before presenting. Show the direct install command, restart Claude Code, run <code>/alive:world</code>, save one decision, then prove retrieval in a fresh session. Show the underlying file in Finder; use a prepared installed state if the network is slow.</p>
-                            </div>
-                          </details>
-                          <details>
-                            <summary>Glossary</summary>
-                            <div class="details-body">
-                              <dl class="glossary">
-                                <div><dt>ALIVE</dt><dd>Open-source local context system for Claude Code; stores project state in plain files across sessions.</dd></div>
-                                <div><dt>Python prerequisite</dt><dd>ALIVE setup needs Python 3.10+ available on the Mac. Verify with <code>python3 --version</code>; install Python 3 only if missing.</dd></div>
-                                <div><dt>Checkpoint (<code>/alive:save</code>)</dt><dd>End-of-session save that routes work into local context files for the next session.</dd></div>
-                              </dl>
-                            </div>
-                          </details>
-                        </div>
-                        <p class="transition-note">Takeaway: your work can survive the session. Next: what leaves your machine when you use cloud AI.</p>
+                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: tools, skills, and plugins—the vocabulary you need before installing memory or connections.</p>
                       </div>
                     </li>
 
@@ -2387,8 +2299,8 @@
               <button type="button" class="module-toggle" aria-expanded="false" id="mod-4-btn" aria-controls="mod-4-panel">
                 <span class="module-num">04</span>
                 <span class="module-copy">
-                  <span class="module-title">Data, tools, skills, and safety</span>
-                  <span class="module-meta">5 lessons · 14 min</span>
+                  <span class="module-title">Tools, skills, and approvals</span>
+                  <span class="module-meta">3 lessons · 8 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -2396,138 +2308,15 @@
             <div class="module-panel" id="mod-4-panel" role="region" aria-labelledby="mod-4-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Explain what actually gets shared with an AI product, how agents gain capabilities, and how the learner keeps consequential actions under control.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> A deliberate data-sharing habit, tools/MCP/skills map, one newly installed skill, and a clear stop-and-ask rule.</p>
+                  <p class="module-desc">Learn the vocabulary of tools, skills, and plugins; install one skill carefully; then write a stop-and-ask approval rule.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> A capability map, one deliberately installed and reviewed skill, and a written stop-and-ask rule.</p>
                   <ul class="lessons">
 
-                    <li class="lesson">
-                      <span class="lesson-num">9</span>
+<li class="lesson">
+                      <span class="lesson-num">8</span>
                       <div>
-                        <p class="lesson-title">What gets shared when you use cloud AI</p>
-                        <p class="lesson-desc">Claude Code sends your context to Anthropic's servers to process it. Here's what that means—and what to withhold before you attach anything sensitive.</p>
-                        <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 3 min</li>
-                          <li><strong>Output</strong> A personal rule for what to share and what to withhold</li>
-                          <li><strong>Standalone clip</strong> Works alone—local vs cloud data exposure without needing the full course.</li>
-                        </ul>
-                        <p class="lesson-why">Every prior lesson assumed the learner would attach files and context freely. Before doing that with real business material, they need a plain-language mental model of where that information actually goes.</p>
-
-                        <div class="lesson-block">
-                          <h4 class="lesson-subhead">Key talking points</h4>
-                          <ul class="talking-points">
-                            <li>A locally-running model can perform inference on the learner's own machine, but connected tools, sync, or telemetry may still transmit data. Check the whole product path, not only the model.</li>
-                            <li>A cloud API model runs on a provider's servers; anything included in the context—files, pasted text, chat messages—travels to that provider to be processed, and may be logged, retained, or reviewed depending on the provider's policy and plan.</li>
-                            <li>Most everyday assistants (the ones this course uses) are cloud-based. That is not automatically unsafe, but it means the learner is trusting a specific provider's policies, not just "the AI."</li>
-                            <li>Provider trust is specific: read the current terms for the provider, plan, account type, and settings. Free versus paid alone does not determine privacy.</li>
-                            <li>Be cautious with: customer or client personal data, financial records, credentials and API keys, health information, anything under an NDA, and anything you are not personally authorized to share.</li>
-                            <li>Local models trade convenience and capability for that privacy—typically smaller, slower to set up, and less capable than the leading cloud models. This course does not require setting one up; the point is to recognize the trade-off exists.</li>
-                          </ul>
-                          <div class="misconceptions">
-                            <p>Correct these</p>
-                            <ul>
-                              <li>"It's just an AI" means the information is not really going anywhere.</li>
-                              <li>A locally-running model and a cloud API model carry identical privacy exposure.</li>
-                              <li>A reputable provider's brand name is a substitute for reading its data-use terms.</li>
-                              <li>Read-only or "just summarizing" access has no data-sharing implications.</li>
-                            </ul>
-                          </div>
-                          <p class="rule-close">Know whether you are talking to your own machine or someone else's server—then decide what you're willing to send. That's your rule.</p>
-                        </div>
-
-                        <div class="lesson-details">
-                          <details>
-                            <summary>Slides</summary>
-                            <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
-                              <div class="slides">
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Local vs cloud model</h5>
-                                  <ul class="slide-body">
-                                    <li>Local inference can stay on-device; connected tools may still send data</li>
-                                    <li>Cloud API: runs on a provider's servers—your context travels there</li>
-                                  </ul>
-                                  <div class="slide-visual">
-                                    <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art split screen: left—a small home computer glowing with a self-contained model chip, walls around it; right—a message travels down a road to a distant server tower labeled provider.</p>
-                                  </div>
-                                  <div class="slide-side-panel">
-                                    <span class="slide-meta-label">Side panel</span>
-                                    <ul>
-                                    <li><strong>Local model</strong> — Runs on the learner's own device.</li>
-                                    <li><strong>Cloud API</strong> — Runs on a provider's remote servers.</li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">Trust the policy, not the logo</h5>
-                                  <ul class="slide-body">
-                                    <li>Read the plan-level data-use terms</li>
-                                    <li>Plan, account type, settings, and provider policy all matter</li>
-                                  </ul>
-                                  <div class="slide-visual">
-                                    <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: a shiny logo badge next to a small magnifying glass hovering over fine-print scroll labeled "data use terms"—the logo alone doesn't answer the question.</p>
-                                  </div>
-                                  <div class="slide-side-panel">
-                                    <span class="slide-meta-label">Side panel</span>
-                                    <ul>
-                                    <li><strong>Provider trust</strong> — What a specific plan and policy allow, not a general brand feeling.</li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">What to hold back</h5>
-                                  <ul class="slide-body">
-                                    <li>Customer data · financials · credentials · health data · NDA material</li>
-                                    <li>When unsure, don't attach it</li>
-                                  </ul>
-                                  <div class="slide-visual">
-                                    <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: five labeled vault icons (customer data, financials, credentials, health, NDA) sealed shut on a shelf, clearly separate from the open practice-folder icon.</p>
-                                  </div>
-                                  <div class="slide-side-panel">
-                                    <span class="slide-meta-label">Side panel</span>
-                                    <ul>
-                                    <li><strong>Sensitive information</strong> — Categories to withhold by default from any AI product.</li>
-                                    </ul>
-                                  </div>
-                                </article>
-                              </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Pre-open the current official data-use policy and the relevant plan/settings page. State the date checked; do not generalize privacy from free vs paid alone or expose a real learner account.</p>
-                            </div>
-                          </details>
-                          <details>
-                            <summary>Glossary</summary>
-                            <div class="details-body">
-                              <dl class="glossary">
-                                <div>
-                                  <dt>Local model</dt>
-                                  <dd>A model that runs on the learner's own device; the learner's data does not need to leave the machine for that model to process it.</dd>
-                                </div>
-                                <div>
-                                  <dt>Cloud API</dt>
-                                  <dd>A model or service accessed over the internet and run on a provider's servers; anything sent as context travels to that provider.</dd>
-                                </div>
-                                <div>
-                                  <dt>Data-use policy</dt>
-                                  <dd>A provider's stated terms for how submitted content may be stored, reviewed, or used, including for model training.</dd>
-                                </div>
-                              </dl>
-                            </div>
-                          </details>
-                        </div>
-                        <p class="transition-note">Transition: With a clear data-sharing rule in place, we can look at what actually extends the assistant's capabilities—tools, skills, and how to get more of them.</p>
-                      </div>
-                    </li>
-
-                    <li class="lesson">
-                      <span class="lesson-num">10</span>
-                      <div>
-                        <p class="lesson-title">Tools vs skills: what agents can actually do</p>
-                        <p class="lesson-desc">Tools let the agent act; skills tell it how to act well. Here's how to map what your workflow needs—without granting more access than necessary.</p>
+                        <p class="lesson-title">Tools vs skills vs plugins</p>
+                        <p class="lesson-desc">Tools let the agent act; skills tell it how to act well; plugins and connections package extensions you can add. Here's the vocabulary—before you install anything.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> Capability map for the practice workflow</li>
@@ -2539,10 +2328,11 @@
                           <ul class="talking-points">
                             <li>Tools do—search, read, write, send, update, or otherwise act. The model requests a tool; the harness executes it (if permitted) and returns the result.</li>
                             <li>Skills guide—reusable instructions, procedures, examples, standards, and decision rules.</li>
-                            <li>Connectors link the assistant to an external source or service; APIs define how systems exchange requests.</li>
+                            <li>Plugins (and similar packages) extend the harness—they may bundle skills, hooks, agents, or connection servers. ALIVE (later) is a plugin; installing a skill often goes through the same plugin/marketplace flow.</li>
+                            <li>Connectors link the assistant to an external source or service; APIs define how systems exchange requests. MCP (later) is one standard for those connections—not memory.</li>
                             <li>A skill without a tool cannot perform the external action; a tool without a skill may be used inconsistently.</li>
                             <li>Connected ≠ selected ≠ correct. More tools increase action surface and risk.</li>
-                            <li>Build a capability map from the workflow; grant the minimum needed per step. (MCP—the standard connection layer—is the next lesson.)</li>
+                            <li>Build a capability map from the workflow; grant the minimum needed per step. Next you will install one skill carefully, then try ALIVE as a first meaningful plugin.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -2564,21 +2354,21 @@
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Tools · skills · connections</h5>
+                                  <h5 class="slide-title">Tools · skills · plugins</h5>
                                   <ul class="slide-body">
-                                    <li>Tools do · Skills guide · Connections link</li>
+                                    <li>Tools do · Skills guide · Plugins/connections extend</li>
                                     <li>A skill without a tool cannot perform the external action</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art three-part strip: wrench labeled Tools do; guidebook labeled Skills guide; plug labeled Connections link. Skill book alone cannot swing the wrench.</p>
+                                    <p>16-bit pixel art three-part strip: wrench labeled Tools do; guidebook labeled Skills guide; plug/package labeled Plugins extend. Skill book alone cannot swing the wrench.</p>
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
                                     <li><strong>Tool</strong> — Executable capability (search, read, write, send…).</li>
                                     <li><strong>Skill</strong> — Reusable guidance—not the same as a tool.</li>
-                                    <li><strong>API</strong> — Interface for systems to exchange requests and results.</li>
+                                    <li><strong>Plugin</strong> — Installable package that can add skills, hooks, or connections.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2615,8 +2405,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>MCP</strong> — Pattern for clients to discover and use tools/resources.</li>
                                     <li><strong>Least privilege</strong> — Grant the minimum capability needed per step.</li>
+                                    <li><strong>Connection</strong> — Link to an external source or service (MCP comes later).</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2637,102 +2427,22 @@
                                   <dd>Reusable guidance—procedures, examples, standards, and decision rules—for a type of work (not the same as a tool).</dd>
                                 </div>
                                 <div>
+                                  <dt>Plugin</dt>
+                                  <dd>An installable package that can add skills, hooks, agents, or connection servers to the harness.</dd>
+                                </div>
+                                <div>
                                   <dt>API</dt>
                                   <dd>A software interface through which systems exchange requests and results.</dd>
                                 </div>
-                                <div>
-                                  <dt>MCP</dt>
-                                  <dd>Model Context Protocol—a common pattern for compatible AI clients to discover and use resources, prompts, and tools.</dd>
-                                </div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: tools do, skills guide. Next: MCP—the standard way assistants connect to external tools.</p>
+                        <p class="transition-note">Takeaway: tools do, skills guide, plugins/connections extend. Next: install one skill carefully—review before you trust it.</p>
                       </div>
                     </li>
-
-                    <li class="lesson">
-                      <span class="lesson-num">11</span>
-                      <div>
-                        <p class="lesson-title">What is MCP?</p>
-                        <p class="lesson-desc">MCP (Model Context Protocol) is a standard way for AI assistants to discover and use external tools and data—like USB for agent connections. Here's what that means in plain language.</p>
-                        <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 3 min</li>
-                          <li><strong>Output</strong> One-sentence explanation of what MCP is and what it is not</li>
-                          <li><strong>Standalone clip</strong> Works alone—defines MCP without requiring Claude Code setup.</li>
-                        </ul>
-                        <p class="lesson-why">Learners will see MCP mentioned in product docs and plugin marketplaces. This lesson gives recognition-level clarity without turning into a protocol spec.</p>
-                        <div class="lesson-block">
-                          <h4 class="lesson-subhead">Key talking points</h4>
-                          <ul class="talking-points">
-                            <li>Problem MCP solves: every tool used to need a custom integration. MCP gives compatible assistants a common way to discover what's available and call it.</li>
-                            <li>Plain analogy: MCP is like a standard plug—one assistant can connect to many MCP servers (calendar, files, databases) if both sides speak MCP.</li>
-                            <li>What MCP provides: a catalog of tools and resources the assistant can request; the harness still runs them with your permissions.</li>
-                            <li>What MCP is not: memory, a replacement for APIs, or a guarantee the right tool will be chosen.</li>
-                            <li>In Claude Code: MCP servers appear as connectable capabilities—similar in spirit to plugins, but following the open MCP standard.</li>
-                          </ul>
-                          <div class="misconceptions">
-                            <p>Correct these</p>
-                            <ul>
-                              <li>MCP is the agent's memory.</li>
-                              <li>MCP replaces APIs entirely.</li>
-                              <li>Connecting an MCP server means the agent will always use it correctly.</li>
-                            </ul>
-                          </div>
-                          <p class="rule-close">MCP standardizes connections—it does not replace judgment, permissions, or review.</p>
-                        </div>
-                        <div class="lesson-details">
-                          <details>
-                            <summary>Slides</summary>
-                            <div class="details-body">
-                              <div class="slides">
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">A standard plug for tools</h5>
-                                  <ul class="slide-body">
-                                    <li>Before: custom integration per tool</li>
-                                    <li>With MCP: one protocol, many servers</li>
-                                  </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: assistant with one universal socket; multiple labeled servers (files, calendar, web) plug in via the same MCP port.</p></div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Extended deck · Slide 2</span>
-                                  <h5 class="slide-title">Discover → request → harness runs</h5>
-                                  <ul class="slide-body">
-                                    <li>Assistant sees available MCP tools</li>
-                                    <li>Model requests; harness executes if allowed</li>
-                                  </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: catalog shelf of MCP tools; request arrow to harness gate; result returns to model.</p></div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Extended deck · Slide 3</span>
-                                  <h5 class="slide-title">MCP is not memory</h5>
-                                  <ul class="slide-body">
-                                    <li>Connection layer, not storage</li>
-                                    <li>Still need permissions and review</li>
-                                  </ul>
-                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: MCP plug icon with X over a brain/memory vault—separate concepts.</p></div>
-                                </article>
-                              </div>
-                            </div>
-                          </details>
-                          <details>
-                            <summary>Glossary</summary>
-                            <div class="details-body">
-                              <dl class="glossary">
-                                <div><dt>MCP</dt><dd>Model Context Protocol—an open standard for AI clients to discover and use external tools and data sources.</dd></div>
-                                <div><dt>MCP server</dt><dd>A service that exposes tools or resources to compatible assistants via MCP.</dd></div>
-                              </dl>
-                            </div>
-                          </details>
-                        </div>
-                        <p class="transition-note">Takeaway: MCP is the standard connection layer. Next: install a skill in Claude Code.</p>
-                      </div>
-                    </li>
-
-                    <li class="lesson">
-                      <span class="lesson-num">12</span>
+<li class="lesson">
+                      <span class="lesson-num">9</span>
                       <div>
                         <p class="lesson-title">How to install a new skill</p>
                         <p class="lesson-desc">In Claude Code, browse and install a reusable skill package—then try it once on your practice task instead of rewriting the same instructions every time.</p>
@@ -2741,7 +2451,7 @@
                           <li><strong>Output</strong> One installed skill, tried once on the practice task</li>
                           <li><strong>Standalone clip</strong> Works alone after Claude Code is installed—discover, review, install, try once.</li>
                         </ul>
-                        <p class="lesson-why">Learners now know what a skill is. This lesson makes it concrete: skills are not something you always author yourself—many supported assistants let you discover and install one with a short command, the same way you'd add an app.</p>
+                        <p class="lesson-why">Learners just learned what a skill is. This lesson makes it concrete: skills are not something you always author yourself—many supported assistants let you discover and install one with a short command, the same way you'd add an app.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
@@ -2846,12 +2556,11 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: New capabilities—whether tools or skills—are only safe to use once boundaries are clear. Next, separate instructions from real enforcement.</p>
+                        <p class="transition-note">Transition: New capabilities—whether tools or skills—are only safe to use once boundaries are clear. Next: when to stop and ask for approval.</p>
                       </div>
                     </li>
-
-                    <li class="lesson">
-                      <span class="lesson-num">13</span>
+<li class="lesson">
+                      <span class="lesson-num">10</span>
                       <div>
                         <p class="lesson-title">When to stop and ask for approval</p>
                         <p class="lesson-desc">Instructions guide behavior; permissions enforce consequences. Write one stop-and-ask rule before your agent can publish, pay, or share anything that matters.</p>
@@ -2969,7 +2678,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Transition: We understand the system and its boundaries. Next—give it work in a form it can execute and we can evaluate.</p>
+                        <p class="transition-note">Transition: Boundaries are clear. Next: install ALIVE—your first meaningful plugin for local memory across sessions.</p>
                       </div>
                     </li>
 
@@ -2985,8 +2694,8 @@
               <button type="button" class="module-toggle" aria-expanded="false" id="mod-5-btn" aria-controls="mod-5-panel">
                 <span class="module-num">05</span>
                 <span class="module-copy">
-                  <span class="module-title">Assign, brief, and review</span>
-                  <span class="module-meta">2 lessons · 8 min</span>
+                  <span class="module-title">Local memory, data judgment, and MCP</span>
+                  <span class="module-meta">3 lessons · 12 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -2994,11 +2703,329 @@
             <div class="module-panel" id="mod-5-panel" role="region" aria-labelledby="mod-5-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
+                  <p class="module-desc">Add ALIVE as a first meaningful plugin for local memory, decide what not to share with cloud AI, then recognize MCP as the standard connection layer.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> ALIVE working across sessions, a personal data-sharing rule, and a one-sentence MCP explanation.</p>
+                  <ul class="lessons">
+
+<li class="lesson">
+                      <span class="lesson-num">11</span>
+                      <div>
+                        <p class="lesson-title">Set up local memory with ALIVE</p>
+                        <p class="lesson-desc">Install the ALIVE plugin for Claude Code, run the guided setup, save one decision, and prove it comes back in a fresh session—all as plain files on your machine.</p>
+                        <ul class="lesson-meta">
+                          <li><strong>Runtime</strong> 6 min</li>
+                          <li><strong>Output</strong> ALIVE installed, one saved context item, successful fresh-session retrieval</li>
+                          <li><strong>Standalone clip</strong> Works alone after Claude Code is installed—install → save → open a fresh session and confirm it remembers.</li>
+                        </ul>
+                        <p class="lesson-why">ALIVE is a Claude Code plugin—an open-source persistent local memory layer: project state lives in readable markdown and JSON on disk; the plugin loads at session start and checkpoints with <code>/alive:save</code>. Skip internal architecture—teach install, save, and a fresh-session confirm.</p>
+                        <p class="audience-note"><strong>Instructor reference:</strong> For other ways to keep lasting context (plain files, connection-layer memory tools, editor rules, and similar), see <code>docs/local-memory-alternatives.md</code>.</p>
+                        <div class="lesson-block">
+                          <h4 class="lesson-subhead">Key talking points</h4>
+                          <ul class="talking-points">
+                            <li>Prerequisites: Claude Code (Lesson 3) and Python 3.10+ on your Mac.</li>
+                            <li>Do you need to install Python? Only if it is missing. ALIVE (and Claude Code plugin/runtime pieces it relies on) needs Python to run.</li>
+                            <li>Quick check: run <code>python3 --version</code> in Terminal. If you see version 3.10 or newer, continue. If not found (or lower), install Python 3 from python.org, then reopen Terminal and re-check.</li>
+                            <li>Install from Terminal with <code>claude plugin install alive@alivecontext</code>. Exit and restart Claude Code, then run the guided setup.</li>
+                            <li>First-time setup: run <code>/alive:world</code>—guided walkthrough creates your local context folder. No ALIVE account; data stays on your machine.</li>
+                            <li>During work: context loads at session start. When done, run <code>/alive:save</code> to checkpoint.</li>
+                            <li>What you get: persistent context across sessions without re-explaining your project. Files are inspectable in any text editor.</li>
+                            <li>Confirm across sessions: save one practice decision, end session, open a new session, ask a question only answerable from what ALIVE saved.</li>
+                          </ul>
+                          <div class="misconceptions">
+                            <p>Correct these</p>
+                            <ul>
+                              <li>ALIVE sends your context to a cloud memory service—core context stays local in plain files.</li>
+                              <li>You must understand ALIVE's internal vocabulary to use it—the guided setup and save command are enough to start.</li>
+                            </ul>
+                          </div>
+                          <p class="rule-close">Install, save once, return in a fresh session. If context comes back, your memory layer works.</p>
+                        </div>
+                        <div class="lesson-details">
+                          <details>
+                            <summary>Slides</summary>
+                            <div class="details-body">
+                              <div class="slides">
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 1</span>
+                                  <h5 class="slide-title">Install ALIVE in Claude Code</h5>
+                                  <ul class="slide-body">
+                                    <li>Install plugin → restart Claude Code → run setup</li>
+                                    <li>Python 3.10+ only if missing—check first, install only if needed</li>
+                                  </ul>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: Claude Code terminal with install commands; plugin icon snapping into place.</p></div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 2</span>
+                                  <h5 class="slide-title">Run /alive:world</h5>
+                                  <ul class="slide-body">
+                                    <li>Guided setup creates your local context folder</li>
+                                    <li>Plain markdown + JSON—you can read every file</li>
+                                  </ul>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: new folder tree on disk; open text file with readable lines.</p></div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 3</span>
+                                  <h5 class="slide-title">Save and confirm it returns</h5>
+                                  <ul class="slide-body">
+                                    <li>Work → checkpoint → new session → ask</li>
+                                    <li>Context returns = setup works</li>
+                                  </ul>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: session 1 saves; session 2 receives project context from folder without re-attaching files.</p></div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Extended deck · Slide 4</span>
+                                  <h5 class="slide-title">What to expect</h5>
+                                  <ul class="slide-body">
+                                    <li>Background load at start; you checkpoint at end</li>
+                                    <li>You still review and correct saved context</li>
+                                  </ul>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: auto load at start; manual save at end; human holds edit pencil.</p></div>
+                                </article>
+                              </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Preflight Python and the plugin before presenting. Show the direct install command, restart Claude Code, run <code>/alive:world</code>, save one decision, then prove retrieval in a fresh session. Show the underlying file in Finder; use a prepared installed state if the network is slow.</p>
+                            </div>
+                          </details>
+                          <details>
+                            <summary>Glossary</summary>
+                            <div class="details-body">
+                              <dl class="glossary">
+                                <div><dt>ALIVE</dt><dd>Open-source local context system for Claude Code; stores project state in plain files across sessions.</dd></div>
+                                <div><dt>Python prerequisite</dt><dd>ALIVE setup needs Python 3.10+ available on the Mac. Verify with <code>python3 --version</code>; install Python 3 only if missing.</dd></div>
+                                <div><dt>Checkpoint (<code>/alive:save</code>)</dt><dd>End-of-session save that routes work into local context files for the next session.</dd></div>
+                              </dl>
+                            </div>
+                          </details>
+                        </div>
+                        <p class="transition-note">Takeaway: your work can survive the session via a local memory plugin. Next: what still leaves your machine when you use cloud AI.</p>
+                      </div>
+                    </li>
+<li class="lesson">
+                      <span class="lesson-num">12</span>
+                      <div>
+                        <p class="lesson-title">What gets shared when you use cloud AI</p>
+                        <p class="lesson-desc">Claude Code sends your context to Anthropic's servers to process it. Here's what that means—and what to withhold before you attach anything sensitive.</p>
+                        <ul class="lesson-meta">
+                          <li><strong>Runtime</strong> 3 min</li>
+                          <li><strong>Output</strong> A personal rule for what to share and what to withhold</li>
+                          <li><strong>Standalone clip</strong> Works alone—local vs cloud data exposure without needing the full course.</li>
+                        </ul>
+                        <p class="lesson-why">You now have local memory on disk—but Claude Code still uses a cloud API. Before connecting more external tools, get a plain-language mental model of where information actually goes.</p>
+
+                        <div class="lesson-block">
+                          <h4 class="lesson-subhead">Key talking points</h4>
+                          <ul class="talking-points">
+                            <li>A locally-running model can perform inference on the learner's own machine, but connected tools, sync, or telemetry may still transmit data. Check the whole product path, not only the model.</li>
+                            <li>A cloud API model runs on a provider's servers; anything included in the context—files, pasted text, chat messages—travels to that provider to be processed, and may be logged, retained, or reviewed depending on the provider's policy and plan.</li>
+                            <li>Most everyday assistants (the ones this course uses) are cloud-based. That is not automatically unsafe, but it means the learner is trusting a specific provider's policies, not just "the AI."</li>
+                            <li>Provider trust is specific: read the current terms for the provider, plan, account type, and settings. Free versus paid alone does not determine privacy.</li>
+                            <li>Be cautious with: customer or client personal data, financial records, credentials and API keys, health information, anything under an NDA, and anything you are not personally authorized to share.</li>
+                            <li>Local models trade convenience and capability for that privacy—typically smaller, slower to set up, and less capable than the leading cloud models. This course does not require setting one up; the point is to recognize the trade-off exists.</li>
+                          </ul>
+                          <div class="misconceptions">
+                            <p>Correct these</p>
+                            <ul>
+                              <li>"It's just an AI" means the information is not really going anywhere.</li>
+                              <li>A locally-running model and a cloud API model carry identical privacy exposure.</li>
+                              <li>A reputable provider's brand name is a substitute for reading its data-use terms.</li>
+                              <li>Read-only or "just summarizing" access has no data-sharing implications.</li>
+                            </ul>
+                          </div>
+                          <p class="rule-close">Know whether you are talking to your own machine or someone else's server—then decide what you're willing to send. That's your rule.</p>
+                        </div>
+
+                        <div class="lesson-details">
+                          <details>
+                            <summary>Slides</summary>
+                            <div class="details-body">
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
+                              <div class="slides">
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 1</span>
+                                  <h5 class="slide-title">Local vs cloud model</h5>
+                                  <ul class="slide-body">
+                                    <li>Local inference can stay on-device; connected tools may still send data</li>
+                                    <li>Cloud API: runs on a provider's servers—your context travels there</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art split screen: left—a small home computer glowing with a self-contained model chip, walls around it; right—a message travels down a road to a distant server tower labeled provider.</p>
+                                  </div>
+                                  <div class="slide-side-panel">
+                                    <span class="slide-meta-label">Side panel</span>
+                                    <ul>
+                                    <li><strong>Local model</strong> — Runs on the learner's own device.</li>
+                                    <li><strong>Cloud API</strong> — Runs on a provider's remote servers.</li>
+                                    </ul>
+                                  </div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 2</span>
+                                  <h5 class="slide-title">Trust the policy, not the logo</h5>
+                                  <ul class="slide-body">
+                                    <li>Read the plan-level data-use terms</li>
+                                    <li>Plan, account type, settings, and provider policy all matter</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: a shiny logo badge next to a small magnifying glass hovering over fine-print scroll labeled "data use terms"—the logo alone doesn't answer the question.</p>
+                                  </div>
+                                  <div class="slide-side-panel">
+                                    <span class="slide-meta-label">Side panel</span>
+                                    <ul>
+                                    <li><strong>Provider trust</strong> — What a specific plan and policy allow, not a general brand feeling.</li>
+                                    </ul>
+                                  </div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 3</span>
+                                  <h5 class="slide-title">What to hold back</h5>
+                                  <ul class="slide-body">
+                                    <li>Customer data · financials · credentials · health data · NDA material</li>
+                                    <li>When unsure, don't attach it</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: five labeled vault icons (customer data, financials, credentials, health, NDA) sealed shut on a shelf, clearly separate from the open practice-folder icon.</p>
+                                  </div>
+                                  <div class="slide-side-panel">
+                                    <span class="slide-meta-label">Side panel</span>
+                                    <ul>
+                                    <li><strong>Sensitive information</strong> — Categories to withhold by default from any AI product.</li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Pre-open the current official data-use policy and the relevant plan/settings page. State the date checked; do not generalize privacy from free vs paid alone or expose a real learner account.</p>
+                            </div>
+                          </details>
+                          <details>
+                            <summary>Glossary</summary>
+                            <div class="details-body">
+                              <dl class="glossary">
+                                <div>
+                                  <dt>Local model</dt>
+                                  <dd>A model that runs on the learner's own device; the learner's data does not need to leave the machine for that model to process it.</dd>
+                                </div>
+                                <div>
+                                  <dt>Cloud API</dt>
+                                  <dd>A model or service accessed over the internet and run on a provider's servers; anything sent as context travels to that provider.</dd>
+                                </div>
+                                <div>
+                                  <dt>Data-use policy</dt>
+                                  <dd>A provider's stated terms for how submitted content may be stored, reviewed, or used, including for model training.</dd>
+                                </div>
+                              </dl>
+                            </div>
+                          </details>
+                        </div>
+                        <p class="transition-note">Transition: With a clear data-sharing rule in place, recognize MCP—the standard way assistants connect to external tools and data.</p>
+                      </div>
+                    </li>
+<li class="lesson">
+                      <span class="lesson-num">13</span>
+                      <div>
+                        <p class="lesson-title">What is MCP?</p>
+                        <p class="lesson-desc">MCP (Model Context Protocol) is a standard way for AI assistants to discover and use external tools and data—like USB for agent connections. Here's what that means in plain language.</p>
+                        <ul class="lesson-meta">
+                          <li><strong>Runtime</strong> 3 min</li>
+                          <li><strong>Output</strong> One-sentence explanation of what MCP is and what it is not</li>
+                          <li><strong>Standalone clip</strong> Works alone—defines MCP without requiring Claude Code setup.</li>
+                        </ul>
+                        <p class="lesson-why">Learners will see MCP mentioned in product docs and plugin marketplaces. This lesson gives recognition-level clarity without turning into a protocol spec.</p>
+                        <div class="lesson-block">
+                          <h4 class="lesson-subhead">Key talking points</h4>
+                          <ul class="talking-points">
+                            <li>Problem MCP solves: every tool used to need a custom integration. MCP gives compatible assistants a common way to discover what's available and call it.</li>
+                            <li>Plain analogy: MCP is like a standard plug—one assistant can connect to many MCP servers (calendar, files, databases) if both sides speak MCP.</li>
+                            <li>What MCP provides: a catalog of tools and resources the assistant can request; the harness still runs them with your permissions.</li>
+                            <li>What MCP is not: memory, a replacement for APIs, or a guarantee the right tool will be chosen.</li>
+                            <li>In Claude Code: MCP servers appear as connectable capabilities—similar in spirit to plugins, but following the open MCP standard.</li>
+                          </ul>
+                          <div class="misconceptions">
+                            <p>Correct these</p>
+                            <ul>
+                              <li>MCP is the agent's memory.</li>
+                              <li>MCP replaces APIs entirely.</li>
+                              <li>Connecting an MCP server means the agent will always use it correctly.</li>
+                            </ul>
+                          </div>
+                          <p class="rule-close">MCP standardizes connections—it does not replace judgment, permissions, or review.</p>
+                        </div>
+                        <div class="lesson-details">
+                          <details>
+                            <summary>Slides</summary>
+                            <div class="details-body">
+                              <div class="slides">
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 1</span>
+                                  <h5 class="slide-title">A standard plug for tools</h5>
+                                  <ul class="slide-body">
+                                    <li>Before: custom integration per tool</li>
+                                    <li>With MCP: one protocol, many servers</li>
+                                  </ul>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: assistant with one universal socket; multiple labeled servers (files, calendar, web) plug in via the same MCP port.</p></div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Extended deck · Slide 2</span>
+                                  <h5 class="slide-title">Discover → request → harness runs</h5>
+                                  <ul class="slide-body">
+                                    <li>Assistant sees available MCP tools</li>
+                                    <li>Model requests; harness executes if allowed</li>
+                                  </ul>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: catalog shelf of MCP tools; request arrow to harness gate; result returns to model.</p></div>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Extended deck · Slide 3</span>
+                                  <h5 class="slide-title">MCP is not memory</h5>
+                                  <ul class="slide-body">
+                                    <li>Connection layer, not storage</li>
+                                    <li>Still need permissions and review</li>
+                                  </ul>
+                                  <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: MCP plug icon with X over a brain/memory vault—separate concepts.</p></div>
+                                </article>
+                              </div>
+                            </div>
+                          </details>
+                          <details>
+                            <summary>Glossary</summary>
+                            <div class="details-body">
+                              <dl class="glossary">
+                                <div><dt>MCP</dt><dd>Model Context Protocol—an open standard for AI clients to discover and use external tools and data sources.</dd></div>
+                                <div><dt>MCP server</dt><dd>A service that exposes tools or resources to compatible assistants via MCP.</dd></div>
+                              </dl>
+                            </div>
+                          </details>
+                        </div>
+                        <p class="transition-note">Takeaway: MCP is the standard connection layer. Next: give the assistant work with CLEAR assignments.</p>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- ========== MODULE 6 ========== -->
+          <li class="module reveal">
+            <h3 class="module-heading">
+              <button type="button" class="module-toggle" aria-expanded="false" id="mod-6-btn" aria-controls="mod-6-panel">
+                <span class="module-num">06</span>
+                <span class="module-copy">
+                  <span class="module-title">Assign, brief, and review</span>
+                  <span class="module-meta">2 lessons · 8 min</span>
+                </span>
+                <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
+              </button>
+            </h3>
+            <div class="module-panel" id="mod-6-panel" role="region" aria-labelledby="mod-6-btn">
+              <div class="module-panel-inner">
+                <div class="module-body">
                   <p class="module-desc">Teach a repeatable collaboration method that works across providers and tasks.</p>
                   <p class="module-outcome"><strong>Outcome:</strong> Give a complete assignment, supply trustworthy source material, and improve an output through evidence-based review.</p>
                   <ul class="lessons">
 
-                    <li class="lesson">
+<li class="lesson">
                       <span class="lesson-num">14</span>
                       <div>
                         <p class="lesson-title">Give better assignments with CLEAR</p>
@@ -3110,8 +3137,7 @@
                         <p class="transition-note">Transition: CLEAR defines the assignment. Result quality still depends on sources and how clearly their authority is labeled.</p>
                       </div>
                     </li>
-
-                    <li class="lesson">
+<li class="lesson">
                       <span class="lesson-num">15</span>
                       <div>
                         <p class="lesson-title">Verify outputs and fix the system</p>
@@ -3238,11 +3264,11 @@
             </div>
           </li>
 
-          <!-- ========== MODULE 6 ========== -->
+          <!-- ========== MODULE 7 ========== -->
           <li class="module reveal">
             <h3 class="module-heading">
-              <button type="button" class="module-toggle" aria-expanded="false" id="mod-6-btn" aria-controls="mod-6-panel">
-                <span class="module-num">06</span>
+              <button type="button" class="module-toggle" aria-expanded="false" id="mod-7-btn" aria-controls="mod-7-panel">
+                <span class="module-num">07</span>
                 <span class="module-copy">
                   <span class="module-title">Your first supervised workflow</span>
                   <span class="module-meta">2 lessons · 5 min</span>
@@ -3250,14 +3276,14 @@
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
             </h3>
-            <div class="module-panel" id="mod-6-panel" role="region" aria-labelledby="mod-6-btn">
+            <div class="module-panel" id="mod-7-panel" role="region" aria-labelledby="mod-7-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Let learners experience the complete loop, then close with a clear-eyed view of what this setup can and cannot do.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> One reviewed artifact and an explicit understanding of where a file-based, single-user setup reaches its limit.</p>
+                  <p class="module-desc">Run the full supervised loop on the practice task, then name the boundary between this single-user setup and shared team work.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> One reviewed artifact and a clear local-vs-team boundary.</p>
                   <ul class="lessons">
 
-                    <li class="lesson">
+<li class="lesson">
                       <span class="lesson-num">16</span>
                       <div>
                         <p class="lesson-title">Run one supervised workflow end to end</p>
@@ -3368,8 +3394,7 @@
                         <p class="transition-note">Takeaway: you've run the loop. One more clip on where this setup stops.</p>
                       </div>
                     </li>
-
-                    <li class="lesson">
+<li class="lesson">
                       <span class="lesson-num">17</span>
                       <div>
                         <p class="lesson-title">Why this single-user setup stops at one person</p>

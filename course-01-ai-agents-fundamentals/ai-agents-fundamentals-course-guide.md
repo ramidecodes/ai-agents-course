@@ -22,7 +22,7 @@ This is the internal design and production reference for **AI Agents Fundamental
 
 ### Place in the course sequence
 
-This is the foundation course, and it is now scoped deliberately around a **complete local, single-user setup**: Claude Code as the primary assistant, ALIVE for local memory, a provider-neutral mental model, data-sharing awareness, MCP at recognition level, a new-skill install, conceptual grounding in context/memory/RAG, and one complete supervised working loop. The course closes by naming its own boundary explicitly: everything here works for one person on one machine. Shared/team context, multi-user access control, business context, brand and content systems, and coaching routines belong in **AI Agents for Your Business**, which will be rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
+This is the foundation course, and it is now scoped deliberately around a **complete local, single-user setup**: Claude Code as the primary assistant, conceptual grounding in context/memory/RAG, tools vs skills vs plugins vocabulary, a careful new-skill install, ALIVE for local memory, data-sharing awareness, MCP at recognition level, and one complete supervised working loop. The course closes by naming its own boundary explicitly: everything here works for one person on one machine. Shared/team context, multi-user access control, business context, brand and content systems, and coaching routines belong in **AI Agents for Your Business**, which will be rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
 
 ### Observable course outcomes
 
@@ -35,7 +35,7 @@ By the end, learners should be able to:
 5. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
 6. Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a local, single-user setup is a different problem from a shared team setup.
 
-Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 may run slightly longer for hands-on setup). Outcome 4's hands-on counterpart is Lesson 8 (ALIVE setup), in the ~62-minute core.
+Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 may run slightly longer for hands-on setup). Outcome 4's hands-on counterpart is Lesson 11 (ALIVE setup), after tools/skills/plugins vocabulary and a careful skill install, in the ~62-minute core.
 
 ## Instructional design approach
 
@@ -44,7 +44,7 @@ The course uses backward design: the practical behavior expected at the end dete
 ### Design principles
 
 1. **One clear outcome per lesson.** Every lesson has a single main behavior or decision the learner should be able to perform.
-2. **Progress from mental model to action.** Learners first understand the system, then its information and capabilities, then how to work with it, and finally how to complete a workflow. Lesson 2 is theory only (what models and harnesses do); Lesson 3 is the install—so setup has meaning after the mental model.
+2. **Progress from mental model to action.** Learners first understand the system, then its information, then its capabilities (tools/skills/plugins), then how to extend and supervise it, and finally how to complete a workflow. Lesson 2 is theory only (what models and harnesses do); Lesson 3 is the install—so setup has meaning after the mental model. ALIVE and MCP come only after plugin vocabulary is clear.
 3. **Keep cognitive load low.** New terminology is grouped by function and anchored to one consistent analogy.
 4. **Use realistic business examples.** Abstract concepts are demonstrated through briefs, research, planning, drafting, and review.
 5. **Correct misconceptions explicitly.** Each lesson names a common false belief and replaces it with a usable rule.
@@ -150,11 +150,12 @@ Use low-friction checks throughout the course. They should not add significant v
 | After Lesson 4  | Select an autonomy level and justify it.               | The learner can match autonomy to risk.                                  |
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
-| After Lesson 8  | Complete ALIVE install (including quick Python check) and confirm a saved item returns in a fresh session. | Local memory works in practice. |
-| After Lesson 9  | State one personal rule for what not to share, and explain the local-model-vs-cloud-API distinction in one sentence. | Data-sharing awareness is practical, not just theoretical. |
-| After Lesson 11 | Explain what MCP is in one sentence. | MCP is recognized as a connection standard, not memory. |
-| After Lesson 12 | Evaluate one skill listing (real or the course showcase example) before installing it—including author/source when discovered via directories like [skills.sh](https://skills.sh). | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
-| After Lesson 13 | Write one stop-and-ask rule.                           | Permissions and human checkpoints are explicit.                          |
+| After Lesson 8  | Explain tools vs skills vs plugins/connections in one sentence each. | Capability vocabulary is clear before installs. |
+| After Lesson 9  | Evaluate one skill listing (real or the course showcase example) before installing it—including author/source when discovered via directories like [skills.sh](https://skills.sh). | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
+| After Lesson 10 | Write one stop-and-ask rule.                           | Permissions and human checkpoints are explicit.                          |
+| After Lesson 11 | Complete ALIVE install (including quick Python check) and confirm a saved item returns in a fresh session. | Local memory plugin works in practice. |
+| After Lesson 12 | State one personal rule for what not to share, and explain the local-model-vs-cloud-API distinction in one sentence. | Data-sharing awareness is practical, not just theoretical. |
+| After Lesson 13 | Explain what MCP is in one sentence. | MCP is recognized as a connection standard, not memory. |
 | After Lesson 14 | Complete a CLEAR assignment.                           | The task is executable and reviewable.                                   |
 | After Lesson 15 | Revise an output using diagnostic feedback.            | The learner can supervise quality.                                       |
 | After Lesson 17 | State in one sentence what this setup covers and what it deliberately does not. | The local-vs-team boundary is understood, not just heard.                |
@@ -181,12 +182,13 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 - Teach concepts and architecture in provider-neutral language where possible.
 - Demonstrate **Claude Code** as the primary assistant throughout the core course.
 - **Lesson 2 sequence (required, theory only—no install):** what a model does (next-token / text generation) → named model families (concrete, dated “as of recording”) → harness / app / assistant vs model; Claude Code = the harness we’ll use → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
-- **Lesson 3 sequence (required)—numbered learner path:** (0) minimum stack in plain language (Claude Code + one workspace folder + one harmless starter brief) → (1) choose & create workspace (new folder per project, or one Personal OS directory) → **caution (not a step):** access ≠ authority / cloud API → (2) Claude account access if needed → (3) open Terminal → (4) install Claude Code → (5) open Claude Code in that folder (sign in when prompted) → (6) confirm it works with a simple prompt → close toward agents / ALIVE later. Do not open with install commands before the stack and folder guidance. Official links: [claude.com/pricing](https://claude.com/pricing) · [Terminal (macOS)](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) · [Install Claude Code](https://code.claude.com/docs/en/install) · [Quickstart](https://code.claude.com/docs/en/quickstart).
-- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 8)—a persistent local memory layer on disk. Lesson 3’s folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
+- **Lesson 3 sequence (required)—numbered learner path:** (0) minimum stack in plain language (Claude Code + one workspace folder + one harmless starter brief) → (1) choose & create workspace (new folder per project, or one Personal OS directory) → **caution (not a step):** access ≠ authority / cloud API → (2) Claude account access if needed → (3) open Terminal → (4) install Claude Code → (5) open Claude Code in that folder (sign in when prompted) → (6) confirm it works with a simple prompt → close toward agents; tools/skills/plugins and ALIVE come later. Do not open with install commands before the stack and folder guidance. Official links: [claude.com/pricing](https://claude.com/pricing) · [Terminal (macOS)](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) · [Install Claude Code](https://code.claude.com/docs/en/install) · [Quickstart](https://code.claude.com/docs/en/quickstart).
+- **Capability ladder (required order):** tools vs skills vs plugins/connections (Lesson 8) → carefully install/review a skill with [skills.sh](https://skills.sh) author checks (Lesson 9) → approvals / least privilege (Lesson 10) → **ALIVE** as first meaningful plugin for local memory (Lesson 11) → data-sharing judgment (Lesson 12) → MCP at recognition level (Lesson 13). Do not teach ALIVE or MCP before the vocabulary lesson.
+- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 11)—a Claude Code plugin that stores persistent local memory on disk. Lesson 3’s folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
 - When naming tools or brands, say what they *are* (the job they do)—harness, local files, memory layer, cloud API, assistant UI—not random name-drops.
 - Provide a separate translation sheet only where product differences would block learners on other assistants.
 - Demonstrate file-aware work using ordinary, human-readable files in a dedicated workspace.
-- Teach why persistent memory doesn't exist by default, what RAG is, and MCP at recognition level in the core course (dedicated ~3 min MCP lesson).
+- Teach why persistent memory doesn't exist by default and what RAG is before extensions; teach MCP at recognition level only after skills/plugins are clear (dedicated ~3 min MCP lesson).
 - Give every learner a no-integration path for conceptual lessons so product differences do not block learning.
 
 ## Minimum tool stack
@@ -213,7 +215,7 @@ Teach and demo in this order. Every installable/openable tool gets a one-line ro
 | 5 | Open Claude Code in your folder | Start the harness in the workspace you chose; complete browser sign-in on first run. | [Quickstart](https://code.claude.com/docs/en/quickstart) · `cd your-workspace-folder` then `claude` |
 | 6 | Confirm it works | Open it, try a simple prompt, confirm a reply. Optional: summarize a harmless starter brief. | Example prompt: `Reply with one sentence: setup works.` |
 
-**Intentionally not in Lesson 3:** Node.js/npm (native installer supersedes that path); Homebrew (optional alternative only); Python / ALIVE / skills (Lesson 8+); Desktop app (course path is Terminal CLI).
+**Intentionally not in Lesson 3:** Node.js/npm (native installer supersedes that path); Homebrew (optional alternative only); Python / ALIVE / skills (Lessons 8–11); Desktop app (course path is Terminal CLI).
 
 ## Setup quick check
 
@@ -250,14 +252,14 @@ Prepare these assets before recording:
 9. **Troubleshooting guide.** Account, file-access, permission, and ordinary-file fallback checks.
 10. **Capstone brief.** One-page fictional business brief with enough information for a small reviewed artifact.
 11. **Data-sharing quick-reference.** A one-page local-vs-cloud comparison plus a short list of what to withhold by default.
-12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD — branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command. In Lesson 12, point learners to [skills.sh](https://skills.sh) as one place to discover skills—and reinforce that installs carry risk: verify the author, prefer official skills from reputable teams, and review what a package claims to do before installing.
-13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 8.
+12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD — branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command. In Lesson 9, point learners to [skills.sh](https://skills.sh) as one place to discover skills—and reinforce that installs carry risk: verify the author, prefer official skills from reputable teams, and review what a package claims to do before installing.
+13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 11.
 
 ## Reference documentation
 
 | Document | Purpose |
 | -------- | ------- |
-| [`docs/local-memory-alternatives.md`](../docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP-based memory, and other persistent local or synced memory layers); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 8. |
+| [`docs/local-memory-alternatives.md`](../docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP-based memory, and other persistent local or synced memory layers); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 11. |
 
 # Guidance for the slide-generation agent
 
@@ -403,11 +405,11 @@ Pilot the course with a small group from the intended audience before final reco
 | Course outcome | Primary lessons | Demonstrated by |
 | -------------- | --------------- | --------------- |
 | Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 covers autonomy and agents |
-| Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9 | Lesson 3 install + quick verify, starter brief, context checklist, and one deliberately installed skill |
-| Explain data sharing (local vs. cloud) well enough to make cautious choices | 7 | One stated personal rule for what not to share |
-| Explain why memory isn't persistent by default, and what RAG does | 6 | Classification of five information examples plus a plain-language RAG explanation |
-| Give, review, verify, and improve a well-sourced assignment | 8, 11–12 | Capability map, CLEAR worksheet, source pack, and diagnostic revision |
-| Complete a low-risk workflow with approval points, and explain the local-vs-team boundary | 4, 10, 13–14 | Autonomy choice, stop-and-ask rule, reviewed capstone artifact, and one-sentence scope statement |
+| Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9, 11 | Lesson 3 install + verify, context checklist, tools/skills/plugins map, one deliberately installed skill, ALIVE memory |
+| Explain data sharing (local vs. cloud) well enough to make cautious choices | 12 | One stated personal rule for what not to share |
+| Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG, then ALIVE as the practical local-memory plugin |
+| Give, review, verify, and improve a well-sourced assignment | 14–15 | CLEAR worksheet, source pack, and diagnostic revision |
+| Complete a low-risk workflow with approval points, and explain the local-vs-team boundary | 4, 10, 16–17 | Autonomy choice, stop-and-ask rule, reviewed capstone artifact, and one-sentence scope statement |
 
 # Design source
 
