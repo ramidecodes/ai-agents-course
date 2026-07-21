@@ -748,7 +748,7 @@
       padding: 0 0 1.1rem;
     }
 
-    /* —— Slides (draft) —— */
+    /* —— Slides —— */
     .slides {
       display: grid;
       gap: 0.75rem;
@@ -1096,7 +1096,7 @@
 <body>
   <header class="hero">
     <div class="wrap">
-      <p class="hero-kicker reveal">Course 01 · Canonical curriculum</p>
+      <p class="hero-kicker reveal">Course 01 · Curriculum + presenter guide</p>
       <h1 class="reveal">AI Agents Fundamentals</h1>
       <p class="hero-sub reveal">Set up an AI assistant, assign real work, and supervise the result</p>
       <ul class="hero-meta reveal" aria-label="Course overview">
@@ -1118,7 +1118,7 @@
           In about 61 minutes, learners replace vague, product-driven notions of AI with a practical working model of assistants and agents. They set up Claude Code on macOS, add local memory with ALIVE, understand what happens to their data along the way, learn a reliable method for assigning work, extend the assistant with a new skill, and complete one small supervised workflow.
         </p>
         <p class="lede">
-          A concise, non-technical introduction for entrepreneurs and business users who have tried chat-based AI but still lack a dependable way to use it for real work. By the end: Claude Code as a working assistant, one practice folder, ALIVE for memory across sessions, one repeatable way to delegate, one set of data-sharing and safety rules, and one completed supervised workflow—plus a clear view of exactly where a local, single-user setup like this one reaches its limit. Each lesson is scoped as a 2–5 minute standalone clip as well as part of the full course.
+          A concise, non-technical introduction for entrepreneurs and business users who have tried chat-based AI but still lack a dependable way to use it for real work. By the end: Claude Code as a working assistant, one practice folder, ALIVE for memory across sessions, one repeatable way to delegate, one set of data-sharing and safety rules, and one completed supervised workflow—plus a clear view of exactly where a file-based, single-user setup like this one reaches its limit. Each lesson is scoped as a 2–6 minute standalone clip as well as part of the full course.
         </p>
       </div>
     </section>
@@ -1147,7 +1147,7 @@
               <li>Knows the practical difference between a local model and a cloud API, and what that means for sensitive information.</li>
               <li>Gives clear assignments with sources, constraints, and success criteria—and installs a new skill deliberately when one is genuinely useful.</li>
               <li>Defines approval points before consequential actions.</li>
-              <li>Reviews work as the accountable owner of the outcome, and knows when a local setup stops being enough.</li>
+              <li>Reviews work as the accountable owner of the outcome, and knows when a file-based, single-user setup stops being enough.</li>
             </ul>
           </div>
         </div>
@@ -1157,14 +1157,14 @@
     <section id="outcomes" aria-labelledby="outcomes-heading">
       <div class="wrap-narrow reveal">
         <p class="section-label">Learning outcomes</p>
-        <h2 id="outcomes-heading">Four capabilities that define completion</h2>
+        <h2 id="outcomes-heading">Six capabilities that define completion</h2>
         <ol class="outcomes">
           <li>Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent—and how a modern chat turn actually runs.</li>
           <li>Set up Claude Code on macOS with ALIVE for local memory, extend the assistant with a new skill, and give it focused task context using ordinary files.</li>
           <li>Explain what gets shared with whom—including the practical difference between a locally-running model and a cloud API—well enough to make deliberate, cautious choices about sensitive information.</li>
           <li>Explain why an assistant has no persistent memory by default, what retrieval-augmented generation (RAG) does, and set up ALIVE for basic local memory across sessions.</li>
           <li>Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.</li>
-          <li>Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a local, single-user setup is a different problem from a shared team setup.</li>
+          <li>Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a file-based, single-user setup is a different problem from a shared team setup.</li>
         </ol>
         <p class="audience-note">
           For non-technical entrepreneurs, creators, coaches, independent professionals, and small-business teams. Prerequisites: a Mac, one supported AI assistant account, a practice folder, and one real but non-sensitive business task. No coding required. Not aimed at engineers building agent infrastructure—though the mental models remain useful.
@@ -1175,7 +1175,7 @@
     <section id="glance" aria-labelledby="glance-heading">
       <div class="wrap reveal">
         <p class="section-label">At a glance</p>
-        <h2 id="glance-heading">Six modules, one complete local working loop</h2>
+        <h2 id="glance-heading">Six modules, one complete single-user working loop</h2>
         <table class="glance">
           <thead>
             <tr>
@@ -1236,11 +1236,41 @@
               <td>Total</td>
               <td class="hide-sm">17</td>
               <td>61 min</td>
-              <td class="hide-sm">A complete, supervised, local AI working loop with memory</td>
+              <td class="hide-sm">A complete, supervised, single-user AI working loop with file-based memory</td>
             </tr>
           </tfoot>
         </table>
-        <p class="audience-note">Lessons are sized for 2–5 minute standalone clips (promo-friendly titles) as well as sequential viewing. Claude Code is the primary demo environment; ALIVE provides local memory in the core path.</p>
+        <p class="audience-note">Lessons are sized for 2–6 minute standalone clips as well as sequential viewing. Claude Code is the primary demo environment; ALIVE provides local, file-based memory in the core path.</p>
+      </div>
+    </section>
+
+    <section id="presenter" aria-labelledby="presenter-heading">
+      <div class="wrap-narrow reveal">
+        <p class="section-label">Presenter guidelines</p>
+        <h2 id="presenter-heading">Keep the hour coherent, current, and demonstrably supervised</h2>
+        <div class="two-col">
+          <div>
+            <p class="col-label">Before presenting</p>
+            <ul class="plain-list">
+              <li>Treat this curriculum and <code>course-01-slides.html</code> as a paired source of truth. The slide file controls audience-facing sequence, copy, visuals, links, and embedded notes; this file controls teaching intent, objectives, misconceptions, demonstrations, and transitions. Reconcile both whenever one changes.</li>
+              <li>Preflight Claude Code, Python 3.10+, ALIVE, the practice folder, links, commands, permissions, and the fresh-session test. Keep a prepared installed state or short capture available for network-dependent steps.</li>
+              <li>Verify product commands, plan terms, and privacy settings against current official sources immediately before recording. State the date checked when showing policy or settings pages.</li>
+              <li>Use one public, non-sensitive practice task throughout. Reset its files to a known baseline before each take.</li>
+              <li>Do not record Lesson 12 until <strong>[Skill Name TBD]</strong> has been replaced with a real, reviewed skill and the corresponding slide copy and notes have been updated.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="col-label">While presenting</p>
+            <ul class="plain-list">
+              <li>The listed runtime includes the demonstration. Pre-stage setup and show only the decision or action that teaches the lesson; do not make viewers wait through downloads, authentication, or long generation.</li>
+              <li>The default slide URL shows the 41-slide full-course cut. Add <code>?extended=1</code> for reinforcement slides, <code>?lesson-dividers=1</code> for standalone-clip title cards, or both for the complete 70-slide reference deck.</li>
+              <li>Use each lesson divider to state the question or outcome. On content slides, explain the visual and add the example or caveat from this guide instead of reading the bullets aloud.</li>
+              <li>Narrate the human decisions: source authority, workspace boundary, permission, verification, correction, and approval. A successful demo is evidence of a supervised step, not proof that the system is safe for unattended work.</li>
+              <li>When a live step fails, name the failure, switch to the prepared state, and continue with the acceptance test. Never imply that a skipped or simulated action succeeded live.</li>
+              <li>Use “local” precisely: ALIVE’s files are local, while Claude Code model inference is cloud-based. Connected tools, sync, or telemetry can still transmit data even when a model runs locally.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1250,7 +1280,7 @@
           <div>
             <p class="section-label">Detailed curriculum</p>
             <h2 id="curriculum-heading">Instructor guide by module and lesson</h2>
-            <p class="lede">Expand a module for lesson objectives, talking points, collapsible <strong>Slides (draft)</strong>, and a trimmed glossary. This page is the <strong>source of truth</strong> for teaching and for Google Slides generation (brand applied later). Each content slide draft includes title, bullets, a 16-bit pixel-art <strong>Visual</strong> brief, and a <strong>Side panel</strong> of relevant terms when useful. Screen-share notes are instructor-only.</p>
+            <p class="lede">Expand a module for lesson objectives, talking points, collapsible <strong>Slides</strong>, and a trimmed glossary. This curriculum and <code>course-01-slides.html</code> are the paired <strong>source of truth</strong>: use the slide file for the audience-facing deck and this guide for teaching intent, presenter guidance, misconceptions, demonstrations, and transitions. Cards labeled <strong>Extended deck</strong> are retained for standalone clips or extra reinforcement but omitted from the default full-course presentation. Screen-share notes are instructor-only.</p>
           </div>
           <div class="toolbar">
             <button type="button" id="expand-all">Expand all</button>
@@ -1313,9 +1343,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -1431,9 +1461,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -1562,15 +1592,15 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Model vs harness</h5>
                                   <ul class="slide-body">
-                                    <li>Model = reasoning engine (predicts text / modalities)</li>
+                                    <li>Model = engine that interprets input and generates output</li>
                                     <li>Harness/app = software that runs the loop, tools, and permissions</li>
                                     <li>Assistant = the combined working experience</li>
                                   </ul>
@@ -1608,7 +1638,7 @@
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 3</span>
+                                  <span class="slide-label">Extended deck · Slide 3</span>
                                   <h5 class="slide-title">Same model, different app</h5>
                                   <ul class="slide-body">
                                     <li>Files, search, memory, and permissions differ by product</li>
@@ -1696,9 +1726,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -1849,9 +1879,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -1873,7 +1903,7 @@
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
+                                  <span class="slide-label">Extended deck · Slide 2</span>
                                   <h5 class="slide-title">Harness chooses the call</h5>
                                   <ul class="slide-body">
                                     <li>The model only sees what the harness includes this turn</li>
@@ -1946,7 +1976,7 @@
                       <span class="lesson-num">6</span>
                       <div>
                         <p class="lesson-title">Why your agent forgets everything</p>
-                        <p class="lesson-desc">A new chat is genuinely empty unless something deliberately bridges the gap. Here's why—and what chat history is not.</p>
+                        <p class="lesson-desc">The model has no built-in memory of the last chat; a new session only knows what the harness deliberately reloads. Here's why—and what chat history is not.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> Classification of what persists today vs what must be supplied again</li>
@@ -1958,7 +1988,7 @@
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li>Context = information available for the current task. Chat history = visible prior messages; the product may not use every message every time. Source knowledge = material deliberately supplied. Memory = information a product preserves and retrieves later.</li>
-                            <li>By default, a model call is stateless: nothing about you or prior sessions is automatically known unless the harness re-supplies it. A "new chat" is genuinely new.</li>
+                            <li>By default, a model call is stateless: nothing about you or prior sessions is known unless the harness supplies it. A new session may still load product-managed instructions, files, history, retrieval, or memory.</li>
                             <li>Products create continuity differently—recent history, saved preferences, retrieval layers—but none of that is the model itself remembering.</li>
                             <li>Important business knowledge should not be assumed to persist because it was said once. If it matters later, it needs a deliberate place to live.</li>
                           </ul>
@@ -1975,12 +2005,12 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 1</span>
+                                  <span class="slide-label">Extended deck · Slide 1</span>
                                   <h5 class="slide-title">Four buckets</h5>
                                   <ul class="slide-body">
                                     <li>Context · chat history · source knowledge · memory</li>
@@ -2003,7 +2033,7 @@
                                   <span class="slide-label">Slide 2</span>
                                   <h5 class="slide-title">No memory by default</h5>
                                   <ul class="slide-body">
-                                    <li>A fresh session starts genuinely empty</li>
+                                    <li>A fresh session only knows what the harness reloads</li>
                                     <li>Continuity is a product feature, not a model trait</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -2087,7 +2117,7 @@
                         </div>
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
@@ -2107,10 +2137,11 @@
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
+                                  <span class="slide-label">Extended deck · Slide 2</span>
                                   <h5 class="slide-title">RAG ≠ memory</h5>
                                   <ul class="slide-body">
-                                    <li>Retrieval = one turn · Memory = across sessions</li>
+                                    <li>RAG retrieves source material for an answer</li>
+                                    <li>Memory preserves useful continuity across sessions</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -2151,7 +2182,7 @@
                             <li>Prerequisites: Claude Code (Lesson 2) and Python 3.10+ on your Mac.</li>
                             <li>Do you need to install Python? Only if it is missing. ALIVE (and Claude Code plugin/runtime pieces it relies on) needs Python to run.</li>
                             <li>Quick check: run <code>python3 --version</code> in Terminal. If you see version 3.10 or newer, continue. If not found (or lower), install Python 3 from python.org, then reopen Terminal and re-check.</li>
-                            <li>Install: <code>/plugin marketplace add https://github.com/alivecontext/alive.git</code> then <code>/plugin install alive@alivecontext</code>. Exit and restart Claude Code.</li>
+                            <li>Install from Terminal with <code>claude plugin install alive@alivecontext</code>. Exit and restart Claude Code, then run the guided setup.</li>
                             <li>First-time setup: run <code>/alive:world</code>—guided walkthrough creates your local context folder. No ALIVE account; data stays on your machine.</li>
                             <li>During work: context loads at session start. When done, run <code>/alive:save</code> to checkpoint.</li>
                             <li>What you get: persistent context across sessions without re-explaining your project. Files are inspectable in any text editor.</li>
@@ -2168,15 +2199,15 @@
                         </div>
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Install ALIVE in Claude Code</h5>
                                   <ul class="slide-body">
-                                    <li>Add marketplace → install plugin → restart session</li>
-                                    <li>Python 3.10+ only if missing: check with <code>python3 --version</code></li>
+                                    <li>Install plugin → restart Claude Code → run setup</li>
+                                    <li>Python 3.10+ only if missing—check first, install only if needed</li>
                                   </ul>
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: Claude Code terminal with install commands; plugin icon snapping into place.</p></div>
                                 </article>
@@ -2193,13 +2224,13 @@
                                   <span class="slide-label">Slide 3</span>
                                   <h5 class="slide-title">Save and return test</h5>
                                   <ul class="slide-body">
-                                    <li>Work → <code>/alive:save</code> → new session → ask</li>
+                                    <li>Work → checkpoint → new session → ask</li>
                                     <li>Context returns = setup works</li>
                                   </ul>
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: session 1 saves; session 2 receives project context from folder without re-attaching files.</p></div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
+                                  <span class="slide-label">Extended deck · Slide 4</span>
                                   <h5 class="slide-title">What to expect</h5>
                                   <ul class="slide-body">
                                     <li>Background load at start; you checkpoint at end</li>
@@ -2208,7 +2239,7 @@
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: auto load at start; manual save at end; human holds edit pencil.</p></div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Run install, <code>/alive:world</code>, save one decision, fresh session retrieval test. Show underlying file in Finder.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Preflight Python and the plugin before presenting. Show the direct install command, restart Claude Code, run <code>/alive:world</code>, save one decision, then prove retrieval in a fresh session. Show the underlying file in Finder; use a prepared installed state if the network is slow.</p>
                             </div>
                           </details>
                           <details>
@@ -2266,10 +2297,10 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>A locally-running model runs on the learner's own machine; nothing needs to leave the device for that model to process it.</li>
+                            <li>A locally-running model can perform inference on the learner's own machine, but connected tools, sync, or telemetry may still transmit data. Check the whole product path, not only the model.</li>
                             <li>A cloud API model runs on a provider's servers; anything included in the context—files, pasted text, chat messages—travels to that provider to be processed, and may be logged, retained, or reviewed depending on the provider's policy and plan.</li>
                             <li>Most everyday assistants (the ones this course uses) are cloud-based. That is not automatically unsafe, but it means the learner is trusting a specific provider's policies, not just "the AI."</li>
-                            <li>Provider trust is a spectrum: read the plan-level data-use terms, prefer settings and plans that limit training on your data when it matters, and treat any free tier as the least private option by default.</li>
+                            <li>Provider trust is specific: read the current terms for the provider, plan, account type, and settings. Free versus paid alone does not determine privacy.</li>
                             <li>Be cautious with: customer or client personal data, financial records, credentials and API keys, health information, anything under an NDA, and anything you are not personally authorized to share.</li>
                             <li>Local models trade convenience and capability for that privacy—typically smaller, slower to set up, and less capable than the leading cloud models. This course does not require setting one up; the point is to recognize the trade-off exists.</li>
                           </ul>
@@ -2287,15 +2318,15 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Local vs cloud model</h5>
                                   <ul class="slide-body">
-                                    <li>Local: runs on your machine—nothing needs to leave it</li>
+                                    <li>Local inference can stay on-device; connected tools may still send data</li>
                                     <li>Cloud API: runs on a provider's servers—your context travels there</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -2315,7 +2346,7 @@
                                   <h5 class="slide-title">Trust the policy, not the logo</h5>
                                   <ul class="slide-body">
                                     <li>Read the plan-level data-use terms</li>
-                                    <li>Free tiers are usually the least private option</li>
+                                    <li>Plan, account type, settings, and provider policy all matter</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -2347,7 +2378,7 @@
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Open the assistant's plan/settings page and point to the actual data-use or training toggle live.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Pre-open the current official data-use policy and the relevant plan/settings page. State the date checked; do not generalize privacy from free vs paid alone or expose a real learner account.</p>
                             </div>
                           </details>
                           <details>
@@ -2409,9 +2440,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -2434,7 +2465,7 @@
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
+                                  <span class="slide-label">Extended deck · Slide 2</span>
                                   <h5 class="slide-title">Who runs the tool?</h5>
                                   <ul class="slide-body">
                                     <li>Model requests a tool call</li>
@@ -2535,7 +2566,7 @@
                         </div>
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
                               <div class="slides">
                                 <article class="slide-card">
@@ -2548,7 +2579,7 @@
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: assistant with one universal socket; multiple labeled servers (files, calendar, web) plug in via the same MCP port.</p></div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
+                                  <span class="slide-label">Extended deck · Slide 2</span>
                                   <h5 class="slide-title">Discover → request → harness runs</h5>
                                   <ul class="slide-body">
                                     <li>Assistant sees available MCP tools</li>
@@ -2557,7 +2588,7 @@
                                   <div class="slide-visual"><span class="slide-meta-label">Visual</span><p>16-bit pixel art: catalog shelf of MCP tools; request arrow to harness gate; result returns to model.</p></div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 3</span>
+                                  <span class="slide-label">Extended deck · Slide 3</span>
                                   <h5 class="slide-title">MCP is not memory</h5>
                                   <ul class="slide-body">
                                     <li>Connection layer, not storage</li>
@@ -2597,8 +2628,8 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>In Claude Code: use <code>/plugins</code> to browse marketplaces, read what a skill does, install, and remove if unhelpful.</li>
-                            <li>Installing a skill is a form of granting capability—review what it claims to do and what it can touch before installing, the same way you would review a permission request.</li>
+                            <li>In Claude Code, use <code>/plugin</code> to browse packages from configured marketplaces, inspect the source and contents, install, and remove if unhelpful.</li>
+                            <li>A plugin may bundle skills, hooks, agents, or MCP servers. Installing the package can therefore add more than guidance; review its source and requested access before installing.</li>
                             <li>A good skill states its purpose, expected inputs, and output format; a vague or undocumented skill is harder to supervise and should be treated with more caution.</li>
                             <li>Showcase example (placeholder only): <strong>[Skill Name TBD — branding/business-coach skill]</strong>. Keep this exact placeholder until the course creator supplies the final skill and name. Do not replace or brand it yet. The workflow shown here—search, read what it does, install, try it once, remove if unhelpful—applies regardless of which skill you pick.</li>
                             <li>Try the installed skill once on the practice task and compare the result to an unguided request—notice what the skill added (structure, questions asked, standard followed).</li>
@@ -2617,16 +2648,16 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content. <strong>Note:</strong> the showcase skill name is a placeholder pending the final skill and name from the course creator—do not invent branding for it.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes. <strong>Note:</strong> the showcase skill name is a placeholder pending the final skill and name from the course creator—do not invent branding for it.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Browse, install, try</h5>
                                   <ul class="slide-body">
-                                    <li>The skills command browses a library of ready-made skills</li>
-                                    <li>Install one the way you'd add an app</li>
+                                    <li>Use <code>/plugin</code> to browse packages from trusted marketplaces</li>
+                                    <li>Inspect the package, install it, then try it once</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -2635,12 +2666,12 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Skills command</strong> — Built-in way to discover, install, and remove skill packages.</li>
+                                    <li><strong>Plugin manager</strong> — Built-in way to discover, inspect, install, and remove packages.</li>
                                     </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
+                                  <span class="slide-label">Extended deck · Slide 2</span>
                                   <h5 class="slide-title">Showcase (placeholder): [Skill Name TBD]</h5>
                                   <ul class="slide-body">
                                     <li>Placeholder branding/business-coach skill (keep placeholder as-is)</li>
@@ -2676,7 +2707,7 @@
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Run the skills command live, install the placeholder showcase skill (keep placeholder label exactly as written), then swap only after the real skill is supplied and try it once on the practice task.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> <strong>Production blocker:</strong> do not record this lesson with the placeholder. Once the real skill is supplied, use <code>/plugin</code>, inspect the package contents and source, install it, then try it once on the practice task.</p>
                             </div>
                           </details>
                           <details>
@@ -2684,8 +2715,8 @@
                             <div class="details-body">
                               <dl class="glossary">
                                 <div>
-                                  <dt>Skills command</dt>
-                                  <dd>A built-in feature in some assistant products for browsing, installing, and removing reusable skill packages.</dd>
+                                  <dt>Plugin manager</dt>
+                                  <dd>Claude Code's <code>/plugin</code> interface for browsing, inspecting, installing, and removing packages from configured marketplaces.</dd>
                                 </div>
                                 <div>
                                   <dt>Skill package</dt>
@@ -2734,9 +2765,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -2882,9 +2913,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -2993,9 +3024,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -3017,7 +3048,7 @@
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
+                                  <span class="slide-label">Extended deck · Slide 2</span>
                                   <h5 class="slide-title">Conflicts: stop and ask</h5>
                                   <ul class="slide-body">
                                     <li>If facts are missing or sources conflict, stop and ask</li>
@@ -3052,9 +3083,28 @@
                                     </ul>
                                   </div>
                                 </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 4</span>
+                                  <h5 class="slide-title">Task fix vs system fix</h5>
+                                  <ul class="slide-body">
+                                    <li>Task fix: patch this output once</li>
+                                    <li>System fix: update the instruction, skill, or source where the error started</li>
+                                  </ul>
+                                  <div class="slide-visual">
+                                    <span class="slide-meta-label">Visual</span>
+                                    <p>16-bit pixel art: fork in the road—left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear.</p>
+                                  </div>
+                                  <div class="slide-side-panel">
+                                    <span class="slide-meta-label">Side panel</span>
+                                    <ul>
+                                      <li><strong>Task fix</strong> — One-off correction to this output.</li>
+                                      <li><strong>System fix</strong> — Durable update where the error originated.</li>
+                                    </ul>
+                                  </div>
+                                </article>
 
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Label 3–4 practice files live, including one outdated file; then revise one factual error with diagnostic feedback and optionally save one reusable quality check outside chat.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Label 3–4 practice files live, including one outdated file; revise one factual error with diagnostic feedback, then make one durable system fix in the instruction, skill, or source where the error began.</p>
                             </div>
                           </details>
                         </div>
@@ -3084,7 +3134,7 @@
               <div class="module-panel-inner">
                 <div class="module-body">
                   <p class="module-desc">Let learners experience the complete loop, then close with a clear-eyed view of what this setup can and cannot do.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> One reviewed artifact and an explicit understanding of where a local, single-user setup reaches its limit.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> One reviewed artifact and an explicit understanding of where a file-based, single-user setup reaches its limit.</p>
                   <ul class="lessons">
 
                     <li class="lesson">
@@ -3120,9 +3170,9 @@
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
@@ -3163,7 +3213,7 @@
                                   </div>
                                 </article>
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 3</span>
+                                  <span class="slide-label">Extended deck · Slide 3</span>
                                   <h5 class="slide-title">Value of the loop</h5>
                                   <ul class="slide-body">
                                     <li>Controlled loop beats chasing a perfect first draft</li>
@@ -3180,7 +3230,7 @@
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Execute the mini workflow (e.g. three article angles) start to finish; find one unsupported claim and revise it.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Pre-stage the brief and source pack. Execute the mini workflow (e.g. three article angles) start to finish, narrating the four human decision markers; find one unsupported claim and revise it. Do not wait through setup or unrelated generation in this three-minute segment.</p>
                             </div>
                           </details>
                           <details>
@@ -3202,7 +3252,7 @@
                     <li class="lesson">
                       <span class="lesson-num">17</span>
                       <div>
-                        <p class="lesson-title">Why your local setup stops at one person</p>
+                        <p class="lesson-title">Why this single-user setup stops at one person</p>
                         <p class="lesson-desc">What you built works for one person on one machine—including ALIVE memory. Adding a teammate is a different problem, not "more of the same."</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 2 min</li>
@@ -3223,21 +3273,21 @@
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
-                              <li>Today's local setup will automatically keep working once a second person needs to use it.</li>
+                              <li>Today's single-user setup will automatically keep working once a second person needs to use it.</li>
                               <li>Sharing a folder or a chat transcript with a teammate is the same as a real shared context system.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">This course gives you a complete local setup for one person. Shared team context is a different problem—and that's the honest stopping point.</p>
+                          <p class="rule-close">This course gives you a complete file-based setup for one person. Shared team context is a different problem—and that's the honest stopping point.</p>
                         </div>
 
                         <div class="lesson-details">
                           <details>
-                            <summary>Slides (draft)</summary>
+                            <summary>Slides</summary>
                             <div class="details-body">
-                              <p class="slide-handoff"><strong>Handoff:</strong> Output target is Google Slides (brand later). Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. This HTML is the source of truth for slide content.</p>
+                              <p class="slide-handoff"><strong>Handoff:</strong> Audience-facing deck: <code>course-01-slides.html</code>. Visual style: 16-bit pixel art—one plain-text visual brief per content slide. Side panel: relevant technical terms + ultra-short definitions when useful. The paired slide HTML is the source of truth for audience-facing sequence, copy, visuals, links, and embedded notes.</p>
                               <div class="slides">
                                 <article class="slide-card">
-                                  <span class="slide-label">Slide 1</span>
+                                  <span class="slide-label">Extended deck · Slide 1</span>
                                   <h5 class="slide-title">What you have now</h5>
                                   <ul class="slide-body">
                                     <li>One assistant, one local folder, one supervised loop</li>
@@ -3291,7 +3341,7 @@
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> None required—close on the two-room slide and state the boundary plainly, without a sales pitch for Course 2.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> None required. Close on the final two-room/bridge visual and state the single-user boundary plainly, without turning the ending into a sales pitch for Course 2.</p>
                             </div>
                           </details>
                           <details>
@@ -3310,7 +3360,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Closing: you have a complete local loop—and a clear boundary for what comes next.</p>
+                        <p class="transition-note">Closing: you have a complete single-user loop—and a clear boundary for what comes next.</p>
                       </div>
                     </li>
 
@@ -3327,7 +3377,7 @@
     <section class="closing" aria-labelledby="next-heading">
       <div class="wrap-narrow reveal">
         <p class="section-label">Scope &amp; completion</p>
-        <h2 id="next-heading">A complete local foundation—on purpose, not by accident</h2>
+        <h2 id="next-heading">A complete single-user foundation—on purpose, not by accident</h2>
         <p>
           This course stays deliberately local and single-user. Shared team memory, multi-user access control, business context, brand systems, content production, and entrepreneurship workflows belong in the follow-on course, <strong>AI Agents for Your Business</strong>, which will be rebuilt around that boundary.
         </p>
@@ -3341,7 +3391,7 @@
           <li>Give a complete CLEAR assignment with a labeled source pack</li>
           <li>Identify required tools, permissions, and at least one approval point</li>
           <li>Verify output against an explicit standard and complete one small reviewed artifact</li>
-          <li>State in one sentence why this local setup does not extend to a team, unchanged</li>
+          <li>State in one sentence why this single-user setup does not extend to a team unchanged</li>
         </ul>
       </div>
     </section>
@@ -3349,7 +3399,7 @@
 
   <footer>
     <div class="wrap">
-      AI Agents Fundamentals · Self-paced video course · Canonical curriculum v2.1 · Last updated 2026-07-21
+      AI Agents Fundamentals · Self-paced video course · Curriculum + presenter guide v2.2 · Last updated 2026-07-21
     </div>
   </footer>
 
