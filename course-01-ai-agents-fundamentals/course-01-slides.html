@@ -733,9 +733,15 @@
         "What you'll be able to do":
           "assets/pixel-art/02-you-remain-accountable.png",
         "Safe practice task": "assets/pixel-art/03-safe-practice-task.png",
+        "What you're setting up today":
+          "assets/pixel-art/00-cover-hero.png",
+        "Words you'll need":
+          "assets/pixel-art/09-same-model-different-app.png",
         "Claude Code minimum stack":
           "assets/pixel-art/04-minimum-beginner-stack.png",
         "Access ≠ authority": "assets/pixel-art/05-access-not-authority.png",
+        "Install, then acceptance test":
+          "assets/pixel-art/06-acceptance-test.png",
         "Acceptance test": "assets/pixel-art/06-acceptance-test.png",
         "Model vs harness": "assets/pixel-art/07-model-vs-harness.png",
         "One chat turn": "assets/pixel-art/08-one-chat-turn.png",
@@ -810,7 +816,7 @@
           title: "AI Agents Fundamentals",
           subtitle:
             "Set up an AI agent, assign real work, and supervise the result",
-          meta: ["60 minutes", "6 modules · 17 lessons", "Beginner"],
+          meta: ["62 minutes", "6 modules · 17 lessons", "Beginner"],
           image: {
             file: "00-cover-hero.png",
             desc: "Course hero visual — human and robot at a desk with supervised workflow icons.",
@@ -859,7 +865,7 @@
           module: "Module 01 · Orientation and setup",
           title: "Course journey",
           bullets: [
-            "6 modules · 17 lessons · about 60 minutes",
+            "6 modules · 17 lessons · about 62 minutes",
             "One loop you'll reuse: brief → draft → review → revise → approve",
             "Same small practice task throughout—later: a persistent memory layer so your agent remembers you, your project, and what you're working on",
           ],
@@ -874,11 +880,11 @@
             },
           ],
           notes:
-            "Screen-share (~30s): pan the finished setup—practice folder, starter brief, labeled draft, your review step. You install Claude Code in Lesson 2.",
+            "Screen-share (~30s): pan the finished setup—practice folder, starter brief, labeled draft, your review step. Lesson 2: stack lingo first, then install Claude Code.",
           tasksLabel: "Watch for",
           tasks: [
             "The five loop stages on screen",
-            "What is demoed now vs what you install next lesson",
+            "What is demoed now vs what you learn and install next lesson",
           ],
         },
         {
@@ -933,7 +939,71 @@
           lesson: 2,
           module: "Module 01 · Orientation and setup",
           title: "Set up Claude Code on your Mac",
-          runtime: "5 min",
+          runtime: "6 min",
+        },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "What you're setting up today",
+          bullets: [
+            "A working assistant on your Mac, in one practice folder",
+            "Proof the file workflow works—before anything sensitive",
+          ],
+          image: {
+            file: "00-cover-hero.png",
+            desc: "16-bit pixel art: human and assistant robot at a desk with a laptop and checklist; human holds a green verified checkmark. Scroll, chip, and search icons arc overhead.",
+          },
+          sidebar: [
+            {
+              term: "Practice folder",
+              def: "Dedicated workspace for course files and drafts.",
+            },
+          ],
+          tasksLabel: "Watch for",
+          tasks: [
+            "What “done” looks like for this lesson",
+            "That verification comes before sensitive files",
+          ],
+        },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "Words you'll need",
+          bullets: [
+            "Model = reasoning engine · Harness = the app around it",
+            "Assistant = what you brief · Terminal · cloud API · plugins later",
+          ],
+          image: {
+            file: "09-same-model-different-app.png",
+            desc: "16-bit pixel art: identical model chip plugged into two different harness cabinets—one with search/files unlocked, one locked—showing same model, different access.",
+          },
+          sidebar: [
+            {
+              term: "Model",
+              def: "Reasoning and generation engine.",
+            },
+            {
+              term: "Harness",
+              def: "Software around the model: UI, context, tools, permissions.",
+            },
+            {
+              term: "Assistant",
+              def: "Model + harness + instructions + context—what you supervise.",
+            },
+            {
+              term: "Cloud API",
+              def: "Remote interface that processes your context on a provider's servers.",
+            },
+          ],
+          notes:
+            "Keep this light—name each term once. Deeper model-vs-harness anatomy is Lesson 3.",
+          tasksLabel: "Watch for",
+          tasks: [
+            "Model vs harness in one plain sentence",
+            "Why “cloud API” matters before you attach files",
+          ],
         },
         {
           type: "content",
@@ -942,7 +1012,58 @@
           title: "Claude Code minimum stack",
           bullets: [
             "Claude Code · one practice folder · one starter brief",
-            "Plugins (ALIVE, skills) come later",
+            "Plugins (ALIVE, skills) come later · other harnesses exist—we standardize here",
+          ],
+          urls: [
+            {
+              href: "https://docs.anthropic.com/en/docs/claude-code",
+              label: "docs.anthropic.com/en/docs/claude-code",
+            },
+          ],
+          image: {
+            file: "04-minimum-beginner-stack.png",
+            desc: "16-bit pixel art: three boxes inside a dotted practice-folder fence—assistant robot, folder, starter-brief scroll. Fancy optional tool icons sit outside the fence, greyed out.",
+          },
+          sidebar: [
+            {
+              term: "Claude Code",
+              def: "The harness this course uses for demos and hands-on work.",
+            },
+            {
+              term: "Plugin",
+              def: "Add-on that extends the harness (ALIVE, skills)—installed later.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "Access ≠ authority",
+          bullets: [
+            "File access is not permission to change or publish",
+            "You choose what enters the chat—and what stays out",
+          ],
+          image: {
+            file: "05-access-not-authority.png",
+            desc: "16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish arrows beyond the workspace boundary.",
+          },
+          sidebar: [
+            {
+              term: "File access",
+              def: "Ability to see files is not permission to change or publish.",
+            },
+          ],
+        },
+        {
+          type: "content",
+          lesson: 2,
+          module: "Module 01 · Orientation and setup",
+          title: "Install, then acceptance test",
+          bullets: [
+            "Install Claude Code → open Terminal in your practice folder",
+            "Open → attach → summarize → draft → inspect → remove",
+            "No business secrets in the test",
           ],
           urls: [
             {
@@ -959,57 +1080,21 @@
             ],
           },
           image: {
-            file: "l02-claude-code-minimum-stack.png",
-            desc: "16-bit pixel art: three boxes inside a dotted practice-folder fence—assistant robot, folder, starter-brief scroll. Fancy optional tool icons sit outside the fence, greyed out.",
-          },
-          sidebar: [
-            {
-              term: "Harness",
-              def: "Software around the model: UI, context, tools, permissions.",
-            },
-            {
-              term: "Plugin",
-              def: "Add-on that extends the harness (ALIVE, skills, MCP servers).",
-            },
-          ],
-        },
-        {
-          type: "content",
-          lesson: 2,
-          module: "Module 01 · Orientation and setup",
-          title: "Access ≠ authority",
-          bullets: [
-            "File access is not permission to change or publish",
-            "Show current workspace boundaries",
-          ],
-          image: {
-            file: "l02-access-not-authority.png",
-            desc: "16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish arrows beyond the workspace boundary.",
-          },
-        },
-        {
-          type: "content",
-          lesson: 2,
-          module: "Module 01 · Orientation and setup",
-          title: "Acceptance test",
-          bullets: [
-            "Open → attach → summarize → draft → inspect → remove",
-            "No business secrets in the test",
-          ],
-          terminal: {
-            label: "In Claude Code",
-            lines: ["cd your-practice-folder", "claude"],
-          },
-          image: {
-            file: "l02-acceptance-test.png",
+            file: "06-acceptance-test.png",
             desc: "16-bit pixel art: six-step path tiles—open → attach → summarize → draft → inspect → remove—ending at a trash can; no secret icons on the path.",
           },
           notes:
-            "Install or open Claude Code, run the acceptance test once. Narrate what you refuse to share.",
+            "After the lingo and stack slides, install or open Claude Code and run the acceptance test once. Narrate what you refuse to share.",
           tasks: [
             "Install or open Claude Code in your practice folder",
             "Run the acceptance test: open → attach → summarize → draft → inspect → remove",
             "Say aloud what you refuse to share in this workspace",
+          ],
+          sidebar: [
+            {
+              term: "Acceptance test",
+              def: "Harmless check that setup works before consequential work.",
+            },
           ],
         },
 
@@ -1049,6 +1134,8 @@
               def: "Model plus harness, instructions, and context—the working experience you brief and supervise.",
             },
           ],
+          notes:
+            "You named model vs harness lightly in Lesson 2—go deeper here. When output fails, ask: generation problem or harness problem?",
         },
         {
           type: "content",
