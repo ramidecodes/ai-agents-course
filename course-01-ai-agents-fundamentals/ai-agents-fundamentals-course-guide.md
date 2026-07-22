@@ -22,14 +22,14 @@ This is the internal design and production reference for **AI Agents Fundamental
 
 ### Place in the course sequence
 
-This is the foundation course, scoped around a **complete local, single-user setup**: Claude Code as the primary assistant, grounding in context/memory/RAG, tools vs skills vs plugins, a careful skill install, ALIVE for local memory, data-sharing awareness, MCP at recognition level, and one supervised working loop. The course closes by naming its own boundary: everything here works for one person on one machine. Shared team context, multi-user access control, business context, brand systems, and coaching routines belong in **AI Agents for Your Business**, rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
+This is the foundation course, scoped around a **complete local, single-user setup**: Claude Desktop as the primary assistant for beginners, grounding in context/memory/RAG, tools vs skills vs plugins, a careful skill install, ALIVE for local memory (via Claude Code plugins in later lessons), data-sharing awareness, MCP at recognition level, and one supervised working loop. The course closes by naming its own boundary: everything here works for one person on one machine. Shared team context, multi-user access control, business context, brand systems, and coaching routines belong in **AI Agents for Your Business**, rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
 
 ### Observable course outcomes
 
 By the end, learners should be able to:
 
 1. Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent, and how a modern chat turn actually runs.
-2. Set up Claude Code on macOS with ALIVE for local memory, extend the assistant with a new skill, and give it focused task context using ordinary files.
+2. Set up Claude Desktop on macOS, extend the assistant with a new skill, and give it focused task context using ordinary files.
 3. Explain what gets shared with whom, including the practical difference between a locally-running model and a cloud API, well enough to make deliberate, cautious choices about sensitive information.
 4. Explain why an assistant has no persistent memory by default, what retrieval-augmented generation (RAG) does, and complete a basic ALIVE local memory setup.
 5. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
@@ -146,7 +146,7 @@ Use low-friction checks throughout the course. They should not add significant v
 | Point           | Check                                                  | Evidence of learning                                                     |
 | --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
 | After Lesson 2  | Explain model versus harness/app in one sentence, and sketch one chat turn. | The foundational distinction and chat/tool loop are understood. |
-| After Lesson 3  | Open Claude Code in the chosen workspace and confirm a simple prompt works. | The harness is installed and usable. |
+| After Lesson 3  | Open Claude Desktop and confirm a simple prompt works with a chosen workspace folder. | The harness is installed and usable. |
 | After Lesson 4  | Select an autonomy level and justify it.               | The learner can match autonomy to risk.                                  |
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
@@ -180,9 +180,9 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 ## Recommended teaching posture
 
 - Teach concepts and architecture in provider-neutral language where possible.
-- Demonstrate **Claude Code** as the primary assistant throughout the core course.
-- **Lesson 2 sequence (required, theory only, no install):** what a model does (next-token / text generation) → named model families (concrete, dated "as of recording") → harness / app / assistant vs model; Claude Code = the harness we'll use → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
-- **Lesson 3 sequence (required), numbered learner path:** (0) minimum stack in plain language (Claude Code + one workspace folder + one harmless starter brief) → (1) choose & create workspace (new folder per project, or one Personal OS directory) → **caution (not a step):** access ≠ authority / cloud API → (2) Claude account access if needed → (3) open Terminal → (4) install Claude Code → (5) open Claude Code in that folder (sign in when prompted) → (6) confirm it works with a simple prompt → close toward agents; tools/skills/plugins and ALIVE come later. Do not open with install commands before the stack and folder guidance. Official links: [claude.com/pricing](https://claude.com/pricing) · [Terminal (macOS)](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) · [Install Claude Code](https://code.claude.com/docs/en/install) · [Quickstart](https://code.claude.com/docs/en/quickstart).
+- Demonstrate **Claude Desktop** as the primary assistant for Lesson 3 and early hands-on work; **Claude Code** appears later for plugins (skills, ALIVE).
+- **Lesson 2 sequence (required, theory only, no install):** what a model does (next-token / text generation) → named model families (concrete, dated "as of recording") → harness / app / assistant vs model; Claude Desktop = the harness we'll install → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
+- **Lesson 3 sequence (required), numbered learner path:** (0) minimum stack in plain language (Claude Desktop + one workspace folder + one harmless starter brief) with a brief opening caution woven in (access ≠ authority / cloud API; keep first session non-sensitive) → (1) choose & create workspace in Finder (new folder per project, or one Personal OS directory) → (2) download & install Claude Desktop from [claude.com/product/claude-code](https://claude.com/product/claude-code) (Download for Mac; paid plan or Console required) → (3) sign in and keep workspace folder handy → (4) confirm it works with a simple prompt → close toward agents; tools/skills/plugins and ALIVE come later. Do not open with install commands or Terminal. Official links: [claude.com/product/claude-code](https://claude.com/product/claude-code) · [claude.com/pricing](https://claude.com/pricing).
 - **Capability ladder (required order):** tools vs skills vs plugins/connections (Lesson 8) → carefully install/review a skill with [skills.sh](https://skills.sh) author checks (Lesson 9) → approvals / least privilege (Lesson 10) → **ALIVE** as first meaningful plugin for local memory (Lesson 11) → data-sharing judgment (Lesson 12) → MCP at recognition level (Lesson 13). Do not teach ALIVE or MCP before the vocabulary lesson.
 - Use **ALIVE** by name for the hands-on local memory lesson (Lesson 11): a Claude Code plugin that stores persistent local memory on disk. Lesson 3's folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
 - When naming tools or brands, say what they *are* (the job they do): harness, local files, memory layer, cloud API, assistant UI, not random name-drops.
@@ -195,7 +195,7 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 
 | Layer | Course requirement | Acceptable implementation |
 | ----- | ------------------ | ------------------------- |
-| Assistant | Claude Code on macOS with file access | Primary demo environment; ALIVE plugin for memory |
+| Assistant | Claude Desktop on macOS with file access | Primary beginner demo environment; Claude Code for plugins (ALIVE, skills) in later lessons |
 | Workspace | Human-readable learner-owned files | New folder per project, or one general Personal OS directory for a personal-assistant style setup |
 | Editing | Direct inspection and correction | Built-in editor or any familiar text editor |
 | Course assets | Brief, worksheet, and checklists | Downloadable Markdown or PDF files |
@@ -204,26 +204,23 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 
 Teach and demo in this order. Every installable/openable tool gets a one-line role, an official URL, and the exact action already used in the slides.
 
-| Step | What to do | What this is | Link / command |
+| Step | What to do | What this is | Link / action |
 | ---- | ---------- | ------------ | -------------- |
-| · | Know the minimum stack | Claude Code (harness) + one workspace folder + one harmless starter brief. Skip memory layer and skills for now. | [Claude Code docs](https://code.claude.com/docs/en/quickstart) |
-| 1 | Choose & create your workspace | A new folder per project, **or** one general Personal OS directory for personal-assistant style work. | Create in Finder or: `mkdir ~/Personal-OS` (or your project path) |
-| ⚠ | Access ≠ authority (caution) | File access is not permission to change or publish. Context you attach often travels over a cloud API. | Keep this first session non-sensitive |
-| 2 | Get Claude account access | Paid Claude plan (Pro, Max, Team, or Enterprise) or Claude Console, required to sign in to Claude Code. Free Claude.ai chat alone is not enough. | [claude.com/pricing](https://claude.com/pricing) |
-| 3 | Open Terminal | macOS app where you type commands; Claude Code runs here. | [Apple Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac) · [Claude terminal guide](https://code.claude.com/docs/en/terminal-guide) |
-| 4 | Install Claude Code | Native installer (recommended). No Node.js required for this path. | [Install docs](https://code.claude.com/docs/en/install) · `curl -fsSL https://claude.ai/install.sh \| bash` |
-| 5 | Open Claude Code in your folder | Start the harness in the workspace you chose; complete browser sign-in on first run. | [Quickstart](https://code.claude.com/docs/en/quickstart) · `cd your-workspace-folder` then `claude` |
-| 6 | Confirm it works | Open it, try a simple prompt, confirm a reply. Optional: summarize a harmless starter brief. | Example prompt: `Reply with one sentence: setup works.` |
+| · | Know the minimum stack | Claude Desktop (harness) + one workspace folder + one harmless starter brief. Brief opening caution: keep first session non-sensitive; file access ≠ permission to share secrets. | [claude.com/product/claude-code](https://claude.com/product/claude-code) |
+| 1 | Choose & create your workspace | A new folder per project, **or** one general Personal OS directory for personal-assistant style work. | Create in Finder (File → New Folder) |
+| 2 | Download & install Claude Desktop | Mac app from the product page. Sign-in needs a paid Claude plan or Console. | [claude.com/product/claude-code](https://claude.com/product/claude-code) → Download for Mac · [claude.com/pricing](https://claude.com/pricing) |
+| 3 | Sign in & open your workspace | Open the app, sign in when prompted, keep your workspace folder handy for later lessons. | Open Claude Desktop from Applications |
+| 4 | Confirm it works | Open it, try a simple prompt, confirm a reply. Optional: summarize a harmless starter brief. | Example prompt: `Reply with one sentence: setup works.` |
 
-**Intentionally not in Lesson 3:** Node.js/npm (native installer supersedes that path); Homebrew (optional alternative only); Python / ALIVE / skills (Lessons 8–11); Desktop app (course path is Terminal CLI).
+**Intentionally not in Lesson 3:** Terminal / CLI install (`curl install.sh`, `claude` command); Node.js/npm; Homebrew; Python / ALIVE / skills (Lessons 8–11). Other install methods exist in docs; the beginner path is Desktop only.
 
 ## Setup quick check
 
 After Lesson 3, the learner should be able to:
 
-1. Open Claude Code in their chosen workspace (project folder or Personal OS directory).
+1. Open Claude Desktop and have a chosen workspace folder ready (project folder or Personal OS directory).
 2. Try a simple prompt and confirm a reply comes back.
-3. Optionally: open or attach a harmless starter brief and ask for a short summary. Inspect the result outside chat if they created a draft.
+3. Optionally: attach a harmless starter brief and ask for a short summary. Inspect the result outside chat if they created a draft.
 4. Keep sensitive material out of this first session.
 
 ## Ordinary-file fallback
@@ -385,7 +382,7 @@ Pilot the course with a small group from the intended audience before final reco
 
 - Can learners choose a safe, appropriately narrow practice task without help?
 - Can they explain the model–harness/app–assistant distinction and sketch one chat/tool turn in their own words?
-- Can they open Claude Code in their workspace and confirm a simple prompt works on a clean account?
+- Can they open Claude Desktop and confirm a simple prompt works on a clean account?
 - Can they produce a usable CLEAR assignment without copying the instructor example?
 - Can they identify a meaningful approval point and verify a claim against a source?
 - Where do they pause, replay, abandon, or ask for help?
@@ -405,7 +402,7 @@ Pilot the course with a small group from the intended audience before final reco
 | Course outcome | Primary lessons | Demonstrated by |
 | -------------- | --------------- | --------------- |
 | Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 covers autonomy and agents |
-| Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9, 11 | Lesson 3 install + verify, context checklist, tools/skills/plugins map, one deliberately installed skill, ALIVE memory |
+| Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9, 11 | Lesson 3 Claude Desktop install + verify, context checklist, tools/skills/plugins map, one deliberately installed skill, ALIVE memory |
 | Explain data sharing (local vs. cloud) well enough to make cautious choices | 12 | One stated personal rule for what not to share |
 | Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG, then ALIVE as the practical local-memory plugin |
 | Give, review, verify, and improve a well-sourced assignment | 14–15 | CLEAR worksheet, source pack, and diagnostic revision |

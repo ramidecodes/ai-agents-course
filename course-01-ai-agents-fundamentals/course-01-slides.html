@@ -743,7 +743,7 @@
           "assets/pixel-art/04-minimum-beginner-stack.png",
         "What you're setting up today": "assets/pixel-art/00-cover-hero.png",
         "Words you'll need": "assets/pixel-art/09-same-model-different-app.png",
-        "Claude Code minimum stack":
+        "Claude Desktop minimum stack":
           "assets/pixel-art/04-minimum-beginner-stack.png",
         "Your setup path": "assets/pixel-art/04-minimum-beginner-stack.png",
         "Project folders or Personal OS":
@@ -751,15 +751,12 @@
         "1 · Choose your workspace":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
         "Access ≠ authority": "assets/pixel-art/05-access-not-authority.png",
-        "Caution · Access ≠ authority":
-          "assets/pixel-art/05-access-not-authority.png",
-        "2 · Get Claude account access": "assets/pixel-art/00-cover-hero.png",
-        "3 · Open Terminal": "assets/pixel-art/00-cover-hero.png",
-        "4 · Install Claude Code": "assets/pixel-art/00-cover-hero.png",
-        "Install and open": "assets/pixel-art/00-cover-hero.png",
-        "5 · Open in your folder": "assets/pixel-art/00-cover-hero.png",
+        "2 · Download & install Claude Desktop":
+          "assets/pixel-art/00-cover-hero.png",
+        "3 · Sign in & open your workspace":
+          "assets/pixel-art/00-cover-hero.png",
         "Confirm it works": "assets/pixel-art/06-acceptance-test.png",
-        "6 · Confirm it works": "assets/pixel-art/06-acceptance-test.png",
+        "4 · Confirm it works": "assets/pixel-art/06-acceptance-test.png",
         "Install, then acceptance test":
           "assets/pixel-art/06-acceptance-test.png",
         "Acceptance test": "assets/pixel-art/06-acceptance-test.png",
@@ -900,7 +897,7 @@
             },
           ],
           notes:
-            "Screen-share (~30s): pan the finished setup: workspace folder, starter brief, labeled draft, your review step. Next: how models and harnesses work (Lesson 2), then install Claude Code (Lesson 3).",
+            "Screen-share (~30s): pan the finished setup: workspace folder, starter brief, labeled draft, your review step. Next: how models and harnesses work (Lesson 2), then install Claude Desktop (Lesson 3).",
           tasksLabel: "Watch for",
           tasks: [
             "The five loop stages on screen",
@@ -913,7 +910,7 @@
           module: "Module 01 · Orientation and mental model",
           title: "What you'll be able to do",
           bullets: [
-            "Set up Claude Code on your Mac and work with files in a dedicated workspace",
+            "Set up Claude Desktop on your Mac and work with files in a dedicated workspace",
             "Brief your AI agent, review its draft, and ask for improvements",
             "Know what to share, and what to keep private",
             "Finish one complete supervised workflow on your own task",
@@ -1026,7 +1023,7 @@
           title: "Harness vs model",
           bullets: [
             "Harness = the app: UI, tools, files, permissions, history",
-            "Assistant = what you brief · Claude Code = our harness",
+            "Assistant = what you brief · Claude Desktop = our harness",
           ],
           image: {
             file: "07-model-vs-harness.png",
@@ -1042,16 +1039,16 @@
               def: "Combined working experience you supervise.",
             },
             {
-              term: "Claude Code",
-              def: "The harness this course uses.",
+              term: "Claude Desktop",
+              def: "The Mac app we'll install: UI, files, tools, and permissions around the model.",
             },
           ],
           notes:
-            "When output fails later, ask: generation problem or harness problem? Install is next lesson, not this one.",
+            "When output fails later, ask: generation problem or harness problem? Install is next lesson, not this one. Claude Code (terminal) is the same product family for advanced use later.",
           tasksLabel: "Watch for",
           tasks: [
             "Model vs harness in one plain sentence",
-            "Why Claude Code is a harness, not a model",
+            "Why Claude Desktop is a harness, not a model",
           ],
         },
         {
@@ -1092,7 +1089,7 @@
           title: "Next: install the harness",
           bullets: [
             "You know what the pieces are",
-            "Next lesson: set up Claude Code on your Mac",
+            "Next lesson: set up Claude Desktop on your Mac",
           ],
           image: {
             file: "04-minimum-beginner-stack.png",
@@ -1108,8 +1105,8 @@
           type: "lesson",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "Set up Claude Code on your Mac",
-          runtime: "5–7 min",
+          title: "Set up Claude Desktop on your Mac",
+          runtime: "4–5 min",
         },
         {
           type: "content",
@@ -1117,13 +1114,14 @@
           module: "Module 02 · Setup and autonomy",
           title: "Your setup path",
           bullets: [
-            "Minimum: Claude Code · one folder · one starter brief",
-            "1 Workspace → 2 Account → 3 Terminal → 4 Install → 5 Open → 6 Confirm",
+            "Minimum: Claude Desktop · one folder · one starter brief",
+            "1 Workspace → 2 Download → 3 Sign in → 4 Confirm",
+            "Keep this first session non-sensitive. File access ≠ permission to share secrets",
           ],
           urls: [
             {
-              href: "https://code.claude.com/docs/en/quickstart",
-              label: "code.claude.com/docs/en/quickstart",
+              href: "https://claude.com/product/claude-code",
+              label: "claude.com/product/claude-code",
             },
           ],
           image: {
@@ -1132,8 +1130,8 @@
           },
           sidebar: [
             {
-              term: "Claude Code",
-              def: "The harness this course uses.",
+              term: "Claude Desktop",
+              def: "The Mac app we'll install: the harness around the model.",
             },
             {
               term: "Cloud API",
@@ -1141,9 +1139,9 @@
             },
           ],
           notes:
-            "Show the whole path before diving in. Memory layer and skills come later. Standardize on Claude Code.",
+            "Show the whole path before diving in. Memory layer and skills come later. Weave the access caution here; do not stop the flow for a separate caution slide.",
           tasksLabel: "Watch for",
-          tasks: ["The six steps", "What stays out of the minimum stack"],
+          tasks: ["The four steps", "What stays out of the minimum stack"],
         },
         {
           type: "content",
@@ -1152,12 +1150,8 @@
           title: "1 · Choose your workspace",
           bullets: [
             "New folder per project, or one Personal OS directory",
-            "Create it now; write down the path",
+            "Create it in Finder now; write down the path",
           ],
-          terminal: {
-            label: "Optional (Terminal)",
-            lines: ["mkdir ~/Personal-OS"],
-          },
           image: {
             file: "44-memory-folder-not-black-box.png",
             desc: "16-bit pixel art: two tidy folder trees: project folders vs one Personal OS home versus a messy dump pile crossed out.",
@@ -1172,41 +1166,24 @@
             "Practical hygiene, not compliance theater. Foreshadow ALIVE (Lesson 11 after plugins) without teaching it now.",
           tasks: [
             "Choose: new project folder or one Personal OS directory",
-            "Create the folder and write the path",
+            "Create the folder in Finder and write the path",
           ],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "Caution · Access ≠ authority",
+          title: "2 · Download & install Claude Desktop",
           bullets: [
-            "File access is not permission to change or publish",
-            "You choose what enters the chat. Keep this session non-sensitive",
-          ],
-          image: {
-            file: "05-access-not-authority.png",
-            desc: "16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish arrows beyond the workspace boundary.",
-          },
-          sidebar: [
-            {
-              term: "File access",
-              def: "Ability to see files is not permission to change or publish.",
-            },
-          ],
-          notes:
-            "Caution only, not a setup step. Cloud API: context you attach often leaves your machine.",
-        },
-        {
-          type: "content",
-          lesson: 3,
-          module: "Module 02 · Setup and autonomy",
-          title: "2 · Get Claude account access",
-          bullets: [
-            "Pro, Max, Team, Enterprise, or Claude Console",
-            "Free Claude.ai chat alone is not enough for Claude Code",
+            "Open claude.com/product/claude-code",
+            "Click Download for Mac, then install like any Mac app",
+            "Sign-in needs Pro, Max, Team, Enterprise, or Console (not free chat alone)",
           ],
           urls: [
+            {
+              href: "https://claude.com/product/claude-code",
+              label: "claude.com/product/claude-code",
+            },
             {
               href: "https://claude.com/pricing",
               label: "claude.com/pricing",
@@ -1219,119 +1196,48 @@
           sidebar: [
             {
               term: "Claude account",
-              def: "Paid plan or Console login required to use Claude Code.",
+              def: "Paid plan or Console login required to use Claude Desktop.",
             },
           ],
           notes:
-            "Screen-share pricing only if learners need signup. Skip if already subscribed.",
+            "Screen-share the product page and Download for Mac. Open pricing only if learners still need an account. Other install methods exist in docs; we do not teach them here.",
           tasks: [
-            "Confirm you have Pro/Max/Team/Enterprise or Console access",
-            "Open claude.com/pricing if you still need an account",
+            "Download Claude Desktop for Mac",
+            "Complete install and open the app",
           ],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "3 · Open Terminal",
+          title: "3 · Sign in & open your workspace",
           bullets: [
-            "Built into macOS (Spotlight → Terminal)",
-            "This is where install and Claude Code run",
+            "Sign in when prompted on first launch",
+            "Keep your workspace folder handy for file work in later lessons",
+            "Context you attach often travels over a cloud API",
           ],
-          urls: [
-            {
-              href: "https://support.apple.com/guide/terminal/welcome/mac",
-              label: "support.apple.com: Terminal User Guide",
-            },
-            {
-              href: "https://code.claude.com/docs/en/terminal-guide",
-              label: "code.claude.com/docs/en/terminal-guide",
-            },
-          ],
-          image: {
-            file: "00-cover-hero.png",
-            desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist.",
-          },
-          sidebar: [
-            {
-              term: "Terminal",
-              def: "macOS app where you type commands.",
-            },
-          ],
-          notes:
-            "Open Terminal live. Point beginners to the Claude terminal guide if needed.",
-          tasks: ["Open Terminal via Spotlight"],
-        },
-        {
-          type: "content",
-          lesson: 3,
-          module: "Module 02 · Setup and autonomy",
-          title: "4 · Install Claude Code",
-          bullets: [
-            "Native installer (recommended), no Node.js",
-            "Paste the command, press Return, wait for it to finish",
-          ],
-          urls: [
-            {
-              href: "https://code.claude.com/docs/en/install",
-              label: "code.claude.com/docs/en/install",
-            },
-          ],
-          terminal: {
-            label: "Install (macOS)",
-            lines: ["curl -fsSL https://claude.ai/install.sh | bash"],
-          },
           image: {
             file: "00-cover-hero.png",
             desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
           },
           sidebar: [
             {
-              term: "Native installer",
-              def: "Official install path; auto-updates in the background.",
+              term: "Workspace",
+              def: "The folder where files and drafts for this work live.",
             },
           ],
           notes:
-            "Screen-share the install (or skip if already installed). Restart Terminal if `claude` is not found.",
+            "Walk through sign-in once. Narrate the folder path you created in step 1.",
           tasks: [
-            "Run the install command",
-            "Optional check: claude --version",
+            "Sign in to Claude Desktop",
+            "Note which workspace folder you will use for course work",
           ],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "5 · Open in your folder",
-          bullets: [
-            "cd into your workspace, then start Claude Code",
-            "Complete browser sign-in on first run",
-          ],
-          urls: [
-            {
-              href: "https://code.claude.com/docs/en/quickstart",
-              label: "code.claude.com/docs/en/quickstart",
-            },
-          ],
-          terminal: {
-            label: "Open in your workspace",
-            lines: ["cd your-workspace-folder", "claude"],
-          },
-          image: {
-            file: "00-cover-hero.png",
-            desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
-          },
-          notes: "Narrate the folder path. Walk through browser login once.",
-          tasks: [
-            "cd to the folder from step 1",
-            "Run claude and finish sign-in if prompted",
-          ],
-        },
-        {
-          type: "content",
-          lesson: 3,
-          module: "Module 02 · Setup and autonomy",
-          title: "6 · Confirm it works",
+          title: "4 · Confirm it works",
           bullets: [
             "Open it · try a simple prompt · confirm a reply",
             "Optional: summarize a harmless starter brief",

@@ -1095,7 +1095,7 @@
       <ul class="hero-meta reveal" aria-label="Course overview">
         <li>62 minutes</li>
         <li>7 modules · 17 lessons</li>
-        <li>Claude Code + ALIVE</li>
+        <li>Claude Desktop + ALIVE</li>
         <li>Beginner · no technical background required</li>
       </ul>
       <a class="scroll-cue reveal" href="#about">Continue <span aria-hidden="true">↓</span></a>
@@ -1111,7 +1111,7 @@
           In about an hour, you replace vague product folklore with a working model of assistants and agents: what the model does, what the harness adds, how context and memory work, how tools and skills differ, and how to supervise one small workflow end to end.
         </p>
         <p class="lede">
-          Built for entrepreneurs and business users who have tried chat AI but still lack a dependable way to use it for real work. By the end you have Claude Code running, a workspace folder, ALIVE for memory across sessions, a CLEAR way to assign work, clear data-sharing rules, and one completed supervised loop, plus an honest view of where a single-user, file-based setup stops. Lessons are short enough to watch alone (about 2–6 minutes) or in sequence.
+          Built for entrepreneurs and business users who have tried chat AI but still lack a dependable way to use it for real work. By the end you have Claude Desktop running, a workspace folder, ALIVE for memory across sessions, a CLEAR way to assign work, clear data-sharing rules, and one completed supervised loop, plus an honest view of where a single-user, file-based setup stops. Lessons are short enough to watch alone (about 2–6 minutes) or in sequence.
         </p>
       </div>
     </section>
@@ -1153,7 +1153,7 @@
         <h2 id="outcomes-heading">What "done" looks like</h2>
         <ol class="outcomes">
           <li>Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent, and how a modern chat turn actually runs.</li>
-          <li>Set up Claude Code on macOS with ALIVE for local memory, extend the assistant with a new skill, and give it focused task context using ordinary files.</li>
+          <li>Set up Claude Desktop on macOS, extend the assistant with a new skill, and give it focused task context using ordinary files.</li>
           <li>Explain what gets shared with whom, including the practical difference between a locally-running model and a cloud API, well enough to make deliberate, cautious choices about sensitive information.</li>
           <li>Explain why an assistant has no persistent memory by default, what retrieval-augmented generation (RAG) does, and set up ALIVE for basic local memory across sessions.</li>
           <li>Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.</li>
@@ -1191,8 +1191,8 @@
               <td>2</td>
               <td><span class="mod-title">Setup and autonomy</span></td>
               <td class="hide-sm">2</td>
-              <td>10 min</td>
-              <td class="hide-sm"><span class="mod-out">Claude Code working, and autonomy choice</span></td>
+              <td>9 min</td>
+              <td class="hide-sm"><span class="mod-out">Claude Desktop working, and autonomy choice</span></td>
             </tr>
             <tr>
               <td>3</td>
@@ -1240,7 +1240,7 @@
             </tr>
           </tfoot>
         </table>
-        <p class="audience-note">Lessons are sized for 2–6 minute standalone clips as well as sequential viewing. Claude Code is the primary demo environment; ALIVE provides local, file-based memory in the core path.</p>
+        <p class="audience-note">Lessons are sized for 2–6 minute standalone clips as well as sequential viewing. Claude Desktop is the primary demo environment for beginners; Claude Code (terminal) appears later for plugins like ALIVE. ALIVE provides local, file-based memory in the core path.</p>
       </div>
     </section>
 
@@ -1253,7 +1253,7 @@
             <p class="col-label">Before presenting</p>
             <ul class="plain-list">
               <li>Treat this curriculum and <code>course-01-slides.html</code> as a paired source of truth. The slide file controls audience-facing sequence, copy, visuals, links, and embedded notes; this file controls teaching intent, objectives, misconceptions, demonstrations, and transitions. Reconcile both whenever one changes.</li>
-              <li>Preflight Claude Code, Python 3.10+, ALIVE, the workspace folder, links, commands, permissions, and the fresh-session check. Keep a prepared installed state or short capture available for network-dependent steps.</li>
+              <li>Preflight Claude Desktop (Lesson 3), Claude Code for plugin lessons, Python 3.10+, ALIVE, the workspace folder, links, permissions, and the fresh-session check. Keep a prepared installed state or short capture available for network-dependent steps.</li>
               <li>Verify product commands, plan terms, and privacy settings against current official sources immediately before recording. State the date checked when showing policy or settings pages.</li>
               <li>Use one public, non-sensitive practice task throughout. Reset its files to a known baseline before each take.</li>
               <li>Do not record Lesson 9 until <strong>[Skill Name TBD]</strong> has been replaced with a real, reviewed skill and the corresponding slide copy and notes have been updated.</li>
@@ -1435,14 +1435,14 @@
                           <li><strong>Output</strong> One-sentence model vs harness distinction, plus a sketched chat turn</li>
                           <li><strong>Standalone clip</strong> Works alone, no setup required; uses diagrams, not your install.</li>
                         </ul>
-                        <p class="lesson-why">The most common misconception is that "the AI" is just the model. Install goes better, and safer when learners already know what the model does, what the harness adds, and how a chat turn with tools actually runs. Theory first; Claude Code install is Lesson 3.</p>
+                        <p class="lesson-why">The most common misconception is that "the AI" is just the model. Install goes better, and safer when learners already know what the model does, what the harness adds, and how a chat turn with tools actually runs. Theory first; Claude Desktop install is Lesson 3.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li><strong>What a model does:</strong> A language model predicts likely next tokens and generates text (and sometimes other modalities). It does not open files, click buttons, or enforce permissions by itself, and a fluent reply is not the same as human understanding.</li>
                             <li><strong>Named model families (as of recording):</strong> Name a few concrete families so learners can categorize, not memorize a catalog: e.g. Claude (Anthropic), GPT (OpenAI), Gemini (Google), and open-weight options you can run or host yourself. Teaching point: same category (models), different providers and tradeoffs; products change. Use "as of recording."</li>
-                            <li><strong>Harness / app / assistant vs model:</strong> The harness is ordinary software around the model: UI, context assembly, tool execution, history, and permissions. An assistant is the working experience when model + harness + instructions + context + capabilities combine. Claude Code is the harness we use in this course, not because it is the only option, but so everyone follows one hands-on path.</li>
+                            <li><strong>Harness / app / assistant vs model:</strong> The harness is ordinary software around the model: UI, context assembly, tool execution, history, and permissions. An assistant is the working experience when model + harness + instructions + context + capabilities combine. Claude Desktop is the harness we install in this course: the Mac app with files, tools, and permissions around the model. Claude Code (terminal) is the same product family for advanced use later; we start with the desktop app so beginners never need the command line.</li>
                             <li><strong>One chat turn:</strong> You send a message → the harness assembles context → the model replies with text and/or tool requests → the harness runs allowed tools and feeds results back → the model may continue → you see a response (often with a step trail). Same model, different harness → different behavior.</li>
                             <li><strong>Bridge:</strong> Next lesson we install and open that harness on your Mac, so the vocabulary has somewhere to land.</li>
                           </ul>
@@ -1507,7 +1507,7 @@
                                   <h5 class="slide-title">Harness vs model</h5>
                                   <ul class="slide-body">
                                     <li>Harness = the app: UI, tools, files, permissions, history</li>
-                                    <li>Assistant = what you brief · Claude Code = our harness</li>
+                                    <li>Assistant = what you brief · Claude Desktop = our harness</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1518,7 +1518,7 @@
                                     <ul>
                                     <li><strong>Harness</strong>: Software around the model: UI, context, tools, permissions.</li>
                                     <li><strong>Assistant</strong>: Combined working experience you supervise.</li>
-                                    <li><strong>Claude Code</strong>: The harness this course uses.</li>
+                                    <li><strong>Claude Desktop</strong>: The Mac app we'll install; the harness around the model.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -1546,7 +1546,7 @@
                                   <h5 class="slide-title">Next: install the harness</h5>
                                   <ul class="slide-body">
                                     <li>You know what the pieces are</li>
-                                    <li>Next lesson: set up Claude Code on your Mac</li>
+                                    <li>Next lesson: set up Claude Desktop on your Mac</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1585,7 +1585,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: model generates; harness runs the loop. Next: set up Claude Code on your Mac.</p>
+                        <p class="transition-note">Takeaway: model generates; harness runs the loop. Next: set up Claude Desktop on your Mac.</p>
                       </div>
                     </li>
 
@@ -1602,7 +1602,7 @@
                 <span class="module-num">02</span>
                 <span class="module-copy">
                   <span class="module-title">Setup and autonomy</span>
-                  <span class="module-meta">2 lessons · 10 min</span>
+                  <span class="module-meta">2 lessons · 9 min</span>
                 </span>
                 <svg class="module-chevron" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5.5 L8 10.5 L13 5.5" /></svg>
               </button>
@@ -1611,32 +1611,30 @@
               <div class="module-panel-inner">
                 <div class="module-body">
                   <p class="module-desc">Install the harness you just learned about, confirm it works, then choose an autonomy level that matches risk, so setup and agent judgment land in the same module.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> Claude Code open in a sensible workspace, a quick confirm that it works, and an autonomy level chosen for the practice task.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> Claude Desktop open with a sensible workspace folder, a quick confirm that it works, and an autonomy level chosen for the practice task.</p>
                   <ul class="lessons">
 
                     <li class="lesson">
                       <span class="lesson-num">3</span>
                       <div>
-                        <p class="lesson-title">Set up Claude Code on your Mac</p>
-                        <p class="lesson-desc">You know what a harness is. Now follow a numbered path: create a workspace, get account access, install Claude Code, open it in that folder, and confirm a simple prompt works. Keep sensitive material out of this first session.</p>
+                        <p class="lesson-title">Set up Claude Desktop on your Mac</p>
+                        <p class="lesson-desc">You know what a harness is. Now follow a short path: create a workspace in Finder, download Claude Desktop, sign in, and confirm a simple prompt works. Keep sensitive material out of this first session.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 5–7 min</li>
-                          <li><strong>Output</strong> Working Claude Code session in a chosen workspace</li>
-                          <li><strong>Standalone clip</strong> Partial (best after Lesson 2's model/harness framing); install steps still work alone if you already want Claude Code on your Mac.</li>
+                          <li><strong>Runtime</strong> 4–5 min</li>
+                          <li><strong>Output</strong> Working Claude Desktop session with a chosen workspace folder</li>
+                          <li><strong>Standalone clip</strong> Partial (best after Lesson 2's model/harness framing); install steps still work alone if you already want Claude Desktop on your Mac.</li>
                         </ul>
-                        <p class="lesson-why">Install has meaning after Lesson 2: learners know Claude Code is a harness wrapping a model, not "the AI" itself. Keep this lesson a clear step-by-step path with links: minimum stack, folder choice, a light boundary caution, then install and verify without QA jargon.</p>
+                        <p class="lesson-why">Install has meaning after Lesson 2: learners know Claude Desktop is a harness wrapping a model, not "the AI" itself. Keep this lesson a clear step-by-step path with links: minimum stack, folder choice, download from the product page, sign in, and a simple confirm prompt. Weave the access caution into the opening overview, not as a step that breaks the flow.</p>
 
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Learner setup path (follow in order)</h4>
                           <ul class="talking-points">
-                            <li><strong>Minimum stack:</strong> Claude Code (the harness) + one workspace folder + one harmless starter brief. Memory layer and skills come later. Skip them for now. We standardize on Claude Code so every learner follows the same path.</li>
-                            <li><strong>1 · Choose &amp; create your workspace.</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory for personal-assistant style work. Create it in Finder, or in Terminal: <code>mkdir ~/Personal-OS</code> (or your project path). That habit helps later when you add a persistent local memory layer (ALIVE in Lesson 11 after you know what plugins are).</li>
-                            <li><strong>Caution (not a step), Access ≠ authority:</strong> File access is not permission to change or publish. You choose what enters the chat. Context you attach often travels over a cloud API (Claude Code sends context to Anthropic's servers unless you use a local model). Keep this first session non-sensitive.</li>
-                            <li><strong>2 · Get Claude account access.</strong> Claude Code needs a paid Claude plan (Pro, Max, Team, or Enterprise) or a Claude Console account, not free Claude.ai chat alone. What it is: your login for the harness and cloud model. Open: <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">claude.com/pricing</a></li>
-                            <li><strong>3 · Open Terminal.</strong> Built into macOS where you'll run the install and start Claude Code. What it is: the app for typing commands. Open: Spotlight → "Terminal", or <a href="https://support.apple.com/guide/terminal/welcome/mac" target="_blank" rel="noopener noreferrer">Apple Terminal User Guide</a> · New to terminals? <a href="https://code.claude.com/docs/en/terminal-guide" target="_blank" rel="noopener noreferrer">Claude terminal guide</a></li>
-                            <li><strong>4 · Install Claude Code.</strong> Official native installer (recommended). No Node.js for this path. What it is: the harness this course uses (a terminal assistant with file access, tools, and permissions around a cloud model). Docs: <a href="https://code.claude.com/docs/en/install" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/install</a>. Command: <code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
-                            <li><strong>5 · Open Claude Code in your folder.</strong> In Terminal: <code>cd</code> into the workspace you created, then run <code>claude</code>. On first run, complete browser sign-in when prompted. Docs: <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener noreferrer">code.claude.com/docs/en/quickstart</a>. Commands: <code>cd your-workspace-folder</code> then <code>claude</code></li>
-                            <li><strong>6 · Confirm it works.</strong> Try a simple prompt and confirm a reply. Optional: attach the starter brief and ask for a short summary. No business secrets in this first check. Example: <code>Reply with one sentence: setup works.</code></li>
+                            <li><strong>Minimum stack:</strong> Claude Desktop (the harness) + one workspace folder + one harmless starter brief. Memory layer and skills come later. Skip them for now. We standardize on Claude Desktop so every beginner follows the same path without the command line.</li>
+                            <li><strong>Opening caution (not a step):</strong> Keep this first session non-sensitive. File access is not permission to change or publish. You choose what enters the chat. Context you attach often travels over a cloud API.</li>
+                            <li><strong>1 · Choose &amp; create your workspace.</strong> Prefer a <em>new folder per project</em>, or one general <em>Personal OS</em> directory for personal-assistant style work. Create it in Finder (File → New Folder). That habit helps later when you add a persistent local memory layer (ALIVE in Lesson 11 after you know what plugins are).</li>
+                            <li><strong>2 · Download &amp; install Claude Desktop.</strong> Open <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener noreferrer">claude.com/product/claude-code</a> and click <strong>Download for Mac</strong>. Install like any Mac app. Sign-in needs a paid Claude plan (Pro, Max, Team, or Enterprise) or Claude Console, not free Claude.ai chat alone. Pricing: <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">claude.com/pricing</a>. Other install methods exist in docs; we do not teach them in this beginner path.</li>
+                            <li><strong>3 · Sign in &amp; open your workspace.</strong> Open Claude Desktop and sign in when prompted. Keep your workspace folder from step 1 handy for file work in later lessons.</li>
+                            <li><strong>4 · Confirm it works.</strong> Try a simple prompt and confirm a reply. Optional: attach the starter brief and ask for a short summary. No business secrets in this first check. Example: <code>Reply with one sentence: setup works.</code></li>
                             <li><strong>Close:</strong> You're set up. Next: agents and how much autonomy to grant, then tools, skills, and plugins, including ALIVE for memory across sessions.</li>
                           </ul>
                           <div class="misconceptions">
@@ -1661,8 +1659,9 @@
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Your setup path</h5>
                                   <ul class="slide-body">
-                                    <li>Minimum: Claude Code · one folder · one starter brief</li>
-                                    <li>1 Workspace → 2 Account → 3 Terminal → 4 Install → 5 Open → 6 Confirm</li>
+                                    <li>Minimum: Claude Desktop · one folder · one starter brief</li>
+                                    <li>1 Workspace → 2 Download → 3 Sign in → 4 Confirm</li>
+                                    <li>Keep this first session non-sensitive. File access ≠ permission to share secrets</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1671,7 +1670,7 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Claude Code</strong>: The harness this course uses.</li>
+                                    <li><strong>Claude Desktop</strong>: The Mac app we'll install; the harness around the model.</li>
                                     <li><strong>Cloud API</strong>: Remote processing of context on a provider's servers.</li>
                                     </ul>
                                   </div>
@@ -1681,7 +1680,7 @@
                                   <h5 class="slide-title">1 · Choose your workspace</h5>
                                   <ul class="slide-body">
                                     <li>New folder per project, or one Personal OS directory</li>
-                                    <li>Create it now; write down the path</li>
+                                    <li>Create it in Finder now; write down the path</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1696,28 +1695,24 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Caution · Access ≠ authority</h5>
+                                  <h5 class="slide-title">2 · Download &amp; install Claude Desktop</h5>
                                   <ul class="slide-body">
-                                    <li>File access is not permission to change or publish</li>
-                                    <li>You choose what enters the chat. Keep this session non-sensitive</li>
+                                    <li>Open claude.com/product/claude-code</li>
+                                    <li>Click Download for Mac, then install like any Mac app</li>
+                                    <li>Sign-in needs Pro, Max, Team, Enterprise, or Console (not free chat alone)</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: folder with a key; green arrow for open/read; red barrier blocking change/publish. (Reuse: <code>05-access-not-authority.png</code>.)</p>
-                                  </div>
-                                  <div class="slide-side-panel">
-                                    <span class="slide-meta-label">Side panel</span>
-                                    <ul>
-                                    <li><strong>File access</strong>: Ability to see files is not permission to change or publish.</li>
-                                    </ul>
+                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark. (Reuse: <code>00-cover-hero.png</code>.)</p>
                                   </div>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">2 · Get Claude account access</h5>
+                                  <h5 class="slide-title">3 · Sign in &amp; open your workspace</h5>
                                   <ul class="slide-body">
-                                    <li>Pro, Max, Team, Enterprise, or Claude Console</li>
-                                    <li>Free Claude.ai chat alone is not enough for Claude Code</li>
+                                    <li>Sign in when prompted on first launch</li>
+                                    <li>Keep your workspace folder handy for file work in later lessons</li>
+                                    <li>Context you attach often travels over a cloud API</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1726,43 +1721,7 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 5</span>
-                                  <h5 class="slide-title">3 · Open Terminal</h5>
-                                  <ul class="slide-body">
-                                    <li>Built into macOS (Spotlight → Terminal)</li>
-                                    <li>This is where install and Claude Code run</li>
-                                  </ul>
-                                  <div class="slide-visual">
-                                    <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist. (Reuse: <code>00-cover-hero.png</code>.)</p>
-                                  </div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 6</span>
-                                  <h5 class="slide-title">4 · Install Claude Code</h5>
-                                  <ul class="slide-body">
-                                    <li>Native installer (recommended), no Node.js</li>
-                                    <li><code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
-                                  </ul>
-                                  <div class="slide-visual">
-                                    <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark. (Reuse: <code>00-cover-hero.png</code>.)</p>
-                                  </div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 7</span>
-                                  <h5 class="slide-title">5 · Open in your folder</h5>
-                                  <ul class="slide-body">
-                                    <li><code>cd your-workspace-folder</code> then <code>claude</code></li>
-                                    <li>Complete browser sign-in on first run</li>
-                                  </ul>
-                                  <div class="slide-visual">
-                                    <span class="slide-meta-label">Visual</span>
-                                    <p>16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark. (Reuse: <code>00-cover-hero.png</code>.)</p>
-                                  </div>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 8</span>
-                                  <h5 class="slide-title">6 · Confirm it works</h5>
+                                  <h5 class="slide-title">4 · Confirm it works</h5>
                                   <ul class="slide-body">
                                     <li>Open it · try a simple prompt · confirm a reply</li>
                                     <li>Optional: summarize a harmless starter brief</li>
@@ -1774,7 +1733,7 @@
                                   </div>
                                 </article>
                               </div>
-                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Walk steps 1→6 in order. After the caution slide, open pricing if needed, then Terminal → install → <code>cd</code> + <code>claude</code> → simple prompt. Narrate what you refuse to share.</p>
+                              <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Walk steps 1→4 in order. Open the product page, click Download for Mac, sign in, then try a simple prompt. Narrate what you refuse to share. Weave the access caution on slide 1; do not stop for a separate caution slide.</p>
                             </div>
                           </details>
                           <details>
@@ -1782,8 +1741,8 @@
                             <div class="details-body">
                               <dl class="glossary">
                                 <div>
-                                  <dt>Claude Code</dt>
-                                  <dd>The harness this course uses: terminal-based assistant with file access, tools, and permissions around a cloud model.</dd>
+                                  <dt>Claude Desktop</dt>
+                                  <dd>The Mac app we install in Lesson 3: the harness with file access, tools, and permissions around a cloud model.</dd>
                                 </div>
                                 <div>
                                   <dt>Cloud API</dt>
@@ -1794,18 +1753,14 @@
                                   <dd>One general workspace directory for personal-assistant style work: an alternative to a new folder per project.</dd>
                                 </div>
                                 <div>
-                                  <dt>Terminal</dt>
-                                  <dd>The macOS app where you type commands to install and run Claude Code.</dd>
-                                </div>
-                                <div>
                                   <dt>Workspace</dt>
-                                  <dd>The folder Claude Code is opened in where files and drafts for this work live.</dd>
+                                  <dd>The folder where files and drafts for this work live.</dd>
                                 </div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: Claude Code is open and working in a sensible folder. Next: when is something actually an agent, and how much autonomy is safe?</p>
+                        <p class="transition-note">Takeaway: Claude Desktop is open and working with a sensible folder. Next: when is something actually an agent, and how much autonomy is safe?</p>
                       </div>
                     </li>
 
@@ -2715,7 +2670,7 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Prerequisites: Claude Code (Lesson 3) and Python 3.10+ on your Mac.</li>
+                            <li>Prerequisites: Claude Desktop working (Lesson 3). This lesson installs ALIVE as a Claude Code plugin; use Claude Code for the plugin steps below. Python 3.10+ on your Mac.</li>
                             <li>Do you need to install Python? Only if it is missing. ALIVE (and Claude Code plugin/runtime pieces it relies on) needs Python to run.</li>
                             <li>Quick check: run <code>python3 --version</code> in Terminal. If you see version 3.10 or newer, continue. If not found (or lower), install Python 3 from python.org, then reopen Terminal and re-check.</li>
                             <li>Install from Terminal with <code>claude plugin install alive@alivecontext</code>. Exit and restart Claude Code, then run the guided setup.</li>
@@ -3402,7 +3357,7 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>What you built today is real and complete for one person: Claude Code, a local workspace, ALIVE for memory across sessions, one repeatable way to delegate and supervise, and one reviewed artifact.</li>
+                            <li>What you built today is real and complete for one person: Claude Desktop, a local workspace, ALIVE for memory across sessions, one repeatable way to delegate and supervise, and one reviewed artifact.</li>
                             <li>It is also inherently single-user and local: your files stay on your machine, your saved memory is yours alone, and nothing here is visible to a teammate unless you manually hand it to them.</li>
                             <li>A team needs a shared source of truth: one place everyone's assistant can read and write, so people don't quietly diverge onto different, conflicting versions of "the current brief" or "the approved brand note."</li>
                             <li>That requires solving problems this course deliberately did not touch: who can see or change what, how conflicting edits from two people are resolved, and how memory is shared without one person's private notes leaking to another.</li>
