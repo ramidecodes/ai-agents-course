@@ -852,7 +852,11 @@
           "assets/pixel-art/22-tools-skills-connections.png",
         "Tools: let it act": "assets/pixel-art/23-who-runs-tool.png",
         "Skills: teach it how": "assets/pixel-art/25-browse-install-try.png",
+        "Skills: browse, review, install":
+          "assets/pixel-art/25-browse-install-try.png",
         "Plugins: installable packages": "assets/pixel-art/45-propose-confirm-save.png",
+        "Plugins: install and configure":
+          "assets/pixel-art/45-propose-confirm-save.png",
         "Tools · skills · plugins":
           "assets/pixel-art/22-tools-skills-connections.png",
         "Who runs the tool?": "assets/pixel-art/23-who-runs-tool.png",
@@ -1632,7 +1636,7 @@
         def: "Installable package that extends the agent with skills, hooks, or connections. ALIVE is a plugin (later)."
       }
     ],
-    notes: "Map the three extension types, then spend one slide on each with examples and where to find them. Next: MCP, then install one skill carefully."
+    notes: "Map the three extension types with examples on Tools, then Connected ≠ correct. Next lesson: install and configure MCP, skills, then plugins."
   },
   {
     type: "content",
@@ -1661,55 +1665,6 @@
         def: "Executable capability that observes or changes something outside the chat."
       }
     ],
-  },
-  {
-    type: "content",
-    lesson: 8,
-    module: "Module 04 · Tools, skills, and connections",
-    title: "Skills: teach it how",
-    bullets: [
-      "Examples: brand voice, research brief, code-review checklist, content outline",
-      "Reusable guidance — not the action itself",
-      "Where to find them: /plugin in Claude Code, skills.sh, academy skills (later in this lesson block)"
-    ],
-    urls: [
-      {
-        href: "https://skills.sh",
-        label: "skills.sh"
-      }
-    ],
-    image: {
-      file: "l12-browse-install-try.png",
-      desc: "16-bit pixel art: shelf of skill-books labeled brand, research, review; one book open with procedure steps."
-    },
-    sidebar: [
-      {
-        term: "Skill",
-        def: "Reusable procedures, examples, and standards for a type of work."
-      }
-    ],
-  },
-  {
-    type: "content",
-    lesson: 8,
-    module: "Module 04 · Tools, skills, and connections",
-    title: "Plugins: installable packages",
-    bullets: [
-      "Examples: ALIVE (local memory, later), skill packs, connection bundles",
-      "One install can add skills, hooks, or MCP servers — review before you trust it",
-      "Where to find them: Claude Code /plugin marketplaces"
-    ],
-    image: {
-      file: "l08-install-alive.png",
-      desc: "16-bit pixel art: sealed package icon labeled plugin snapping into the harness; small icons for skill, hook, and connection spilling out."
-    },
-    sidebar: [
-      {
-        term: "Plugin",
-        def: "Installable package that can bundle skills, hooks, or connections."
-      }
-    ],
-    notes: "Keep examples category-first. Point forward: skills install in Lesson 10; ALIVE in Lesson 11; MCP in Lesson 9."
   },
   {
     type: "content",
@@ -1760,8 +1715,8 @@
     type: "lesson",
     lesson: 9,
     module: "Module 04 · Tools, skills, and connections",
-    title: "What is MCP?",
-    runtime: "3 min"
+    title: "Install and configure extensions",
+    runtime: "5 min"
   },
   {
     type: "content",
@@ -1813,7 +1768,8 @@
         term: "Workflow (MCP)",
         def: "Specialized prompts or procedures exposed through MCP — related to skills, but standardized at the connection layer."
       }
-    ]
+    ],
+    notes: "First of three install/configure beats: MCP, then skills, then plugins. Point at registries; do not install an MCP server in this clip unless you have a prepared demo."
   },
   {
     type: "content",
@@ -1854,20 +1810,13 @@
         def: "Information preserved across sessions: a separate product feature."
       }
     ],
-    notes: "Recognition only: what MCP is and is not. Do not install an MCP server in this lesson. Next: install one skill carefully."
-  },
-  {
-    type: "lesson",
-    lesson: 10,
-    module: "Module 04 · Tools, skills, and connections",
-    title: "How to install a new skill",
-    runtime: "3 min"
+    notes: "Recognition only: what MCP is and is not. Next in this lesson: install one skill carefully, then plugins."
   },
   {
     type: "content",
-    lesson: 10,
+    lesson: 9,
     module: "Module 04 · Tools, skills, and connections",
-    title: "Browse, review, install, try",
+    title: "Skills: browse, review, install",
     bullets: [
       "Browse with /plugin (or discover at skills.sh)",
       "Verify the author; prefer official skills from reputable teams",
@@ -1900,13 +1849,43 @@
         def: "Installable package that can add skills, hooks, or connections."
       }
     ],
-    notes: "Combine discover + review + install into one demo. Next slide: academy skills for creators (placeholder until real skill + install path are supplied).",
+    notes: "Second install/configure beat: skills. Combine discover + review + install into one demo. Next: plugins. Academy showcase follows in Lesson 10.",
     tasksLabel: "Try this",
     tasks: [
       "Browse packages with /plugin (optionally skills.sh)",
       "Verify author and read what it claims to do",
       "Install once, try on your practice task, remove if unhelpful"
     ]
+  },
+  {
+    type: "content",
+    lesson: 9,
+    module: "Module 04 · Tools, skills, and connections",
+    title: "Plugins: install and configure",
+    bullets: [
+      "Examples: ALIVE (local memory, later), skill packs, connection bundles",
+      "One install can add skills, hooks, or MCP servers — review before you trust it",
+      "Where to find them: Claude Code /plugin marketplaces",
+      "Configure only what the workflow needs; remove unused packages"
+    ],
+    image: {
+      file: "l08-install-alive.png",
+      desc: "16-bit pixel art: sealed package icon labeled plugin snapping into the harness; small icons for skill, hook, and connection spilling out."
+    },
+    sidebar: [
+      {
+        term: "Plugin",
+        def: "Installable package that can bundle skills, hooks, or connections."
+      }
+    ],
+    notes: "Third install/configure beat: plugins. Keep examples category-first. Point forward: academy skills in Lesson 10; ALIVE in Lesson 11."
+  },
+  {
+    type: "lesson",
+    lesson: 10,
+    module: "Module 04 · Tools, skills, and connections",
+    title: "Academy skills for creators",
+    runtime: "2 min"
   },
   {
     type: "content",
@@ -1935,12 +1914,12 @@
         def: "A reviewed skill package from this academy, aimed at creator workflows (placeholder until the live listing is ready)."
       }
     ],
-    notes: "Production blocker: do not record until [Skill Name TBD], install path, and academy link are replaced. Keep the install habit from the previous slide; this is the concrete creator-facing showcase, not a second install method.",
+    notes: "Production blocker: do not record until [Skill Name TBD], install path, and academy link are replaced. Same install habit as Lesson 9 skills; this is the concrete creator-facing showcase, not a second install method.",
     tasksLabel: "Try this (when live)",
     tasks: [
       "Open the academy skill listing [link TBD]",
       "Review what [Skill Name TBD] claims to do",
-      "Install it the same way as the previous slide",
+      "Install it the same way as the previous lesson",
       "Try it once on your practice task"
     ]
   },
@@ -2269,7 +2248,7 @@
     title: "What you learned",
     bullets: [
       "Model vs harness · context · memory · RAG",
-      "Extend with tools, skills, plugins · recognize MCP",
+      "Extend with tools, skills, plugins · install MCP → skills → plugins",
       "Install carefully · add local memory · protect privacy",
       "Prompt with CLEAR and stop-and-ask on every practice task"
     ],

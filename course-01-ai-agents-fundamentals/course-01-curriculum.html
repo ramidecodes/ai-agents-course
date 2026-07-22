@@ -1206,7 +1206,7 @@
               <td><span class="mod-title">Tools, skills, and connections</span></td>
               <td class="hide-sm">3</td>
               <td>11 min</td>
-              <td class="hide-sm"><span class="mod-out">Tools/skills/plugins map, MCP recognition, one installed skill</span></td>
+              <td class="hide-sm"><span class="mod-out">Tools map, MCP → skills → plugins install path, academy skill showcase</span></td>
             </tr>
             <tr>
               <td>5</td>
@@ -2235,7 +2235,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: extending your agent with tools, skills, and plugins — the vocabulary you need before installing anything.</p>
+                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: extending your agent with tools, skills, and plugins — then how to install and configure them.</p>
                       </div>
                     </li>
 
@@ -2260,17 +2260,17 @@
             <div class="module-panel" id="mod-4-panel" role="region" aria-labelledby="mod-4-btn">
               <div class="module-panel-inner">
                 <div class="module-body">
-                  <p class="module-desc">Learn how to extend your agent with tools, skills, and plugins; recognize MCP; then install one skill carefully.</p>
-                  <p class="module-outcome"><strong>Outcome:</strong> A capability map, a one-sentence MCP explanation, and one deliberately installed skill.</p>
+                  <p class="module-desc">Learn how to extend your agent with tools, skills, and plugins; then install and configure MCP, skills, and plugins in that order.</p>
+                  <p class="module-outcome"><strong>Outcome:</strong> A capability map, a working sense of MCP / skills / plugins installs, and one deliberately reviewed skill path.</p>
                   <ul class="lessons">
 
                     <li class="lesson">
                       <span class="lesson-num">8</span>
                       <div>
                         <p class="lesson-title">Extending your agent</p>
-                        <p class="lesson-desc">Your base assistant reasons and writes. You extend it with tools (action), skills (know-how), and plugins (installable packages) — with examples and where to find each.</p>
+                        <p class="lesson-desc">Your base assistant reasons and writes. You extend it with tools (action), skills (know-how), and plugins (installable packages) — then grant the minimum capability per step.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 5 min</li>
+                          <li><strong>Runtime</strong> 4 min</li>
                           <li><strong>Output</strong> Capability map for the practice workflow</li>
                         </ul>
                         <div class="lesson-block">
@@ -2278,8 +2278,7 @@
                           <ul class="talking-points">
                             <li>Three ways to extend: tools, skills, and plugins.</li>
                             <li>Tools let it act (search, files, calendar, email); find more via connectors and MCP.</li>
-                            <li>Skills teach it how (brand voice, research brief, checklists); find them via <code>/plugin</code> and skills.sh.</li>
-                            <li>Plugins package what you install (skill packs, ALIVE later, connection bundles); browse Claude Code marketplaces.</li>
+                            <li>Skills teach it how; plugins package what you install — details in the next lesson.</li>
                             <li>More extensions ≠ better: connected ≠ selected ≠ correct. Grant the minimum needed per step.</li>
                           </ul>
                           <p class="rule-close">Start from the workflow and grant the minimum capability needed for each step.</p>
@@ -2309,24 +2308,6 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
-                                  <h5 class="slide-title">Skills: teach it how</h5>
-                                  <ul class="slide-body">
-                                    <li>Examples: brand voice, research brief, code-review checklist, content outline</li>
-                                    <li>Reusable guidance — not the action itself</li>
-                                    <li>Where to find them: /plugin, skills.sh, academy skills (later)</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 4</span>
-                                  <h5 class="slide-title">Plugins: installable packages</h5>
-                                  <ul class="slide-body">
-                                    <li>Examples: ALIVE (local memory, later), skill packs, connection bundles</li>
-                                    <li>One install can add skills, hooks, or MCP servers — review before you trust it</li>
-                                    <li>Where to find them: Claude Code /plugin marketplaces</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 5</span>
                                   <h5 class="slide-title">Connected ≠ correct</h5>
                                   <ul class="slide-body">
                                     <li>More extensions ≠ better — connected ≠ selected ≠ correct</li>
@@ -2347,28 +2328,28 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Next: MCP — the open standard for connecting to external systems.</p>
+                        <p class="transition-note">Next: install and configure extensions — MCP first, then skills, then plugins.</p>
                       </div>
                     </li>
 
                     <li class="lesson">
                       <span class="lesson-num">9</span>
                       <div>
-                        <p class="lesson-title">What is MCP?</p>
-                        <p class="lesson-desc">MCP is an open-source standard for connecting AI applications to external systems — data sources, tools, and workflows. Like USB-C for AI. Know the idea; no install yet.</p>
+                        <p class="lesson-title">Install and configure extensions</p>
+                        <p class="lesson-desc">How to actually install and configure the three extension paths: MCP connections, skills, then plugins — in that order.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 3 min</li>
-                          <li><strong>Output</strong> One-sentence explanation of what MCP is and is not</li>
+                          <li><strong>Runtime</strong> 5 min</li>
+                          <li><strong>Output</strong> One carefully installed skill; a clear sense of MCP and plugin install paths</li>
                         </ul>
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Official: open-source standard connecting AI apps to external systems.</li>
-                            <li>Covers data sources, tools, and workflows — USB-C analogy.</li>
-                            <li>Examples people use: files, GitHub, Slack, databases, web search — browse Official MCP Registry, mcp.so, Smithery, Glama, PulseMCP.</li>
-                            <li>Not memory; not a guarantee the right tool is chosen. Concept only — no install yet.</li>
+                            <li><strong>MCP first:</strong> open standard connecting AI apps to external systems (USB-C analogy). Browse Official MCP Registry, mcp.so, Smithery, Glama, PulseMCP.</li>
+                            <li><strong>Skills second:</strong> browse with <code>/plugin</code> (or skills.sh), verify author, install once, try, remove if unhelpful.</li>
+                            <li><strong>Plugins last:</strong> installable packages that can add skills, hooks, or MCP servers — review before you trust; configure only what the workflow needs.</li>
+                            <li>MCP is not memory; connected ≠ correct. Judgment and review still apply.</li>
                           </ul>
-                          <p class="rule-close">MCP standardizes how extensions connect. It does not replace judgment or review.</p>
+                          <p class="rule-close">Install in order: MCP → skills → plugins. Treat each install like granting a capability.</p>
                         </div>
                         <div class="lesson-details">
                           <details>
@@ -2384,6 +2365,26 @@
                                     <li>Servers expose capabilities — e.g. files, GitHub, Slack, databases, web search</li>
                                   </ul>
                                 </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 2</span>
+                                  <h5 class="slide-title">Skills: browse, review, install</h5>
+                                  <ul class="slide-body">
+                                    <li>Browse with /plugin (or discover at skills.sh)</li>
+                                    <li>Verify the author; prefer official skills from reputable teams</li>
+                                    <li>Read what it claims to do, then install and try it once</li>
+                                    <li>Remove it if it doesn't earn its place</li>
+                                  </ul>
+                                </article>
+                                <article class="slide-card">
+                                  <span class="slide-label">Slide 3</span>
+                                  <h5 class="slide-title">Plugins: install and configure</h5>
+                                  <ul class="slide-body">
+                                    <li>Examples: ALIVE (local memory, later), skill packs, connection bundles</li>
+                                    <li>One install can add skills, hooks, or MCP servers — review before you trust it</li>
+                                    <li>Where to find them: Claude Code /plugin marketplaces</li>
+                                    <li>Configure only what the workflow needs; remove unused packages</li>
+                                  </ul>
+                                </article>
                               </div>
                             </div>
                           </details>
@@ -2393,32 +2394,33 @@
                               <dl class="glossary">
                                 <div><dt>MCP</dt><dd>Model Context Protocol: open-source standard connecting AI applications to external data sources, tools, and workflows.</dd></div>
                                 <div><dt>MCP server</dt><dd>Service that exposes tools, data, or workflows via MCP.</dd></div>
+                                <div><dt>Skill</dt><dd>Reusable guidance: procedures, examples, standards.</dd></div>
+                                <div><dt>Plugin</dt><dd>Installable package that can bundle skills, hooks, or connections.</dd></div>
                               </dl>
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Next: install one skill carefully — plugins may bundle skills and MCP servers.</p>
+                        <p class="transition-note">Next: academy skills for creators — same install habit, concrete showcase.</p>
                       </div>
                     </li>
 
                     <li class="lesson">
                       <span class="lesson-num">10</span>
                       <div>
-                        <p class="lesson-title">How to install a new skill</p>
-                        <p class="lesson-desc">Browse, review, install, and try one skill in a single careful loop — then meet the academy's content-creator skills (placeholder until the live listing is ready).</p>
+                        <p class="lesson-title">Academy skills for creators</p>
+                        <p class="lesson-desc">Meet the academy's content-creator skills (placeholder until the live listing is ready) — same install habit you just practiced.</p>
                         <ul class="lesson-meta">
-                          <li><strong>Runtime</strong> 3 min</li>
-                          <li><strong>Output</strong> One installed skill, tried once</li>
+                          <li><strong>Runtime</strong> 2 min</li>
+                          <li><strong>Output</strong> Path to one academy skill once the listing is live</li>
                         </ul>
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Use <code>/plugin</code> (and optionally skills.sh) to discover packages.</li>
-                            <li>Verify the author; prefer official skills; read what it claims to do.</li>
-                            <li>Install once, try on the practice task, remove if unhelpful.</li>
-                            <li>Academy showcase (placeholder): content-creator skills from this academy — start with <strong>[Skill Name TBD]</strong> once the listing and install path are live. Same install habit; not a second method.</li>
+                            <li>Academy showcase (placeholder): content-creator skills from this academy — start with <strong>[Skill Name TBD]</strong> once the listing and install path are live.</li>
+                            <li>Install the same way as Lesson 9 (<code>/plugin</code> or skills.sh) — not a second method.</li>
+                            <li>Review what it claims to do, try once on the practice task, remove if unhelpful.</li>
                           </ul>
-                          <p class="rule-close">Treat installing a skill like granting a capability: review, try once, keep only if it earns its place.</p>
+                          <p class="rule-close">Same careful install habit; this is the concrete creator-facing showcase.</p>
                         </div>
                         <div class="lesson-details">
                           <details>
@@ -2427,16 +2429,6 @@
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Browse, review, install, try</h5>
-                                  <ul class="slide-body">
-                                    <li>Browse with /plugin (or discover at skills.sh)</li>
-                                    <li>Verify the author; prefer official skills from reputable teams</li>
-                                    <li>Read what it claims to do, then install and try it once</li>
-                                    <li>Remove it if it doesn't earn its place</li>
-                                  </ul>
-                                </article>
-                                <article class="slide-card">
-                                  <span class="slide-label">Slide 2</span>
                                   <h5 class="slide-title">Academy skills for creators</h5>
                                   <ul class="slide-body">
                                     <li>Our academy ships skills built for content creators [details TBD]</li>
@@ -2694,14 +2686,14 @@
                         <div class="lesson-block">
                           <ul class="talking-points">
                             <li>Model vs harness · context · memory · RAG</li>
-                            <li>Tools, skills, plugins · MCP · careful installs · ALIVE</li>
+                            <li>Tools, skills, plugins · MCP → skills → plugins installs · ALIVE</li>
                             <li>Privacy · CLEAR + stop-and-ask on practice tasks</li>
                           </ul>
                           <p class="rule-close">You have a complete supervised foundation. Keep practicing on real, low-risk work.</p>
                         </div>
                         <div class="lesson-details">
                           <details><summary>Slides</summary><div class="details-body"><div class="slides">
-                            <article class="slide-card"><span class="slide-label">Slide 1</span><h5 class="slide-title">What you learned</h5><ul class="slide-body"><li>Model vs harness · context · memory · RAG</li><li>Extend with tools, skills, plugins · recognize MCP</li><li>Install carefully · add local memory · protect privacy</li><li>Prompt with CLEAR and stop-and-ask on every practice task</li></ul></article>
+                            <article class="slide-card"><span class="slide-label">Slide 1</span><h5 class="slide-title">What you learned</h5><ul class="slide-body"><li>Model vs harness · context · memory · RAG</li><li>Extend with tools, skills, plugins · install MCP → skills → plugins</li><li>Install carefully · add local memory · protect privacy</li><li>Prompt with CLEAR and stop-and-ask on every practice task</li></ul></article>
                             <article class="slide-card"><span class="slide-label">Closing</span><h5 class="slide-title">Thank you</h5><ul class="slide-body"><li>Course materials: [link TBD]</li><li>Academy skills for creators: [link TBD]</li><li>AI Agents for Your Business: [link TBD]</li><li>Community / support: [link TBD]</li></ul></article>
                           </div></div></details>
                         </div>
@@ -2729,7 +2721,7 @@
         <ul>
           <li>Explain the model–harness distinction and the chat/tool loop</li>
           <li>Explain context, memory, and RAG in plain language</li>
-          <li>Extend an agent with tools, skills, and plugins, and explain MCP in one sentence</li>
+          <li>Extend an agent with tools, skills, and plugins, and install/configure them in order (MCP → skills → plugins)</li>
           <li>Install a skill carefully and set up ALIVE for basic local memory</li>
           <li>State a personal privacy rule for cloud AI</li>
           <li>Write a CLEAR assignment with a stop-and-ask line</li>
