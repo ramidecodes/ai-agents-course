@@ -35,7 +35,7 @@ By the end, learners should be able to:
 5. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
 6. Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a local, single-user setup is a different problem from a shared team setup.
 
-Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 is a short hands-on setup). Outcome 4's hands-on counterpart is Lesson 11 (ALIVE setup), after tools/skills/plugins vocabulary and a careful skill install, in the ~60-minute core.
+Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 is a short hands-on setup). Outcome 4's hands-on counterpart is Lesson 12 (ALIVE setup), after tools/skills/plugins vocabulary, MCP recognition, and a careful skill install, in the ~60-minute core.
 
 ## Instructional design approach
 
@@ -44,7 +44,7 @@ The course uses backward design: the practical behavior expected at the end dete
 ### Design principles
 
 1. **One clear outcome per lesson.** Every lesson has a single main behavior or decision the learner should be able to perform.
-2. **Progress from mental model to action.** Learners first understand the system, then its information, then its capabilities (tools/skills/plugins), then how to extend and supervise it, and finally how to complete a workflow. Lesson 2 is theory only (what models and harnesses do); Lesson 3 is the install, so setup has meaning after the mental model. ALIVE and MCP come only after plugin vocabulary is clear.
+2. **Progress from mental model to action.** Learners first understand the system, then its information, then its capabilities (tools/skills/plugins), then how extensions connect (MCP), then how to install and supervise them, and finally how to complete a workflow. Lesson 2 is theory only (what models and harnesses do); Lesson 3 is the install, so setup has meaning after the mental model. MCP and ALIVE come only after the extension vocabulary lesson.
 3. **Keep cognitive load low.** New terminology is grouped by function and anchored to one consistent analogy.
 4. **Use realistic business examples.** Abstract concepts are demonstrated through briefs, research, planning, drafting, and review.
 5. **Correct misconceptions explicitly.** Each lesson names a common false belief and replaces it with a usable rule.
@@ -89,7 +89,7 @@ Use this analogy throughout the course:
 | Memory       | Notebook or knowledge system        | Preserves selected information for later use.                                       |
 | Tools        | Hands                               | Let the system search, calculate, read, write, send, or change something.           |
 | Skills       | Playbooks                           | Describe how to perform a recurring type of work well.                              |
-| MCP          | Standard connection layer           | Gives compatible assistants a common way to discover and use external capabilities. |
+| MCP          | Standard connection layer (USB-C for AI) | Open standard connecting AI applications to external data sources, tools, and workflows. |
 | Guardrails   | Permissions and boundaries          | Restrict what can happen and where approval is required.                            |
 | Human        | Accountable owner                   | Defines the goal, provides judgment, verifies results, and approves consequences.   |
 
@@ -133,7 +133,7 @@ Use terms consistently across videos, worksheets, and slides.
 | Skill             | Reusable instructions, standards, examples, or procedures for a type of work.                                               |
 | Connector         | An integration that links the assistant to another service or data source.                                                  |
 | API               | A defined interface through which software systems communicate.                                                             |
-| MCP               | Model Context Protocol, a standard way for compatible AI clients to discover and use external resources and tools.          |
+| MCP               | Model Context Protocol: open-source standard connecting AI applications to external data sources, tools, and workflows. |
 | Guardrail         | A technical or procedural control that limits behavior.                                                                     |
 | Sandbox           | A restricted environment that limits the effect of actions.                                                                 |
 | Human in the loop | A person reviews, approves, corrects, or intervenes at defined points.                                                      |
@@ -152,12 +152,12 @@ Use low-friction checks throughout the course. They should not add significant v
 | After Lesson 4  | Complete the Chat and Code tries from Lesson 4. Say what changed on your Mac in each part and who controlled the steps. | The learner can tell chat-assistant Chat from multi-step, file-changing work in Claude Desktop (Chat may be labeled Home). |
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
-| After Lesson 8  | Explain tools vs skills vs plugins/connections in one sentence each. | Capability vocabulary is clear before installs. |
-| After Lesson 9  | Evaluate one skill listing (real or the course showcase example) before installing it, including author/source when discovered via directories like [skills.sh](https://skills.sh). | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
-| After Lesson 10 | Write one stop-and-ask rule.                           | Permissions and human checkpoints are explicit.                          |
-| After Lesson 11 | Complete ALIVE install (including quick Python check) and confirm a saved item returns in a fresh session. | Local memory plugin works in practice. |
-| After Lesson 12 | State one personal rule for what not to share, and explain the local-model-vs-cloud-API distinction in one sentence. | Data-sharing awareness is practical, not just theoretical. |
-| After Lesson 13 | Explain what MCP is in one sentence. | MCP is recognized as a connection standard, not memory. |
+| After Lesson 8  | Explain tools vs skills vs plugins in one sentence each. | Capability vocabulary is clear before installs. |
+| After Lesson 9  | Explain what MCP is in one sentence and what it is not. | MCP is recognized as a connection standard, not memory. |
+| After Lesson 10 | Evaluate one skill listing (real or the course showcase example) before installing it, including author/source when discovered via directories like [skills.sh](https://skills.sh). | The learner treats new skills as a deliberate, reviewed choice, not a default install. |
+| After Lesson 11 | Write one stop-and-ask rule.                           | Permissions and human checkpoints are explicit.                          |
+| After Lesson 12 | Complete ALIVE install (including quick Python check) and confirm a saved item returns in a fresh session. | Local memory plugin works in practice. |
+| After Lesson 13 | State one personal rule for what not to share, and explain the local-model-vs-cloud-API distinction in one sentence. | Data-sharing awareness is practical, not just theoretical. |
 | After Lesson 14 | Complete a CLEAR assignment.                           | The task is executable and reviewable.                                   |
 | After Lesson 15 | Revise an output using diagnostic feedback.            | The learner can supervise quality.                                       |
 | After Lesson 17 | State in one sentence what this setup covers and what it deliberately does not. | The local-vs-team boundary is understood, not just heard.                |
@@ -185,12 +185,12 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 - Demonstrate **Claude Desktop** as the primary assistant for Lesson 3 and early hands-on work; **Claude Code** appears later for plugins (skills, ALIVE).
 - **Lesson 2 sequence (required, theory only, no install):** what a model does (next-token / text generation) → named model families (concrete, dated "as of recording") → harness / app / assistant vs model; Claude Desktop = the harness we'll install → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
 - **Lesson 3 sequence (required), numbered learner path:** (0) minimum stack in plain language (Claude Desktop + one workspace folder + one harmless starter brief) with a brief opening caution woven in (access ≠ authority; keep first session non-sensitive) and CLI named as vocabulary only (not a step) → (1) download & install Claude Desktop from [claude.com/product/claude-code](https://claude.com/product/claude-code) (Download for Mac; sign in on first launch; paid plan or Console required) → (2) create workspace in Finder (new folder per project, or one Personal OS directory; explain the difference orally) → (3) confirm it works with a simple prompt → close toward agents; tools/skills/plugins and ALIVE come later. Install before folder. Do not open with install commands or Terminal. Official links: [claude.com/product/claude-code](https://claude.com/product/claude-code) · [claude.com/pricing](https://claude.com/pricing).
-- **Capability ladder (required order):** extending your agent — tools, skills, and plugins (Lesson 8) → carefully install/review a skill with [skills.sh](https://skills.sh) author checks (Lesson 9) → approvals / least privilege (Lesson 10) → **ALIVE** as first meaningful plugin for local memory (Lesson 11) → data-sharing judgment (Lesson 12) → MCP at recognition level (Lesson 13). Do not teach ALIVE or MCP before the vocabulary lesson.
-- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 11): a Claude Code plugin that stores persistent local memory on disk. Lesson 3's folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
+- **Capability ladder (required order):** extending your agent — tools, skills, and plugins (Lesson 8) → MCP at recognition level (Lesson 9) → carefully install/review a skill with [skills.sh](https://skills.sh) author checks (Lesson 10) → approvals / least privilege (Lesson 11) → **ALIVE** as first meaningful plugin for local memory (Lesson 12) → data-sharing judgment (Lesson 13). Do not teach ALIVE before the vocabulary lesson; teach MCP immediately after it, before the first skill install.
+- Use **ALIVE** by name for the hands-on local memory lesson (Lesson 12): a Claude Code plugin that stores persistent local memory on disk. Lesson 3's folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
 - When naming tools or brands, say what they *are* (the job they do): harness, local files, memory layer, cloud API, assistant UI, not random name-drops.
 - Provide a separate translation sheet only where product differences would block learners on other assistants.
 - Demonstrate file-aware work using ordinary, human-readable files in a dedicated workspace.
-- Teach why persistent memory doesn't exist by default and what RAG is before extensions; teach MCP at recognition level only after skills/plugins are clear (dedicated ~3 min MCP lesson).
+- Teach why persistent memory doesn't exist by default and what RAG is before extensions; teach MCP at recognition level immediately after tools/skills/plugins vocabulary (Lesson 9), before the first skill install.
 - Give every learner a no-integration path for conceptual lessons so product differences do not block learning.
 
 ## Minimum tool stack
@@ -213,7 +213,7 @@ Teach and demo in this order. Every installable/openable tool gets a one-line ro
 | 2 | Create your workspace | A new folder per project, **or** one general Personal OS directory. Explain the difference orally; keep slides brief. | Create in Finder (File → New Folder) |
 | 3 | Confirm it works | Try a simple prompt, confirm a reply. Optional: summarize a harmless starter brief. | Example prompt: `Reply with one sentence: setup works.` |
 
-**Intentionally not in Lesson 3:** Terminal / CLI install (`curl install.sh`, `claude` command) as a taught step; Node.js/npm; Homebrew; Python / ALIVE / skills (Lessons 8–11). Other install methods exist in docs; the beginner path is Desktop only.
+**Intentionally not in Lesson 3:** Terminal / CLI install (`curl install.sh`, `claude` command) as a taught step; Node.js/npm; Homebrew; Python / ALIVE / skills (Lessons 8–13). Other install methods exist in docs; the beginner path is Desktop only.
 
 ## Setup quick check
 
@@ -250,14 +250,14 @@ Prepare these assets before recording:
 9. **Troubleshooting guide.** Account, file-access, permission, and ordinary-file fallback checks.
 10. **Capstone brief.** One-page fictional business brief with enough information for a small reviewed artifact.
 11. **Data-sharing quick-reference.** A one-page local-vs-cloud comparison plus a short list of what to withhold by default.
-12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD: branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command. In Lesson 9, point learners to [skills.sh](https://skills.sh) as one place to discover skills, and reinforce that installs carry risk: verify the author, prefer official skills from reputable teams, and review what a package claims to do before installing.
-13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 11.
+12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD: branding/business-coach skill]`) until the final skill/name is supplied. Use it only to demonstrate discovery, review, and install via the skills command. In Lesson 10, point learners to [skills.sh](https://skills.sh) as one place to discover skills, and reinforce that installs carry risk: verify the author, prefer official skills from reputable teams, and review what a package claims to do before installing.
+13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 12.
 
 ## Reference documentation
 
 | Document | Purpose |
 | -------- | ------- |
-| [`docs/local-memory-alternatives.md`](./docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP-based memory, and other persistent local or synced memory layers); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 11. |
+| [`docs/local-memory-alternatives.md`](./docs/local-memory-alternatives.md) | Agent-agnostic and harness-portable memory options (plain files, MCP-based memory, and other persistent local or synced memory layers); tradeoffs vs the Course 1 ALIVE + Claude Code path. Point curious learners and instructors here from Lessons 2, 3, and 12. |
 
 # Guidance for the slide-generation agent
 
