@@ -118,7 +118,7 @@ Use terms consistently across videos, worksheets, and slides.
 | Instructions      | Persistent or task-level guidance that shapes behavior beyond one isolated request.                                         |
 | Token             | A small unit used by models to process text and other encoded information; it is not always a whole word.                   |
 | Context           | The information made available to the model for the current task.                                                           |
-| Context window    | The finite amount of information the model can consider in one model call.                                                  |
+| Context window    | Everything the model can read in one request; fixed working memory measured in tokens, not long-term storage.               |
 | Chat history      | A record of messages; it may be used as context, but it is not automatically reliable memory.                               |
 | Memory            | A mechanism for preserving selected information and making it available later.                                              |
 | Knowledge source  | A document, database, page, or other source the system can consult.                                                         |

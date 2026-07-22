@@ -1323,8 +1323,11 @@
           module: "Module 03 · Context, forgetting, and retrieval",
           title: "Context window",
           bullets: [
-            "Finite workbench, not perfect memory",
-            "Instructions, messages, files, and tool results compete for space",
+            "Everything the model can read in one request: fixed working memory, not long-term memory",
+            "Measured in tokens (small text chunks); every model has a hard limit",
+            "Fills with instructions, chat history, attached files, tool results, and your message",
+            "At the limit, older content drops off or gets summarized; the model cannot see what left",
+            "Gauge is the limit; the document outside the grid did not fit this call",
           ],
           image: {
             file: "13-context-window-v2.png",
@@ -1333,13 +1336,15 @@
           sidebar: [
             {
               term: "Context window",
-              def: "Finite working space for instructions, messages, retrieved notes, and tool results in one model call.",
+              def: "Everything the model can read in one request; fixed working memory with a token limit.",
             },
             {
               term: "Token",
-              def: "Small processing unit for text, not always a whole word, and not a measure of truth.",
+              def: "Small chunk of text the model counts toward that limit; not always a whole word.",
             },
           ],
+          notes:
+            "Walk the six tiles left to right, then point to the gauge and the overflow document.",
         },
         {
           type: "content",

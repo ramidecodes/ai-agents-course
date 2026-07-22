@@ -1909,7 +1909,8 @@
                             <li>A prompt is the immediate input; an assignment can include goal, sources, constraints, format, process, and success criteria.</li>
                             <li>Instructions stack: product rules, org/course rules, project rules, reusable skills, and the current request.</li>
                             <li>The model only uses what the harness includes in the current model call: it cannot "see" your whole disk or every past chat by itself.</li>
-                            <li>A context window is finite working space; a large window is not perfect memory or perfect attention.</li>
+                            <li>The context window is everything the model can read in one request: instructions, history, files, tool results, and your message, all counted in tokens up to a hard limit.</li>
+                            <li>When the window fills, older content drops off or gets summarized; the model cannot see what fell out. A large window is still not perfect memory.</li>
                             <li>Relevance, authority, structure, and clarity beat filling the window.</li>
                             <li>Context checklist: outcome, audience, sources, constraints, example, deliverable, quality standard, what to ask rather than assume.</li>
                           </ul>
@@ -1936,8 +1937,11 @@
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">Context window</h5>
                                   <ul class="slide-body">
-                                    <li>Finite workbench, not perfect memory</li>
-                                    <li>Instructions, messages, files, and tool results compete for space</li>
+                                    <li>Everything the model can read in one request: fixed working memory, not long-term memory</li>
+                                    <li>Measured in tokens (small text chunks); every model has a hard limit</li>
+                                    <li>Fills with instructions, chat history, attached files, tool results, and your message</li>
+                                    <li>At the limit, older content drops off or gets summarized; the model cannot see what left</li>
+                                    <li>Gauge is the limit; the document outside the grid did not fit this call</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -1946,8 +1950,8 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Context window</strong>: Finite working space for one model call.</li>
-                                    <li><strong>Token</strong>: Small text processing unit, not a measure of truth.</li>
+                                    <li><strong>Context window</strong>: Everything the model can read in one request; fixed working memory with a token limit.</li>
+                                    <li><strong>Token</strong>: Small chunk of text counted toward that limit; not always a whole word.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2007,7 +2011,7 @@
                                 </div>
                                 <div>
                                   <dt>Context window</dt>
-                                  <dd>Finite working space for instructions, messages, retrieved notes, tool results, and sources in one model call.</dd>
+                                  <dd>Everything the model can read in one request; fixed working memory measured in tokens, not long-term storage.</dd>
                                 </div>
                                 <div>
                                   <dt>Context</dt>
