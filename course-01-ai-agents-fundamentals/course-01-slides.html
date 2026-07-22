@@ -1499,8 +1499,9 @@
           module: "Module 03 · Context, forgetting, and retrieval",
           title: "RAG: retrieve, then generate",
           bullets: [
-            "Search notes → pull pieces → add to context → generate",
-            "Grounds the answer; does not guarantee it's correct",
+            "Without sources, models can invent plausible but wrong answers (hallucination)",
+            "RAG is a grounding technique: search → pull relevant pieces → add to context → generate",
+            "Grounding reduces invention; it does not guarantee the answer is correct",
           ],
           image: {
             file: "l07-rag-retrieve-then-generate.png",
@@ -1508,8 +1509,16 @@
           },
           sidebar: [
             {
+              term: "Hallucination",
+              def: "When a model states something confident and plausible but false or unsupported.",
+            },
+            {
+              term: "Grounding",
+              def: "Tying an answer to real source material instead of generation alone.",
+            },
+            {
               term: "RAG",
-              def: "Retrieval-augmented generation: search source material and add relevant pieces to context before generating.",
+              def: "Retrieval-augmented generation: a grounding technique that searches source material and adds relevant pieces to context before generating.",
             },
           ],
         },

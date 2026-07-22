@@ -2150,7 +2150,7 @@
                       <span class="lesson-num">7</span>
                       <div>
                         <p class="lesson-title">What RAG actually means</p>
-                        <p class="lesson-desc">Before the model answers, many systems search your notes and pull relevant pieces into context. That's RAG, and it helps, but doesn't guarantee truth.</p>
+                        <p class="lesson-desc">Models can hallucinate plausible but wrong answers. RAG is a grounding technique: before answering, systems search your notes and pull relevant pieces into context. It helps, but doesn't guarantee truth.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> One-sentence explanation of RAG and its limits</li>
@@ -2159,19 +2159,21 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>RAG (retrieval-augmented generation): before generating, the harness searches notes or documents, pulls relevant pieces into context, then the model generates.</li>
+                            <li>Without sources, models can sound confident while inventing plausible but wrong answers — that is hallucination.</li>
+                            <li>RAG (retrieval-augmented generation) is a grounding technique: before generating, the harness searches notes or documents, pulls relevant pieces into context, then the model generates.</li>
+                            <li>Grounding ties the answer to real source material instead of generation alone; it reduces invention but does not guarantee correctness or faithful use.</li>
                             <li>The model still only sees what was retrieved that turn: it did not "remember" on its own.</li>
-                            <li>RAG improves grounding when the right material is retrieved; it does not guarantee correctness or faithful use.</li>
                             <li>RAG is not memory: retrieval is one turn's context assembly; memory preserves information across sessions.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
                               <li>RAG is the same thing as memory.</li>
+                              <li>RAG prevents hallucinations entirely.</li>
                               <li>RAG proves the retrieved answer is correct.</li>
                             </ul>
                           </div>
-                          <p class="rule-close">RAG retrieves, then generates. Grounding helps; it is not proof.</p>
+                          <p class="rule-close">RAG retrieves, then generates. Grounding reduces hallucination; it is not proof.</p>
                         </div>
                         <div class="lesson-details">
                           <details>
@@ -2182,8 +2184,9 @@
                                   <span class="slide-label">Slide 1</span>
                                   <h5 class="slide-title">RAG: retrieve, then generate</h5>
                                   <ul class="slide-body">
-                                    <li>Search notes → pull pieces → add to context → generate</li>
-                                    <li>Grounds the answer; does not guarantee it's correct</li>
+                                    <li>Without sources, models can invent plausible but wrong answers (hallucination)</li>
+                                    <li>RAG is a grounding technique: search → pull relevant pieces → add to context → generate</li>
+                                    <li>Grounding reduces invention; it does not guarantee the answer is correct</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -2191,7 +2194,11 @@
                                   </div>
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
-                                    <ul><li><strong>RAG</strong>: Fetching relevant source material into context before generating.</li></ul>
+                                    <ul>
+                                      <li><strong>Hallucination</strong>: Confident, plausible output that is false or unsupported.</li>
+                                      <li><strong>Grounding</strong>: Tying an answer to real source material instead of generation alone.</li>
+                                      <li><strong>RAG</strong>: A grounding technique — search source material and add relevant pieces to context before generating.</li>
+                                    </ul>
                                   </div>
                                 </article>
                                 <article class="slide-card">
@@ -2213,7 +2220,9 @@
                             <summary>Glossary</summary>
                             <div class="details-body">
                               <dl class="glossary">
-                                <div><dt>RAG</dt><dd>Retrieval-augmented generation: searching source material and adding relevant pieces to context before generating.</dd></div>
+                                <div><dt>Hallucination</dt><dd>When a model states something confident and plausible but false or unsupported.</dd></div>
+                                <div><dt>Grounding</dt><dd>Tying an answer to real source material instead of generation alone.</dd></div>
+                                <div><dt>RAG</dt><dd>Retrieval-augmented generation: a grounding technique that searches source material and adds relevant pieces to context before generating.</dd></div>
                               </dl>
                             </div>
                           </details>

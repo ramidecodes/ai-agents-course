@@ -123,7 +123,9 @@ Use terms consistently across videos, worksheets, and slides.
 | Memory            | Deliberate storage that preserves selected information and reloads it across sessions; not automatic in plain chat.       |
 | Knowledge source  | A document, database, page, or other source the system can consult.                                                         |
 | Retrieval         | The process of finding relevant information for the current task.                                                           |
-| RAG               | Retrieval-augmented generation: retrieving relevant source material and adding it to the model's context before generation. |
+| Hallucination     | When a model states something confident and plausible but false or unsupported.                                             |
+| Grounding         | Tying an answer to real source material instead of generation alone.                                                        |
+| RAG               | Retrieval-augmented generation: a grounding technique that searches source material and adds relevant pieces to context before generating. |
 | Embedding         | A numeric representation used to compare meaning or similarity.                                                             |
 | Vector search     | A way of finding semantically similar material using embeddings.                                                            |
 | Knowledge graph   | Structured entities and relationships that make connections explicit.                                                       |
@@ -343,7 +345,7 @@ Use this list to ensure the course corrects the misunderstandings most likely to
 - A large context window produces perfect recall.
 - More context always improves results.
 - RAG is the same as memory.
-- RAG prevents hallucinations.
+- RAG prevents hallucinations entirely.
 - Embedding similarity proves truth or authority.
 - A knowledge graph is automatically more accurate than source files.
 - A skill is the same as a tool.
