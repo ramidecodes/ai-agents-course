@@ -890,9 +890,9 @@
     module: "Module 01 · Orientation and mental model",
     title: "Course journey",
     bullets: [
-      "7 modules · 17 lessons · about 60 minutes",
-      "One loop you'll reuse: brief → draft → review → revise → approve",
-      "Same small practice task throughout. Later: tools, skills, and plugins (including a local memory layer) so your agent can remember your project across sessions"
+      "About 60 minutes · one loop you'll reuse: brief → draft → review → revise → approve",
+      "Same small practice task throughout",
+      "Later: tools, skills, plugins, local memory, prompting, and one full supervised workflow"
     ],
     image: {
       file: "l01-course-journey.png",
@@ -1200,7 +1200,7 @@
         def: "One general directory for personal-assistant style work and lasting context."
       }
     ],
-    notes: "Keep both options brief; explain the difference orally in recording. Foreshadow ALIVE (Lesson 12 after plugins) without teaching it now.",
+    notes: "Keep both options brief; explain the difference orally in recording. Foreshadow ALIVE (Lesson 11 after plugins) without teaching it now.",
     tasks: [
       "Choose: new project folder or one Personal OS directory",
       "Create the folder in Finder and write the path"
@@ -1534,19 +1534,19 @@
   {
     type: "lesson",
     lesson: 8,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "Extending your agent",
     runtime: "3 min"
   },
   {
     type: "content",
     lesson: 8,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "Extending your agent",
     bullets: [
       "Tools — let it act (search, read, write, send)",
       "Skills — teach it how to work well (procedures, standards, examples)",
-      "Plugins — installable packages that add skills, hooks, or connections",
+      "Plugins — installable packages that add skills, hooks, or connections"
     ],
     image: {
       file: "l10-tools-skills-connections.png",
@@ -1566,13 +1566,13 @@
         def: "Installable package that extends the agent with skills, hooks, or connections. ALIVE is a plugin (later)."
       }
     ],
-    notes: "Extensions add capability: tools act, skills guide, plugins package what you install. Next: MCP — the standard connection layer, then install one skill."
+    notes: "Extensions: tools act, skills guide, plugins package. Next: MCP, then install one skill carefully."
   },
   {
     type: "content",
     fullCourse: false,
     lesson: 8,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "Who runs the tool?",
     bullets: [
       "Model requests a tool call",
@@ -1596,7 +1596,7 @@
   {
     type: "content",
     lesson: 8,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "Connected ≠ correct",
     bullets: [
       "More extensions ≠ better — connected ≠ selected ≠ correct",
@@ -1616,14 +1616,14 @@
   {
     type: "lesson",
     lesson: 9,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "What is MCP?",
     runtime: "3 min"
   },
   {
     type: "content",
     lesson: 9,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "MCP: connect to external systems",
     bullets: [
       "MCP (Model Context Protocol): open standard for connecting AI apps to external systems",
@@ -1660,7 +1660,7 @@
     type: "content",
     fullCourse: false,
     lesson: 9,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "Discover → request → harness runs",
     bullets: [
       "Assistant discovers what an MCP server exposes",
@@ -1675,7 +1675,7 @@
     type: "content",
     fullCourse: false,
     lesson: 9,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "MCP is not memory",
     bullets: [
       "Connection layer, not storage",
@@ -1700,18 +1700,20 @@
   {
     type: "lesson",
     lesson: 10,
-    module: "Module 04 · Tools, skills, and approvals",
+    module: "Module 04 · Tools, skills, and connections",
     title: "How to install a new skill",
     runtime: "3 min"
   },
   {
     type: "content",
     lesson: 10,
-    module: "Module 04 · Tools, skills, and approvals",
-    title: "Browse, install, try",
+    module: "Module 04 · Tools, skills, and connections",
+    title: "Browse, review, install, try",
     bullets: [
-      "Use /plugin to browse packages from trusted marketplaces",
-      "Inspect the package, install it, then try it once"
+      "Browse with /plugin (or discover at skills.sh)",
+      "Verify the author; prefer official skills from reputable teams",
+      "Read what it claims to do, then install and try it once",
+      "Remove it if it doesn't earn its place"
     ],
     terminal: {
       label: "In Claude Code",
@@ -1719,52 +1721,6 @@
         "/plugin"
       ]
     },
-    image: {
-      file: "l12-browse-install-try.png",
-      desc: "16-bit pixel art: a shelf of labeled skill-book icons; one book flies into an open backpack on the assistant sprite after an \"install\" tap."
-    },
-    sidebar: [
-      {
-        term: "Skill",
-        def: "Reusable guidance: procedures, examples, standards, not the same as a tool."
-      },
-      {
-        term: "Plugin",
-        def: "Add-on package (skills, hooks, or connection servers) installed via marketplace."
-      }
-    ],
-    tasksLabel: "Try this",
-    tasks: [
-      "Run /plugin to browse available packages",
-      "Pick one skill from a trusted marketplace",
-      "Read what it claims to do before installing"
-    ]
-  },
-  {
-    type: "content",
-    fullCourse: false,
-    lesson: 10,
-    module: "Module 04 · Tools, skills, and approvals",
-    title: "Showcase (placeholder): [Skill Name TBD]",
-    bullets: [
-      "Placeholder branding/business-coach skill (keep placeholder as-is)",
-      "Final skill + name supplied later. Do not invent branding; workflow shown is what matters"
-    ],
-    image: {
-      file: "l12-showcase-skill-tbd.png",
-      desc: "16-bit pixel art: a skill-book icon with a clearly stitched \"TBD\" placeholder patch on its cover, sitting on the shelf next to ordinary skill books."
-    }
-  },
-  {
-    type: "content",
-    lesson: 10,
-    module: "Module 04 · Tools, skills, and approvals",
-    title: "Review before you install",
-    bullets: [
-      "Discover at skills.sh, then verify the author",
-      "Prefer official skills from reputable teams; read what it claims to do",
-      "Try once; remove if it doesn't earn its place"
-    ],
     urls: [
       {
         href: "https://skills.sh",
@@ -1772,106 +1728,53 @@
       }
     ],
     image: {
-      file: "l12-review-before-install.png",
-      desc: "16-bit pixel art: a magnifying glass over a skill's description card before the install button; a trash icon beside an uninstall action."
-    },
-    notes: "Point to skills.sh as one discovery directory, not an auto-trust list. Installing carries risk: verify the author, prefer official skills from reputable teams, then inspect before install. Production blocker: do not record this lesson with the placeholder. Once the real skill is supplied, use /plugin, inspect the package contents and source, install it, then try it once on the practice task.",
-    tasks: [
-      "Optionally browse skills.sh, then verify the author",
-      "Inspect the package contents and source before install",
-      "Install the skill you reviewed",
-      "Try it once on your practice task",
-      "Compare the result to an unguided request"
-    ]
-  },
-  {
-    type: "lesson",
-    lesson: 11,
-    module: "Module 04 · Tools, skills, and approvals",
-    title: "When to stop and ask for approval",
-    runtime: "2 min"
-  },
-  {
-    type: "content",
-    lesson: 11,
-    module: "Module 04 · Tools, skills, and approvals",
-    title: "Permission ladder",
-    bullets: [
-      "Read → create/edit → send/publish → irreversible",
-      "Least privilege for this workflow"
-    ],
-    image: {
-      file: "l13-permission-ladder.png",
-      desc: "16-bit pixel art: ladder rungs Read → create/edit → send/publish → irreversible; a padlock sits on the publish/irreversible rungs."
+      file: "l12-browse-install-try.png",
+      desc: "16-bit pixel art: skill-book shelf; magnifying glass over one card; install into backpack; trash icon for remove."
     },
     sidebar: [
       {
-        term: "Guardrail",
-        def: "A technical or procedural control that limits what the assistant can do."
-      }
-    ]
-  },
-  {
-    type: "content",
-    lesson: 11,
-    module: "Module 04 · Tools, skills, and approvals",
-    title: "Guide vs enforce",
-    bullets: [
-      "Instructions guide; permissions enforce",
-      "\"Please don't publish\" ≠ no publishing permission"
-    ],
-    image: {
-      file: "l13-guide-vs-enforce.png",
-      desc: "16-bit pixel art: sticky note saying \"please don't publish\" next to a publish button that still works; beside it, the same button with a real padlock that blocks the action."
-    },
-    sidebar: [
-      {
-        term: "Instructions",
-        def: "Persistent guidance that shapes behavior, not a security boundary by itself."
+        term: "Skill",
+        def: "Reusable guidance: procedures, examples, standards — not the same as a tool."
       },
       {
-        term: "Sandbox",
-        def: "A restricted environment that limits where actions can take effect."
+        term: "Plugin",
+        def: "Installable package that can add skills, hooks, or connections."
       }
+    ],
+    notes: "Combine discover + review + install into one demo. Production blocker: replace [Skill Name TBD] before recording. Prefer official skills; inspect before install.",
+    tasksLabel: "Try this",
+    tasks: [
+      "Browse packages with /plugin (optionally skills.sh)",
+      "Verify author and read what it claims to do",
+      "Install once, try on your practice task, remove if unhelpful"
     ]
   },
   {
     type: "content",
-    lesson: 11,
-    module: "Module 04 · Tools, skills, and approvals",
-    title: "Stop and ask",
+    fullCourse: false,
+    lesson: 10,
+    module: "Module 04 · Tools, skills, and connections",
+    title: "Showcase (placeholder): [Skill Name TBD]",
     bullets: [
-      "Write: \"Stop and ask me before ___.\"",
-      "Legal · financial · reputational · privacy · irreversible"
+      "Placeholder branding/business-coach skill (keep placeholder as-is)",
+      "Final skill + name supplied later; workflow shown is what matters"
     ],
     image: {
-      file: "l13-stop-and-ask.png",
-      desc: "16-bit pixel art: stop-sign gate before publish/pay/share icons; human sprite at the gate; small labels for legal, financial, reputational, privacy."
-    },
-    sidebar: [
-      {
-        term: "Human in the loop",
-        def: "A person who must approve consequential or irreversible actions."
-      }
-    ],
-    notes: "Draft the learner's stop-and-ask sentence live; reject a \"trust the model\" alternative.",
-    tasks: [
-      "Write: \"Stop and ask me before ___.\"",
-      "Cover at least one consequential area (legal, financial, reputational, privacy, irreversible)",
-      "Reject a \"trust the model\" alternative"
-    ]
+      file: "l12-showcase-skill-tbd.png",
+      desc: "16-bit pixel art: skill-book with stitched TBD patch on the cover."
+    }
   },
   {
     type: "lesson",
-    lesson: 12,
-    module: "Module 05 · Local memory and data judgment",
+    lesson: 11,
+    module: "Module 05 · Local memory",
     title: "Set up local memory with ALIVE",
     runtime: "6 min"
   },
   {
     type: "content",
-    lesson: 12,
-    module: "Module 05 · Local memory and data judgment",
+    lesson: 11,
+    module: "Module 05 · Local memory",
     title: "Install ALIVE in Claude Code",
     bullets: [
       "Install plugin → restart Claude Code → run setup",
@@ -1928,8 +1831,8 @@
   },
   {
     type: "content",
-    lesson: 12,
-    module: "Module 05 · Local memory and data judgment",
+    lesson: 11,
+    module: "Module 05 · Local memory",
     title: "Run /alive:world",
     bullets: [
       "Guided setup creates your local context folder",
@@ -1954,8 +1857,8 @@
   },
   {
     type: "content",
-    lesson: 12,
-    module: "Module 05 · Local memory and data judgment",
+    lesson: 11,
+    module: "Module 05 · Local memory",
     title: "Save and confirm it returns",
     bullets: [
       "Work → checkpoint → new session → ask",
@@ -1969,7 +1872,7 @@
     },
     image: {
       file: "l08-save-and-return-test.png",
-      desc: "16-bit pixel art: session 1 saves; session 2 receives project context from folder without re-attaching files."
+      desc: "16-bit pixel art: session 1 saves; session 2 receives project context from folder."
     },
     sidebar: [
       {
@@ -1977,48 +1880,32 @@
         def: "End-of-session save (/alive:save) that routes work into local context files."
       }
     ],
-    notes: "Preflight Python and the plugin before presenting. Show the direct install command, restart Claude Code, run /alive:world, save one decision, then prove retrieval in a fresh session. Show the underlying file in Finder; use a prepared installed state if the network is slow.",
+    notes: "Preflight Python and the plugin. Prove retrieval in a fresh session; show the underlying file in Finder.",
     tasks: [
       "Save one decision with /alive:save",
-      "Start a fresh Claude Code session",
-      "Ask for the saved context and confirm it returns",
-      "Open the underlying file in Finder to verify it is plain text"
+      "Start a fresh session and confirm context returns",
+      "Open the underlying file in Finder"
     ]
   },
   {
-    type: "content",
-    fullCourse: false,
-    lesson: 12,
-    module: "Module 05 · Local memory and data judgment",
-    title: "What to expect",
-    bullets: [
-      "Background load at start; you checkpoint at end",
-      "You still review and correct saved context"
-    ],
-    image: {
-      file: "l08-what-to-expect.png",
-      desc: "16-bit pixel art: auto load at start; manual save at end; human holds edit pencil."
-    }
-  },
-  {
     type: "lesson",
-    lesson: 13,
-    module: "Module 05 · Local memory and data judgment",
-    title: "What gets shared when you use cloud AI",
+    lesson: 12,
+    module: "Module 06 · Privacy and security",
+    title: "Privacy and security basics",
     runtime: "3 min"
   },
   {
     type: "content",
-    lesson: 13,
-    module: "Module 05 · Local memory and data judgment",
-    title: "Local vs cloud model",
+    lesson: 12,
+    module: "Module 06 · Privacy and security",
+    title: "Local vs cloud",
     bullets: [
       "Local inference can stay on-device; connected tools may still send data",
-      "Cloud API: runs on a provider's servers. Your context travels there"
+      "Cloud API: your context travels to a provider's servers"
     ],
     image: {
       file: "l09-local-vs-cloud-model.png",
-      desc: "16-bit pixel art split screen: left: a small home computer glowing with a self-contained model chip; right: a message travels down a road to a distant server tower labeled provider."
+      desc: "16-bit pixel art split screen: home computer vs message traveling to a distant provider tower."
     },
     sidebar: [
       {
@@ -2033,61 +1920,61 @@
   },
   {
     type: "content",
-    lesson: 13,
-    module: "Module 05 · Local memory and data judgment",
-    title: "Trust the policy, not the logo",
-    bullets: [
-      "Read the plan-level data-use terms",
-      "Plan, account type, settings, and provider policy all matter"
-    ],
-    urls: [
-      {
-        href: "https://docs.anthropic.com/en/docs/claude-code",
-        label: "docs.anthropic.com/en/docs/claude-code (settings & policy)"
-      }
-    ],
-    image: {
-      file: "l09-trust-the-policy.png",
-      desc: "16-bit pixel art: a shiny logo badge next to a magnifying glass hovering over fine-print scroll labeled \data use terms\: the logo alone doesn't answer the question."
-    },
-    sidebar: [
-      {
-        term: "Data-use policy",
-        def: "Provider terms for how submitted content may be stored, reviewed, or used."
-      }
-    ]
-  },
-  {
-    type: "content",
-    lesson: 13,
-    module: "Module 05 · Local memory and data judgment",
+    lesson: 12,
+    module: "Module 06 · Privacy and security",
     title: "What to hold back",
     bullets: [
       "Customer data · financials · credentials · health data · NDA material",
-      "When unsure, don't attach it"
+      "When unsure, don't attach it",
+      "Write one personal rule: what you will share vs withhold"
     ],
     image: {
       file: "l09-what-to-hold-back.png",
-      desc: "16-bit pixel art: five labeled vault icons (customer data, financials, credentials, health, NDA) sealed shut on a shelf, separate from the open practice-folder icon."
+      desc: "16-bit pixel art: five sealed vault icons separate from an open practice-folder icon."
     },
-    notes: "Pre-open the current official data-use policy and the relevant plan/settings page. State the date checked; do not generalize privacy from free vs paid alone or expose a real learner account.",
+    notes: "Frame this as a general privacy habit for any cloud AI — not only ALIVE. Keep the practice task non-sensitive.",
     tasks: [
-      "Open your plan's data-use policy page",
-      "Note the date you checked it",
-      "Write your personal rule: what to share vs withhold"
+      "Write your personal rule: what to share vs withhold",
+      "Apply it to today's practice task"
     ]
   },
   {
     type: "lesson",
-    lesson: 14,
-    module: "Module 06 · Assign, brief, and review",
-    title: "Give better assignments with CLEAR",
+    lesson: 13,
+    module: "Module 07 · Prompting techniques",
+    title: "Prompting techniques that work",
     runtime: "4 min"
   },
   {
     type: "content",
-    lesson: 14,
-    module: "Module 06 · Assign, brief, and review",
+    lesson: 13,
+    module: "Module 07 · Prompting techniques",
+    title: "Prompting techniques",
+    bullets: [
+      "Be specific about the outcome and format you want",
+      "Load the context the model needs (sources, constraints, examples)",
+      "Use CLEAR for fuller assignments",
+      "Add a stop-and-ask line for consequential actions"
+    ],
+    image: {
+      file: "l14-clear-at-a-glance.png",
+      desc: "16-bit pixel art: simple toolkit of prompting cards — specific, context, CLEAR checklist, stop-and-ask gate."
+    },
+    sidebar: [
+      {
+        term: "Prompt",
+        def: "The immediate input or request given to the model."
+      },
+      {
+        term: "CLEAR",
+        def: "A checklist for stronger assignments: Clarify, Load, Explain, Ask, Review."
+      }
+    ]
+  },
+  {
+    type: "content",
+    lesson: 13,
+    module: "Module 07 · Prompting techniques",
     title: "CLEAR at a glance",
     bullets: [
       "Clarify · Load · Explain · Ask · Review",
@@ -2095,226 +1982,135 @@
     ],
     image: {
       file: "l14-clear-at-a-glance.png",
-      desc: "16-bit pixel art: five letter blocks C–L–E–A–R, each with one short phrase underneath (outcome / context / standards / deliverable / review)."
+      desc: "16-bit pixel art: five letter blocks C–L–E–A–R with short phrases underneath."
     }
   },
   {
     type: "content",
-    lesson: 14,
-    module: "Module 06 · Assign, brief, and review",
-    title: "Before: vague",
+    lesson: 13,
+    module: "Module 07 · Prompting techniques",
+    title: "Vague → CLEAR",
     bullets: [
-      "\"Help with my content.\"",
-      "Hard to execute; harder to evaluate"
+      "Before: \"Help with my content.\"",
+      "After: outcome, sources, standards, deliverable, and review are visible"
     ],
     image: {
-      file: "l14-before-vague.png",
-      desc: "16-bit pixel art: foggy speech bubble reading \"help with my content\"; confused assistant shrug; no checklist visible."
+      file: "l14-after-clear.png",
+      desc: "16-bit pixel art: vague foggy bubble transforms into a labeled CLEAR checklist sheet."
+    },
+    notes: "Transform the vague line into a CLEAR assignment live; leave one gap and ask the agent to surface it.",
+    tasks: [
+      "Rewrite \"Help with my content\" using CLEAR",
+      "Add one stop-and-ask line for a consequential action"
+    ]
+  },
+  {
+    type: "content",
+    lesson: 13,
+    module: "Module 07 · Prompting techniques",
+    title: "Stop and ask",
+    bullets: [
+      "Write: \"Stop and ask me before ___.\"",
+      "Use for legal, financial, reputational, privacy, or irreversible steps"
+    ],
+    image: {
+      file: "l13-stop-and-ask.png",
+      desc: "16-bit pixel art: stop-sign gate before publish/pay/share icons; human at the gate."
     },
     sidebar: [
       {
-        term: "Prompt",
-        def: "Immediate input for this turn; a vague line is not an executable assignment."
+        term: "Stop-and-ask",
+        def: "A prompt instruction that requires human approval before a named consequential action."
       }
     ]
   },
   {
-    type: "content",
+    type: "lesson",
     lesson: 14,
-    module: "Module 06 · Assign, brief, and review",
-    title: "After: CLEAR",
-    bullets: [
-      "Outcome, sources, standards, deliverable, and review are visible",
-      "Hard constraints vs preferences"
-    ],
-    image: {
-      file: "l14-after-clear.png",
-      desc: "16-bit pixel art: the vague bubble transforms into a labeled checklist sheet with boxes for outcome, sources, standards, deliverable, and review."
-    },
-    notes: "Transform \"help with my content\" into a CLEAR assignment on a worksheet; leave one gap and ask the agent to surface it.",
-    tasks: [
-      "Transform \"help with my content\" into a CLEAR assignment",
-      "Include outcome, sources, standards, deliverable, and review",
-      "Leave one intentional gap and ask the agent to surface it"
-    ]
-  },
-  {
-    type: "lesson",
-    lesson: 15,
-    module: "Module 06 · Assign, brief, and review",
-    title: "Verify outputs and fix the system",
-    runtime: "4 min"
-  },
-  {
-    type: "content",
-    lesson: 15,
-    module: "Module 06 · Assign, brief, and review",
-    title: "Source pack + authority labels",
-    bullets: [
-      "Name the source of truth explicitly",
-      "Approved · reference · draft · outdated · archive"
-    ],
-    image: {
-      file: "l15-source-pack-authority-labels.png",
-      desc: "16-bit pixel art: messy overflowing folder on the left vs a small neat pack with five clear stamps feeding into a CLEAR Load box."
-    }
-  },
-  {
-    type: "content",
-    fullCourse: false,
-    lesson: 15,
-    module: "Module 06 · Assign, brief, and review",
-    title: "Conflicts: stop and ask",
-    bullets: [
-      "If facts are missing or sources conflict, stop and ask",
-      "Say what to imitate in examples"
-    ],
-    image: {
-      file: "l15-conflicts-stop-and-ask.png",
-      desc: "16-bit pixel art: two scrolls disagreeing; stop hand and ask-bubble to a human; an example scroll with an \"imitate this\" arrow."
-    }
-  },
-  {
-    type: "content",
-    lesson: 15,
-    module: "Module 06 · Assign, brief, and review",
-    title: "Diagnostic feedback",
-    bullets: [
-      "Issue → evidence → standard → correction → verify",
-      "Not: \"This is bad. Try again.\""
-    ],
-    image: {
-      file: "l15-diagnostic-feedback.png",
-      desc: "16-bit pixel art: left speech bubble \"This is bad. Try again.\" crossed out; right: five-step arrow chain issue → evidence → standard → correction → verify."
-    },
-    notes: "Label 3–4 practice files live, including one outdated file; revise one factual error with diagnostic feedback, then make one durable system fix where the error began.",
-    tasks: [
-      "Label 3–4 practice files (include one outdated file)",
-      "Use authority labels: approved · reference · draft · outdated · archive",
-      "Revise one factual error with diagnostic feedback",
-      "Make one durable system fix where the error began"
-    ]
-  },
-  {
-    type: "content",
-    lesson: 15,
-    module: "Module 06 · Assign, brief, and review",
-    title: "Task fix vs system fix",
-    bullets: [
-      "Task fix: patch this output once",
-      "System fix: update the instruction, skill, or source where the error started"
-    ],
-    image: {
-      file: "l15-task-fix-vs-system-fix.png",
-      desc: "16-bit pixel art: fork in the road: left path labeled TASK FIX with a character patching one document; right path labeled SYSTEM FIX with a character updating an instruction book with a gear."
-    }
-  },
-  {
-    type: "lesson",
-    lesson: 16,
-    module: "Module 07 · Your first supervised workflow",
+    module: "Module 08 · Your workflow and next steps",
     title: "Run one supervised workflow end to end",
     runtime: "3 min"
   },
   {
     type: "content",
-    lesson: 16,
-    module: "Module 07 · Your first supervised workflow",
+    lesson: 14,
+    module: "Module 08 · Your workflow and next steps",
     title: "Run the full loop",
     bullets: [
       "Keep the artifact small so every step is visible",
-      "From CLEAR assignment through verification and approval"
+      "CLEAR assignment → draft → review → revise → approve",
+      "You stay accountable for the final result"
     ],
     image: {
       file: "l16-run-the-full-loop.png",
-      desc: "16-bit pixel art: compact end-to-end loop reusing Lesson 1 stages (brief → draft → review → revise → approve); CLEAR sheet at the start and a verify stamp mid-path."
-    }
-  },
-  {
-    type: "content",
-    lesson: 16,
-    module: "Module 07 · Your first supervised workflow",
-    title: "Human decision markers",
-    bullets: [
-      "Source authority · permissions · verification · approval",
-      "Narrate these live"
-    ],
-    image: {
-      file: "l16-human-decision-markers.png",
-      desc: "16-bit pixel art: four checkpoint gates with human sprites: source authority / permissions / verification / approval: along the workflow path."
+      desc: "16-bit pixel art: compact end-to-end loop with CLEAR sheet at start and verify stamp mid-path."
     },
-    notes: "Pre-stage the brief and source pack. Execute the mini workflow (e.g. three article angles) start to finish, narrating the four human decision markers; find one unsupported claim and revise it. Do not wait through setup or unrelated generation in this three-minute segment.",
+    notes: "Pre-stage the brief. Execute a mini workflow start to finish; find one weak claim and revise it.",
     tasks: [
-      "Execute your mini workflow start to finish on the practice task",
-      "Narrate the four human decision markers as you go",
-      "Find one unsupported claim and revise it",
-      "Get to an approved artifact through the full loop"
+      "Run your practice task through the full loop once",
+      "Approve only after a quick review"
     ]
   },
   {
-    type: "content",
-    fullCourse: false,
-    lesson: 16,
-    module: "Module 07 · Your first supervised workflow",
-    title: "Value of the loop",
-    bullets: [
-      "Controlled loop beats chasing a perfect first draft"
-    ],
-    image: {
-      file: "l16-value-of-the-loop.png",
-      desc: "16-bit pixel art: shiny first-draft pile smaller than a controlled loop pathway with gates; tiny handoff card labeled Course 2 at the end."
-    }
-  },
-  {
     type: "lesson",
-    lesson: 17,
-    module: "Module 07 · Your first supervised workflow",
-    title: "Why this single-user setup stops at one person",
+    lesson: 15,
+    module: "Module 08 · Your workflow and next steps",
+    title: "Where this setup stops",
     runtime: "2 min"
   },
   {
     type: "content",
-    fullCourse: false,
-    lesson: 17,
-    module: "Module 07 · Your first supervised workflow",
-    title: "What you have now",
+    lesson: 15,
+    module: "Module 08 · Your workflow and next steps",
+    title: "Built for one person",
     bullets: [
-      "One agent, one local folder, one supervised loop",
-      "Complete for one person"
-    ],
-    image: {
-      file: "l17-what-you-have-now.png",
-      desc: "16-bit pixel art: a single human sprite standing inside a cozy, complete workshop room: desk, folder, assistant robot, with a solid checkmark on the door."
-    }
-  },
-  {
-    type: "content",
-    lesson: 17,
-    module: "Module 07 · Your first supervised workflow",
-    title: "Add a second person",
-    bullets: [
-      "Whose folder is current? Whose memory is right?",
-      "Not solved by copying files back and forth"
-    ],
-    image: {
-      file: "l17-add-a-second-person.png",
-      desc: "16-bit pixel art: two identical workshop rooms side by side, each with its own folder and assistant; a confused double-arrow between them shows conflicting copies."
-    }
-  },
-  {
-    type: "content",
-    lesson: 17,
-    module: "Module 07 · Your first supervised workflow",
-    title: "A different problem, later",
-    bullets: [
-      "Access control, conflict resolution, shared memory",
-      "Next: AI Agents for Your Business"
+      "This course gives you a complete local, single-user setup",
+      "The main limit: collaboration — shared context, access, and team workflows",
+      "Next course: AI Agents for Your Business"
     ],
     image: {
       file: "l17-a-different-problem-later.png",
-      desc: "16-bit pixel art: the two workshop rooms connected by a bridge under construction, with a signpost reading \"Course 2\" pointing across it."
+      desc: "16-bit pixel art: one complete workshop; bridge under construction labeled Course 2 toward a shared team space."
     },
-    notes: "No screen-share required. Close on the final two-room/bridge visual and state the single-user boundary plainly, without turning the ending into a sales pitch for Course 2."
+    notes: "Close plainly on the single-user boundary. Tease Course 2 for team collaboration without a hard sell."
+  },
+  {
+    type: "lesson",
+    lesson: 16,
+    module: "Module 08 · Your workflow and next steps",
+    title: "Course recap",
+    runtime: "2 min"
+  },
+  {
+    type: "content",
+    lesson: 16,
+    module: "Module 08 · Your workflow and next steps",
+    title: "What you learned",
+    bullets: [
+      "Model vs harness · context · memory · RAG",
+      "Extend with tools, skills, plugins · recognize MCP",
+      "Install carefully · add local memory · protect privacy",
+      "Prompt with CLEAR and stop-and-ask · run one supervised loop"
+    ],
+    image: {
+      file: "l01-course-journey.png",
+      desc: "16-bit pixel art: journey stations revisited as a simple completed path with a checkmark."
+    }
+  },
+  {
+    type: "title",
+    kicker: "Closing",
+    title: "Thank you",
+    subtitle: "Placeholder — add final branding, links, and contact details here.",
+    meta: [
+      "Course materials: [link TBD]",
+      "AI Agents for Your Business: [link TBD]",
+      "Community / support: [link TBD]"
+    ],
+    image: {
+      file: "00-cover-hero.png",
+      desc: "Course hero visual reused for closing: human and robot at a desk."
+    }
   }
 ];
 
