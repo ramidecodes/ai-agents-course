@@ -32,8 +32,8 @@ By the end, learners should be able to:
 2. Set up Claude Desktop on macOS, extend the assistant with a new skill, and give it focused task context using ordinary files.
 3. Explain what gets shared with whom, including the practical difference between a locally-running model and a cloud API, well enough to make deliberate, cautious choices about sensitive information.
 4. Explain why an assistant has no persistent memory by default, what retrieval-augmented generation (RAG) does, and complete a basic ALIVE local memory setup.
-5. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
-6. Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a local, single-user setup is a different problem from a shared team setup.
+5. Give and improve an AI assignment using CLEAR and a stop-and-ask line for consequential actions.
+6. Complete a low-risk supervised workflow end to end, and explain why a local, single-user setup is a different problem from a shared team setup.
 
 Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 is a short hands-on setup). Outcome 4's hands-on counterpart is Lesson 11 (ALIVE setup), after tools/skills/plugins vocabulary, MCP recognition, and a careful skill install.
 
@@ -101,7 +101,7 @@ The anatomy of a useful agent is therefore:
 
 Use terms consistently across videos, worksheets, and slides.
 
-**Glossary scope in the curriculum HTML:** per-lesson glossaries list only technical or AI/agent-specific terms (for example harness, token, context window, MCP). Everyday words used in teaching (practice task, deliverable, source pack) stay in the lesson body but are not glossary entries.
+**Glossary scope in the curriculum HTML:** per-lesson glossaries list only technical or AI/agent-specific terms (for example harness, token, context window, MCP, CLEAR). Everyday words used in teaching (practice task, deliverable) stay in the lesson body but are not glossary entries.
 
 | Term              | Course definition                                                                                                           |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -170,12 +170,12 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 
 | Criterion            | Successful evidence                                                |
 | -------------------- | ------------------------------------------------------------------ |
-| Outcome clarity      | The requested artifact and intended audience are explicit.         |
-| Context quality      | Only relevant sources are provided and their authority is labeled. |
-| Boundaries           | Constraints, non-goals, and approval points are stated.            |
-| Capability awareness | The learner can explain which skills and tools are required.       |
-| Verification         | Claims and requirements are checked against the brief.             |
-| Feedback             | At least one revision is requested with diagnostic reasoning.      |
+| Outcome clarity      | The requested artifact and intended audience are explicit (CLEAR). |
+| Context quality      | Only relevant, non-sensitive practice sources are attached.        |
+| Boundaries           | A stop-and-ask line covers at least one consequential action.      |
+| Capability awareness | The learner can name which tools, skills, or plugins helped.       |
+| Verification         | Claims and requirements are checked against the brief once.        |
+| Feedback             | At least one revision is requested after a quick review.           |
 
 # Tool setup and implementation guidance
 
@@ -404,12 +404,12 @@ Pilot the course with a small group from the intended audience before final reco
 
 | Course outcome | Primary lessons | Demonstrated by |
 | -------------- | --------------- | --------------- |
-| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 slide 1 is the canonical chat assistant vs workflow vs agent taxonomy, with a Chat/Code exercise |
-| Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9, 11 | Lesson 3 Claude Desktop install + verify, context checklist, tools/skills/plugins map, one deliberately installed skill, ALIVE memory |
+| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 is the chat assistant vs workflow vs agent taxonomy, with a Chat/Code exercise |
+| Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–11 | Lesson 3 Claude Desktop install + verify, context checklist, tools/skills/plugins deep-dives, MCP recognition, one deliberately installed skill (plus academy placeholder), ALIVE memory |
 | Explain data sharing (local vs. cloud) well enough to make cautious choices | 12 | One stated personal rule for what not to share |
-| Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG, then ALIVE as the practical local-memory plugin |
-| Give, review, verify, and improve a well-sourced assignment | 14–15 | CLEAR worksheet, source pack, and diagnostic revision |
-| Complete a low-risk workflow with approval points, and explain the local-vs-team boundary | 4, 10, 16–17 | Chat vs Code exercise (chat assistant vs multi-step local action), stop-and-ask rule, reviewed capstone artifact, and one-sentence scope statement |
+| Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG (with hallucination/grounding), then ALIVE as the practical local-memory plugin |
+| Give, review, and improve an assignment with CLEAR and stop-and-ask | 13–14 | CLEAR worksheet, stop-and-ask line, and one supervised revision in the final loop |
+| Complete a low-risk workflow and explain the local-vs-team boundary | 4, 13–16 | Chat vs Code exercise, stop-and-ask habit, reviewed mini artifact, Course 2 boundary statement, and course recap |
 
 # Design source
 
