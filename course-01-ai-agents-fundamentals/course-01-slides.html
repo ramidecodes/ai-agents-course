@@ -761,6 +761,7 @@
         "Same model, different app":
           "assets/pixel-art/09-same-model-different-app.png",
         "Agent vs workflow": "assets/pixel-art/10-four-patterns.png",
+        Agents: "assets/pixel-art/10-four-patterns.png",
         "One answer, workflow, or agent":
           "assets/pixel-art/10-four-patterns.png",
         "Try it: Chat then Code":
@@ -1240,36 +1241,39 @@
           type: "lesson",
           lesson: 4,
           module: "Module 02 · Setup and autonomy",
-          title: "One answer, workflow, or agent?",
+          title: "Chat assistant, workflow, or agent?",
           runtime: "3 min",
         },
         {
           type: "content",
           lesson: 4,
           module: "Module 02 · Setup and autonomy",
-          title: "One answer, workflow, or agent",
+          title: "Agents",
           bullets: [
-            "One answer: you ask, it replies once",
-            "Workflow: you (or fixed rules) define each step",
-            "Agent: you state a goal; the AI chooses and runs multiple steps",
-            "A chatbot label does not make it an agent",
+            "Chat assistant: you ask, it replies. One turn at a time; no multi-step goal pursuit.",
+            "Workflow: fixed steps you or rules control. A checklist or automation; each step defined.",
+            "Agent: you give a goal; the system chains steps and uses tools toward it (with your approval).",
           ],
           image: {
             file: "10-four-patterns.png",
-            desc: "16-bit pixel art: three columns highlighted: single chat bubble (one answer); step chain (workflow); looping goal-seeker with tools (agent).",
+            desc: "16-bit pixel art: three columns highlighted: single chat bubble (chat assistant); step chain (workflow); looping goal-seeker with tools (agent).",
           },
           sidebar: [
+            {
+              term: "Chat assistant",
+              def: "Conversation only. You ask; it replies one turn at a time.",
+            },
             {
               term: "Workflow",
               def: "A defined sequence of steps you or fixed rules control.",
             },
             {
               term: "Agent",
-              def: "Pursues a goal across multiple steps, choosing actions within boundaries.",
+              def: "Pursues a goal across multiple steps, using tools within boundaries you set.",
             },
           ],
           notes:
-            "Keep the contrast plain. One chat turn from Lesson 2 is not an agent. An agent repeats that loop toward a goal without you directing each step.",
+            "Canonical taxonomy slide. Lesson 2 covered one chat turn, not these three patterns. Keep the contrast plain: a friendly chatbot label does not make something an agent.",
         },
         {
           type: "content",
@@ -1279,7 +1283,7 @@
           bullets: [
             "Chat tab: conversation only. One reply, nothing changes on disk.",
             "Code tab: can read and write in your workspace when you approve each step.",
-            "Part A maps to one answer. Part B maps to agent-like multi-step work from the last slide.",
+            "Part A maps to a chat assistant. Part B maps to agent-like multi-step work from the last slide.",
           ],
           image: {
             file: "03-safe-practice-task.png",
@@ -1296,7 +1300,7 @@
             },
           ],
           notes:
-            "Demo both tabs live. Claude Desktop may label Chat as Home (wording varies by version). Part A is one answer. Part B is agent-like: you state a goal; the harness runs multiple steps with your approval. Keep content non-sensitive and use the Lesson 3 workspace folder.",
+            "Demo both tabs live. Claude Desktop may label Chat as Home (wording varies by version). Part A is a chat assistant. Part B is agent-like: you state a goal; the harness runs multiple steps with your approval. Keep content non-sensitive and use the Lesson 3 workspace folder.",
           tasks: [
             "Part A (Chat): ask one harmless question. Confirm no file was created.",
             "Part B (Code): open your Lesson 3 workspace folder.",
