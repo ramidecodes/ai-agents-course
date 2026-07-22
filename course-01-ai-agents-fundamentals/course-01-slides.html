@@ -748,15 +748,13 @@
         "Your setup path": "assets/pixel-art/04-minimum-beginner-stack.png",
         "Project folders or Personal OS":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
-        "1 · Choose your workspace":
+        "1 · Download & install Claude Desktop":
+          "assets/pixel-art/00-cover-hero.png",
+        "2 · Create your workspace":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
         "Access ≠ authority": "assets/pixel-art/05-access-not-authority.png",
-        "2 · Download & install Claude Desktop":
-          "assets/pixel-art/00-cover-hero.png",
-        "3 · Sign in & open your workspace":
-          "assets/pixel-art/00-cover-hero.png",
         "Confirm it works": "assets/pixel-art/06-acceptance-test.png",
-        "4 · Confirm it works": "assets/pixel-art/06-acceptance-test.png",
+        "3 · Confirm it works": "assets/pixel-art/06-acceptance-test.png",
         "Install, then acceptance test":
           "assets/pixel-art/06-acceptance-test.png",
         "Acceptance test": "assets/pixel-art/06-acceptance-test.png",
@@ -833,7 +831,7 @@
           title: "AI Agents Fundamentals",
           subtitle:
             "Set up an AI agent, assign real work, and supervise the result",
-          meta: ["62 minutes", "7 modules · 17 lessons", "Beginner"],
+          meta: ["61 minutes", "7 modules · 17 lessons", "Beginner"],
           image: {
             file: "00-cover-hero.png",
             desc: "Course hero visual: human and robot at a desk with supervised workflow icons.",
@@ -882,7 +880,7 @@
           module: "Module 01 · Orientation and mental model",
           title: "Course journey",
           bullets: [
-            "7 modules · 17 lessons · about 62 minutes",
+            "7 modules · 17 lessons · about 61 minutes",
             "One loop you'll reuse: brief → draft → review → revise → approve",
             "Same small practice task throughout. Later: tools, skills, and plugins (including a local memory layer) so your agent can remember your project across sessions",
           ],
@@ -1106,7 +1104,7 @@
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
           title: "Set up Claude Desktop on your Mac",
-          runtime: "4–5 min",
+          runtime: "3–4 min",
         },
         {
           type: "content",
@@ -1114,8 +1112,8 @@
           module: "Module 02 · Setup and autonomy",
           title: "Your setup path",
           bullets: [
-            "Minimum: Claude Desktop · one folder · one starter brief",
-            "1 Workspace → 2 Download → 3 Sign in → 4 Confirm",
+            "Two steps: install Claude Desktop, then create a workspace folder",
+            "Finish with a quick confirm-it-works prompt",
             "Keep this first session non-sensitive. File access ≠ permission to share secrets",
           ],
           urls: [
@@ -1134,50 +1132,24 @@
               def: "The Mac app we'll install: the harness around the model.",
             },
             {
-              term: "Cloud API",
-              def: "Remote processing of context on a provider's servers.",
+              term: "CLI",
+              def: "Command-line install path. Vocabulary only; not our beginner step.",
             },
           ],
           notes:
-            "Show the whole path before diving in. Memory layer and skills come later. Weave the access caution here; do not stop the flow for a separate caution slide.",
+            "Show the whole path before diving in. Install first, folder second. Memory layer and skills come later. Weave the access caution here; do not stop for a separate caution slide.",
           tasksLabel: "Watch for",
-          tasks: ["The four steps", "What stays out of the minimum stack"],
+          tasks: ["Install before folder", "What stays out of the minimum stack"],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "1 · Choose your workspace",
-          bullets: [
-            "New folder per project, or one Personal OS directory",
-            "Create it in Finder now; write down the path",
-          ],
-          image: {
-            file: "44-memory-folder-not-black-box.png",
-            desc: "16-bit pixel art: two tidy folder trees: project folders vs one Personal OS home versus a messy dump pile crossed out.",
-          },
-          sidebar: [
-            {
-              term: "Personal OS",
-              def: "One general directory for personal-assistant style work and lasting context.",
-            },
-          ],
-          notes:
-            "Practical hygiene, not compliance theater. Foreshadow ALIVE (Lesson 11 after plugins) without teaching it now.",
-          tasks: [
-            "Choose: new project folder or one Personal OS directory",
-            "Create the folder in Finder and write the path",
-          ],
-        },
-        {
-          type: "content",
-          lesson: 3,
-          module: "Module 02 · Setup and autonomy",
-          title: "2 · Download & install Claude Desktop",
+          title: "1 · Download & install Claude Desktop",
           bullets: [
             "Open claude.com/product/claude-code",
             "Click Download for Mac, then install like any Mac app",
-            "Sign-in needs Pro, Max, Team, Enterprise, or Console (not free chat alone)",
+            "Sign in on first launch (Pro, Max, Team, Enterprise, or Console)",
           ],
           urls: [
             {
@@ -1200,44 +1172,43 @@
             },
           ],
           notes:
-            "Screen-share the product page and Download for Mac. Open pricing only if learners still need an account. Other install methods exist in docs; we do not teach them here.",
+            "Screen-share the product page and Download for Mac. Walk sign-in in the same beat. Open pricing only if learners still need an account. Other install methods exist in docs; we do not teach them here.",
           tasks: [
             "Download Claude Desktop for Mac",
-            "Complete install and open the app",
+            "Install, open, and sign in",
           ],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "3 · Sign in & open your workspace",
+          title: "2 · Create your workspace",
           bullets: [
-            "Sign in when prompted on first launch",
-            "Keep your workspace folder handy for file work in later lessons",
-            "Context you attach often travels over a cloud API",
+            "New folder per project, or one Personal OS directory",
+            "Create it in Finder now; write down the path",
           ],
           image: {
-            file: "00-cover-hero.png",
-            desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
+            file: "44-memory-folder-not-black-box.png",
+            desc: "16-bit pixel art: two tidy folder trees: project folders vs one Personal OS home versus a messy dump pile crossed out.",
           },
           sidebar: [
             {
-              term: "Workspace",
-              def: "The folder where files and drafts for this work live.",
+              term: "Personal OS",
+              def: "One general directory for personal-assistant style work and lasting context.",
             },
           ],
           notes:
-            "Walk through sign-in once. Narrate the folder path you created in step 1.",
+            "Keep both options brief; explain the difference orally in recording. Foreshadow ALIVE (Lesson 11 after plugins) without teaching it now.",
           tasks: [
-            "Sign in to Claude Desktop",
-            "Note which workspace folder you will use for course work",
+            "Choose: new project folder or one Personal OS directory",
+            "Create the folder in Finder and write the path",
           ],
         },
         {
           type: "content",
           lesson: 3,
           module: "Module 02 · Setup and autonomy",
-          title: "4 · Confirm it works",
+          title: "3 · Confirm it works",
           bullets: [
             "Open it · try a simple prompt · confirm a reply",
             "Optional: summarize a harmless starter brief",
