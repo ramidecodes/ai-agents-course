@@ -761,7 +761,7 @@
         "Same model, different app":
           "assets/pixel-art/09-same-model-different-app.png",
         "Agent vs workflow": "assets/pixel-art/10-four-patterns.png",
-        "Your practice task": "assets/pixel-art/03-safe-practice-task.png",
+        "Try it: Chat then Code": "assets/pixel-art/03-safe-practice-task.png",
         "Four patterns": "assets/pixel-art/10-four-patterns.png",
         "What an agent does": "assets/pixel-art/11-what-an-agent-does.png",
         "Autonomy ladder": "assets/pixel-art/12-autonomy-ladder.png",
@@ -1237,7 +1237,7 @@
           type: "lesson",
           lesson: 4,
           module: "Module 02 · Setup and autonomy",
-          title: "When is something actually an agent?",
+          title: "One answer, workflow, or agent?",
           runtime: "3 min",
         },
         {
@@ -1272,22 +1272,33 @@
           type: "content",
           lesson: 4,
           module: "Module 02 · Setup and autonomy",
-          title: "Your practice task",
+          title: "Try it: Chat then Code",
           bullets: [
-            "Name the pattern your practice task needs",
-            "Start with the simplest option that still saves time",
-            "You review before anything goes out",
+            "Part A · Chat: ask one question and get one reply. Nothing changes on your Mac.",
+            "Part B · Code: open your workspace folder from Lesson 3 and ask Claude to create a harmless file, for example hello.txt with one line.",
+            "Chat is conversation. Code can act on your machine when you approve each step.",
+            "Check your folder afterward. You stay responsible for what goes in and what comes out.",
           ],
           image: {
             file: "03-safe-practice-task.png",
             desc: "16-bit pixel art: learner at desk with a small labeled practice-task card and a simple pattern checklist.",
           },
+          sidebar: [
+            {
+              term: "Chat",
+              def: "Conversation only. Replies in the window; does not change your files in this exercise.",
+            },
+            {
+              term: "Code",
+              def: "Can read and write files in your workspace when you approve each step.",
+            },
+          ],
           notes:
-            "Ask the learner to classify their practice task from Lesson 1. They should be able to say who controls each step.",
+            "Demo both tabs live. Claude Desktop labels them Chat and Code at the top (wording may vary by version). Part A is one answer. Part B is agent-like: you state a goal; the harness runs multiple steps with your approval. Keep content non-sensitive and use the Lesson 3 workspace folder.",
           tasks: [
-            "Classify your practice task: one answer, workflow, or agent",
-            "Say who controls each step",
-            "Confirm you will review before anything goes out",
+            'Part A: In Chat, ask: "In one sentence, what is a workflow?" Confirm one reply and no new file.',
+            "Part B: In Code, select your workspace folder and ask Claude to create hello.txt with one harmless line. Approve the steps and confirm the file exists.",
+            "Say aloud: who chose each step in Part A? In Part B?",
           ],
         },
 

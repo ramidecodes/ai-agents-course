@@ -147,7 +147,7 @@ Use low-friction checks throughout the course. They should not add significant v
 | --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
 | After Lesson 2  | Explain model versus harness/app in one sentence, and sketch one chat turn. | The foundational distinction and chat/tool loop are understood. |
 | After Lesson 3  | Open Claude Desktop and confirm a simple prompt works with a chosen workspace folder. | The harness is installed and usable. |
-| After Lesson 4  | Classify your practice task as one answer, workflow, or agent, and say who controls each step. | The learner can tell agent from workflow for their own task. |
+| After Lesson 4  | Complete the Chat and Code tries from Lesson 4. Say what changed on your Mac in each part and who controlled the steps. | The learner can tell one-answer chat from multi-step, file-changing work in Claude Desktop. |
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
 | After Lesson 8  | Explain tools vs skills vs plugins/connections in one sentence each. | Capability vocabulary is clear before installs. |
@@ -405,7 +405,7 @@ Pilot the course with a small group from the intended audience before final reco
 | Explain data sharing (local vs. cloud) well enough to make cautious choices | 12 | One stated personal rule for what not to share |
 | Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG, then ALIVE as the practical local-memory plugin |
 | Give, review, verify, and improve a well-sourced assignment | 14–15 | CLEAR worksheet, source pack, and diagnostic revision |
-| Complete a low-risk workflow with approval points, and explain the local-vs-team boundary | 4, 10, 16–17 | Agent vs workflow classification, stop-and-ask rule, reviewed capstone artifact, and one-sentence scope statement |
+| Complete a low-risk workflow with approval points, and explain the local-vs-team boundary | 4, 10, 16–17 | Chat vs Code exercise (one answer vs multi-step local action), stop-and-ask rule, reviewed capstone artifact, and one-sentence scope statement |
 
 # Design source
 
