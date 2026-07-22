@@ -250,7 +250,7 @@ Prepare these assets before recording:
 9. **Troubleshooting guide.** Account, file-access, permission, and ordinary-file fallback checks.
 10. **Capstone brief.** One-page fictional business brief with enough information for a small reviewed artifact.
 11. **Data-sharing quick-reference.** A one-page local-vs-cloud comparison plus a short list of what to withhold by default.
-12. **Skill showcase example.** Keep the literal placeholder label (`[Skill Name TBD: branding/business-coach skill]`) until the final skill/name is supplied. Use it only in the extended deck for Lesson 10. Prefer the combined browse → review → install → try slide in the full-course cut.
+12. **Academy skills for creators (Lesson 10).** Full-course placeholder slide immediately after browse → review → install → try. Keep `[Skill Name TBD]`, install path, and academy listing link as placeholders until supplied. Do not invent branding; same install habit as the previous slide. Optional: repeat the live link on the Thank you slide.
 13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 11.
 14. **Thank-you closing.** Placeholder links and branding on the final title slide — replace before publish.
 
