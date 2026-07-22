@@ -1771,8 +1771,7 @@
     bullets: [
       "MCP (Model Context Protocol): open standard for connecting AI apps to external systems",
       "One protocol for data sources, tools, and workflows — like USB-C for AI applications",
-      "MCP servers expose capabilities — e.g. files, GitHub, Slack, databases, web search",
-      "Browse directories like mcp.so; know the idea here — we don't install an MCP server yet"
+      "MCP servers expose capabilities — e.g. files, GitHub, Slack, databases, web search"
     ],
     urls: [
       {
@@ -1780,8 +1779,21 @@
         label: "modelcontextprotocol.io"
       },
       {
-        href: "https://mcp.so",
-        label: "mcp.so (browse servers)"
+        href: "https://code.claude.com/docs/en/mcp",
+        label: "Anthropic / Claude Code: MCP"
+      },
+      {
+        href: "https://registry.modelcontextprotocol.io/",
+        label: "Official MCP Registry"
+      },
+      {
+        label: "Browse",
+        links: [
+          { href: "https://mcp.so", label: "mcp.so" },
+          { href: "https://smithery.ai", label: "Smithery" },
+          { href: "https://glama.ai/mcp", label: "Glama" },
+          { href: "https://www.pulsemcp.com", label: "PulseMCP" }
+        ]
       }
     ],
     image: {
@@ -2362,7 +2374,21 @@
 
       function renderUrls(urls) {
         if (!urls || !urls.length) return "";
-        return `<ul class="slide-urls">${urls.map((u) => `<li><a href="${escapeHtml(u.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(u.label || u.href)}</a></li>`).join("")}</ul>`;
+        return `<ul class="slide-urls">${urls
+          .map((u) => {
+            if (u.links && u.links.length) {
+              const prefix = u.label ? `${escapeHtml(u.label)}: ` : "";
+              const parts = u.links
+                .map(
+                  (l) =>
+                    `<a href="${escapeHtml(l.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.label || l.href)}</a>`,
+                )
+                .join(" · ");
+              return `<li>${prefix}${parts}</li>`;
+            }
+            return `<li><a href="${escapeHtml(u.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(u.label || u.href)}</a></li>`;
+          })
+          .join("")}</ul>`;
       }
 
       function renderCompare(compare) {
