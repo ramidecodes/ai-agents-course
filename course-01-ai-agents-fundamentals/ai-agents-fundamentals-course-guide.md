@@ -35,7 +35,7 @@ By the end, learners should be able to:
 5. Give, review, verify, and improve an AI assignment using explicit sources, constraints, deliverables, and success criteria.
 6. Complete a low-risk supervised workflow with appropriate permissions and human approval points, and explain why a local, single-user setup is a different problem from a shared team setup.
 
-Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 is a short hands-on setup). Outcome 4's hands-on counterpart is Lesson 11 (ALIVE setup), after tools/skills/plugins vocabulary and a careful skill install, in the ~61-minute core.
+Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 is a short hands-on setup). Outcome 4's hands-on counterpart is Lesson 11 (ALIVE setup), after tools/skills/plugins vocabulary and a careful skill install, in the ~60-minute core.
 
 ## Instructional design approach
 
@@ -147,7 +147,7 @@ Use low-friction checks throughout the course. They should not add significant v
 | --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
 | After Lesson 2  | Explain model versus harness/app in one sentence, and sketch one chat turn. | The foundational distinction and chat/tool loop are understood. |
 | After Lesson 3  | Open Claude Desktop and confirm a simple prompt works with a chosen workspace folder. | The harness is installed and usable. |
-| After Lesson 4  | Select an autonomy level and justify it.               | The learner can match autonomy to risk.                                  |
+| After Lesson 4  | Classify your practice task as one answer, workflow, or agent, and say who controls each step. | The learner can tell agent from workflow for their own task. |
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
 | After Lesson 8  | Explain tools vs skills vs plugins/connections in one sentence each. | Capability vocabulary is clear before installs. |
@@ -400,12 +400,12 @@ Pilot the course with a small group from the intended audience before final reco
 
 | Course outcome | Primary lessons | Demonstrated by |
 | -------------- | --------------- | --------------- |
-| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 covers autonomy and agents |
+| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 teaches agent vs workflow |
 | Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9, 11 | Lesson 3 Claude Desktop install + verify, context checklist, tools/skills/plugins map, one deliberately installed skill, ALIVE memory |
 | Explain data sharing (local vs. cloud) well enough to make cautious choices | 12 | One stated personal rule for what not to share |
 | Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG, then ALIVE as the practical local-memory plugin |
 | Give, review, verify, and improve a well-sourced assignment | 14–15 | CLEAR worksheet, source pack, and diagnostic revision |
-| Complete a low-risk workflow with approval points, and explain the local-vs-team boundary | 4, 10, 16–17 | Autonomy choice, stop-and-ask rule, reviewed capstone artifact, and one-sentence scope statement |
+| Complete a low-risk workflow with approval points, and explain the local-vs-team boundary | 4, 10, 16–17 | Agent vs workflow classification, stop-and-ask rule, reviewed capstone artifact, and one-sentence scope statement |
 
 # Design source
 

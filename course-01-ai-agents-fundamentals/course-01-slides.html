@@ -760,6 +760,8 @@
         "Acceptance test": "assets/pixel-art/06-acceptance-test.png",
         "Same model, different app":
           "assets/pixel-art/09-same-model-different-app.png",
+        "Agent vs workflow": "assets/pixel-art/10-four-patterns.png",
+        "Your practice task": "assets/pixel-art/03-safe-practice-task.png",
         "Four patterns": "assets/pixel-art/10-four-patterns.png",
         "What an agent does": "assets/pixel-art/11-what-an-agent-does.png",
         "Autonomy ladder": "assets/pixel-art/12-autonomy-ladder.png",
@@ -831,7 +833,7 @@
           title: "AI Agents Fundamentals",
           subtitle:
             "Set up an AI agent, assign real work, and supervise the result",
-          meta: ["61 minutes", "7 modules · 17 lessons", "Beginner"],
+          meta: ["60 minutes", "7 modules · 17 lessons", "Beginner"],
           image: {
             file: "00-cover-hero.png",
             desc: "Course hero visual: human and robot at a desk with supervised workflow icons.",
@@ -880,7 +882,7 @@
           module: "Module 01 · Orientation and mental model",
           title: "Course journey",
           bullets: [
-            "7 modules · 17 lessons · about 61 minutes",
+            "7 modules · 17 lessons · about 60 minutes",
             "One loop you'll reuse: brief → draft → review → revise → approve",
             "Same small practice task throughout. Later: tools, skills, and plugins (including a local memory layer) so your agent can remember your project across sessions",
           ],
@@ -1236,81 +1238,56 @@
           lesson: 4,
           module: "Module 02 · Setup and autonomy",
           title: "When is something actually an agent?",
-          runtime: "4 min",
+          runtime: "3 min",
         },
         {
           type: "content",
           lesson: 4,
           module: "Module 02 · Setup and autonomy",
-          title: "Four patterns",
+          title: "Agent vs workflow",
           bullets: [
-            "One-off answer · workflow · automation · agent",
-            "Pick the simplest that still saves time",
+            "One answer: you ask, it replies once",
+            "Workflow: you (or fixed rules) define each step",
+            "Agent: you state a goal; the AI chooses and runs multiple steps",
+            "A chatbot label does not make it an agent",
           ],
           image: {
-            file: "l04-four-patterns.png",
-            desc: "16-bit pixel art: four columns: single chat bubble; step chain (workflow); clock-trigger path (automation); looping goal-seeker with tools (agent). Minimal icons.",
+            file: "10-four-patterns.png",
+            desc: "16-bit pixel art: three columns highlighted: single chat bubble (one answer); step chain (workflow); looping goal-seeker with tools (agent).",
           },
           sidebar: [
             {
               term: "Workflow",
-              def: "A defined sequence of steps used to produce an outcome.",
+              def: "A defined sequence of steps you or fixed rules control.",
             },
-            {
-              term: "Automation",
-              def: "A workflow triggered by rules, limited judgment, predefined path.",
-            },
-          ],
-        },
-        {
-          type: "content",
-          lesson: 4,
-          module: "Module 02 · Setup and autonomy",
-          title: "What an agent does",
-          bullets: [
-            "Goal + tools via harness + observe + continue within bounds",
-            "Same loop as a chat turn, repeated",
-          ],
-          image: {
-            file: "l04-what-an-agent-does.png",
-            desc: "16-bit pixel art: agent sprite looping goal flag → tool use → observe eye → continue arrow, inside a dashed boundary fence (harness/tools inside the fence).",
-          },
-          sidebar: [
             {
               term: "Agent",
-              def: "Pursues a goal across steps using tools via a harness.",
-            },
-            {
-              term: "Agentic",
-              def: "A degree of planning, acting, and recovering, not magic.",
-            },
-          ],
-        },
-        {
-          type: "content",
-          lesson: 4,
-          module: "Module 02 · Setup and autonomy",
-          title: "Autonomy ladder",
-          bullets: [
-            "Suggest → Draft → Prepare → Act with approval → Independent",
-            "Course zone: Draft through Act with approval",
-          ],
-          image: {
-            file: "l04-autonomy-ladder.png",
-            desc: "16-bit pixel art: five-rung ladder (Suggest → Draft → Prepare → Act with approval → Independent); rungs 2–4 highlighted as the course zone; top rung dimmed.",
-          },
-          sidebar: [
-            {
-              term: "Human in the loop",
-              def: "A person reviews, approves, or intervenes at defined points.",
+              def: "Pursues a goal across multiple steps, choosing actions within boundaries.",
             },
           ],
           notes:
-            'Classify the learner\'s practice task on the autonomy ladder; stop short of "publish without review."',
+            "Keep the contrast plain. One chat turn from Lesson 2 is not an agent. An agent repeats that loop toward a goal without you directing each step.",
+        },
+        {
+          type: "content",
+          lesson: 4,
+          module: "Module 02 · Setup and autonomy",
+          title: "Your practice task",
+          bullets: [
+            "Name the pattern your practice task needs",
+            "Start with the simplest option that still saves time",
+            "You review before anything goes out",
+          ],
+          image: {
+            file: "03-safe-practice-task.png",
+            desc: "16-bit pixel art: learner at desk with a small labeled practice-task card and a simple pattern checklist.",
+          },
+          notes:
+            "Ask the learner to classify their practice task from Lesson 1. They should be able to say who controls each step.",
           tasks: [
-            "Place your practice task on the autonomy ladder",
-            "Choose a level from Draft through Act with approval",
-            'Stop short of "publish without review"',
+            "Classify your practice task: one answer, workflow, or agent",
+            "Say who controls each step",
+            "Confirm you will review before anything goes out",
           ],
         },
 
