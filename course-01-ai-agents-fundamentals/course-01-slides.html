@@ -741,14 +741,11 @@
         "One chat turn": "assets/pixel-art/08-one-chat-turn.png",
         "Next: install the harness":
           "assets/pixel-art/04-minimum-beginner-stack.png",
-        "What you're setting up today":
-          "assets/pixel-art/00-cover-hero.png",
-        "Words you'll need":
-          "assets/pixel-art/09-same-model-different-app.png",
+        "What you're setting up today": "assets/pixel-art/00-cover-hero.png",
+        "Words you'll need": "assets/pixel-art/09-same-model-different-app.png",
         "Claude Code minimum stack":
           "assets/pixel-art/04-minimum-beginner-stack.png",
-        "Your setup path":
-          "assets/pixel-art/04-minimum-beginner-stack.png",
+        "Your setup path": "assets/pixel-art/04-minimum-beginner-stack.png",
         "Project folders or Personal OS":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
         "1 · Choose your workspace":
@@ -756,8 +753,7 @@
         "Access ≠ authority": "assets/pixel-art/05-access-not-authority.png",
         "Caution · Access ≠ authority":
           "assets/pixel-art/05-access-not-authority.png",
-        "2 · Get Claude account access":
-          "assets/pixel-art/00-cover-hero.png",
+        "2 · Get Claude account access": "assets/pixel-art/00-cover-hero.png",
         "3 · Open Terminal": "assets/pixel-art/00-cover-hero.png",
         "4 · Install Claude Code": "assets/pixel-art/00-cover-hero.png",
         "Install and open": "assets/pixel-art/00-cover-hero.png",
@@ -788,7 +784,8 @@
           "assets/pixel-art/45-propose-confirm-save.png",
         "Run /alive:world":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
-        "Save and confirm it returns": "assets/pixel-art/46-fresh-session-test.png",
+        "Save and confirm it returns":
+          "assets/pixel-art/46-fresh-session-test.png",
         "Save and return test": "assets/pixel-art/46-fresh-session-test.png",
         "What to expect": "assets/pixel-art/45-propose-confirm-save.png",
         "Local vs cloud model": "assets/pixel-art/19-local-vs-cloud-model.png",
@@ -970,7 +967,7 @@
           module: "Module 01 · Orientation and mental model",
           title: "What a model does",
           bullets: [
-            "Predicts next tokens / generates text, not "thinks like a person"",
+            "Predicts next tokens / generates text, not 'thinks like a person'",
             "Does not open files or run tools by itself",
           ],
           image: {
@@ -1006,7 +1003,7 @@
           ],
           image: {
             file: "09-same-model-different-app.png",
-            desc: "16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small "as of recording" stamp.",
+            desc: "16-bit pixel art: four labeled model chips on a shelf (Claude / GPT / Gemini / open-weight); a small 'as of recording' stamp.",
           },
           sidebar: [
             {
@@ -1019,7 +1016,7 @@
           tasksLabel: "Watch for",
           tasks: [
             "That these are model families, not apps",
-            "Why "as of recording" matters",
+            "Why 'as of recording' matters",
           ],
         },
         {
@@ -1324,8 +1321,7 @@
             file: "00-cover-hero.png",
             desc: "16-bit pixel art: human and assistant at a desk with laptop and checklist; green checkmark.",
           },
-          notes:
-            "Narrate the folder path. Walk through browser login once.",
+          notes: "Narrate the folder path. Walk through browser login once.",
           tasks: [
             "cd to the folder from step 1",
             "Run claude and finish sign-in if prompted",
@@ -2058,7 +2054,10 @@
             desc: "16-bit pixel art split screen: left: a small home computer glowing with a self-contained model chip; right: a message travels down a road to a distant server tower labeled provider.",
           },
           sidebar: [
-            { term: "Local model", def: "Runs on your device; inference may stay local." },
+            {
+              term: "Local model",
+              def: "Runs on your device; inference may stay local.",
+            },
             {
               term: "Cloud API",
               def: "Runs on a provider's remote servers. Your context travels there.",
@@ -2518,7 +2517,7 @@
       function renderTerminals(data) {
         const blocks = [];
         if (data.terminal) blocks.push(data.terminal);
-        if (data.terminals) blocks.push(..data.terminals);
+        if (data.terminals) blocks.push(...data.terminals);
         return blocks.map((t) => renderTerminal(t)).join("");
       }
 
@@ -2617,13 +2616,13 @@
         return `<section class="slide slide--content${active}" data-index="${index}" data-notes="${data.notes ? escapeHtml(data.notes) : ""}" aria-hidden="${index !== current}"><div class="slide-header"><p class="slide-kicker">Lesson ${data.lesson}</p><p class="slide-module">${escapeHtml(data.module)}</p></div><div class="slide-body-wrap">${inner}</div><div></div></section>`;
       }
 
-      function buildDeck {
+      function buildDeck() {
         deck.innerHTML = ACTIVE_SLIDES.map((s, i) => renderSlide(s, i)).join(
           "",
         );
       }
 
-      function updateUI {
+      function updateUI() {
         deck.querySelectorAll(".slide").forEach((el, i) => {
           const active = i === current;
           el.classList.toggle("is-active", active);
@@ -2654,17 +2653,17 @@
 
       function goTo(index) {
         current = Math.max(0, Math.min(ACTIVE_SLIDES.length - 1, index));
-        updateUI;
+        updateUI();
       }
 
-      function next {
+      function next() {
         goTo(current + 1);
       }
-      function prev {
+      function prev() {
         goTo(current - 1);
       }
 
-      function toggleNotes {
+      function toggleNotes() {
         if (!notesText.textContent) return;
         notesVisible = !notesVisible;
         notesEl.classList.toggle("is-visible", notesVisible);
@@ -2675,18 +2674,18 @@
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
-          e.preventDefault;
-          next;
+          e.preventDefault();
+          next();
         } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
-          e.preventDefault;
-          prev;
+          e.preventDefault();
+          prev();
         } else if (e.key === "n" || e.key === "N") {
-          toggleNotes;
+          toggleNotes();
         } else if (e.key === "Home") {
-          e.preventDefault;
+          e.preventDefault();
           goTo(0);
         } else if (e.key === "End") {
-          e.preventDefault;
+          e.preventDefault();
           goTo(ACTIVE_SLIDES.length - 1);
         }
       });
@@ -2703,13 +2702,13 @@
         "touchend",
         (e) => {
           const dx = e.changedTouches[0].screenX - touchStartX;
-          if (Math.abs(dx) > 50) dx < 0 ? next : prev;
+          if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
         },
         { passive: true },
       );
 
-      buildDeck;
-      updateUI;
+      buildDeck();
+      updateUI();
     </script>
   </body>
 </html>
