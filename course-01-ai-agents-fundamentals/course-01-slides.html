@@ -373,6 +373,59 @@
         text-decoration-color: var(--ink);
       }
 
+      /* —— Good / bad example tables —— */
+      .compare-block {
+        margin-top: 1.15rem;
+      }
+
+      .compare-block + .compare-block {
+        margin-top: 0.85rem;
+      }
+
+      .compare-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 0 0 0.45rem;
+      }
+
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: clamp(0.8125rem, 1.5vw, 0.95rem);
+        line-height: 1.45;
+        color: var(--ink-soft);
+      }
+
+      .compare-table th,
+      .compare-table td {
+        border: 1px solid var(--rule);
+        padding: 0.55rem 0.7rem;
+        vertical-align: top;
+        text-align: left;
+      }
+
+      .compare-table th {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink);
+        background: var(--wash);
+      }
+
+      .compare-table th:first-child,
+      .compare-table td:first-child {
+        width: 42%;
+        color: var(--ink-faint);
+      }
+
+      .compare-table td:last-child {
+        color: var(--ink);
+      }
+
       /* —— On-slide learner tasks —— */
       .slide-tasks {
         margin-top: 1.5rem;
@@ -789,10 +842,12 @@
           "assets/pixel-art/46-fresh-session-test.png",
         "Save and return test": "assets/pixel-art/46-fresh-session-test.png",
         "What to expect": "assets/pixel-art/45-propose-confirm-save.png",
-        "Local vs cloud model": "assets/pixel-art/19-local-vs-cloud-model.png",
         "Trust the policy, not the logo":
           "assets/pixel-art/20-trust-policy-not-logo.png",
         "What to hold back": "assets/pixel-art/21-what-to-hold-back.png",
+        "Be specific · Load context":
+          "assets/pixel-art/15-smallest-complete-set.png",
+        "CLEAR": "assets/pixel-art/33-after-clear.png",
         "Extending your agent":
           "assets/pixel-art/22-tools-skills-connections.png",
         "Tools: let it act": "assets/pixel-art/23-who-runs-tool.png",
@@ -810,6 +865,8 @@
           "assets/pixel-art/23-who-runs-tool.png",
         "MCP is not memory": "assets/pixel-art/24-connected-not-correct.png",
         "Browse, install, try": "assets/pixel-art/25-browse-install-try.png",
+        "Browse, review, install, try":
+          "assets/pixel-art/25-browse-install-try.png",
         "Showcase (placeholder): [Skill Name TBD]":
           "assets/pixel-art/26-showcase-skill-tbd.png",
         "Academy skills for creators":
@@ -820,6 +877,7 @@
         "Guide vs enforce": "assets/pixel-art/29-guide-vs-enforce.png",
         "Stop and ask": "assets/pixel-art/30-stop-and-ask.png",
         "CLEAR at a glance": "assets/pixel-art/31-clear-at-a-glance.png",
+        "Prompting techniques": "assets/pixel-art/31-clear-at-a-glance.png",
         "Before: vague": "assets/pixel-art/32-before-vague.png",
         "After: CLEAR": "assets/pixel-art/33-after-clear.png",
         "Source pack + authority labels":
@@ -829,14 +887,17 @@
         "Diagnostic feedback": "assets/pixel-art/36-diagnostic-feedback.png",
         "Task fix vs system fix":
           "assets/pixel-art/37-task-fix-vs-system-fix.png",
-        "Run the full loop": "assets/pixel-art/38-run-the-full-loop.png",
         "Human decision markers":
           "assets/pixel-art/39-human-decision-markers.png",
         "Value of the loop": "assets/pixel-art/40-value-of-loop.png",
         "What you have now": "assets/pixel-art/41-what-you-have-now.png",
+        "What you learned": "assets/pixel-art/41-what-you-have-now.png",
         "Add a second person": "assets/pixel-art/42-add-second-person.png",
         "A different problem, later":
           "assets/pixel-art/43-different-problem-later.png",
+        "Built for one person":
+          "assets/pixel-art/43-different-problem-later.png",
+        "Thank you": "assets/pixel-art/00-cover-hero.png",
       };
 
       const SLIDES = [
@@ -847,7 +908,7 @@
     subtitle: "Set up an AI agent, assign real work, and supervise the result",
     meta: [
       "About 60 minutes",
-      "8 modules · 16 lessons",
+      "8 modules · 15 lessons",
       "Beginner"
     ],
     image: {
@@ -895,9 +956,9 @@
     module: "Module 01 · Orientation and mental model",
     title: "Course journey",
     bullets: [
-      "About 60 minutes · 8 modules · 16 lessons",
+      "About 60 minutes · 8 modules · 15 lessons",
       "One loop you'll reuse: brief → draft → review → revise → approve",
-      "Later: tools, skills, plugins, local memory, privacy, prompting techniques, and one supervised workflow"
+      "Later: tools, skills, plugins, local memory, privacy, and prompting techniques"
     ],
     image: {
       file: "l01-course-journey.png",
@@ -909,7 +970,7 @@
         def: "A product feature that preserves selected information for later sessions, not automatic."
       }
     ],
-    notes: "Screen-share (~30s): pan the finished setup: workspace folder, starter brief, labeled draft, your review step. Foreshadow: you'll get a prompting toolkit (CLEAR + stop-and-ask) before the final loop. Next: how models and harnesses work (Lesson 2), then install Claude Desktop (Lesson 3).",
+    notes: "Screen-share (~30s): pan the finished setup: workspace folder, starter brief, labeled draft, your review step. Foreshadow: you'll get a prompting toolkit (CLEAR + stop-and-ask). Next: how models and harnesses work (Lesson 2), then install Claude Desktop (Lesson 3).",
     tasksLabel: "Watch for",
     tasks: [
       "The five loop stages on screen",
@@ -925,7 +986,7 @@
       "Set up Claude Desktop on your Mac and work with files in a dedicated workspace",
       "Brief your AI agent, review its draft, and ask for improvements",
       "Know what to share, and what to keep private",
-      "Finish one complete supervised workflow on your own task"
+      "Brief and supervise a small practice task with CLEAR and stop-and-ask"
     ],
     image: {
       file: "l01-you-remain-accountable.png",
@@ -946,7 +1007,7 @@
     bullets: [
       "Pick one small, public example: e.g. three article angles from a public brief",
       "Low stakes · easy to undo · nothing confidential",
-      "Same task for all 16 lessons. Every concept connects to one outcome"
+      "Same task across the course. Every concept connects to one outcome"
     ],
     image: {
       file: "l01-safe-practice-task.png",
@@ -1995,31 +2056,7 @@
     lesson: 12,
     module: "Module 06 · Privacy and security",
     title: "Privacy and security basics",
-    runtime: "3 min"
-  },
-  {
-    type: "content",
-    lesson: 12,
-    module: "Module 06 · Privacy and security",
-    title: "Local vs cloud",
-    bullets: [
-      "Local inference can stay on-device; connected tools may still send data",
-      "Cloud API: your context travels to a provider's servers"
-    ],
-    image: {
-      file: "l09-local-vs-cloud-model.png",
-      desc: "16-bit pixel art split screen: home computer vs message traveling to a distant provider tower."
-    },
-    sidebar: [
-      {
-        term: "Local model",
-        def: "Runs on your device; inference may stay local."
-      },
-      {
-        term: "Cloud API",
-        def: "Runs on a provider's remote servers. Your context travels there."
-      }
-    ]
+    runtime: "2 min"
   },
   {
     type: "content",
@@ -2027,6 +2064,7 @@
     module: "Module 06 · Privacy and security",
     title: "What to hold back",
     bullets: [
+      "Cloud AI: what you type and attach can leave your machine",
       "Customer data · financials · credentials · health data · NDA material",
       "When unsure, don't attach it",
       "Write one personal rule: what you will share vs withhold"
@@ -2035,7 +2073,7 @@
       file: "l09-what-to-hold-back.png",
       desc: "16-bit pixel art: five sealed vault icons separate from an open practice-folder icon."
     },
-    notes: "Frame this as a general privacy habit for any cloud AI — not only ALIVE. Keep the practice task non-sensitive.",
+    notes: "Frame this as a general privacy habit for any cloud AI — not only ALIVE. Skip local-vs-cloud deep dives; keep the practice task non-sensitive.",
     tasks: [
       "Write your personal rule: what to share vs withhold",
       "Apply it to today's practice task"
@@ -2046,7 +2084,7 @@
     lesson: 13,
     module: "Module 07 · Prompting techniques",
     title: "Prompting techniques that work",
-    runtime: "4 min"
+    runtime: "5 min"
   },
   {
     type: "content",
@@ -2054,10 +2092,15 @@
     module: "Module 07 · Prompting techniques",
     title: "Prompting techniques",
     bullets: [
-      "Be specific about the outcome and format you want",
-      "Load the context the model needs (sources, constraints, examples)",
-      "Use CLEAR for fuller assignments",
-      "Add a stop-and-ask line for consequential actions"
+      "Be specific · Load context · CLEAR · Stop-and-ask",
+      "Simple habits — not magical wording",
+      "Deeper reference: Anthropic's prompting guide"
+    ],
+    urls: [
+      {
+        href: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        label: "docs.anthropic.com — Prompt engineering overview"
+      }
     ],
     image: {
       file: "l14-clear-at-a-glance.png",
@@ -2078,24 +2121,58 @@
     type: "content",
     lesson: 13,
     module: "Module 07 · Prompting techniques",
-    title: "CLEAR at a glance",
+    title: "Be specific · Load context",
     bullets: [
-      "Clarify · Load · Explain · Ask · Review",
-      "A thinking checklist, not a magic template"
+      "Name the outcome, format, length, and audience",
+      "Attach the sources, constraints, and one example of good work"
+    ],
+    compares: [
+      {
+        label: "Be specific",
+        headers: ["Weak", "Strong"],
+        rows: [
+          [
+            "Help with my content.",
+            "Write 3 LinkedIn angles for freelancers. Each: 1-line hook + 2 bullets."
+          ]
+        ]
+      },
+      {
+        label: "Load context",
+        headers: ["Weak", "Strong"],
+        rows: [
+          [
+            "Write a blog post about our product.",
+            "Using the attached brief, draft 400 words for first-time buyers. Claims only from the brief."
+          ]
+        ]
+      }
     ],
     image: {
-      file: "l14-clear-at-a-glance.png",
-      desc: "16-bit pixel art: five letter blocks C–L–E–A–R with short phrases underneath."
+      file: "l05-smallest-complete-set.png",
+      desc: "16-bit pixel art: minimal complete context pack — brief, sources, and constraints together."
     }
   },
   {
     type: "content",
     lesson: 13,
     module: "Module 07 · Prompting techniques",
-    title: "Vague → CLEAR",
+    title: "CLEAR",
     bullets: [
-      "Before: \"Help with my content.\"",
-      "After: outcome, sources, standards, deliverable, and review are visible"
+      "Clarify · Load · Explain · Ask · Review",
+      "A thinking checklist, not a magic template"
+    ],
+    compares: [
+      {
+        label: "Vague → CLEAR",
+        headers: ["Before", "After"],
+        rows: [
+          [
+            "Help with my content.",
+            "Clarify: 3 post angles. Load: public brief. Explain: practical tone. Ask: draft only. Review: I'll pick one."
+          ]
+        ]
+      }
     ],
     image: {
       file: "l14-after-clear.png",
@@ -2116,6 +2193,18 @@
       "Write: \"Stop and ask me before ___.\"",
       "Use for legal, financial, reputational, privacy, or irreversible steps"
     ],
+    compares: [
+      {
+        label: "Consequential action",
+        headers: ["Weak", "Strong"],
+        rows: [
+          [
+            "Publish when ready.",
+            "Stop and ask me before publishing, sending, or sharing outside this folder."
+          ]
+        ]
+      }
+    ],
     image: {
       file: "l13-stop-and-ask.png",
       desc: "16-bit pixel art: stop-sign gate before publish/pay/share icons; human at the gate."
@@ -2131,41 +2220,12 @@
     type: "lesson",
     lesson: 14,
     module: "Module 08 · Your workflow and next steps",
-    title: "Run one supervised workflow end to end",
-    runtime: "3 min"
-  },
-  {
-    type: "content",
-    lesson: 14,
-    module: "Module 08 · Your workflow and next steps",
-    title: "Run the full loop",
-    bullets: [
-      "Keep the artifact small so every step is visible",
-      "Use your CLEAR brief and stop-and-ask line from the prompting lesson",
-      "Respect your privacy rule — attach only what you chose to share",
-      "CLEAR → draft → review → revise → approve"
-    ],
-    image: {
-      file: "l16-run-the-full-loop.png",
-      desc: "16-bit pixel art: compact end-to-end loop with CLEAR sheet at start and verify stamp mid-path."
-    },
-    notes: "Live demo checklist: (1) open CLEAR brief, (2) confirm stop-and-ask line is in the prompt, (3) attach only non-sensitive practice files, (4) draft → spot one weak claim → revise once → approve. Keep the artifact tiny so every step fits the runtime.",
-    tasks: [
-      "Run your practice task with a CLEAR brief and one stop-and-ask line",
-      "Attach only files allowed by your privacy rule",
-      "Revise once after a quick review, then approve"
-    ]
-  },
-  {
-    type: "lesson",
-    lesson: 15,
-    module: "Module 08 · Your workflow and next steps",
     title: "Where this setup stops",
     runtime: "2 min"
   },
   {
     type: "content",
-    lesson: 15,
+    lesson: 14,
     module: "Module 08 · Your workflow and next steps",
     title: "Built for one person",
     bullets: [
@@ -2181,21 +2241,21 @@
   },
   {
     type: "lesson",
-    lesson: 16,
+    lesson: 15,
     module: "Module 08 · Your workflow and next steps",
     title: "Course recap",
     runtime: "2 min"
   },
   {
     type: "content",
-    lesson: 16,
+    lesson: 15,
     module: "Module 08 · Your workflow and next steps",
     title: "What you learned",
     bullets: [
       "Model vs harness · context · memory · RAG",
       "Extend with tools, skills, plugins · recognize MCP",
       "Install carefully · add local memory · protect privacy",
-      "Prompt with CLEAR and stop-and-ask · run one supervised loop"
+      "Prompt with CLEAR and stop-and-ask on every practice task"
     ],
     image: {
       file: "l01-course-journey.png",
@@ -2301,6 +2361,37 @@
         return `<ul class="slide-urls">${urls.map((u) => `<li><a href="${escapeHtml(u.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(u.label || u.href)}</a></li>`).join("")}</ul>`;
       }
 
+      function renderCompare(compare) {
+        if (!compare || !compare.headers || !compare.rows) return "";
+        const label = compare.label
+          ? `<p class="compare-label">${escapeHtml(compare.label)}</p>`
+          : "";
+        const head = compare.headers
+          .map((h) => `<th scope="col">${escapeHtml(h)}</th>`)
+          .join("");
+        const body = compare.rows
+          .map(
+            (row) =>
+              `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`,
+          )
+          .join("");
+        return `
+        <div class="compare-block">
+          ${label}
+          <table class="compare-table">
+            <thead><tr>${head}</tr></thead>
+            <tbody>${body}</tbody>
+          </table>
+        </div>`;
+      }
+
+      function renderCompares(data) {
+        const blocks = [];
+        if (data.compare) blocks.push(data.compare);
+        if (data.compares) blocks.push(...data.compares);
+        return blocks.map((c) => renderCompare(c)).join("");
+      }
+
       function renderSidebar(items) {
         if (!items || !items.length) return "";
         return `
@@ -2380,6 +2471,7 @@
             <div class="content-main">
               <h2>${escapeHtml(data.title)}</h2>
               ${renderBullets(data.bullets)}
+              ${renderCompares(data)}
               ${renderTerminals(data)}
               ${renderUrls(data.urls)}
               ${renderTasks(data)}

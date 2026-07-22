@@ -22,7 +22,7 @@ This is the internal design and production reference for **AI Agents Fundamental
 
 ### Place in the course sequence
 
-This is the foundation course, scoped around a **complete local, single-user setup**: Claude Desktop as the primary assistant for beginners, grounding in context/memory/RAG, tools vs skills vs plugins, a careful skill install, ALIVE for local memory (via Claude Code plugins in later lessons), data-sharing awareness, MCP at recognition level, and one supervised working loop. The course closes by naming its own boundary: everything here works for one person on one machine. Shared team context, multi-user access control, business context, brand systems, and coaching routines belong in **AI Agents for Your Business**, rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
+This is the foundation course, scoped around a **complete local, single-user setup**: Claude Desktop as the primary assistant for beginners, grounding in context/memory/RAG, tools vs skills vs plugins, a careful skill install, ALIVE for local memory (via Claude Code plugins in later lessons), data-sharing awareness, MCP at recognition level, and prompting habits practiced on small lesson tasks. The course closes by naming its own boundary: everything here works for one person on one machine. Shared team context, multi-user access control, business context, brand systems, and coaching routines belong in **AI Agents for Your Business**, rebuilt around that local-vs-team boundary rather than simply continuing where this course leaves off.
 
 ### Observable course outcomes
 
@@ -30,10 +30,10 @@ By the end, learners should be able to:
 
 1. Explain the practical differences among a model, AI application (harness), assistant, workflow, automation, and agent, and how a modern chat turn actually runs.
 2. Set up Claude Desktop on macOS, extend the assistant with a new skill, and give it focused task context using ordinary files.
-3. Explain what gets shared with whom, including the practical difference between a locally-running model and a cloud API, well enough to make deliberate, cautious choices about sensitive information.
+3. Explain what gets shared with cloud AI well enough to make deliberate, cautious choices about sensitive information.
 4. Explain why an assistant has no persistent memory by default, what retrieval-augmented generation (RAG) does, and complete a basic ALIVE local memory setup.
 5. Give and improve an AI assignment using CLEAR and a stop-and-ask line for consequential actions.
-6. Complete a low-risk supervised workflow end to end, and explain why a local, single-user setup is a different problem from a shared team setup.
+6. Apply those habits on the course practice tasks, and explain why a local, single-user setup is a different problem from a shared team setup.
 
 Lesson objectives in `course-01-curriculum.html` break these outcomes into smaller, observable skills. Each lesson is also scoped as a 2–5 minute standalone promo clip where practical (Lesson 2 is theory before install; Lesson 3 is a short hands-on setup). Outcome 4's hands-on counterpart is Lesson 11 (ALIVE setup), after tools/skills/plugins vocabulary, MCP recognition, and a careful skill install.
 
@@ -156,11 +156,10 @@ Use low-friction checks throughout the course. They should not add significant v
 | After Lesson 9  | Explain what MCP is in one sentence and what it is not. | MCP is recognized as a connection standard, not memory. |
 | After Lesson 10 | Browse, review, install, and try one skill once. | The learner treats new skills as a deliberate, reviewed choice. |
 | After Lesson 11 | Complete ALIVE install and confirm a saved item returns in a fresh session. | Local memory plugin works in practice. |
-| After Lesson 12 | State one personal rule for what not to share, and explain local vs cloud in one sentence. | Privacy awareness is practical. |
+| After Lesson 12 | State one personal rule for what not to share with cloud AI. | Privacy awareness is practical. |
 | After Lesson 13 | Write a CLEAR assignment with one stop-and-ask line. | Prompting habits are executable and supervised. |
-| After Lesson 14 | Complete one supervised mini workflow. | The learner can run the full loop. |
-| After Lesson 15 | State in one sentence what this setup covers and what it deliberately does not. | The local-vs-team boundary is understood. |
-| After Lesson 16 | List the main pillars of the course from the recap. | The journey is consolidated. |
+| After Lesson 14 | State in one sentence what this setup covers and what it deliberately does not. | The local-vs-team boundary is understood. |
+| After Lesson 15 | List the main pillars of the course from the recap. | The journey is consolidated. |
 
 ## Final practical check
 
@@ -185,7 +184,7 @@ Using a supplied one-page business brief, the learner asks the assistant to plan
 - Demonstrate **Claude Desktop** as the primary assistant for Lesson 3 and early hands-on work; **Claude Code** appears later for plugins (skills, ALIVE).
 - **Lesson 2 sequence (required, theory only, no install):** what a model does (next-token / text generation) → named model families (concrete, dated "as of recording") → harness / app / assistant vs model; Claude Desktop = the harness we'll install → one chat turn (model requests → harness runs tools) → bridge: next we install the harness.
 - **Lesson 3 sequence (required), numbered learner path:** (0) minimum stack in plain language (Claude Desktop + one workspace folder + one harmless starter brief) with a brief opening caution woven in (access ≠ authority; keep first session non-sensitive) and CLI named as vocabulary only (not a step) → (1) download & install Claude Desktop from [claude.com/product/claude-code](https://claude.com/product/claude-code) (Download for Mac; sign in on first launch; paid plan or Console required) → (2) create workspace in Finder (new folder per project, or one Personal OS directory; explain the difference orally) → (3) confirm it works with a simple prompt → close toward agents; tools/skills/plugins and ALIVE come later. Install before folder. Do not open with install commands or Terminal. Official links: [claude.com/product/claude-code](https://claude.com/product/claude-code) · [claude.com/pricing](https://claude.com/pricing).
-- **Capability ladder (required order):** extending your agent — tools, skills, and plugins (Lesson 8) → MCP at recognition level (Lesson 9) → carefully install/review a skill (Lesson 10) → **ALIVE** local memory (Lesson 11) → privacy & security (Lesson 12) → prompting techniques including CLEAR and stop-and-ask (Lesson 13) → supervised workflow (Lesson 14) → single-user limit / Course 2 (Lesson 15) → recap (Lesson 16).
+- **Capability ladder (required order):** extending your agent — tools, skills, and plugins (Lesson 8) → MCP at recognition level (Lesson 9) → carefully install/review a skill (Lesson 10) → **ALIVE** local memory (Lesson 11) → privacy & security (Lesson 12) → prompting techniques including CLEAR and stop-and-ask (Lesson 13) → single-user limit / Course 2 (Lesson 14) → recap (Lesson 15).
 - Use **ALIVE** by name for the hands-on local memory lesson (Lesson 11): a Claude Code plugin that stores persistent local memory on disk. Lesson 3's folder guidance (project folders vs Personal OS) should foreshadow that without teaching the full ALIVE lesson early.
 - When naming tools or brands, say what they *are* (the job they do): harness, local files, memory layer, cloud API, assistant UI, not random name-drops.
 - Provide a separate translation sheet only where product differences would block learners on other assistants.
@@ -249,7 +248,7 @@ Prepare these assets before recording:
 8. **Assistant translation sheet.** Equivalent setup concepts and product-specific terminology.
 9. **Troubleshooting guide.** Account, file-access, permission, and ordinary-file fallback checks.
 10. **Capstone brief.** One-page fictional business brief with enough information for a small reviewed artifact.
-11. **Data-sharing quick-reference.** A one-page local-vs-cloud comparison plus a short list of what to withhold by default.
+11. **Data-sharing quick-reference.** A short list of what to withhold by default when using cloud AI, plus space for a personal share-vs-withhold rule.
 12. **Academy skills for creators (Lesson 10).** Full-course placeholder slide immediately after browse → review → install → try. Keep `[Skill Name TBD]`, install path, and academy listing link as placeholders until supplied. Do not invent branding; same install habit as the previous slide. Optional: repeat the live link on the Thank you slide.
 13. **ALIVE setup companion.** Install steps, `/alive:world`, `/alive:save`, and a fresh-session confirm for Lesson 11.
 14. **Thank-you closing.** Placeholder links and branding on the final title slide — replace before publish.
@@ -406,10 +405,10 @@ Pilot the course with a small group from the intended audience before final reco
 | -------------- | --------------- | --------------- |
 | Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 is the chat assistant vs workflow vs agent taxonomy, with a Chat/Code exercise |
 | Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–11 | Lesson 3 Claude Desktop install + verify, context checklist, tools/skills/plugins deep-dives, MCP recognition, one deliberately installed skill (plus academy placeholder), ALIVE memory |
-| Explain data sharing (local vs. cloud) well enough to make cautious choices | 12 | One stated personal rule for what not to share |
+| Explain data sharing with cloud AI well enough to make cautious choices | 12 | One stated personal rule for what not to share |
 | Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG (with hallucination/grounding), then ALIVE as the practical local-memory plugin |
-| Give, review, and improve an assignment with CLEAR and stop-and-ask | 13–14 | CLEAR worksheet, stop-and-ask line, and one supervised revision in the final loop |
-| Complete a low-risk workflow and explain the local-vs-team boundary | 4, 13–16 | Chat vs Code exercise, stop-and-ask habit, reviewed mini artifact, Course 2 boundary statement, and course recap |
+| Give, review, and improve an assignment with CLEAR and stop-and-ask | 13 | CLEAR worksheet, stop-and-ask line, and good/bad prompt examples |
+| Apply prompting habits on practice tasks and explain the local-vs-team boundary | 4, 13–15 | Chat vs Code exercise, stop-and-ask habit, Course 2 boundary statement, and course recap |
 
 # Design source
 
