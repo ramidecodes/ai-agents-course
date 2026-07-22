@@ -119,8 +119,8 @@ Use terms consistently across videos, worksheets, and slides.
 | Token             | A small unit used by models to process text and other encoded information; it is not always a whole word.                   |
 | Context           | The information made available to the model for the current task.                                                           |
 | Context window    | Everything the model can read in one request; fixed working memory measured in tokens, not long-term storage.               |
-| Chat history      | A record of messages; it may be used as context, but it is not automatically reliable memory.                               |
-| Memory            | A mechanism for preserving selected information and making it available later.                                              |
+| Chat history      | Prior messages in one thread, usually resent with each new message; not shared across unrelated chats or projects.          |
+| Memory            | Deliberate storage that preserves selected information and reloads it across sessions; not automatic in plain chat.       |
 | Knowledge source  | A document, database, page, or other source the system can consult.                                                         |
 | Retrieval         | The process of finding relevant information for the current task.                                                           |
 | RAG               | Retrieval-augmented generation: retrieving relevant source material and adding it to the model's context before generation. |
@@ -338,6 +338,7 @@ Use this list to ensure the course corrects the misunderstandings most likely to
 - The model and the AI product (harness) are the same thing.
 - The model itself executes tools, searches the web, or edits files.
 - A bigger or newer model remembers more about the user personally.
+- Another chat or project automatically knows what you discussed elsewhere.
 - Chat history is reliable long-term memory.
 - A large context window produces perfect recall.
 - More context always improves results.

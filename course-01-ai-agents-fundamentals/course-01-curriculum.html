@@ -2040,14 +2040,16 @@
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
                             <li>Context = information available for the current task. Chat history = visible prior messages; the product may not use every message every time. Source knowledge = material deliberately supplied. Memory = information a product preserves and retrieves later.</li>
-                            <li>By default, a model call is stateless: nothing about you or prior sessions is known unless the harness supplies it. A new session may still load product-managed instructions, files, history, retrieval, or memory.</li>
-                            <li>Products create continuity differently: recent history, saved preferences, retrieval layers, but none of that is the model itself remembering.</li>
-                            <li>Important business knowledge should not be assumed to persist because it was said once. If it matters later, it needs a deliberate place to live.</li>
+                            <li>Chats and projects are isolated by default. What you said in one thread or workspace does not carry into another unless you deliberately connect them.</li>
+                            <li>Each model call is stateless: it only sees what the harness puts in the current context window. Inside one chat thread, that usually means the full conversation so far is resent with every message you send.</li>
+                            <li>Resent thread history is not persistent memory. A new session starts empty unless the product reloads history, files, retrieval, or a memory layer.</li>
+                            <li>Important business knowledge should not be assumed to persist because it was said once. If it matters later, save it to a file, note, or memory plugin (ALIVE comes later in this course).</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
                             <ul>
                               <li>A bigger or newer model remembers the learner personally.</li>
+                              <li>Another chat or project automatically knows what you discussed elsewhere.</li>
                               <li>Chat history is reliable permanent memory.</li>
                               <li>The agent permanently learns every correction made in conversation.</li>
                             </ul>
@@ -2083,10 +2085,13 @@
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 2</span>
-                                  <h5 class="slide-title">No memory by default</h5>
+                                  <h5 class="slide-title">Persistent memory</h5>
                                   <ul class="slide-body">
-                                    <li>A fresh session only knows what the harness reloads</li>
-                                    <li>Continuity is a product feature, not a model trait</li>
+                                    <li>Chats and projects are isolated. Another thread or workspace does not inherit what you said elsewhere.</li>
+                                    <li>Each turn, the model only knows what fits in the current context window.</li>
+                                    <li>Inside one chat, every message you send includes the full thread so far. That is how the model follows the conversation in that session.</li>
+                                    <li>Thread history is not persistent memory. Start a new chat and that continuity is gone unless the product reloads it.</li>
+                                    <li>Real persistent memory means deliberate storage: files, notes, or a memory plugin (like ALIVE later in this course).</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -2096,9 +2101,11 @@
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
                                     <li><strong>Stateless</strong>: Each model call starts with no built-in memory of past calls.</li>
-                                    <li><strong>Chat history</strong>: Visibility does not mean every message is in the call.</li>
+                                    <li><strong>Chat history</strong>: Prior messages in this thread, resent with each new message.</li>
+                                    <li><strong>Persistent memory</strong>: Facts saved outside the model and reloaded across sessions.</li>
                                     </ul>
                                   </div>
+                                  <p class="slide-instructor-note"><span class="slide-instructor-label">Screen-share</span> Contrast two open chats or projects: what you said in one is invisible in the other. Then show how one thread still works because the harness resends history each turn.</p>
                                 </article>
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 3</span>
@@ -2122,7 +2129,7 @@
                               <dl class="glossary">
                                 <div>
                                   <dt>Chat history</dt>
-                                  <dd>A visible record of prior messages; visibility does not guarantee that every message is included in every model call.</dd>
+                                  <dd>Prior messages in one thread, usually resent with each new message so the model can follow the conversation. Not shared across unrelated chats or projects.</dd>
                                 </div>
                                 <div>
                                   <dt>Stateless</dt>

@@ -775,7 +775,7 @@
         "Smallest complete set":
           "assets/pixel-art/15-smallest-complete-set.png",
         "Four buckets": "assets/pixel-art/16-four-buckets.png",
-        "No memory by default": "assets/pixel-art/17-no-memory-by-default.png",
+        "Persistent memory": "assets/pixel-art/17-no-memory-by-default.png",
         "If it matters, store it":
           "assets/pixel-art/44-memory-folder-not-black-box.png",
         "RAG: retrieve, then generate":
@@ -1434,10 +1434,13 @@
           type: "content",
           lesson: 6,
           module: "Module 03 · Context, forgetting, and retrieval",
-          title: "No memory by default",
+          title: "Persistent memory",
           bullets: [
-            "A fresh session only knows what the harness reloads",
-            "Continuity is a product feature, not a model trait",
+            "Chats and projects are isolated. Another thread or workspace does not inherit what you said elsewhere.",
+            "Each turn, the model only knows what fits in the current context window.",
+            "Inside one chat, every message you send includes the full thread so far. That is how the model follows the conversation in that session.",
+            "Thread history is not persistent memory. Start a new chat and that continuity is gone unless the product reloads it.",
+            "Real persistent memory means deliberate storage: files, notes, or a memory plugin (like ALIVE later in this course).",
           ],
           image: {
             file: "l06-no-memory-by-default.png",
@@ -1448,7 +1451,17 @@
               term: "Stateless",
               def: "No built-in memory of previous calls unless the harness re-supplies prior information.",
             },
+            {
+              term: "Chat history",
+              def: "Prior messages in this thread, resent with each new message so the model can follow along.",
+            },
+            {
+              term: "Persistent memory",
+              def: "Facts saved outside the model and reloaded across sessions; not automatic in plain chat.",
+            },
           ],
+          notes:
+            "Contrast two open chats or projects: what you said in one is invisible in the other. Then show how one thread still works because the harness resends history each turn.",
         },
         {
           type: "content",
