@@ -1769,7 +1769,13 @@
         def: "Specialized prompts or procedures exposed through MCP — related to skills, but standardized at the connection layer."
       }
     ],
-    notes: "First of three install/configure beats: MCP, then skills, then plugins. Point at registries; do not install an MCP server in this clip unless you have a prepared demo."
+    notes: "First of three install/configure beats: MCP, then skills, then plugins. Point at registries; do not install an MCP server in this clip unless you have a prepared demo.",
+    tasksLabel: "Try this",
+    tasks: [
+      "Open the Official MCP Registry (or mcp.so / Smithery / Glama / PulseMCP)",
+      "Pick one server and note what capabilities it exposes",
+      "Do not install yet unless you have a prepared demo"
+    ]
   },
   {
     type: "content",
@@ -1818,15 +1824,16 @@
     module: "Module 04 · Tools, skills, and connections",
     title: "Skills: browse, review, install",
     bullets: [
-      "Browse with /plugin (or discover at skills.sh)",
+      "Browse at skills.sh — or find with npx skills find <query>",
       "Verify the author; prefer official skills from reputable teams",
       "Read what it claims to do, then install and try it once",
       "Remove it if it doesn't earn its place"
     ],
     terminal: {
-      label: "In Claude Code",
+      label: "skills.sh",
       lines: [
-        "/plugin"
+        "npx skills find <query>",
+        "npx skills add <owner/repo>"
       ]
     },
     urls: [
@@ -1849,12 +1856,12 @@
         def: "Installable package that can add skills, hooks, or connections."
       }
     ],
-    notes: "Second install/configure beat: skills. Combine discover + review + install into one demo. Next: plugins. Academy showcase follows in Lesson 10.",
+    notes: "Second install/configure beat: skills. Combine discover + review + install into one demo. Show skills.sh and the npx skills CLI (find / add). Next: plugins. Academy showcase follows in Lesson 10.",
     tasksLabel: "Try this",
     tasks: [
-      "Browse packages with /plugin (optionally skills.sh)",
+      "Browse at skills.sh (or run npx skills find <query>)",
       "Verify author and read what it claims to do",
-      "Install once, try on your practice task, remove if unhelpful"
+      "Install with npx skills add <owner/repo>, try once, remove if unhelpful"
     ]
   },
   {
@@ -1868,6 +1875,12 @@
       "Where to find them: Claude Code /plugin marketplaces",
       "Configure only what the workflow needs; remove unused packages"
     ],
+    terminal: {
+      label: "In Claude Code",
+      lines: [
+        "/plugin"
+      ]
+    },
     image: {
       file: "l08-install-alive.png",
       desc: "16-bit pixel art: sealed package icon labeled plugin snapping into the harness; small icons for skill, hook, and connection spilling out."
@@ -1878,7 +1891,13 @@
         def: "Installable package that can bundle skills, hooks, or connections."
       }
     ],
-    notes: "Third install/configure beat: plugins. Keep examples category-first. Point forward: academy skills in Lesson 10; ALIVE in Lesson 11."
+    notes: "Third install/configure beat: plugins. Keep examples category-first. /plugin belongs here — not on the skills slide. Point forward: academy skills in Lesson 10; ALIVE in Lesson 11.",
+    tasksLabel: "Try this",
+    tasks: [
+      "Browse packages in Claude Code with /plugin",
+      "Review what a package adds before you install",
+      "Configure only what the workflow needs; remove unused packages"
+    ]
   },
   {
     type: "lesson",
@@ -1894,7 +1913,7 @@
     title: "Academy skills for creators",
     bullets: [
       "Our academy ships skills built for content creators [details TBD]",
-      "Install the same way you just learned (/plugin or skills.sh)",
+      "Install the same way you just learned (skills.sh / npx skills)",
       "Start with: [Skill Name TBD] — review it, then try it once on your practice task",
       "Install path / marketplace listing: [link TBD]"
     ],
