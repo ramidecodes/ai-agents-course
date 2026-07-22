@@ -795,6 +795,9 @@
         "What to hold back": "assets/pixel-art/21-what-to-hold-back.png",
         "Extending your agent":
           "assets/pixel-art/22-tools-skills-connections.png",
+        "Tools: let it act": "assets/pixel-art/23-who-runs-tool.png",
+        "Skills: teach it how": "assets/pixel-art/25-browse-install-try.png",
+        "Plugins: installable packages": "assets/pixel-art/45-propose-confirm-save.png",
         "Tools · skills · plugins":
           "assets/pixel-art/22-tools-skills-connections.png",
         "Who runs the tool?": "assets/pixel-art/23-who-runs-tool.png",
@@ -1538,7 +1541,7 @@
     lesson: 8,
     module: "Module 04 · Tools, skills, and connections",
     title: "Extending your agent",
-    runtime: "3 min"
+    runtime: "5 min"
   },
   {
     type: "content",
@@ -1568,7 +1571,84 @@
         def: "Installable package that extends the agent with skills, hooks, or connections. ALIVE is a plugin (later)."
       }
     ],
-    notes: "Extensions: tools act, skills guide, plugins package. Next: MCP, then install one skill carefully."
+    notes: "Map the three extension types, then spend one slide on each with examples and where to find them. Next: MCP, then install one skill carefully."
+  },
+  {
+    type: "content",
+    lesson: 8,
+    module: "Module 04 · Tools, skills, and connections",
+    title: "Tools: let it act",
+    bullets: [
+      "Examples: web search, read/write files, calendar, email, browser actions",
+      "The model requests a tool; the harness runs it if allowed",
+      "In Claude Desktop / Claude Code: built-in tools plus connected apps",
+      "Where to find more: product connectors, MCP servers (next lesson)"
+    ],
+    urls: [
+      {
+        href: "https://modelcontextprotocol.io/",
+        label: "modelcontextprotocol.io (tools via MCP)"
+      }
+    ],
+    image: {
+      file: "l10-who-runs-the-tool.png",
+      desc: "16-bit pixel art: wrench and action icons (search, file, calendar, send) with a request arrow from the model to the harness."
+    },
+    sidebar: [
+      {
+        term: "Tool",
+        def: "Executable capability that observes or changes something outside the chat."
+      }
+    ],
+  },
+  {
+    type: "content",
+    lesson: 8,
+    module: "Module 04 · Tools, skills, and connections",
+    title: "Skills: teach it how",
+    bullets: [
+      "Examples: brand voice, research brief, code-review checklist, content outline",
+      "Reusable guidance — not the action itself",
+      "Where to find them: /plugin in Claude Code, skills.sh, academy skills (later in this lesson block)"
+    ],
+    urls: [
+      {
+        href: "https://skills.sh",
+        label: "skills.sh"
+      }
+    ],
+    image: {
+      file: "l12-browse-install-try.png",
+      desc: "16-bit pixel art: shelf of skill-books labeled brand, research, review; one book open with procedure steps."
+    },
+    sidebar: [
+      {
+        term: "Skill",
+        def: "Reusable procedures, examples, and standards for a type of work."
+      }
+    ],
+  },
+  {
+    type: "content",
+    lesson: 8,
+    module: "Module 04 · Tools, skills, and connections",
+    title: "Plugins: installable packages",
+    bullets: [
+      "Examples: ALIVE (local memory, later), skill packs, connection bundles",
+      "One install can add skills, hooks, or MCP servers — review before you trust it",
+      "Where to find them: Claude Code /plugin marketplaces"
+    ],
+    image: {
+      file: "l08-install-alive.png",
+      desc: "16-bit pixel art: sealed package icon labeled plugin snapping into the harness; small icons for skill, hook, and connection spilling out."
+    },
+    sidebar: [
+      {
+        term: "Plugin",
+        def: "Installable package that can bundle skills, hooks, or connections."
+      }
+    ],
+    notes: "Keep examples category-first. Point forward: skills install in Lesson 10; ALIVE in Lesson 11; MCP in Lesson 9."
   },
   {
     type: "content",
