@@ -2227,7 +2227,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: tools, skills, and plugins: the vocabulary you need before installing memory or connections.</p>
+                        <p class="transition-note">Takeaway: RAG is retrieve-then-answer, not perfect recall. Next: extending your agent with tools, skills, and plugins — the vocabulary you need before installing anything.</p>
                       </div>
                     </li>
 
@@ -2259,8 +2259,8 @@
 <li class="lesson">
                       <span class="lesson-num">8</span>
                       <div>
-                        <p class="lesson-title">Tools vs skills vs plugins</p>
-                        <p class="lesson-desc">Tools let the agent act; skills tell it how to act well; plugins and connections package extensions you can add. Here's the vocabulary before you install anything.</p>
+                        <p class="lesson-title">Extending your agent</p>
+                        <p class="lesson-desc">Your base assistant reasons and writes. You extend it with tools (action), skills (know-how), and plugins (installable packages). Learn the vocabulary before you install anything.</p>
                         <ul class="lesson-meta">
                           <li><strong>Runtime</strong> 3 min</li>
                           <li><strong>Output</strong> Capability map for the practice workflow</li>
@@ -2270,13 +2270,13 @@
                         <div class="lesson-block">
                           <h4 class="lesson-subhead">Key talking points</h4>
                           <ul class="talking-points">
-                            <li>Tools do: search, read, write, send, update, or otherwise act. The model requests a tool; the harness executes it (if permitted) and returns the result.</li>
-                            <li>Skills guide: reusable instructions, procedures, examples, standards, and decision rules.</li>
-                            <li>Plugins (and similar packages) extend the harness: they may bundle skills, hooks, agents, or connection servers. ALIVE (later) is a plugin; installing a skill often goes through the same plugin/marketplace flow.</li>
+                            <li>You extend a base assistant in three ways: tools, skills, and plugins.</li>
+                            <li>Tools let it act: search, read, write, send, update, or otherwise change something. The model requests a tool; the harness executes it (if permitted) and returns the result.</li>
+                            <li>Skills teach it how to work well: reusable instructions, procedures, examples, standards, and decision rules.</li>
+                            <li>Plugins package extensions you install: they may bundle skills, hooks, agents, or connection servers. ALIVE (later) is a plugin; installing a skill often goes through the same plugin/marketplace flow.</li>
                             <li>Connectors link the assistant to an external source or service; APIs define how systems exchange requests. MCP (later) is one standard for those connections, not memory.</li>
-                            <li>A skill without a tool cannot perform the external action; a tool without a skill may be used inconsistently.</li>
-                            <li>Connected ≠ selected ≠ correct. More tools increase action surface and risk.</li>
-                            <li>Build a capability map from the workflow; grant the minimum needed per step. Next you will install one skill carefully, then try ALIVE as a first meaningful plugin.</li>
+                            <li>Skills guide the work; tools perform the action. A skill without a tool cannot perform the external action; a tool without a skill may be used inconsistently.</li>
+                            <li>More extensions ≠ better: connected ≠ selected ≠ correct. Grant the minimum needed per step. Next you will install one skill carefully, then try ALIVE as a first meaningful plugin.</li>
                           </ul>
                           <div class="misconceptions">
                             <p>Correct these</p>
@@ -2298,10 +2298,13 @@
                               <div class="slides">
                                 <article class="slide-card">
                                   <span class="slide-label">Slide 1</span>
-                                  <h5 class="slide-title">Tools · skills · plugins</h5>
+                                  <h5 class="slide-title">Extending your agent</h5>
                                   <ul class="slide-body">
-                                    <li>Tools do · Skills guide · Plugins/connections extend</li>
-                                    <li>A skill without a tool cannot perform the external action</li>
+                                    <li>Three ways to extend your agent: tools, skills, and plugins</li>
+                                    <li>Tools — let it act (search, read, write, send)</li>
+                                    <li>Skills — teach it how to work well (procedures, standards, examples)</li>
+                                    <li>Plugins — installable packages that add skills, hooks, or connections</li>
+                                    <li>Skills guide the work; tools perform the action</li>
                                   </ul>
                                   <div class="slide-visual">
                                     <span class="slide-meta-label">Visual</span>
@@ -2310,9 +2313,9 @@
                                   <div class="slide-side-panel">
                                     <span class="slide-meta-label">Side panel</span>
                                     <ul>
-                                    <li><strong>Tool</strong>: Executable capability (search, read, write, send…).</li>
-                                    <li><strong>Skill</strong>: Reusable guidance, not the same as a tool.</li>
-                                    <li><strong>Plugin</strong>: Installable package that can add skills, hooks, or connections.</li>
+                                    <li><strong>Tool</strong>: Executable capability that lets the agent act (search, read, write, send…).</li>
+                                    <li><strong>Skill</strong>: Reusable guidance that teaches the agent how to work well.</li>
+                                    <li><strong>Plugin</strong>: Installable package that extends the agent with skills, hooks, or connections.</li>
                                     </ul>
                                   </div>
                                 </article>
@@ -2339,7 +2342,7 @@
                                   <span class="slide-label">Slide 3</span>
                                   <h5 class="slide-title">Connected ≠ correct</h5>
                                   <ul class="slide-body">
-                                    <li>Connected ≠ selected ≠ correct</li>
+                                    <li>More extensions ≠ better — connected ≠ selected ≠ correct</li>
                                     <li>Grant the minimum capability per workflow step</li>
                                   </ul>
                                   <div class="slide-visual">
@@ -2382,7 +2385,7 @@
                             </div>
                           </details>
                         </div>
-                        <p class="transition-note">Takeaway: tools do, skills guide, plugins/connections extend. Next: install one skill carefully. Review before you trust it.</p>
+                        <p class="transition-note">Takeaway: tools act, skills guide, plugins package what you install. Next: install one skill carefully. Review before you trust it.</p>
                       </div>
                     </li>
 <li class="lesson">

@@ -793,6 +793,8 @@
         "Trust the policy, not the logo":
           "assets/pixel-art/20-trust-policy-not-logo.png",
         "What to hold back": "assets/pixel-art/21-what-to-hold-back.png",
+        "Extending your agent":
+          "assets/pixel-art/22-tools-skills-connections.png",
         "Tools · skills · plugins":
           "assets/pixel-art/22-tools-skills-connections.png",
         "Who runs the tool?": "assets/pixel-art/23-who-runs-tool.png",
@@ -1547,7 +1549,7 @@
             },
           ],
           notes:
-            "RAG is not memory. Next module: tools vs skills vs plugins, then a careful skill install before ALIVE as a memory plugin.",
+            "RAG is not memory. Next module: extending your agent with tools, skills, and plugins, then a careful skill install before ALIVE as a memory plugin.",
         },
 
         /* —— Lesson 8 —— */
@@ -1555,17 +1557,20 @@
           type: "lesson",
           lesson: 8,
           module: "Module 04 · Tools, skills, and approvals",
-          title: "Tools vs skills vs plugins",
+          title: "Extending your agent",
           runtime: "3 min",
         },
         {
           type: "content",
           lesson: 8,
           module: "Module 04 · Tools, skills, and approvals",
-          title: "Tools · skills · plugins",
+          title: "Extending your agent",
           bullets: [
-            "Tools do · Skills guide · Plugins/connections extend",
-            "A skill without a tool cannot perform the external action",
+            "Three ways to extend your agent: tools, skills, and plugins",
+            "Tools — let it act (search, read, write, send)",
+            "Skills — teach it how to work well (procedures, standards, examples)",
+            "Plugins — installable packages that add skills, hooks, or connections",
+            "Skills guide the work; tools perform the action",
           ],
           image: {
             file: "l10-tools-skills-connections.png",
@@ -1574,19 +1579,19 @@
           sidebar: [
             {
               term: "Tool",
-              def: "Executable capability (search, read, write, send). The model requests it; the harness runs it if allowed.",
+              def: "Executable capability that lets the agent act (search, read, write, send). The model requests it; the harness runs it if allowed.",
             },
             {
               term: "Skill",
-              def: "Reusable guidance: procedures, examples, and standards, not the same as a tool.",
+              def: "Reusable guidance — procedures, examples, and standards — that teaches the agent how to work well.",
             },
             {
               term: "Plugin",
-              def: "Installable package that can add skills, hooks, or connections. ALIVE is a plugin (later).",
+              def: "Installable package that extends the agent with skills, hooks, or connections. ALIVE is a plugin (later).",
             },
           ],
           notes:
-            "Vocabulary first: tools do, skills guide, plugins extend. Next lesson: install one skill carefully. ALIVE and MCP come after.",
+            "Extensions add capability: tools act, skills guide, plugins package what you install. Next lesson: install one skill carefully. ALIVE and MCP come after.",
         },
         {
           type: "content",
@@ -1616,7 +1621,7 @@
           module: "Module 04 · Tools, skills, and approvals",
           title: "Connected ≠ correct",
           bullets: [
-            "Connected ≠ selected ≠ correct",
+            "More extensions ≠ better — connected ≠ selected ≠ correct",
             "Grant the minimum capability per workflow step",
           ],
           image: {
