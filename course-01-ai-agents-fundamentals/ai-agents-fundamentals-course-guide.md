@@ -3,7 +3,7 @@ course_id: ai-agents-fundamentals
 document_type: production-guide
 status: production-draft
 source_curriculum: course-01-curriculum.html
-last_updated: "2026-07-21"
+last_updated: "2026-07-22"
 ---
 
 # AI Agents Fundamentals: Course Guide
@@ -147,7 +147,7 @@ Use low-friction checks throughout the course. They should not add significant v
 | --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
 | After Lesson 2  | Explain model versus harness/app in one sentence, and sketch one chat turn. | The foundational distinction and chat/tool loop are understood. |
 | After Lesson 3  | Open Claude Desktop and confirm a simple prompt works with a chosen workspace folder. | The harness is installed and usable. |
-| After Lesson 4  | Complete the Chat and Code tries from Lesson 4. Say what changed on your Mac in each part and who controlled the steps. | The learner can tell one-answer chat from multi-step, file-changing work in Claude Desktop. |
+| After Lesson 4  | Complete the Chat and Code tries from Lesson 4. Say what changed on your Mac in each part and who controlled the steps. | The learner can tell one-answer Chat from multi-step, file-changing work in Claude Desktop (Chat may be labeled Home). |
 | After Lesson 6  | Explain in one sentence why the assistant won't remember them next session without help. | Statelessness is understood. |
 | After Lesson 7  | Explain RAG in one sentence and name one limit. | RAG is distinguished from memory. |
 | After Lesson 8  | Explain tools vs skills vs plugins/connections in one sentence each. | Capability vocabulary is clear before installs. |
@@ -400,7 +400,7 @@ Pilot the course with a small group from the intended audience before final reco
 
 | Course outcome | Primary lessons | Demonstrated by |
 | -------------- | --------------- | --------------- |
-| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 teaches agent vs workflow |
+| Explain models, harnesses/apps, assistants, workflows, automations, and agents (including one chat turn) | 2–4 | Lesson 2 teaches model vs harness and one chat turn; Lesson 4 teaches one answer vs workflow vs agent with a Chat/Code exercise |
 | Set up an assistant, install a new skill, and provide focused context with ordinary files | 3, 5, 8–9, 11 | Lesson 3 Claude Desktop install + verify, context checklist, tools/skills/plugins map, one deliberately installed skill, ALIVE memory |
 | Explain data sharing (local vs. cloud) well enough to make cautious choices | 12 | One stated personal rule for what not to share |
 | Explain why memory isn't persistent by default, and what RAG does | 6–7, 11 | Classification examples, plain-language RAG, then ALIVE as the practical local-memory plugin |

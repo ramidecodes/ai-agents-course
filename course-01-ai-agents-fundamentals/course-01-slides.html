@@ -761,7 +761,10 @@
         "Same model, different app":
           "assets/pixel-art/09-same-model-different-app.png",
         "Agent vs workflow": "assets/pixel-art/10-four-patterns.png",
-        "Try it: Chat then Code": "assets/pixel-art/03-safe-practice-task.png",
+        "One answer, workflow, or agent":
+          "assets/pixel-art/10-four-patterns.png",
+        "Try it: Chat then Code":
+          "assets/pixel-art/03-safe-practice-task.png",
         "Four patterns": "assets/pixel-art/10-four-patterns.png",
         "What an agent does": "assets/pixel-art/11-what-an-agent-does.png",
         "Autonomy ladder": "assets/pixel-art/12-autonomy-ladder.png",
@@ -1244,7 +1247,7 @@
           type: "content",
           lesson: 4,
           module: "Module 02 · Setup and autonomy",
-          title: "Agent vs workflow",
+          title: "One answer, workflow, or agent",
           bullets: [
             "One answer: you ask, it replies once",
             "Workflow: you (or fixed rules) define each step",
@@ -1274,19 +1277,18 @@
           module: "Module 02 · Setup and autonomy",
           title: "Try it: Chat then Code",
           bullets: [
-            "Part A · Chat: ask one question and get one reply. Nothing changes on your Mac.",
-            "Part B · Code: open your workspace folder from Lesson 3 and ask Claude to create a harmless file, for example hello.txt with one line.",
-            "Chat is conversation. Code can act on your machine when you approve each step.",
-            "Check your folder afterward. You stay responsible for what goes in and what comes out.",
+            "Chat tab: conversation only. One reply, nothing changes on disk.",
+            "Code tab: can read and write in your workspace when you approve each step.",
+            "Part A maps to one answer. Part B maps to agent-like multi-step work from the last slide.",
           ],
           image: {
             file: "03-safe-practice-task.png",
-            desc: "16-bit pixel art: learner at desk with a small labeled practice-task card and a simple pattern checklist.",
+            desc: "16-bit pixel art: learner at desk with a small labeled practice-task card and Chat vs Code tabs on screen.",
           },
           sidebar: [
             {
               term: "Chat",
-              def: "Conversation only. Replies in the window; does not change your files in this exercise.",
+              def: "Conversation only. One reply in the window; does not change your files in this exercise.",
             },
             {
               term: "Code",
@@ -1294,11 +1296,12 @@
             },
           ],
           notes:
-            "Demo both tabs live. Claude Desktop labels them Chat and Code at the top (wording may vary by version). Part A is one answer. Part B is agent-like: you state a goal; the harness runs multiple steps with your approval. Keep content non-sensitive and use the Lesson 3 workspace folder.",
+            "Demo both tabs live. Claude Desktop may label Chat as Home (wording varies by version). Part A is one answer. Part B is agent-like: you state a goal; the harness runs multiple steps with your approval. Keep content non-sensitive and use the Lesson 3 workspace folder.",
           tasks: [
-            'Part A: In Chat, ask: "In one sentence, what is a workflow?" Confirm one reply and no new file.',
-            "Part B: In Code, select your workspace folder and ask Claude to create hello.txt with one harmless line. Approve the steps and confirm the file exists.",
-            "Say aloud: who chose each step in Part A? In Part B?",
+            "Part A (Chat): ask one harmless question. Confirm no file was created.",
+            "Part B (Code): open your Lesson 3 workspace folder.",
+            "Ask Claude to create hello.txt with one harmless line. Approve each step if prompted.",
+            "Open Finder and confirm the file appeared.",
           ],
         },
 
