@@ -426,6 +426,23 @@
         color: var(--ink);
       }
 
+      .compare-table--prompt td {
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 0.92em;
+        white-space: pre-line;
+      }
+
+      .compare-table--prompt th:first-child,
+      .compare-table--prompt td:first-child {
+        background: rgba(0, 0, 0, 0.035);
+      }
+
+      .compare-table--prompt th:last-child,
+      .compare-table--prompt td:last-child {
+        background: rgba(0, 0, 0, 0.06);
+        font-weight: 500;
+      }
+
       /* —— On-slide learner tasks —— */
       .slide-tasks {
         margin-top: 1.5rem;
@@ -847,6 +864,8 @@
         "What to hold back": "assets/pixel-art/21-what-to-hold-back.png",
         "Be specific · Load context":
           "assets/pixel-art/15-smallest-complete-set.png",
+        "Be specific": "assets/pixel-art/32-before-vague.png",
+        "Load context": "assets/pixel-art/15-smallest-complete-set.png",
         "CLEAR": "assets/pixel-art/33-after-clear.png",
         "Extending your agent":
           "assets/pixel-art/22-tools-skills-connections.png",
@@ -2106,9 +2125,9 @@
     module: "Module 07 · Prompting techniques",
     title: "Prompting techniques",
     bullets: [
-      "Be specific · Load context · CLEAR · Stop-and-ask",
-      "Simple habits — not magical wording",
-      "Deeper reference: Anthropic's prompting guide"
+      "Four habits: Be specific · Load context · CLEAR · Stop-and-ask",
+      "Each habit has a Bad vs Good prompt — copy the Good pattern",
+      "Simple habits — not magical wording"
     ],
     urls: [
       {
@@ -2129,35 +2148,61 @@
         term: "CLEAR",
         def: "A checklist for stronger assignments: Clarify, Load, Explain, Ask, Review."
       }
-    ]
+    ],
+    notes: "Preview the four habits; tell learners every remaining slide is a Bad vs Good pair. Point to Anthropic's guide for depth."
   },
   {
     type: "content",
     lesson: 13,
     module: "Module 07 · Prompting techniques",
-    title: "Be specific · Load context",
+    title: "Be specific",
     bullets: [
-      "Name the outcome, format, length, and audience",
-      "Attach the sources, constraints, and one example of good work"
+      "Name the outcome, format, length, and audience"
     ],
     compares: [
       {
-        label: "Be specific",
-        headers: ["Weak", "Strong"],
+        label: "Same ask — vague vs specific",
+        prompt: true,
+        headers: ["Bad", "Good"],
         rows: [
           [
             "Help with my content.",
-            "Write 3 LinkedIn angles for freelancers. Each: 1-line hook + 2 bullets."
+            "Write 3 LinkedIn angles for freelance designers. Each: 1-line hook + 2 bullets. Max 80 words each."
+          ],
+          [
+            "Make this better.",
+            "Tighten this email to 120 words. Keep the ask clear. Friendly, not salesy."
           ]
         ]
-      },
+      }
+    ],
+    image: {
+      file: "l14-before-vague.png",
+      desc: "16-bit pixel art: vague foggy prompt bubble — what happens when the ask is unclear."
+    },
+    notes: "Read Bad aloud, then Good. Ask: what can the model actually deliver from each?"
+  },
+  {
+    type: "content",
+    lesson: 13,
+    module: "Module 07 · Prompting techniques",
+    title: "Load context",
+    bullets: [
+      "Attach sources, constraints, and (when useful) one example of good work"
+    ],
+    compares: [
       {
-        label: "Load context",
-        headers: ["Weak", "Strong"],
+        label: "Same topic — no context vs loaded",
+        prompt: true,
+        headers: ["Bad", "Good"],
         rows: [
           [
             "Write a blog post about our product.",
-            "Using the attached brief, draft 400 words for first-time buyers. Claims only from the brief."
+            "Using the attached product brief, draft ~400 words for first-time buyers. Claims only from the brief. Tone: practical, no hype."
+          ],
+          [
+            "Summarize our offering.",
+            "From pricing.md + faq.md in this folder: 5 bullets for a sales call. Flag any claim not in those files."
           ]
         ]
       }
@@ -2165,7 +2210,8 @@
     image: {
       file: "l05-smallest-complete-set.png",
       desc: "16-bit pixel art: minimal complete context pack — brief, sources, and constraints together."
-    }
+    },
+    notes: "Show attaching a brief live if possible. Stress: the model only knows what you load."
   },
   {
     type: "content",
@@ -2173,17 +2219,17 @@
     module: "Module 07 · Prompting techniques",
     title: "CLEAR",
     bullets: [
-      "Clarify · Load · Explain · Ask · Review",
-      "A thinking checklist, not a magic template"
+      "Clarify · Load · Explain · Ask · Review — a checklist, not a magic template"
     ],
     compares: [
       {
-        label: "Vague → CLEAR",
-        headers: ["Before", "After"],
+        label: "Vague ask → CLEAR assignment",
+        prompt: true,
+        headers: ["Bad", "Good"],
         rows: [
           [
             "Help with my content.",
-            "Clarify: 3 post angles. Load: public brief. Explain: practical tone. Ask: draft only. Review: I'll pick one."
+            "Clarify: 3 LinkedIn post angles for freelancers.\nLoad: use the attached public brief only.\nExplain: practical tone; no jargon.\nAsk: draft only — do not publish.\nReview: I'll pick one angle and edit."
           ]
         ]
       }
@@ -2192,7 +2238,7 @@
       file: "l14-after-clear.png",
       desc: "16-bit pixel art: vague foggy bubble transforms into a labeled CLEAR checklist sheet."
     },
-    notes: "Transform the vague line into a CLEAR assignment live; leave one gap and ask the agent to surface it.",
+    notes: "Transform the Bad line into the Good CLEAR assignment live; leave one gap and ask the agent to surface it.",
     tasks: [
       "Rewrite \"Help with my content\" using CLEAR",
       "Add one stop-and-ask line for a consequential action"
@@ -2209,12 +2255,17 @@
     ],
     compares: [
       {
-        label: "Consequential action",
-        headers: ["Weak", "Strong"],
+        label: "Consequential action gate",
+        prompt: true,
+        headers: ["Bad", "Good"],
         rows: [
           [
             "Publish when ready.",
-            "Stop and ask me before publishing, sending, or sharing outside this folder."
+            "Draft the post in drafts/. Stop and ask me before publishing, sending, or sharing outside this folder."
+          ],
+          [
+            "Go ahead and send it to the client.",
+            "Prepare the client email. Stop and ask me before sending anything externally."
           ]
         ]
       }
@@ -2228,7 +2279,8 @@
         term: "Stop-and-ask",
         def: "A prompt instruction that requires human approval before a named consequential action."
       }
-    ]
+    ],
+    notes: "Have learners write one stop-and-ask line for their practice task before leaving the lesson."
   },
   {
     type: "lesson",
@@ -2394,19 +2446,27 @@
         const label = compare.label
           ? `<p class="compare-label">${escapeHtml(compare.label)}</p>`
           : "";
+        const tableClass = [
+          "compare-table",
+          compare.prompt ? "compare-table--prompt" : "",
+        ]
+          .filter(Boolean)
+          .join(" ");
         const head = compare.headers
           .map((h) => `<th scope="col">${escapeHtml(h)}</th>`)
           .join("");
         const body = compare.rows
           .map(
             (row) =>
-              `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`,
+              `<tr>${row
+                .map((cell) => `<td>${escapeHtml(cell)}</td>`)
+                .join("")}</tr>`,
           )
           .join("");
         return `
         <div class="compare-block">
           ${label}
-          <table class="compare-table">
+          <table class="${tableClass}">
             <thead><tr>${head}</tr></thead>
             <tbody>${body}</tbody>
           </table>
